@@ -16,4 +16,4 @@ Just because LunarVim has an opinion doesn't mean you need to share it. Every bu
 
 ## Fast
 
-LunarVim lazyloads plugins wherever possible to maximize speed. Disabled plugins also will not decrease speed due to the plugin list being compiled with only the active plugins. This strategy allows LunarVim to not have to choose between features and speed.
+LunarVim lazyloads plugins wherever possible to maximize speed. Enabled plugins also will not decrease speed due to the plugin list being compiled with only the active plugins. This strategy allows LunarVim to not have to choose between features and speed.
