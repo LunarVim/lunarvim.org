@@ -367,6 +367,7 @@ Every plugin that works with Neovim works with LunarVim, here are some examples 
     require "lsp_signature".setup()
   end
 },
+```
 
 ### [lsp-rooter](https://github.com/ahmedkhalf/lsp-rooter.nvim)
 
