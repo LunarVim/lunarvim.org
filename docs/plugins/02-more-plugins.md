@@ -1,4 +1,4 @@
-# Available Plugins
+# More Plugins
 
 Every plugin that works with Neovim works with LunarVim, here are some examples to get you started.
 
