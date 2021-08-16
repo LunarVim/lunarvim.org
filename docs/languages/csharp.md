@@ -21,3 +21,7 @@ The csharp language server OmniSharp supports formatting. Formatting is automati
 ```lua
 lvim.lang.cs.formatters = { { exe = "clang_format" } }
 ```
+
+## Related plugins
+
+(TODO)

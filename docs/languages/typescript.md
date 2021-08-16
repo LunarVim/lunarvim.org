@@ -62,3 +62,7 @@ E.g. modify the `root_dir` setup value:
 ```lua
 lvim.lang.typescript.lsp.setup["root_dir"] = <new value>
 ```
+
+## Related plugins
+
+(TODO)

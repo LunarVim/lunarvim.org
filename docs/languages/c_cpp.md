@@ -53,3 +53,7 @@ lvim.lang.cpp.lsp.setup.cmd = { "<path to executable>", "arg1", "arg2" }
 ```
 
 `<LS identifier>` must be one supported by `nvim-lspconfig`. [List of available LSP  configs](https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md)
+
+## Related plugins
+
+(TODO)

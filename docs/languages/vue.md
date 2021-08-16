@@ -43,3 +43,7 @@ The selected linter must be installed separately.
 ```lua
 :NlspConfig vuels
 ```
+
+## Related plugins
+
+(TODO)

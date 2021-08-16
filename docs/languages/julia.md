@@ -16,3 +16,7 @@ Pkg.instantiate()
 ```
 julia install.jl
 ```
+
+## Related plugins
+
+(TODO)
