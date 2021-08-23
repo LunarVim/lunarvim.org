@@ -37,7 +37,7 @@ vim.api.nvim_buf_set_keymap(0, '', 'cc', 'line(".") == 1 ? "cc" : "ggcc"', { nor
 ```
 
 ### LunarVim style
-Overwrite/augment the key-mappings provided by LunarVim for any mode, or leave empty to keep the defaults.
+Overwrite the default keybindings for a given mode
 ``` lua
  lvim.keys.normal_mode = {
    -- Page down/up
