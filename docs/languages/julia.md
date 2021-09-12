@@ -8,3 +8,7 @@ To install the Julia language server in the location where [nvim-lspconfig expec
 ```
 julia --project=~/.julia/environments/nvim-lspconfig -e 'using Pkg; Pkg.add("LanguageServer")'
 ```
+
+## Related plugins
+
+(TODO)

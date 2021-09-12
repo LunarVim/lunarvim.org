@@ -48,3 +48,7 @@ lvim.lang.vue.linters = { { exe = "eslint" } }
 ```lua
 :NlspConfig vuels
 ```
+
+## Related plugins
+
+(TODO)

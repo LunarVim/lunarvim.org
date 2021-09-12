@@ -27,3 +27,7 @@
 ## Debugger
 
 (TODO)
+
+## Related plugins
+
+(TODO)

@@ -37,3 +37,7 @@ For more information about the language server configuration, refer to [nvim-lsp
 ## Formatters
 
 Formatting is supported by the PowerShell ES language server without additional configuration.
+
+## Related plugins
+
+(TODO)
