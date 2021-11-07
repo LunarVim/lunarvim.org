@@ -15,7 +15,7 @@
 You can install `clangd` language server using the [nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer)
 
 ```vim
-:LspInstall clangd
+:LspInstall cpp
 ```
 
 Check the official documentation for other methods <https://clangd.llvm.org/installation>.
