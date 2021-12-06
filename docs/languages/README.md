@@ -51,7 +51,7 @@ To install a supported language server:
 
 You can also toggle `<:LspInstallInfo>` and interactively choose which servers to install.
 
-### Servers' override
+### Server override
 
 `lvim.lsp.override` contains a list of servers that will **not** be automatically configured by default, for example only `tsserver` is allowed for JS-family languages, and when a language has more than one server available, then the most popular one is usually chosen.
 
