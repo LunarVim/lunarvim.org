@@ -9,7 +9,7 @@ First, within LunarVim run the following:
 :TSInstall hcl
 ```
 
-Do setup TreeSitter for `.tf` files as well, just add this to your `config.lua`:
+To setup TreeSitter for `.tf` files as well, just add this to your `config.lua`:
 ```lua
 local parser_configs = require("nvim-treesitter.parsers").get_parser_configs()
 parser_configs.hcl = {
