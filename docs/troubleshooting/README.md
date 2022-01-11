@@ -37,18 +37,38 @@ If that doesn't work, try re-syncing your plugins:
 1. while running LunarVim: `:PackerSync`
 2. from the CLI: `lvim +PackerSync`
 
+## LunarVim is slow!
+
+### are you using `fish`?
+
+> First of all, it is not recommended to set shell to fish in vim. Plenty of vim addons execute fish-incompatible shellscript, so setting it to /bin/sh is typically better, especially if you have no good reason to set it to fish.
+
+```lua
+vim.opt.shell = "/bin/sh"
+```
+
+See [fish-shell/fish-shell#7004](https://github.com/fish-shell/fish-shell/issues/7004) and `:h 'shell'` for more info.
+
 ## Language server XXX does not start for me!
 
 ### is it overriden?
 
-This could be due to the fact that the server is [overridden](../languages/README.md#manually-configured-servers)
+This could be due to the fact that the server is [overridden](../languages/README.md#server-override)
 
 ```lua
 --- is it in this list?
 :lua print(vim.inspect(lvim.lsp.override))
 ```
 
-If that's the case, then you need to either remove it from that list and re-run `:LvimCacheReset` or set it up [manually](../languages/README.md#overriding-the-default-setup-options).
+If that's the case, then you need to either remove it from that list and re-run `:LvimCacheReset`
+
+```lua
+lvim.lsp.override = vim.tbl_filter(function(name)
+  return name ~= "eslint"
+end, lvim.lsp.override)
+```
+
+or set it up [manually](../languages/README.md#server-setup).
 
 ### is it supported by [nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer)?
 
@@ -60,7 +80,7 @@ Check out the tips for [debugging nvim-lspconfig](https://github.com/neovim/nvim
 
 ## Too many language servers are starting at once!
 
-Are any of these servers [overridden](../languages/README.md#manually-configured-servers) by default?
+Are any of these servers [overridden](../languages/README.md#server-override) by default?
 
 ```lua
 :lua print(vim.inspect(require("lvim.lsp.config").override))
