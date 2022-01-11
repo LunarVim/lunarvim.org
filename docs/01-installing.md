@@ -3,7 +3,12 @@
 ## Prerequisites
 
 - Make sure you have installed the latest version of [`Neovim 0.5`](https://github.com/neovim/neovim/releases/tag/v0.5.0).
-- Have `npm`, `node` and `cargo` installed on your system.
+- Have these programs installed on your system and accessible through the terminal under their name:
+  - `npm`
+  - `node`
+  - `cargo`
+  - `xclip`
+  - `fd`
 - [Resolve `EACCES` permissions when installing packages globally](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) to avoid error when installing packages with npm.
 
 # Install
