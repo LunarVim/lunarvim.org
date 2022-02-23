@@ -14,7 +14,7 @@
 
 ## Configure Lunarvim
 
-The Lsp, and formatting does not work out of the box. To fix this, do the following:
+The `sourcekit` language server is disabled (overridden) by default because of the conflict with `clangd`
 
 ### Lsp Configuration
 Create a file called `~/.config/lvim/ftplugin/swift.lua`:
