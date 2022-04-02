@@ -92,3 +92,19 @@ If they are then you are using the syntax prior to [LunarVim#1813](https://githu
 -- this is the correct syntax since 3dd60bd
 vim.list_extend(lvim.lsp.override, { "jsonls" })
 ```
+
+## Running LunarVim on M1 mac reports error `mach-o, but wrong architecture`
+
+On start up, lunarvim reports errors such as below with several plugins.
+
+``` bash
+no suitable image found.  Did find:
+    $HOME/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/kotlin.so: mach-o, but wrong architecture
+    $HOME/.local/share/nvim/site/pack/packer/start/nvim-treesitter/parser/kotlin.so: mach-o, but wrong architecture
+```
+
+Lunarvim does not support M1 mac natively. This can be fixed by installing
+homebrew and neovim through the x86_64 architecture platfomr location
+`/usr/local`. Doing so will run neovim and homebrew through the x86_64
+architecture. This only works provided you have Rosetta installed. 
+
