@@ -136,9 +136,9 @@ This will create a file in `$LUNARVIM_CONFIG_DIR/lsp-settings`, to enable persis
 Make sure to install `jsonls` for autocompletion.
 :::
 
-## Formatting
+## Linting/Formatting
 
-Set a formatter, this will override the language server formatting capabilities (if it exists)
+Set a linter/formatter, this will override the language server formatting capabilities (if it exists)
 
 ```lua
 local formatters = require "lvim.lsp.null-ls.formatters"
@@ -150,9 +150,22 @@ formatters.setup {
     filetypes = { "typescript", "typescriptreact" },
   },
 }
+
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+  { command = "flake8" },
+  {
+    command = "shellcheck",
+    args = { "--severity", "warning" },
+  },
+  {
+    command = "codespell",
+    filetypes = { "javascript", "python" },
+  },
+}
 ```
 
-_Note: Formatters' installation is not managed by LunarVim. Refer to the each tool's respective manual for installation steps._
+_Note: Formatters' or Linters' installation is not managed by LunarVim. Refer to the each tool's respective manual for installation steps._
 
 ### Custom arguments
 
@@ -168,11 +181,21 @@ formatters.setup {
     args = { "--print-width", "100" },
   },
 }
+
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+  {
+    command = "shellcheck",
+    ---@usage arguments to pass to the formatter
+    -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+    args = { "--severity", "warning" },
+  },
+}
 ```
 
 _Note: remember that arguments cannot contains spaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`._
 
-### Multi languages per formatter
+### Multi languages per linter/formatter
 
 By default a formatter will attach to all the filetypes it supports.
 
@@ -189,7 +212,7 @@ formatters.setup {
 
 _Note: removing the `filetypes` argument will allow the formatter to attach to all the default filetypes it supports._
 
-### Multi formatters per language
+### Multi linters/formatters per language
 
 There are no restrictions on setting up multiple formatters per language
 
@@ -199,6 +222,15 @@ formatters.setup {
   {
   { command = "black", filetypes = { "python" } },
   { command = "isort", filetypes = { "python" } },
+  },
+}
+
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+  {
+    command = "codespell",
+    ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
+    filetypes = { "javascript", "python" },
   },
 }
 ```
@@ -215,7 +247,10 @@ Let's take `markdown` as an example:
 
 ```lua
 local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup({{command = "prettier", filetypes = {"markdown"} }})
+formatters.setup({{command = "prettier", filetypes = {"markdown"} }})S
+
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup({{command = "flake8", filetypes = { "python" } }})
 ```
 
 ### Formatting on save
@@ -226,85 +261,4 @@ You can disable auto-command and is to true by default.
 
 ```lua
 lvim.format_on_save = true
-```
-
-## Linting
-
-Set additional linters
-
-```lua
-local linters = require "lvim.lsp.null-ls.linters"
-linters.setup {
-  { command = "flake8" },
-  {
-    command = "shellcheck",
-    args = { "--severity", "warning" },
-  },
-  {
-    command = "codespell",
-    filetypes = { "javascript", "python" },
-  },
-}
-```
-
-_Note: linters' installation is not managed by LunarVim. Refer to the each tool's respective manual for installation steps._
-
-### Custom arguments
-
-It's also possible to add custom arguments for each linter.
-
-```lua
-local linters = require "lvim.lsp.null-ls.linters"
-linters.setup {
-  {
-    command = "shellcheck",
-    ---@usage arguments to pass to the formatter
-    -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
-    args = { "--severity", "warning" },
-  },
-}
-```
-
-_Note: remember that arguments cannot contains spaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`._
-
-### Multi linters per language
-
-```lua
-local linters = require "lvim.lsp.null-ls.linters"
-linters.setup {
-  { command = "flake8", filetypes = { "python" } },
-  { command = "codespell", filetypes = { "python" } },
-}
-```
-
-### Multi languages per linter
-
-```lua
-local linters = require "lvim.lsp.null-ls.linters"
-linters.setup {
-  {
-    command = "codespell",
-    ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
-    filetypes = { "javascript", "python" },
-  },
-}
-```
-
-::: tip
-Removing the `filetypes` argument will allow the linter to attach to all the default filetypes it supports.
-:::
-
-### Lazy-loading the linter setup
-
-By default, all null-ls providers are checked on startup. If you want to avoid that or want to only set up the provider when you opening the associated file-type,
-then you can use [filetype plugins](../configuration/07-ftplugin.md) for this purpose.
-
-Let's take `python` as an example:
-
-1. create a file called `python.lua` in the `$LUNARVIM_CONFIG_DIR/after/ftplugin` folder
-2. add the following snippet
-
-```lua
-local linters = require "lvim.lsp.null-ls.linters"
-linters.setup({{command = "flake8", filetypes = { "python" } }})
 ```
