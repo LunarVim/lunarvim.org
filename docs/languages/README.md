@@ -163,13 +163,46 @@ linters.setup {
     filetypes = { "javascript", "python" },
   },
 }
+
+local code_actions = require "lvim.lsp.null-ls.code_actions"
+code_actions.setup {
+  {
+    command = "proselint"
+  },
+}
 ```
 
-_Note: Formatters' or Linters' installation is not managed by LunarVim. Refer to the each tool's respective manual for installation steps._
+Another method is to reference the linter/formatter/code_actions by their names, as referenced in [null-ls docs](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md), if you do not want to customize the command
+
+```lua
+local formatters = require "lvim.lsp.null-ls.formatters"
+formatters.setup {
+  { name = "black" },
+}
+
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup {
+  { name = "flake8" },
+  { name = "shellcheck" },
+  {
+    name = "codespell",
+    filetypes = { "javascript", "python" },
+  },
+}
+
+local code_actions = require "lvim.lsp.null-ls.code_actions"
+code_actions.setup {
+  {
+    name = "proselint"
+  },
+}
+```
+
+_Note: Formatters' or Linters' or Code Actions installation is not managed by LunarVim. Refer to the each tool's respective manual for installation steps._
 
 ### Custom arguments
 
-It's also possible to add custom arguments for each formatter.
+It's also possible to add custom arguments for each linter/formatter/code_actions.
 
 ```lua
 local formatters = require "lvim.lsp.null-ls.formatters"
@@ -189,6 +222,14 @@ linters.setup {
     ---@usage arguments to pass to the formatter
     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
     args = { "--severity", "warning" },
+  },
+}
+
+local code_actions = require "lvim.lsp.null-ls.code_actions"
+code_actions.setup {
+  {
+    command = "proselint",
+    args = { "--json" },
   },
 }
 ```
@@ -212,7 +253,7 @@ formatters.setup {
 
 _Note: removing the `filetypes` argument will allow the formatter to attach to all the default filetypes it supports._
 
-### Multi linters/formatters per language
+### Multi linters/formatters/code_actions per language
 
 There are no restrictions on setting up multiple formatters per language
 
@@ -231,6 +272,15 @@ linters.setup {
     command = "codespell",
     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
     filetypes = { "javascript", "python" },
+  },
+}
+
+local code_actions = require "lvim.lsp.null-ls.code_actions"
+code_actions.setup {
+  {
+    command = "proselint",
+    args = { "--json" },
+    filetypes = { "markdown", "tex" },
   },
 }
 ```
