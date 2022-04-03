@@ -91,6 +91,7 @@ A typical setup call with default arguments
 -- edit this file by running `:lua vim.cmd("edit " .. lvim.lsp.templates_dir .. "/lua.lua"))`
 require("lvim.lsp.manager").setup("sumneko_lua")
 ```
+
 ::: tip
 You can quickly find these files by running `<leader>Lf` -> "Find LunarVim Files"
 :::
@@ -142,9 +143,9 @@ Set a formatter, this will override the language server formatting capabilities 
 ```lua
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
-  { exe = "black" },
+  { command = "black" },
   {
-    exe = "prettier",
+    command = "prettier",
     args = { "--print-width", "100" },
     filetypes = { "typescript", "typescriptreact" },
   },
@@ -161,7 +162,7 @@ It's also possible to add custom arguments for each formatter.
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   {
-    exe = "prettier",
+    command = "prettier",
     ---@usage arguments to pass to the formatter
     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
     args = { "--print-width", "100" },
@@ -179,7 +180,7 @@ By default a formatter will attach to all the filetypes it supports.
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   {
-    exe = "prettier",
+    command = "prettier",
     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
     filetypes = { "typescript", "typescriptreact" },
   },
@@ -196,8 +197,8 @@ There are no restrictions on setting up multiple formatters per language
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   {
-  { exe = "black", filetypes = { "python" } },
-  { exe = "isort", filetypes = { "python" } },
+  { command = "black", filetypes = { "python" } },
+  { command = "isort", filetypes = { "python" } },
   },
 }
 ```
@@ -214,7 +215,7 @@ Let's take `markdown` as an example:
 
 ```lua
 local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup({{exe = "prettier", filetypes = {"markdown"} }})
+formatters.setup({{command = "prettier", filetypes = {"markdown"} }})
 ```
 
 ### Formatting on save
@@ -234,13 +235,13 @@ Set additional linters
 ```lua
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { exe = "flake8" },
+  { command = "flake8" },
   {
-    exe = "shellcheck",
+    command = "shellcheck",
     args = { "--severity", "warning" },
   },
   {
-    exe = "codespell",
+    command = "codespell",
     filetypes = { "javascript", "python" },
   },
 }
@@ -256,7 +257,7 @@ It's also possible to add custom arguments for each linter.
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
   {
-    exe = "shellcheck",
+    command = "shellcheck",
     ---@usage arguments to pass to the formatter
     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
     args = { "--severity", "warning" },
@@ -271,8 +272,8 @@ _Note: remember that arguments cannot contains spaces, options such as `--line-w
 ```lua
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
-  { exe = "flake8", filetypes = { "python" } },
-  { exe = "codespell", filetypes = { "python" } },
+  { command = "flake8", filetypes = { "python" } },
+  { command = "codespell", filetypes = { "python" } },
 }
 ```
 
@@ -282,12 +283,13 @@ linters.setup {
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup {
   {
-    exe = "codespell",
+    command = "codespell",
     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
     filetypes = { "javascript", "python" },
   },
 }
 ```
+
 ::: tip
 Removing the `filetypes` argument will allow the linter to attach to all the default filetypes it supports.
 :::
@@ -304,5 +306,5 @@ Let's take `python` as an example:
 
 ```lua
 local linters = require "lvim.lsp.null-ls.linters"
-linters.setup({{exe = "flake8", filetypes = { "python" } }})
+linters.setup({{command = "flake8", filetypes = { "python" } }})
 ```
