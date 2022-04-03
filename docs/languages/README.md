@@ -285,20 +285,17 @@ code_actions.setup {
 }
 ```
 
-### Lazy-loading the formatter setup
+### Lazy-loading the linter/formatter/code_actions setup
 
 By default, all null-ls providers are checked on startup. If you want to avoid that or want to only set up the provider when you opening the associated file-type,
 then you can use [filetype plugins](../configuration/07-ftplugin.md) for this purpose.
 
-Let's take `markdown` as an example:
+Let's take `python` as an example:
 
-1. create a file called `markdown.lua` in the `$LUNARVIM_CONFIG_DIR/after/ftplugin` folder
+1. create a file called `python.lua` in the `$LUNARVIM_CONFIG_DIR/after/ftplugin` folder
 2. add the following snippet
 
 ```lua
-local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup({{command = "prettier", filetypes = {"markdown"} }})S
-
 local linters = require "lvim.lsp.null-ls.linters"
 linters.setup({{command = "flake8", filetypes = { "python" } }})
 ```
