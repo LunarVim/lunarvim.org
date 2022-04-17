@@ -311,13 +311,6 @@ local M = {}
    return M._config
  end
 
- function M.config()
-   lvim.builtin.octo = {
-     active = false,
-     on_config_done = nil,
-     opts = M.defaults,
-   }
- end
 
  function M.setup(user_config)
    require("octo.completion")
