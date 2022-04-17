@@ -224,9 +224,17 @@ Every plugin that works with Neovim works with LunarVim, here are some examples 
 
 ```lua
 {
-  "pwntester/octo.nvim",
-  event = "BufRead",
-},
+    'pwntester/octo.nvim',
+    cmd = "Octo",
+    requires = {
+    'nvim-lua/plenary.nvim',
+    'nvim-telescope/telescope.nvim',
+    'kyazdani42/nvim-web-devicons',
+  },
+  config = function ()
+    require"octo".setup()
+  end
+}
 ```
 ```lua
 local M = {}
