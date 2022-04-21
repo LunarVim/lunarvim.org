@@ -774,6 +774,11 @@ Also define keybindings in your `config.lua`
 {
   "tpope/vim-surround",
   keys = {"c", "d", "y"}
+  config = function()
+    -- Lunar-vim sets this to a value which is too fast and vim-surround does not work properly if we don't increase it.
+    vim.o.timeoutlen = 500
+
+  end
 },
 ```
 
