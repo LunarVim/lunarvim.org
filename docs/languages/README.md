@@ -172,7 +172,7 @@ code_actions.setup {
 }
 ```
 
-Another method is to reference the linter/formatter/code_actions by their names, as referenced in [null-ls docs](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md), if you do not want to customize the command
+Another method is to reference the linter/formatter/code_actions by their names, as referenced in [null-ls docs](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md), if you do not want to customize the command 
 
 ```lua
 local formatters = require "lvim.lsp.null-ls.formatters"
@@ -197,6 +197,8 @@ code_actions.setup {
   },
 }
 ```
+
+This will lookup the provided name in the builtin configurations of `null_ls` and apply them. It can be considered equivalent to `null_ls.builtins.diagnostics.{name}`/`null_ls.builtins.formatting.{name}`/`null_ls.builtins.code_actions.{name}`
 
 _Note: Formatters' or Linters' or Code Actions installation is not managed by LunarVim. Refer to the each tool's respective manual for installation steps._
 
