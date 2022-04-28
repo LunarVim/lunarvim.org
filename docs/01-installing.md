@@ -82,6 +82,40 @@ appendWindowsPath = false
 ```
 Reference: [WSL automount settings](https://docs.microsoft.com/en-us/windows/wsl/wsl-config#automount-settings)
 
+## Tips for Neovide users
+In order to use lunarvim with [Neovide](https://github.com/neovide/neovide) you need to add the following line to your `config.lua`
+
+```lua
+vim.o.guifont = "Your font name"
+```
+
+Where your font name is the literal name of the font you want to use. For example `Inconsolata Nerd Font`.
+You will also need to export the right environment variables and call neovide with the apropriate parameters. An easy way to achieve this is to create a little script like this, for example in your home directory (`~/neovide`)
+
+```bash
+#!/bin/sh
+# ~/neovide
+export LUNARVIM_RUNTIME_DIR="${LUNARVIM_RUNTIME_DIR:-"/Users/danielo/.local/share/lunarvim"}"
+export LUNARVIM_CONFIG_DIR="${LUNARVIM_CONFIG_DIR:-"/Users/danielo/.config/lvim"}"
+export LUNARVIM_CACHE_DIR="${LUNARVIM_CACHE_DIR:-"/Users/danielo/.cache/nvim"}"
+
+exec neovide -- -u "$LUNARVIM_RUNTIME_DIR/lvim/init.lua" "$@"
+```
+
+Then give it the proper execution permissions 
+
+```bash
+chmod +x ~/neovide
+```
+
+And you can launch from now on like this:
+
+```bash
+~/neovide
+# or with params
+~/neovide some-file
+```
+
 ## Uninstall
 
 You can remove LunarVim (including the configuration files) using the bundled `uninstall` script
