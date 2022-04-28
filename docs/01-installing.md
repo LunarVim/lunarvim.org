@@ -89,8 +89,8 @@ In order to use lunarvim with [Neovide](https://github.com/neovide/neovide) you 
 vim.o.guifont = "Your font name"
 ```
 
-Where your font name is the literal name of the font you want to use. For example `Inconsolata Nerd Font`.
-You will also need to export the right environment variables and call neovide with the apropriate parameters. An easy way to achieve this is to create a little script like this, for example `~/.local/bin/lvim-gui`
+Where `Your Font Name` is the literal name of the font you want to use. For example `"Inconsolata Nerd Font"`.
+You will also need to export the right environment variables and call neovide with the apropriate parameters. An easy way to achieve this is to create a little executable script like, for example `~/.local/bin/lvim-gui`
 
 ```bash
 #!/bin/sh
