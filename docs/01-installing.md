@@ -90,14 +90,14 @@ vim.o.guifont = "Your font name"
 ```
 
 Where your font name is the literal name of the font you want to use. For example `Inconsolata Nerd Font`.
-You will also need to export the right environment variables and call neovide with the apropriate parameters. An easy way to achieve this is to create a little script like this, for example in your home directory (`~/neovide`)
+You will also need to export the right environment variables and call neovide with the apropriate parameters. An easy way to achieve this is to create a little script like this, for example `~/.local/bin/lvim-gui`
 
 ```bash
 #!/bin/sh
-# ~/neovide
-export LUNARVIM_RUNTIME_DIR="${LUNARVIM_RUNTIME_DIR:-"/Users/danielo/.local/share/lunarvim"}"
-export LUNARVIM_CONFIG_DIR="${LUNARVIM_CONFIG_DIR:-"/Users/danielo/.config/lvim"}"
-export LUNARVIM_CACHE_DIR="${LUNARVIM_CACHE_DIR:-"/Users/danielo/.cache/nvim"}"
+# ~/.local/bin/lvim-gui
+export LUNARVIM_RUNTIME_DIR="${LUNARVIM_RUNTIME_DIR:-"$HOME/.local/share/lunarvim"}"
+export LUNARVIM_CONFIG_DIR="${LUNARVIM_CONFIG_DIR:-"$HOME/.config/lvim"}"
+export LUNARVIM_CACHE_DIR="${LUNARVIM_CACHE_DIR:-"$HOME/.cache/lvim"}"
 
 exec neovide -- -u "$LUNARVIM_RUNTIME_DIR/lvim/init.lua" "$@"
 ```
@@ -105,15 +105,15 @@ exec neovide -- -u "$LUNARVIM_RUNTIME_DIR/lvim/init.lua" "$@"
 Then give it the proper execution permissions 
 
 ```bash
-chmod +x ~/neovide
+chmod +x ~/.local/bin/lvim-gui
 ```
 
 And you can launch from now on like this:
 
 ```bash
-~/neovide
+lvim-gui
 # or with params
-~/neovide some-file
+lvim-gui some-file
 ```
 
 ## Uninstall
