@@ -302,6 +302,10 @@ Every plugin that works with Neovim works with LunarVim, here are some examples 
 {
   "p00f/nvim-ts-rainbow",
 },
+
+lvim.builtin.treesitter.rainbow = {
+  enable = true,
+}
 ```
 
 ### [playground](https://github.com/nvim-treesitter/playground)
