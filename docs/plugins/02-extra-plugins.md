@@ -551,6 +551,36 @@ lvim.builtin.which_key.mappings["t"] = {
 },
 ```
 
+### [copilot.lua](https://github.com/zbirenbaum/copilot.lua) and [copilot-cmp](https://github.com/zbirenbaum/copilot-cmp)
+
+**let a computer write code for you**
+
+You need to authenticate acording to [the instructions](https://github.com/zbirenbaum/copilot.lua#preliminary-steps).
+
+```lua
+lvim.plugins = {
+  { "zbirenbaum/copilot.lua",
+    event = { "VimEnter" },
+    config = function()
+      vim.defer_fn(function()
+        require("copilot").setup {
+	  -- REPLACE with your path to lunarvim
+          plugin_manager_path = "/home/miki/.local/share/lunarvim" .. "/site/pack/packer",
+        }
+      end, 100)
+    end,
+  },
+
+  { "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua", "nvim-cmp" },
+  },  
+  ...
+}
+
+-- Can not be placed into the config method of the plugins.
+table.insert(lvim.builtin.cmp.sources, { name = "copilot", group_index = 0 })
+``` 
+
 ### [dial.nvim](https://github.com/monaqa/dial.nvim)
 
 **extended incrementing/decrementing**
