@@ -564,8 +564,7 @@ lvim.plugins = {
     config = function()
       vim.defer_fn(function()
         require("copilot").setup {
-	  -- REPLACE with your path to lunarvim
-          plugin_manager_path = "/home/miki/.local/share/lunarvim" .. "/site/pack/packer",
+	  plugin_manager_path = get_runtime_dir() .. "/site/pack/packer",
         }
       end, 100)
     end,
