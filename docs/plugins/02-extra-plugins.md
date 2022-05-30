@@ -555,7 +555,7 @@ lvim.builtin.which_key.mappings["t"] = {
 
 **let a computer write code for you**
 
-You need to authenticate acording to [the instructions](https://github.com/zbirenbaum/copilot.lua#preliminary-steps).
+You need to authenticate according to [the instructions](https://github.com/zbirenbaum/copilot.lua#preliminary-steps).
 
 ```lua
 lvim.plugins = {
