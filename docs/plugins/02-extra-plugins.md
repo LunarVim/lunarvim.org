@@ -360,8 +360,8 @@ Finally, within the `on_config_done` callback register your extension :
 
 ```lua
 lvim.builtin.telescope.on_config_done = function(telescope)
-  telescope.load_extension "frecency"
-  telescope.load_extension "neoclip"
+  pcall(telescope.load_extension, "frecency")
+  pcall(telescope.load_extension, "neoclip")
   -- any other extensions loading
 end
 ```
