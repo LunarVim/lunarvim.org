@@ -1,17 +1,54 @@
 # Autocommands
 
-To set up autocommands use `lvim.autocommands.custom_groups`. Autocommands are defined in the form `{ Event, filetype, command }`. This will run a command at a given event for the given filetype.
+To set up autocommands use the native nvim api `vim.api.nvim_create_autocmd` or the Lunarvim table `lvim.autocmds` to load a list of autocommands.
+Autocommands are defined in the form
+```
+lvim.autocmds = {
+  { -- first entry
+    <EVENT>,
+    { -- this is passed directly as opts to `nvim_create_autocmd()`
+      pattern = { <FILETYPE> },
+      -- enable wrap mode for json files only
+      command = "<COMMAND>",
+    },
+  },
+  -- add more entries
+}
+```
+an concrete example could look like this:
+```
+lvim.autocmds = {
+    "BufEnter",
+      pattern = { "*.json", "*.jsonc" },
+      command = "setlocal wrap",
+    },
+  },
+}
+```
+This will run a command at a given event for the given filetype.
+
+An example using the nvim api could look like this:
+```
+vim.api.nvim_create_autocmd("BufEnter", {
+	  pattern = { "*.json", "*.jsonc" },
+	  -- enable wrap mode for json files only
+	  command = "setlocal wrap",
+})
+```
+You can also add custom mappings using `command`. For example the following autocommand would add the mapping `<space><space>` to `cpp` and `hpp` files to switch between source and header files using `ClangdSwitchSourceHeader`:
+
+```
+lvim.autocommands = {
+  {
+    "BufWinEnter",
+    {
+      pattern = { "*.cpp", "*.hpp" },
+      command = ":nnoremap <silent> <space><space> :ClangdSwitchSourceHeader<CR>",
+    }
+  },
+}
+```
 
 To view help on autocommands: `:h autocmd`
 
 Here is a [list of events](https://tech.saigonist.com/b/code/list-all-vim-script-events.html)
-
-```lua
-lvim.autocommands.custom_groups = {
-  -- On entering a lua file, set the tab spacing and shift width to 8
-  { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
-
-  -- On entering insert mode in any file, scroll the window so the cursor line is centered
-  {"InsertEnter", "*", ":normal zz"},
-}
-```
