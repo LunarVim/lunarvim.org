@@ -5,6 +5,7 @@
 - Make sure you have installed the latest version of [`Neovim v0.7.0+`](https://github.com/neovim/neovim/releases/latest).
 - Have `git`, `make`, `pip`, `npm`, `node` and `cargo` installed on your system.
 - [Resolve `EACCES` permissions when installing packages globally](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) to avoid error when installing packages with npm.
+- Make sure that you have a terminal that supports 24-bit colors. If not, you might face some issues regarding the default colorscheme, and other colorschemes. 
 
 # Install
 
