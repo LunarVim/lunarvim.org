@@ -4,8 +4,10 @@ To set up autocommands use the native nvim api `vim.api.nvim_create_autocmd`, or
 ```lua
 lvim.autocmds = {
     "BufEnter", -- see `:h autocmd-events`
-      pattern = { "*.json", "*.jsonc" },
-      command = "setlocal wrap",
+      { -- this table is passed verbatim as `opts` to `nvim_create_autocmd`
+          pattern = { "*.json", "*.jsonc" }, -- see `:h autocmd-events`
+          command = "setlocal wrap", 
+      }
     },
   },
 }
@@ -20,20 +22,18 @@ vim.api.nvim_create_autocmd("BufEnter", {
 	  command = "setlocal wrap",
 })
 ```
-You can also add custom mappings using `command`. For example the following autocommand would add the mapping `<space><space>` to `cpp` and `hpp` files to switch between source and header files using `ClangdSwitchSourceHeader`:
+You can also add lua callbacks
 
 ```lua
 lvim.autocommands = {
   {
-    "BufWinEnter",
-    {
-      pattern = { "*.cpp", "*.hpp" },
-      command = ":nnoremap <silent> <space><space> :ClangdSwitchSourceHeader<CR>",
-    }
-  },
+  "BufWinEnter", {
+  pattern = { "*.cpp", "*.hpp" },
+  callback = function()
+    -- DYI editorconfig
+    if vim.loop.cwd() == "path/to/my/project" then
+      vim.cmd [[setlocal tabstop=8 shiftwidth=8]]
+    end
+  end},
 }
 ```
-
-To view help on autocommands: `:h autocmd`
-
-Here is a [list of events](https://tech.saigonist.com/b/code/list-all-vim-script-events.html)
