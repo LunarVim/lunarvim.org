@@ -4,20 +4,6 @@ To set up autocommands use the native nvim api `vim.api.nvim_create_autocmd` or 
 Autocommands are defined in the form
 ```lua
 lvim.autocmds = {
-  { -- first entry
-    <EVENT>,
-    { -- this is passed directly as opts to `nvim_create_autocmd()`
-      pattern = { <FILETYPE> },
-      -- enable wrap mode for json files only
-      command = "<COMMAND>",
-    },
-  },
-  -- add more entries
-}
-```
-an concrete example could look like this:
-```lua
-lvim.autocmds = {
     "BufEnter",
       pattern = { "*.json", "*.jsonc" },
       command = "setlocal wrap",
