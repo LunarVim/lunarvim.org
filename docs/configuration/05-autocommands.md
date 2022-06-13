@@ -4,7 +4,7 @@ To set up autocommands use the native nvim api `vim.api.nvim_create_autocmd` or 
 Autocommands are defined in the form
 ```lua
 lvim.autocmds = {
-    "BufEnter",
+    "BufEnter", -- see `:h autocmd-events`
       pattern = { "*.json", "*.jsonc" },
       command = "setlocal wrap",
     },
