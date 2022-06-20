@@ -9,8 +9,6 @@ lvim.autocmds = {
           command = "setlocal wrap", 
       }
     },
-  },
-}
 ```
 This will run a command at a given event for the given filetype.
 
@@ -26,14 +24,15 @@ You can also add lua callbacks
 
 ```lua
 lvim.autocommands = {
-  {
-  "BufWinEnter", {
-  pattern = { "*.cpp", "*.hpp" },
-  callback = function()
-    -- DYI editorconfig
-    if vim.loop.cwd() == "path/to/my/project" then
-      vim.cmd [[setlocal tabstop=8 shiftwidth=8]]
-    end
-  end},
+    {
+    "BufWinEnter", {
+    pattern = { "*.cpp", "*.hpp" },
+    callback = function()
+      -- DYI editorconfig
+      if vim.loop.cwd() == "path/to/my/project" then
+        vim.cmd [[setlocal tabstop=8 shiftwidth=8]]
+      end
+    end},
+  }
 }
 ```
