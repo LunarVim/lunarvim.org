@@ -4,11 +4,15 @@
 
 You can add your own snippets to LunarVim.
 
+Custom snippets can be defined as json or lua.
+
+### json version
+
 First create a folder : `~/.config/snippets/` next to your `config.lua`
 
 Then in there you need at least 2 files.
 
-The first describes where your snippets are :
+The first file describes where your snippets are :
 
 `package.json` :
 
@@ -47,3 +51,5 @@ For each language, create a file like this :
 ```
 
 You should be able to expand `hello` into `print("Hello, World!")`
+
+## TODO : lua version
