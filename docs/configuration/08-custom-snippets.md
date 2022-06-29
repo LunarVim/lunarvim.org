@@ -39,7 +39,7 @@ For each language, create a file like this :
   "hello": {
     "prefix": "hello",
     "body": [
-      "print("Hello, World!")
+      "print('Hello, World!')"
     ],
     "description": "print Hello, World!"
   }
