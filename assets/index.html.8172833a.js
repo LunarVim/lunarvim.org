@@ -1,0 +1,1 @@
+const a={key:"v-84715046",path:"/sponsors/",title:"Thank You!",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:16273596e5,contributors:[{name:"Chris",email:"chris@macbook.local",commits:1},{name:"christianchiarulli",email:"chrisatmachine@gmail.com",commits:1}]},filePathRelative:"sponsors/README.md"};export{a as data};

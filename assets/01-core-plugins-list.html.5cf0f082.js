@@ -1,0 +1,1 @@
+const t={key:"v-5b553624",path:"/plugins/01-core-plugins-list.html",title:"Core Plugins List",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1650109278e3,contributors:[{name:"kylo252",email:"59826753+kylo252@users.noreply.github.com",commits:2}]},filePathRelative:"plugins/01-core-plugins-list.md"};export{t as data};

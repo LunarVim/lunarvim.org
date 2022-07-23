@@ -1,0 +1,1 @@
+const o={key:"v-3b81d9ca",path:"/sponsors/01-donate.html",title:"How to Donate",lang:"en-US",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1637937786e3,contributors:[{name:"Chris",email:"chris@macbook.local",commits:1},{name:"Gonzalo Serrano",email:"boikot@gmail.com",commits:1}]},filePathRelative:"sponsors/01-donate.md"};export{o as data};
