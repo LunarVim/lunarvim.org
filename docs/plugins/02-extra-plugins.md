@@ -276,7 +276,6 @@ Every plugin that works with Neovim works with LunarVim, here are some examples 
 ```lua
 {
   "windwp/nvim-ts-autotag",
-  event = "InsertEnter",
   config = function()
     require("nvim-ts-autotag").setup()
   end,
@@ -351,6 +350,21 @@ lvim.builtin.treesitter.rainbow.enable = true
 
 ## Telescope Extensions
 
+### How to install telescope extensions
+
+First **add your telescope extension to the list of plugins** as usual (`lvim.plugins = { ... }`) following the extension instructions.
+There are several ways to register extensions within telescope, but the safer is using the `on_config_done` callback for telescope.
+Create the callback function anywhere in your `config.lua`. This function will be called when telescope has finished loading and will get telescope as its only parameter.
+Finally, within the `on_config_done` callback register your extension :
+
+```lua
+lvim.builtin.telescope.on_config_done = function(telescope)
+  pcall(telescope.load_extension, "frecency")
+  pcall(telescope.load_extension, "neoclip")
+  -- any other extensions loading
+end
+```
+
 ### [telescope-fzy-native.nvim](https://github.com/nvim-telescope/telescope-fzy-native.nvim)
 
 **fzy style sorter that is compiled**
@@ -408,7 +422,7 @@ lvim.builtin.treesitter.rainbow.enable = true
 {
   "norcalli/nvim-colorizer.lua",
     config = function()
-      require("colorizer").setup({ "*" }, {
+      require("colorizer").setup({ "css", "scss", "html", "javascript" }, {
           RGB = true, -- #RGB hex codes
           RRGGBB = true, -- #RRGGBB hex codes
           RRGGBBAA = true, -- #RRGGBBAA hex codes
@@ -483,10 +497,8 @@ lvim.builtin.treesitter.rainbow.enable = true
 {
   "ray-x/lsp_signature.nvim",
   event = "BufRead",
-  config = function()
-    require "lsp_signature".setup()
-  end
-}
+  config = function() require"lsp_signature".on_attach() end,
+},
 ```
 
 ### [symbols-outline.nvim](https://github.com/simrat39/symbols-outline.nvim)
@@ -550,6 +562,36 @@ lvim.builtin.which_key.mappings["t"] = {
   cmd = "Codi",
 },
 ```
+
+### [copilot.lua](https://github.com/zbirenbaum/copilot.lua) and [copilot-cmp](https://github.com/zbirenbaum/copilot-cmp)
+
+**let a computer write code for you**
+
+You need to authenticate according to [the instructions](https://github.com/zbirenbaum/copilot.lua#preliminary-steps).
+
+```lua
+lvim.plugins = {
+  { "zbirenbaum/copilot.lua",
+    event = { "VimEnter" },
+    config = function()
+      vim.defer_fn(function()
+        require("copilot").setup {
+	        plugin_manager_path = get_runtime_dir() .. "/site/pack/packer",
+        }
+      end, 100)
+    end,
+  },
+
+  { "zbirenbaum/copilot-cmp",
+    after = { "copilot.lua", "nvim-cmp" },
+  },  
+  ...
+}
+
+-- Can not be placed into the config method of the plugins.
+lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
+table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
+``` 
 
 ### [dial.nvim](https://github.com/monaqa/dial.nvim)
 
@@ -779,7 +821,7 @@ Also define keybindings in your `config.lua`
 ```lua
 {
   "tpope/vim-surround",
-  keys = {"c", "d", "y"}
+  
   -- make sure to change the value of `timeoutlen` if it's not triggering correctly, see https://github.com/tpope/vim-surround/issues/117
   -- setup = function()
     --  vim.o.timeoutlen = 500
