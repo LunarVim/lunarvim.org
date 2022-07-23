@@ -2,8 +2,8 @@
 
 ## Prerequisites
 
-- Make sure you have installed the latest version of [`Neovim 0.5`](https://github.com/neovim/neovim/releases/tag/v0.6.1).
-- Have `npm`, `node` and `cargo` installed on your system.
+- Make sure you have installed the latest version of [`Neovim v0.7.2+`](https://github.com/neovim/neovim/releases/latest).
+- Have `git`, `make`, `pip`, `npm`, `node` and `cargo` installed on your system.
 - [Resolve `EACCES` permissions when installing packages globally](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) to avoid error when installing packages with npm.
 
 # Install
@@ -81,6 +81,40 @@ enabled = false
 appendWindowsPath = false
 ```
 Reference: [WSL automount settings](https://docs.microsoft.com/en-us/windows/wsl/wsl-config#automount-settings)
+
+## Tips for Neovide users
+In order to use lunarvim with [Neovide](https://github.com/neovide/neovide) you need to add the following line to your `config.lua`
+
+```lua
+vim.o.guifont = "Your font name"
+```
+
+Where `Your Font Name` is the literal name of the font you want to use. For example `"Inconsolata Nerd Font"`.
+You will also need to export the right environment variables and call neovide with the apropriate parameters. An easy way to achieve this is to create a little executable script like, for example `~/.local/bin/lvim-gui`
+
+```bash
+#!/bin/sh
+# ~/.local/bin/lvim-gui
+export LUNARVIM_RUNTIME_DIR="${LUNARVIM_RUNTIME_DIR:-"$HOME/.local/share/lunarvim"}"
+export LUNARVIM_CONFIG_DIR="${LUNARVIM_CONFIG_DIR:-"$HOME/.config/lvim"}"
+export LUNARVIM_CACHE_DIR="${LUNARVIM_CACHE_DIR:-"$HOME/.cache/lvim"}"
+
+exec neovide -- -u "$LUNARVIM_RUNTIME_DIR/lvim/init.lua" "$@"
+```
+
+Then give it the proper execution permissions 
+
+```bash
+chmod +x ~/.local/bin/lvim-gui
+```
+
+And you can launch from now on like this:
+
+```bash
+lvim-gui
+# or with params
+lvim-gui some-file
+```
 
 ## Uninstall
 
