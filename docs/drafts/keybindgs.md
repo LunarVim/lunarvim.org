@@ -3,17 +3,21 @@
 ## Python
 
 ```lua
-lvim.autocommands.custom_groups = {
+lvim.autocommands = {
   {
     "Filetype",
-    "python",
-    "nnoremap <leader>r <cmd>lua require('core.terminal')._exec_toggle('python " .. vim.fn.expand "%" .. ";read')<CR>",
+    {
+      pattern = "python",
+      command = "nnoremap <leader>r <cmd>lua require('toggleterm.terminal').Terminal:new {cmd='python ' .. vim.fn.expand('%') .. ';read', hidden =false}:toggle()<CR>",
+    },
   },
   {
     "Filetype",
-    "python",
-    "nnoremap <leader>t <cmd>lua require('toggleterm.terminal').Terminal:new {cmd='python -m unittest;read', hidden =false}:toggle()<CR>",
-  },
+    {
+      pattern = "python",
+      command = "nnoremap <leader>t <cmd>lua require('toggleterm.terminal').Terminal:new {cmd='python -m unittest;read', hidden =false}:toggle()<CR>",
+    },
+  }
 }
 lvim.builtin.which_key.mappings["r"] = "Run"
 lvim.builtin.which_key.mappings["t"] = "Test"
