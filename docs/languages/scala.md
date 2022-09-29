@@ -53,9 +53,9 @@ lvim.plugins = {
     },
 }
 
-vim.api.nvim_create_autocmd("BufEnter", {
-  pattern = { "*.scala", "*.sbt" },
-  command = "lua require('user.metals').config()"
+vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+  pattern = { "*.scala", "*.sbt", "*.sc" },
+  callback = function() require('user.metals').config() end,
 })
 ```
 When you open the first scala file, you should run `:MetalsInstall` in order to complete the plugin instalation.
