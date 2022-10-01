@@ -106,6 +106,23 @@ lvim-gui
 lvim-gui some-file
 ```
 
+If you use macOS and installed neovide through the .dmg, to open Neovide with LunarVim, run these commands:
+
+```bash
+cd /Applications/Neovide.app/Contents/MacOS
+cp neovide neovide-original
+cat << EOF > neovide
+#!/bin/sh
+
+export LUNARVIM_RUNTIME_DIR="${LUNARVIM_RUNTIME_DIR:-"$HOME/.local/share/lunarvim"}"
+export LUNARVIM_CONFIG_DIR="${LUNARVIM_CONFIG_DIR:-"$HOME/.config/lvim"}"
+export LUNARVIM_CACHE_DIR="${LUNARVIM_CACHE_DIR:-"$HOME/.cache/lvim"}"
+
+exec /Applications/Neovide.app/Contents/MacOS/neovide-original -- -u "$LUNARVIM_RUNTIME_DIR/lvim/init.lua" "$@"
+EOF
+```
+
+
 ## Uninstall
 
 You can remove LunarVim (including the configuration files) using the bundled `uninstall` script
