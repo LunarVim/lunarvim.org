@@ -57,12 +57,12 @@ const config = {
   customFields: {
     primaryCTA: {
       text: "Install",
-      to: "/docs/installation",
+      to: "docs/installation",
     },
    // secondary all to action optional
     secondaryCTA: {
       text:"Support" ,
-      to: "/docs/sponsors/donate",
+      to: "docs/sponsors/donate",
     },
     heroImage: {
       src: "/img/lunarvim_logo.png",
@@ -94,6 +94,10 @@ const config = {
           {
             href: 'https://github.com/lunarvim/lunarvim',
             label: 'GitHub',
+            position: 'right',
+          },
+          {
+            type: 'localeDropdown',
             position: 'right',
           },
         ],

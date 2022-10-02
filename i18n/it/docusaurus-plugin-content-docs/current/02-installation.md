@@ -107,7 +107,7 @@ E d'ora in poi potrai lanciare in questo modo:
 
 ```bash
 lvim-gui
-# or with params
+# o con parametri
 lvim-gui some-file
 ```
 
