@@ -1,5 +1,10 @@
 name: Check Spelling
-on: [push, pull_request]
+on:
+  pull_request_target:
+  push:
+    branches: ["**"]
+    tags-ignore: ["**"]
+
 jobs:
   spelling:
     name: Check Spelling
@@ -18,13 +23,24 @@ jobs:
     steps:
     - name: check-spelling
       id: spelling
-      uses: check-spelling/check-spelling@main
+      uses: check-spelling/check-spelling@v0.0.20
       with:
+        config: .github/actions/spelling
         suppress_push_for_open_pull_request: 1
         checkout: true
-        spell_check_this: check-spelling/spell-check-this@prerelease
         post_comment: 0
-        experimental_apply_changes_via_bot: 1
+        dictionary_source_prefixes: '{"cspell": "https://raw.githubusercontent.com/streetsidesoftware/cspell-dicts/main/dictionaries/"}'
+        extra_dictionaries:
+          cspell:filetypes/filetypes.txt
+          cspell:html/src/html.txt
+          cspell:css/css.txt
+          cspell:lua/lua.txt
+          cspell:node/node.txt
+          cpell:markdown/markdown.txt
+          cspell:de_DE/src/German_de_DE.dic
+          cspell:de_CH/src/hunspell/index.dic
+          cspell:nl_NL/src/hunspell/index.dic
+        check_extra_dictionaries: ''
 
   comment:
     name: Report
@@ -39,28 +55,6 @@ jobs:
       uses: check-spelling/check-spelling@main
       with:
         checkout: true
-        spell_check_this: check-spelling/spell-check-this@prerelease
+        spell_check_this: check-spelling/spell-check-this@v0.0.20
         task: ${{ needs.spelling.outputs.followup }}
         experimental_apply_changes_via_bot: 1
-
-  update:
-    name: Update PR
-    permissions:
-      contents: write
-      pull-requests: write
-    runs-on: ubuntu-latest
-    if: ${{
-        github.event_name == 'issue_comment' &&
-        github.event.issue.pull_request &&
-        contains(github.event.comment.body, '@check-spelling-bot apply')
-      }}
-    concurrency:
-      group: spelling-update-${{ github.event.issue.number }}
-      cancel-in-progress: false
-    steps:
-    - name: apply spelling updates
-      uses: check-spelling/check-spelling@main
-      with:
-        experimental_apply_changes_via_bot: 1
-        checkout: true
-        ssh_key: "${{ secrets.CHECK_SPELLING }}"

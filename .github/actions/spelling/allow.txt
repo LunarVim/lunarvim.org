@@ -1,6 +1,7 @@
 AUR
 BUILTINS
 Bsplit
+Blog
 CMAKE
 DYI
 Drv
@@ -21,6 +22,7 @@ WSL
 Website
 YAML
 automount
+blog
 config
 crlf
 eacces
@@ -91,6 +93,7 @@ toml
 tsx
 ubuntu
 url
+voll
 vsplit
 website
 wiki
