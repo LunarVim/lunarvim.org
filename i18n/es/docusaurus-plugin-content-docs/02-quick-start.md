@@ -20,7 +20,6 @@ No se admiten todos los idiomas. Para obtener una lista de los idiomas admitidos
 
 ## Servidor de Lenguajes
 
-To install a Language Server for your language:
 Para instalar un servidor de lenguaje para para su lenguaje
 
 ```vim
@@ -37,8 +36,6 @@ Esto deben instalarse / configurarse por separados.
 Ver [lenguajes](./languages/README.md) donde se puede abordar cada idioma con su formateo y rodado.
 
 ## Fuentes Nerd
-
-Installing a [nerd font](https://www.nerdfonts.com/) is recommended. Otherwise some symbols won't be rendered properly. For more information go to the [configuration section ](./configuration/04-nerd-fonts.md).
 
 Se recomienda instalar una [ nerd font](https://www.nerdfonts.com/). De lo contrario, algunos símbolos no se representarán correctamente. Para obtener más información, vaya a la [sección de configuración](./configuration/04-nerd-fonts.md).
 
