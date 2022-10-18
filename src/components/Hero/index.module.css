@@ -27,6 +27,8 @@
 
 .heroContent {
   flex: .45;
+  width: 100%;
+  max-width: 28rem;
 }
 
 .heroImage {
@@ -52,6 +54,50 @@
   width: 100%;
 }
 
+.slogan::after {
+  content: " ▋";
+  animation: cursor-blink 2s linear infinite;
+}
+
+@keyframes cursor-blink {
+  50%{
+    opacity: 0;
+  }
+}
+
+.toggleAnimations {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  z-index: 3;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
+  --size: 3rem;
+  width: var(--size);
+  size: var(--size);
+  opacity: .45;
+  transition: opacity 300ms ease-in-out;
+}
+
+.toggleAnimations:active,
+.toggleAnimations:hover {
+  opacity: 1;
+}
+
+.toggleAnimations > svg {
+  width: 100%;
+  height: 100%;
+}
+
+.toggleAnimations > svg path {
+  fill: var(--primary-fg);
+}
+.toggleAnimations > svg circle {
+  stroke: var(--primary-fg);
+}
+
+
 @media screen and (min-width: 996px) {
   .heroTitle {
     display: flex;
@@ -68,5 +114,8 @@
   }
   .heroImage > img {
     max-width: max-content;
+  }
+  .heroContent {
+    max-width: unset;
   }
 }

@@ -3,17 +3,18 @@
 
 /* const lightCodeTheme = require('prism-react-renderer/themes/github'); */
 /* const darkCodeTheme = require('prism-react-renderer/themes/dracula'); */
-const codeTheme = require("./src/themes/code-theme");
+const codeTheme = require("./src/theme/code-theme");
+const socials = require("./socials");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "LunarVim",
-  tagline: "Cool Slogan about LunarVim",
   url: "https://lunarvim.org",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/lunarvim_icon.png",
+  trailingSlash: false,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -50,14 +51,14 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/lunarvim/lunarvim.org/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/LunarVim/lunarvim.org/tree/master/",
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            "https://github.com/lunarvim/lunarvim.org/tree/main/packages/create-docusaurus/templates/shared/",
+            "https://github.com/LunarVim/lunarvim.org/tree/master/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -67,14 +68,23 @@ const config = {
   ],
 
   customFields: {
+    taglineList: [
+      "Interstellar Developement Experience",
+      "Neovim in <Space>",
+      "Houston, how do I exit?",
+      "A community driven IDE for Neovim",
+      "The Neovim config from another world",
+      "The IDE that's too cool for planet Earth",
+      "A stellar Neovim experience",
+    ],
     primaryCTA: {
       text: "Install",
       to: "docs/installation",
     },
-    // secondary all to action optional
+    // secondary call to action is optional
     secondaryCTA: {
       text: "Support",
-      to: "/docs/sponsors/donate",
+      to: "/donate",
     },
     heroImage: {
       src: "/img/lunarvim_logo.png",
@@ -121,6 +131,10 @@ const config = {
         title: "Neovim from Scratch",
       },
     ],
+    Contributors: {
+      owner: "LunarVim",
+      repos: ["LunarVim", "lunarvim.org", "starter.lvim",],
+    },
   },
 
   themeConfig:
@@ -140,47 +154,17 @@ const config = {
         items: [
           {
             type: "doc",
-            docId: "introduction",
+            docId: "installation",
             position: "left",
             label: "Docs",
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            type: "doc",
             position: "left",
-            docId: "sponsors/donate",
+            to: "/donate",
             label: "Donate",
           },
-          {
-            href: "https://twitter.com/chrisatmachine",
-            position: "right",
-            className: "navbar-icon navbar-icon-twitter",
-          },
-          {
-            href: "https://www.reddit.com/r/lunarvim/",
-            position: "right",
-            className: "navbar-icon navbar-icon-reddit",
-          },
-          {
-            href: "https://www.youtube.com/channel/UCS97tchJDq17Qms3cux8wcA",
-            position: "right",
-            className: "navbar-icon navbar-icon-youtube",
-          },
-          {
-            href: "https://matrix.to/#/#the-machine:matrix.org",
-            position: "right",
-            className: "navbar-icon navbar-icon-matrix",
-          },
-          {
-            href: "https://discord.gg/Xb9B4Ny",
-            position: "right",
-            className: "navbar-icon navbar-icon-discord",
-          },
-          {
-            href: "https://github.com/lunarvim/lunarvim",
-            position: "right",
-            className: "navbar-icon navbar-icon-github",
-          },
+          ...socials,
           {
             type: "localeDropdown",
             position: "right",
@@ -194,8 +178,27 @@ const config = {
       prism: {
         theme: codeTheme,
         darkTheme: codeTheme,
+        additionalLanguages: [
+          "lua",
+          "markup",
+          "javascript",
+          "css",
+          "bash",
+          "powershell",
+          "python",
+        ],
       },
     }),
+  plugins: [
+    [
+      "./plugins/asciinema",
+      {
+        casts_folder: "static/casts",
+        font_name: "glyphs.ttf",
+        source_font: "src/theme/fura_code_nerd.ttf",
+      },
+    ],
+  ],
 };
 
 module.exports = config;

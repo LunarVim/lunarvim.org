@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AnimationsContext } from "../../hooks/useAnimations";
 import styles from "./styles.module.css";
 
 //get random number between min and max
@@ -7,13 +8,13 @@ const randomNumber = (min, max) => {
 };
 
 const STAR_SIZES = [1, 1, 2, 3, 4]; // in px
-const STARS_COUNT = 75;
-const FALLING_STARS_COUNT = randomNumber(3, 4);
 
-const Stars = ({ children }) => (
-  <div className={styles.starsContainer}>
+const Stars = ({ children, starsCount = 75, FALLING_STARS_COUNT = 0 }) => {
+  const { animate } = useContext(AnimationsContext);
+
+  return <div className={styles.starsContainer}>
     {/* generating array with length = STARS_COUNT */}
-    {[...Array(STARS_COUNT)].map((_, i) => {
+    { animate ? [...Array(starsCount)].map((_, i) => {
       /* random and size */
       const size = STAR_SIZES[Math.round(Math.random() * STAR_SIZES.length)];
 
@@ -31,9 +32,9 @@ const Stars = ({ children }) => (
           }}
         />
       );
-    })}
+    }) : null}
     {/* generating array with length = FALLING_STARS_COUNT */}
-    {[...Array(FALLING_STARS_COUNT)].map((_, i) => (
+    { animate ? [...Array(FALLING_STARS_COUNT)].map((_, i) => (
       <div
         key={i}
         className={styles.fallingStar}
@@ -44,9 +45,9 @@ const Stars = ({ children }) => (
           animationDuration: `${randomNumber(10, 20)}s`,
         }}
       />
-    ))}
+    )) : null }
     {children}
   </div>
-);
+};
 
 export default Stars;

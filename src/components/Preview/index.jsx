@@ -5,13 +5,9 @@ import styles from "./styles.module.css";
 import Clouds from "../Clouds/";
 
 const Preview = () => {
-  const {
-    siteConfig: {
-      customFields: { previewImgs },
-    },
-  } = useDocusaurusContext();
+  const { siteConfig: { customFields: { previewImgs } } } = useDocusaurusContext();
 
-  const [previewIdx, setPreviewIdx] = useState(0);
+  const [previewIdx, setPreviewIdx] = useState(1);
   const imgsCount = previewImgs.length;
 
   const nextImg = () => {
@@ -50,12 +46,8 @@ const Preview = () => {
             />
           ))}
         </div>
-        <button className={`${styles.btn} ${styles.prev}`} onClick={prevImg}>
-          <Arrow />
-        </button>
-        <button className={`${styles.btn} ${styles.next}`} onClick={nextImg}>
-          <Arrow />
-        </button>
+        <button className={`${styles.btn} ${styles.prev}`} onClick={prevImg}> <Arrow /> </button>
+        <button className={`${styles.btn} ${styles.next}`} onClick={nextImg}> <Arrow /> </button>
       </div>
     </Clouds>
   );
