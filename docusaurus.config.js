@@ -75,7 +75,7 @@ const config = {
       "The Neovim config from another world",
       "The IDE that's too cool for planet Earth",
       "A stellar Neovim experience",
-      "The world's most lightweight IDE",
+      "The universe's most lightweight IDE",
       "No-Config Neovim",
       "Support for +10 Languages"
     ],
