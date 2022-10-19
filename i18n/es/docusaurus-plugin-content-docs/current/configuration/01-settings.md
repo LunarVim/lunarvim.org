@@ -11,8 +11,8 @@ vim.opt.{option}
 ```lua
 vim.opt.backup = false -- crea una copia de respaldo
 vim.opt.clipboard = "unnamedplus" -- permite a neovim tener acceso al portapapeles del sistema
-vim.opt.cmdheight = 2 -- más espacio en la linea de comandos de neovim para mostrar mensajes
-vim.opt.colorcolumn = "99999" -- arregla la linea de identación por ahora
+vim.opt.cmdheight = 2 -- más espacio en la línea de comandos de neovim para mostrar mensajes
+vim.opt.colorcolumn = "99999" -- arregla la línea de identación por ahora
 vim.opt.completeopt = { "menuone", "noselect" }
 vim.opt.conceallevel = 0 -- para que `` sea visible en los archivos de markdown
 vim.opt.fileencoding = "utf-8" -- la codificación escrita a un archivo
@@ -42,15 +42,15 @@ vim.opt.writebackup = false -- si un archivo se comienza a editar por otro progr
 vim.opt.expandtab = true -- convierte tabs a espacios
 vim.opt.shiftwidth = 2 -- el numero de espacios que se agregan en una identación
 vim.opt.tabstop = 2 -- inserta 2 espacios por cada tab 
-vim.opt.cursorline = true -- resalta la linea actual
-vim.opt.number = true -- activa las lineas enumeradas
-vim.opt.relativenumber = false -- activa los numeros relativos a la linea actual
+vim.opt.cursorline = true -- resalta la línea actual
+vim.opt.number = true -- activa las líneas enumeradas
+vim.opt.relativenumber = false -- activa los numeros relativos a la línea actual
 vim.opt.numberwidth = 4 -- establece el ancho de una columna a 4
-vim.opt.signcolumn = "yes" -- siempre muestra el signo de la columna, de lo contrario, cambiaria el texto en cada linea
-vim.opt.wrap = false -- muestra las lineas como una sola linea larga
+vim.opt.signcolumn = "yes" -- siempre muestra el signo de la columna, de lo contrario, cambiaría el texto en cada línea
+vim.opt.wrap = false -- muestra las líneas como una sola línea larga
 vim.opt.spell = false
 vim.opt.spelllang = "es" -- importante para editar escritos en español
-vim.opt.scrolloff = 8 -- cambia la cantidad de lineas del scroll
+vim.opt.scrolloff = 8 -- cambia la cantidad de líneas del scroll
 vim.opt.sidescrolloff = 8
 ```
 
