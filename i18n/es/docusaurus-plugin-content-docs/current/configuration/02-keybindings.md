@@ -1,15 +1,15 @@
 # Mapeo de teclas
 
-Usa `<Leader>Lk` para ver los mapeos de teclas en Lunarvim.
+Usa `<Leader>Lk` para ver los mapeos de teclas en LunarVim.
 
-Para modificar un mapeo de tecla en Lunarvim.
+Para modificar un mapeo de tecla en LunarVim.
 
 ```lua
   -- X cierra un buffer
   lvim.keys.normal_mode["<S-x>"] = ":BufferClose<CR>"
 ```
 
-Para eliminar mapeos de teclas establecidas en Lunarvim.
+Para eliminar mapeos de teclas establecidas en LunarVim.
 
 ```lua
   lvim.keys.normal_mode["<C-h>"] = false
@@ -19,7 +19,7 @@ Para eliminar mapeos de teclas establecidas en Lunarvim.
 ```
 
 ### Mostrando que está mapeado
-Usa `<Leader>Lk` para ver los mapeos de teclas en Lunarvim.
+Usa `<Leader>Lk` para ver los mapeos de teclas en LunarVim.
 
 Para verificar si una tecla en particular ya ha sido mapeada:
 

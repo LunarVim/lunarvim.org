@@ -1,6 +1,6 @@
 # Configuraciones Generales
 
-Para establecer las opciones usa
+Para establecer las opciones usa.
 
 ```lua
 vim.opt.{option}
