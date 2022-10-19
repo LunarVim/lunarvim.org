@@ -26,7 +26,7 @@ todas las nuevas características con todos los nuevos errores:
 LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)
 ```
 
-Asegúrate de comprobar la sección de [troubleshooting](./troubleshooting/README.md) Si encuentras algún problema.
+Asegúrate de comprobar la sección de [troubleshooting](./troubleshooting/) Si encuentras algún problema.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NlRxRtGpHHk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>
 

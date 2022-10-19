@@ -33,14 +33,14 @@ Algunas veces el servidor de lenguaje no tendrá un nombre obvio para el suyo. P
 Formateo y Linting no son compatibles con algunos LSP de forma predeterminada.
 Esto deben instalarse / configurarse por separados.
 
-Ver [lenguajes](./languages/README.md) donde se puede abordar cada idioma con su formateo y rodado.
+Ver [lenguajes](./languages/) donde se puede abordar cada idioma con su formateo y rodado.
 
 ## Fuentes Nerd
 
-Se recomienda instalar una [ nerd font](https://www.nerdfonts.com/). De lo contrario, algunos símbolos no se representarán correctamente. Para obtener más información, vaya a la [sección de configuración](./configuration/04-nerd-fonts.md).
+Se recomienda instalar una [ nerd font](https://www.nerdfonts.com/). De lo contrario, algunos símbolos no se representarán correctamente. Para obtener más información, vaya a la [sección de configuración](./configuration/nerd-fonts).
 
 ## Siguientes Pasos
 
-- Aprenda como [configurar LunarVim](./configuration/README.md)
-- Más información sobre los [plugins instalados](./plugins/README.md)
-- Aprenda a configurar LunarVim para su [lenguaje](./languages/README.md)
+- Aprenda como [configurar LunarVim](./configuration/)
+- Más información sobre los [plugins instalados](./plugins/)
+- Aprenda a configurar LunarVim para su [lenguaje](./languages/)
