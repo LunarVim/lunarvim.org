@@ -7,8 +7,8 @@
 
 ## No se puede ejecutar `lvim`.
 
-Asegúrese de que `lvim` está disponible y es ejecutable en su path.
-Puede comprobar los resultados de estos comandos para verificar eso
+Asegúrese de que `lvim` está disponible y es ejecutable en tu path.
+Puedes comprobar los resultados de estos comandos para verificar eso
 
 ```shell
 which lvim
@@ -83,7 +83,7 @@ Consulte [fish-shell/fish-shell#7004](https://github.com/fish-shell/fish-shell/i
 
 ### Actualice node
 
-Algunos servidores de lenguaje dependen de versiones más recientes de node. Actualice su versión de node a la más reciente.
+Algunos servidores de lenguaje dependen de versiones más recientes de node. Actualiza tu versión de node a la más reciente.
 
 ### ¿Se anula?
 
