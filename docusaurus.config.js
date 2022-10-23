@@ -27,7 +27,7 @@ const config = {
   i18n: {
 
     defaultLocale: "en",
-    locales: ["en", "de", "it"],
+    locales: ["en", "de", "es", "it"],
     localeConfigs: {
       en: {
         label: "English",
@@ -37,6 +37,9 @@ const config = {
       },
       it: {
         label: "Italiano",
+      }
+      es: {
+        label: "Español",
       },
     },
   },
@@ -197,6 +200,17 @@ const config = {
         font_name: "glyphs.ttf",
         source_font: "src/theme/fura_code_nerd.ttf",
       },
+    ],
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      ({
+        hashed: true,
+        language: ["en", "es", "de"],
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: false,
+        explicitSearchResultPath: true
+      }),
     ],
   ],
 };
