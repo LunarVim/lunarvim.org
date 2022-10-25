@@ -16,6 +16,13 @@ No alarms and No surprises:
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 ```
 
+For Windows:
+```powershell
+iwr -useb https://raw.githubusercontent.com/LunarVim/LunarVim/master/utils/installer/install.ps1 | ni install.ps1
+
+powershell -ExecutionPolicy Unrestricted .\install.ps1
+```
+
 ## Nightly
 
 (Neovim 0.9.0)
