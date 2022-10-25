@@ -18,9 +18,7 @@ bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/
 
 For Windows:
 ```powershell
-iwr -useb https://raw.githubusercontent.com/LunarVim/LunarVim/master/utils/installer/install.ps1 | ni install.ps1
-
-powershell -ExecutionPolicy Unrestricted .\install.ps1
+Invoke-WebRequest https://raw.githubusercontent.com/LunarVim/LunarVim/master/utils/installer/install.ps1 -UseBasicParsing | Invoke-Expression
 ```
 
 ## Nightly
