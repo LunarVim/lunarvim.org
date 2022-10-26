@@ -45,12 +45,9 @@ Add the following to your `config.lua`
 
 ```lua
 lvim.plugins = {
-    {
-      "scalameta/nvim-metals",
-      config = function()
-        require("user.metals").config()
-      end,
-    },
+  {
+    "scalameta/nvim-metals",
+  },
 }
 
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
