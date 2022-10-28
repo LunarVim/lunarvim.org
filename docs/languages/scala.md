@@ -35,7 +35,12 @@ M.config = function()
     excludedPackages = {},
   }
   metals_config.init_options.statusBarProvider = false
-  require("metals").initialize_or_attach { metals_config }
+  require("metals").initialize_or_attach(metals_config)
+  vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
+    pattern = { "*.scala", "*.sbt", "*.sc" },
+    callback = function() require("metals").initialize_or_attach(config) end,
+  })
+  require("metals").setup_dap()
 end
 
 return M
@@ -53,12 +58,32 @@ lvim.plugins = {
     },
 }
 
-vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
-  pattern = { "*.scala", "*.sbt", "*.sc" },
-  callback = function() require('user.metals').config() end,
-})
+dap.configurations.scala = {
+  {
+    type = "scala",
+    request = "launch",
+    name = "Run or Test Target",
+    metals = {
+      runType = "runOrTestFile",
+    },
+  },
+  {
+    type = "scala",
+    request = "launch",
+    name = "Test Target",
+    metals = {
+      runType = "testTarget",
+    },
+  },
+}
 ```
 When you open the first scala file, you should run `:MetalsInstall` in order to complete the plugin installation.
+
+To debug scala program, make sure that dap is activated:
+```
+lvim.builtin.dap.active = true
+```
+Any Lunarvim builtin debug commands, which could be displayed by pressing `<leader> d`, is supported.
 
 ## Supported formatters
 
