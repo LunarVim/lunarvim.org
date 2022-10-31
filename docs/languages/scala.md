@@ -36,7 +36,6 @@ M.config = function()
     lvim_lsp.common_on_attach(client, bufnr)
     require("metals").setup_dap()
   end
-  metals_config.init_options.statusBarProvider = false
   metals_config.settings = {
     superMethodLensesEnabled = true,
     showImplicitArguments = true,
@@ -44,6 +43,7 @@ M.config = function()
     showImplicitConversionsAndClasses = true,
     excludedPackages = {},
   }
+  metals_config.init_options.statusBarProvider = false
   vim.api.nvim_create_autocmd("FileType", {
     pattern = { "scala", "sbt", "java" },
     callback = function() require("metals").initialize_or_attach(metals_config) end,
