@@ -9,7 +9,7 @@
 ## Supported language servers
 
 ```lua
-java = { "jdtls" }
+{ "jdtls" }
 ```
 
 jdtls is installed automatically once you open a `.java` file.
@@ -22,7 +22,11 @@ jdtls requires **jdk-17 or newer** to run.
 
 ## Supported formatters
 
-The Java language server (jdtls) supports formatting, and it is enabled by default. It is possible to fine-tune its formatting rules, but it is also possible to use a different formatter. When such a formatter is used, jdtls formatting will be disabled to avoid conflict.
+```lua
+{ "astyle", "clang_format", "google_java_format", "npm_groovy_lint", "uncrustify" }
+```
+
+The Java language server (jdtls) also supports formatting, and it is enabled by default. It is possible to fine-tune its formatting rules, but it is also possible to use a different formatter from the above list. When such a formatter is used, jdtls formatting will be disabled to avoid conflict.
 
 ### jdtls
 
@@ -123,6 +127,12 @@ formatters.setup {
     extra_args = { "-c", "path/to/your.cfg" },
   }
 }
+```
+
+## Supported linters
+
+```lua
+{ "checkstyle", "pmd", "semgrep" }
 ```
 
 ## Advanced configuration
