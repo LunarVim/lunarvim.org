@@ -161,6 +161,9 @@ Every plugin that works with Neovim works with LunarVim, here are some examples 
     vim.g.matchup_matchparen_offscreen = { method = "popup" }
   end,
 },
+
+-- enable treesitter integration
+lvim.builtin.treesitter.matchup.enable = true
 ```
 
 ### [nvim-window-picker](https://github.com/s1n7ax/nvim-window-picker)
