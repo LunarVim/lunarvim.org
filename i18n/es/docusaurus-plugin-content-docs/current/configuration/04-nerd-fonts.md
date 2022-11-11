@@ -14,7 +14,6 @@ Según el repositorio:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fR4ThXzhQYI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>
 
-
 ### Instalación fácil
 
 Visita [este repositorio](https://github.com/ronniedroid/getnf) donde encontrarás una forma sencilla de instalar nerd fonts.
