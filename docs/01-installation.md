@@ -2,7 +2,7 @@
 
 ## Try it first!
 
-If your are using Docker in your machine, you can run the following command to try LunarVim while keeping your existing Neovim configuration intact.
+If your are using Docker in your machine, you can run the following command to try a clean installation of LunarVim.
 
 ```bash
 docker run -w /root -it --rm alpine:edge sh -uelic '
