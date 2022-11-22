@@ -1,5 +1,13 @@
 # Keybindings
 
+## Leader Key
+
+The default leader key is `Space`. This can be changed with the following
+
+```lua
+lvim.leader = "space"
+```
+
 Use `<Leader>Lk` to view the keybindings set by Lunarvim.
 See the [keybind overview](../03-keybind-overview.md) for most commonly use keybinds
 
@@ -79,6 +87,7 @@ lvim.builtin.which_key.mappings["P"] = {
   "<cmd>lua require'telescope'.extensions.project.project{}<CR>", "Projects"
 }
 ```
+As stated above, the leader key included. So for the above example, the keybinding becomes `<leader>P`
 
 ### Removing a single mapping
 
@@ -87,7 +96,7 @@ Remove a single Whichkey keybind
 lvim.builtin.which_key.mappings['w'] = {}
 ```
 
-Adding a key to a existing submenu.
+Adding a key to an existing menu/submenu.
 
 ```lua
 lvim.builtin.which_key.mappings["tP"] = {
@@ -132,11 +141,3 @@ lvim.builtin.which_key.mappings = {
 }
 ```
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BdoizYjJHis" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>
-
-## Leader Key
-
-The default leader key is `Space`. This can be changed with the following
-
-```lua
-lvim.leader = "space"
-```
