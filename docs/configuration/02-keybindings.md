@@ -87,7 +87,7 @@ lvim.builtin.which_key.mappings["P"] = {
   "<cmd>lua require'telescope'.extensions.project.project{}<CR>", "Projects"
 }
 ```
-As stated above, the leader key included. So for the above example, the keybinding becomes `<leader>P`
+As stated above, the leader key is included. So for the above example, the keybinding becomes `<leader>P`
 
 ### Removing a single mapping
 
