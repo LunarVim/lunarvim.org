@@ -11,6 +11,9 @@ Also see:
 
 **TIP:** `<M>` is `alt` on Windows/Linux and `option` on MacOS
 
+**TIP:** Non-leader keybindings (for e.g. `<C-\>`, mentioned below and others) can be viewed
+by pressing `<backspace>` in the which-key main menu (first popup after pressing `<leader>`)
+
 ## Plugins
 
 | key                 | description                                                                              | mode   |
@@ -39,8 +42,8 @@ Also see:
 | ----------- | ----------------- | -------------- |
 | `<leader>/` | comment           | normal, visual |
 | `gb`        | block comment     | visual         |
-| `<A-k>`     | move line(s) up   | normal, visual |
-| `<A-j>`     | move line(s) down | normal, visual |
+| `<M-k>`     | move line(s) up   | normal, visual |
+| `<M-j>`     | move line(s) down | normal, visual |
 
 ## Completion
 
@@ -76,7 +79,9 @@ Also see:
 | `<leader>Lc` | edit config.lua           | normal |
 | `<leader>h`  | clear search highlighting | normal |
 | `<leader>sh` | search through `:help`    | normal |
+| `<leader>sr` | open recent files         | normal |
+| `<leader>pS` | list of installed plugins | normal |
 
 ## [nvimtree](https://github.com/nvim-tree/nvim-tree.lua) (side file explorer)
 
-`g?` show keybidings
+`g?` show keybindings
