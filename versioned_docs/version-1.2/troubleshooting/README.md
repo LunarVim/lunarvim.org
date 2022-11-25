@@ -26,14 +26,17 @@ bash utils/installer/install_bin.sh
 
 ### Cache issues
 
-This might be the result of old cache files that need to be reset. LunarVim makes use of  [impatients's](https://github.com/lewis6991/impatient.nvim) to optimize the startup procedure and deliver a snappy experience.
+This might be the result of old cache files that need to be reset. LunarVim makes use of  [impatient's](https://github.com/lewis6991/impatient.nvim) to optimize the startup procedure and deliver a snappy experience.
 
 1. while running LunarVim: `:LvimCacheReset`
 2. from the CLI: `lvim +LvimCacheReset`
 
 ### Plugin issue
 
-Another common reason for such errors is due to Packer being unable to fully restore a snapshot. This could be due to multiple reasons, but mostl commonly it's a breaking change in some plugin, or `git` refusing to pull an update to a plugin because it [can't safely fast-forward the current branch](https://blog.sffc.xyz/post/185195398930/why-you-should-use-git-pull-ff-only-git-is-a).
+Another common reason for such errors is due to Packer being unable to fully restore a snapshot.
+This could be due to multiple reasons, but most commonly it's a breaking change in some plugin,
+or `git` refusing to pull an update to a plugin because it 
+[can't safely fast-forward the current branch](https://blog.sffc.xyz/post/185195398930/why-you-should-use-git-pull-ff-only-git-is-a).
 
 The easiest way to solve this is to manually update (a rebase is likely required) the offending plugin, which should be located in [Packer's package-root](https://github.com/wbthomason/packer.nvim/blob/4dedd3b08f8c6e3f84afbce0c23b66320cd2a8f2/doc/packer.txt#L199) at `$LUNARVIM_RUNTIME_DIR/site/pack/packer`. 
 
@@ -134,7 +137,7 @@ vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "jsonls" })
 ## My LunarVim looks ugly!
 
 - Make sure that you have a terminal that supports 24-bit colors. If not, you might face some issues regarding the default colorscheme, and other colorschemes. 
-  - For a explainer on what 24-bit colors are, and to test if your terminal supports it, we like this usefull repository: https://github.com/termstandard/colors
+  - For a explainer on what 24-bit colors are, and to test if your terminal supports it, we like this useful repository: https://github.com/termstandard/colors
 
 - Another issue might be `termguicolors`. If this is the case, we advice you to look at the official neovim docs:
   - What is `termguicolors`? see <https://neovim.io/doc/user/options.html#'termguicolors'>

@@ -16,7 +16,7 @@ You may want to add this plugin to your config. It provides treesitter integrati
 
 ## Configure LunarVim
 
-The `angularls` server is overriden by default. So it needs to be [manually configured](./../languages/README.md#server-override).
+The `angularls` server is overridden by default. So it needs to be [manually configured](./../languages/README.md#server-override).
 
 ### Setup
 

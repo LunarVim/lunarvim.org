@@ -1,4 +1,4 @@
-# Keybind overvie
+# Keybind overview
 
 Here's an overview of the most commonly used mappings.
 It is not a complete list, you can find more by pressing `<leader>sk` to search through them,

@@ -109,7 +109,7 @@ vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
 Now you can set it up manually using the builtin [lsp-manager](https://github.com/LunarVim/LunarVim/blob/rolling/lua/lvim/lsp/manager.lua)
 
 ```lua
---- list of options that should take predence over any of LunarVim's defaults
+--- list of options that should take precedence over any of LunarVim's defaults
 --- check the lspconfig documentation for a list of all possible options
 local opts = {}
 require("lvim.lsp.manager").setup("pyright", opts)
@@ -216,7 +216,7 @@ formatters.setup {
   {
     command = "prettier",
     ---@usage arguments to pass to the formatter
-    -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+    -- these cannot contain whitespace, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
     args = { "--print-width", "100" },
   },
 }
@@ -226,7 +226,7 @@ linters.setup {
   {
     command = "shellcheck",
     ---@usage arguments to pass to the formatter
-    -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
+    -- these cannot contain whitespace, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
     args = { "--severity", "warning" },
   },
 }
