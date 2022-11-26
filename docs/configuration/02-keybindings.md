@@ -66,7 +66,7 @@ lvim.lsp.buffer_mappings.normal_mode['gk'] = lvim.lsp.buffer_mappings.normal_mod
 ```
 
 ### Remove a binding
-LSP bindings take precendence over regular keybdings. So in order to use a key for a regular binding, we have to remove
+LSP bindings take precedence over regular keybindings. So in order to use a key for a regular binding, we have to remove
 it first
 ```lua
 lvim.lsp.buffer_mappings.normal_mode['K'] = nil

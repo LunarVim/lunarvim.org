@@ -73,7 +73,7 @@ formatters.setup {
 ```
 With the above configuration, the default settings will be used. To see the defaults, type `clang-format --dump-config` in the terminal.
 
-clang-format suppors multiple predefined styles. For the list of values see: https://clang.llvm.org/docs/ClangFormatStyleOptions.html#configurable-format-style-options
+clang-format supports multiple predefined styles. For the list of values see: https://clang.llvm.org/docs/ClangFormatStyleOptions.html#configurable-format-style-options
 
 To specify such style you need to set extra args in `config.lua`:
 ```lua
@@ -104,7 +104,7 @@ google-java-format should be on the $PATH
 
 Enable formatter in `~/.config/lvim/config.lua`:
 ```lua
-atters = require "lvim.lsp.null-ls.formatters"
+formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   {
     command = "google-java-format",
@@ -119,7 +119,7 @@ uncrustify works similarly to clang-format.
 
 Enable formatter in `~/.config/lvim/config.lua`:
 ```lua
-atters = require "lvim.lsp.null-ls.formatters"
+formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   {
     command = "uncrustify",
