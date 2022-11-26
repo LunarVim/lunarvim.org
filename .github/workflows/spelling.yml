@@ -15,9 +15,6 @@ on:
     - 'opened'
     - 'reopened'
     - 'synchronize'
-  issue_comment:
-    types:
-    - 'created'
 
 jobs:
   spelling:
