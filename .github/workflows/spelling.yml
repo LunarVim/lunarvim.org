@@ -40,6 +40,7 @@ jobs:
       id: spelling
       uses: check-spelling/check-spelling@v0.0.21-alpha1
       with:
+        checkout: true
         suppress_push_for_open_pull_request: 1
         post_comment: 0
         dictionary_source_prefixes: '{"cspell": "https://raw.githubusercontent.com/streetsidesoftware/cspell-dicts/main/dictionaries/"}'
@@ -60,6 +61,7 @@ jobs:
     - name: comment
       uses: check-spelling/check-spelling@prerelease
       with:
+        checkout: true
         task: ${{ needs.spelling.outputs.followup }}
 
   comment-pr:
@@ -74,4 +76,5 @@ jobs:
     - name: comment
       uses: check-spelling/check-spelling@v0.0.21-alpha1
       with:
+        checkout: true
         task: ${{ needs.spelling.outputs.followup }}
