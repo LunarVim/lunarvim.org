@@ -72,45 +72,31 @@ mini.map doesn't automatically open, by design. The follwing makes sure to fix t
 
 ```
 lvim.autocommands = {
-  ...
   {
-    "BufEnter",
+    {"BufEnter", "Filetype"},
     {
-      desc = "Open mini.map and exclude some filtypes",
+      desc = "Open mini.map and exclude some filetypes",
       pattern = { "*" },
       callback = function()
         local exclude_ft = {
-          "",
-          "nofile",
-          "nowrite",
-          "quickfix",
-          "prompt",
-          "terminal",
+          "qf",
+          "NvimTree",
           "toggleterm",
-          "startify",
-          "dashboard",
+          "TelescopePrompt",
           "alpha",
           "netrw",
-          "NvimTree",
-          "packer",
-          "telescope",
-          "lazygit",
-          "bufferline",
         }
 
         local map = require('mini.map')
-        if vim.o.buftype == "" and not vim.tbl_contains(exclude_ft, vim.o.filetype) then
-          map.open()
-        elseif vim.o.buftype == "nofile" and vim.o.filetype == "minimap" then
-          return
-        else
+        if vim.tbl_contains(exclude_ft, vim.o.filetype) then
           vim.b.minimap_disable = true
           map.close()
+        elseif vim.o.buftype == "" then
+          map.open()
         end
       end,
     },
   },
-  ...
 }
 ```
 
