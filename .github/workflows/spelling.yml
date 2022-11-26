@@ -47,6 +47,7 @@ jobs:
           cspell:filetypes/filetypes.txt
           cspell:lua/lua.txt
           cspell:markdown/src/markdown.txt
+        check_extra_dictionaries: ''
   comment-push:
     name: Report (Push)
     # If your workflow isn't running on push, you can remove this job
