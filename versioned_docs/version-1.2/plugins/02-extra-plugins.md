@@ -31,21 +31,73 @@ Every plugin that works with Neovim works with LunarVim, here are some examples 
 },
 ```
 
-### [minimap](https://github.com/wfxr/minimap.vim)
+### [mini.map](https://github.com/echasnovski/mini.map/)
 
-**blazing fast minimap/scrollbar written in Rust**
+**blazing fast minimap/scrollbar in Lua**
 
 ```lua
 {
-  'wfxr/minimap.vim',
-  run = "cargo install --locked code-minimap",
-  -- cmd = {"Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight"},
-  config = function ()
-    vim.cmd ("let g:minimap_width = 10")
-    vim.cmd ("let g:minimap_auto_start = 1")
-    vim.cmd ("let g:minimap_auto_start_win_enter = 1")
-  end,
+  "echasnovski/mini.map",
+  branch = "stable",
+  config = function()
+    require('mini.map').setup()
+    local map = require('mini.map')
+    map.setup({
+      integrations = {
+        map.gen_integration.builtin_search(),
+        map.gen_integration.diagnostic({
+          error = 'DiagnosticFloatingError',
+          warn  = 'DiagnosticFloatingWarn',
+          info  = 'DiagnosticFloatingInfo',
+          hint  = 'DiagnosticFloatingHint',
+        }),
+      },
+      symbols = {
+        encode = map.gen_encode_symbols.dot('4x2'),
+      },
+      window = {
+        side = 'right',
+        width = 20, -- set to 1 for a pure scrollbar :)
+        winblend = 15,
+        show_integration_count = false,
+      },
+    })
+  end
 },
+```
+
+#### automatically open mini.map and exclude buffers, filetypes
+
+mini.map doesn't automatically open, by design. The follwing makes sure to fix that and excludes buffers/filetypes you don't want it to open:
+
+```
+lvim.autocommands = {
+  {
+    {"BufEnter", "Filetype"},
+    {
+      desc = "Open mini.map and exclude some filetypes",
+      pattern = { "*" },
+      callback = function()
+        local exclude_ft = {
+          "qf",
+          "NvimTree",
+          "toggleterm",
+          "TelescopePrompt",
+          "alpha",
+          "netrw",
+        }
+
+        local map = require('mini.map')
+        if vim.tbl_contains(exclude_ft, vim.o.filetype) then
+          vim.b.minimap_disable = true
+          map.close()
+        elseif vim.o.buftype == "" then
+          map.open()
+        end
+      end,
+    },
+  },
+}
 ```
 
 ### [numb](https://github.com/nacro90/numb.nvim)
