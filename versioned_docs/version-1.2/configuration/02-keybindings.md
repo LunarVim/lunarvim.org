@@ -1,7 +1,6 @@
 # Keybindings
 
-Use `<Leader>Lk` to view the keybindings set by Lunarvim.
-See the [keybind overview](../03-keybind-overview.md) for most commonly use keybinds
+See the [keybind overview](../03-keybind-overview.md) for most commonly used keybinds
 
 ## Leader Key
 
@@ -33,6 +32,8 @@ Or just list every mapping
 
 ## (Re)mapping keys
 
+To modify or add a keymapping:
+
 ```lua
   -- X closes a buffer
   lvim.keys.normal_mode["<S-x>"] = ":BufferKill<CR>"
@@ -42,6 +43,8 @@ Or just list every mapping
 ```
 
 ## Removing default mappings
+
+To remove keymappings set by Lunarvim:
 
 ```lua
   lvim.keys.normal_mode["<C-h>"] = false
