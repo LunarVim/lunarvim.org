@@ -151,6 +151,8 @@ lvim.builtin.which_key.mappings = {
 }
 ```
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BdoizYjJHis" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>
+
 ## [toggleterm](https://github.com/akinsho/toggleterm.nvim) (terminal) mappings
 
 To change the terminal mapping:
@@ -158,5 +160,3 @@ To change the terminal mapping:
 ```lua
 lvim.builtin.terminal.open_mapping = "<c-t>"
 ```
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/BdoizYjJHis" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>
