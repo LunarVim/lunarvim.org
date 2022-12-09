@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { AnimationsContext } from "../../hooks/useAnimations";
 import Translate from "@docusaurus/Translate";
 import clsx from "clsx";
