@@ -1,5 +1,6 @@
 .container {
   transform: translateX(-50%);
+  pointer-events: none;
   position: absolute;
   top: 80%;
   left: 120%;
