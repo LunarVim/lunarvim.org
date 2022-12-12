@@ -9,7 +9,7 @@ import Contributors from "../components/Contributors";
 import Hero from "../components/Hero";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import AnimationsContextProvider from "../hooks/useAnimations";
-import ChristmasAinmations from "../components/ChristmasAnimations/";
+import Lightrope from "../components/Christmas/Lightrope";
 
 const Home = () => {
   const { siteConfig } = useDocusaurusContext();
@@ -20,7 +20,7 @@ const Home = () => {
         description="Description will go into a meta tag in <head />"
       >
         <main>
-          <ChristmasAinmations />
+          <Lightrope />
           <Hero />
           <Preview />
           <Features />

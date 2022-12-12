@@ -9,18 +9,23 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import ShootingStar from "../Icons/ShootingStar";
 import DisabledStar from "../Icons/DisabledStar";
 import Slogan from "./Slogan";
+import Santa from "../Christmas/Santa";
 
 const Hero = () => {
-  const { siteConfig: { customFields: { primaryCTA, secondaryCTA, heroImage } } } = useDocusaurusContext();
+  const {
+    siteConfig: {
+      customFields: { primaryCTA, secondaryCTA, heroImage },
+    },
+  } = useDocusaurusContext();
   const { animate, setAnimate } = useContext(AnimationsContext);
 
   return (
     <Stars FALLING_STARS_COUNT={3}>
-      <button className={styles.toggleAnimations} onClick={() => setAnimate(currentState => !currentState)}>
-        {animate ?
-          <DisabledStar /> :
-          <ShootingStar />
-        }
+      <button
+        className={styles.toggleAnimations}
+        onClick={() => setAnimate((currentState) => !currentState)}
+      >
+        {animate ? <DisabledStar /> : <ShootingStar />}
       </button>
 
       <header className={clsx("hero hero--primary", styles.heroBanner)}>
@@ -51,6 +56,7 @@ const Hero = () => {
               alt={heroImage.alt}
             />
           </div>
+          <Santa />
         </div>
       </header>
     </Stars>

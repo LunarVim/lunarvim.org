@@ -1,0 +1,53 @@
+.container {
+  transform: translateX(-50%);
+  position: absolute;
+  top: 80%;
+  left: 120%;
+  animation: move 30s linear infinite;
+}
+@media screen and (min-width: 996px) {
+  .container {
+    top: 100%;
+  }
+}
+@keyframes move {
+  to {
+    left: -20%;
+  }
+}
+.svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.plane {
+  position: relative;
+  animation: float 3s infinite;
+}
+@keyframes float {
+  50% {
+    -webkit-transform: translateY(25px);
+    transform: translateY(25px);
+  }
+}
+.hand {
+  transform: rotate(10deg);
+  animation: wave 1.5s infinite;
+  transform-origin: center;
+}
+.blade {
+  animation: spin 1s infinite linear;
+  transform-origin: 50% 54%;
+}
+@keyframes spin {
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+@keyframes wave {
+  50% {
+    transform: rotate(-10deg);
+  }
+}
