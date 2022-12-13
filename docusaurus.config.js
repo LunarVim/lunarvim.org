@@ -98,6 +98,11 @@ const config = {
       src: "/img/lunarvim_logo.png",
       alt: "LunarVim Logo",
     },
+    christmas: {
+      lightrope: true,
+      snowBtn: true,
+      santa: true,
+    },
     previewImgs: [
       {
         src: "/img/lunarvim_preview5.png",

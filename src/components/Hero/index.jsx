@@ -14,7 +14,12 @@ import Santa from "../Christmas/Santa";
 const Hero = () => {
   const {
     siteConfig: {
-      customFields: { primaryCTA, secondaryCTA, heroImage },
+      customFields: {
+        primaryCTA,
+        secondaryCTA,
+        heroImage,
+        christmas: { snowBtn },
+      },
     },
   } = useDocusaurusContext();
   const { animate, setAnimate } = useContext(AnimationsContext);
@@ -35,14 +40,16 @@ const Hero = () => {
             <Slogan />
             <div className={styles.buttons}>
               <Link
-                className="button button--primary button--lg"
+                className={`button button--primary button--lg ${snowBtn ? styles.snowBtn : ""
+                  }`}
                 to={primaryCTA.to}
               >
                 <Translate>{primaryCTA.text}</Translate>
               </Link>
               {secondaryCTA ? (
                 <Link
-                  className="button button--outline button--lg"
+                  className={`button button--outline button--lg ${snowBtn ? styles.snowBtn : ""
+                    }`}
                   to={secondaryCTA.to}
                 >
                   <Translate>{secondaryCTA.text}</Translate>
