@@ -54,4 +54,4 @@ vim.opt.scrolloff = 8 -- cambia la cantidad de líneas del scroll
 vim.opt.sidescrolloff = 8
 ```
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/hY5-Q6NxQgY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8O6o3p7CN7Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>
