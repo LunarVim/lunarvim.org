@@ -1,0 +1,3 @@
+# Only markdown in docs
+^docs/.*\.md$
+^versioned_docs/.*\.md$

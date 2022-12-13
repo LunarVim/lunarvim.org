@@ -51,6 +51,12 @@ const config = {
           // Remove this to remove the "edit this page" links.
           editUrl:
             "https://github.com/LunarVim/lunarvim.org/tree/master/",
+          versions: {
+            current: {
+              label: 'master',
+              path: 'master',
+            },
+          },
         },
         blog: {
           showReadingTime: true,
@@ -118,19 +124,19 @@ const config = {
       /* NOTE: max 3 preferred */
       /* type: video | playlist */
       {
-        type: "playlist",
-        id: "PLhoH5vyxr6QoYP4bKw0krF4aEn_3_pfWA",
-        title: "LunarVim (IDE for Neovim)",
-      },
-      {
         type: "video",
         id: "NPmKRygD7DU",
         title: "Neovim v0.8 release",
       },
       {
+        type: "video",
+        id: "sFA9kX-Ud_c",
+        title: "Install LunarVim Stable Release",
+      },
+      {
         type: "playlist",
-        id: "PLhoH5vyxr6Qq41NFL4GvhFp-WLd5xzIzZ",
-        title: "Neovim from Scratch",
+        id: "PLhoH5vyxr6QoYP4bKw0krF4aEn_3_pfWA",
+        title: "LunarVim (IDE for Neovim)",
       },
     ],
     Contributors: {
@@ -167,6 +173,11 @@ const config = {
             label: "Donate",
           },
           ...socials,
+          {
+            type: 'docsVersionDropdown',
+            position: 'right',
+            dropdownActiveClassDisabled: true,
+          },
           {
             type: "localeDropdown",
             position: "right",
