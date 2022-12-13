@@ -1,0 +1,4 @@
+apk
+ripgrep
+sdk
+uelic
