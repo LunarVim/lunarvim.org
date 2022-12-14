@@ -64,6 +64,15 @@ Invoke-WebRequest https://raw.githubusercontent.com/LunarVim/LunarVim/master/uti
 ```
 
 </TabItem>
+<TabItem value="docker" label="Try it first in Docker!">
+
+_This is intended just to take a look at the base functionalities, so some interactions may be blocked by the environment._
+
+```bash
+docker run -w /root -it --rm alpine:edge sh -uelic 'apk add git neovim ripgrep alpine-sdk bash --update && bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) && /root/.local/bin/lvim'
+```
+
+</TabItem>
 </Tabs>
 
 Make sure to check the [troubleshooting](./troubleshooting/README.md) section if you encounter any problem.
