@@ -1,6 +1,10 @@
 # Keybindings
 
-See the [keybind overview](../03-keybind-overview.md) for most commonly used keybinds
+See the [keybind overview](../03-keybind-overview.md) for most commonly used keybinds.
+
+If you want to (re)map a keybinding that starts with `<leader>`, use [Whichkey Bindings](#whichkey-bindings).
+If the bindings are LSP (intellisense) related, use [LSP Bindings](#lsp-bindings).
+In all other cases, use [NeoVim mappings](#neovim-mappings)
 
 ## Leader Key
 
@@ -30,7 +34,9 @@ Or just list every mapping
 :map
 ```
 
-## (Re)mapping keys
+## NeoVim mappings
+
+### (Re)mapping keys
 
 To modify or add a keymapping:
 
@@ -42,7 +48,7 @@ To modify or add a keymapping:
   lvim.keys.normal_mode["<C-d>"] = "<C-d>zz"
 ```
 
-## Removing default mappings
+### Removing default mappings
 
 To remove keymappings set by Lunarvim:
 
@@ -73,8 +79,8 @@ lvim.lsp.buffer_mappings.normal_mode['gk'] = lvim.lsp.buffer_mappings.normal_mod
 
 ### Remove a binding
 
-LSP bindings take precedence over regular keybindings. So in order to use a key for a regular binding, we have to remove
-it first
+LSP bindings take precedence over regular keybindings.
+So in order to use a key for a regular binding, we have to remove it first
 
 ```lua
 lvim.lsp.buffer_mappings.normal_mode['K'] = nil
@@ -83,8 +89,8 @@ lvim.keys.normal_mode['K'] = "<Cmd>echo Okay!<CR>"
 
 ## Whichkey Bindings
 
-To add or remap keybindings for whichkey use `lvim.builtin.which_key.mappings`
-The leader key is already included in whichkey mappings
+To add or remap keybindings for whichkey use `lvim.builtin.which_key.mappings`.
+The leader key is already included.
 
 ### Single mapping
 

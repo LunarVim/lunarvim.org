@@ -84,6 +84,7 @@ fav
 pls
 rtp
 regex
+intellisense
 
 # LSP
 astyle
