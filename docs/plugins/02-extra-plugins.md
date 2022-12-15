@@ -631,33 +631,23 @@ lvim.builtin.which_key.mappings["t"] = {
 
 ### [copilot.lua](https://github.com/zbirenbaum/copilot.lua) and [copilot-cmp](https://github.com/zbirenbaum/copilot-cmp)
 
-**let a computer write code for you**
-
-You need to authenticate according to [the instructions](https://github.com/zbirenbaum/copilot.lua#preliminary-steps).
+**your AI pair programmer**
 
 ```lua
-lvim.plugins = {
-  { "zbirenbaum/copilot.lua",
-    event = { "VimEnter" },
-    config = function()
-      vim.defer_fn(function()
-        require("copilot").setup {
-	        plugin_manager_path = get_runtime_dir() .. "/site/pack/packer",
-        }
-      end, 100)
-    end,
-  },
+table.insert(lvim.plugins, {
+  "zbirenbaum/copilot-cmp",
+  event = "InsertEnter",
+  requires = { "zbirenbaum/copilot.lua" },
+  config = function()
+    vim.defer_fn(function()
+      require("copilot").setup() -- https://github.com/zbirenbaum/copilot.lua/blob/master/README.md#setup-and-configuration
+      require("copilot_cmp").setup() -- https://github.com/zbirenbaum/copilot-cmp/blob/master/README.md#configuration
+    end, 100)
+  end,
+})
+```
 
-  { "zbirenbaum/copilot-cmp",
-    after = { "copilot.lua", "nvim-cmp" },
-  },  
-  ...
-}
-
--- Can not be placed into the config method of the plugins.
-lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
-table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
-``` 
+Make sure to run `:PackerLoad copilot-cmp` followed by `:Copilot auth` once the plugin is installed to start the authentication process.
 
 ### [dial.nvim](https://github.com/monaqa/dial.nvim)
 
