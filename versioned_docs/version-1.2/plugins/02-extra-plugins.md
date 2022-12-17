@@ -70,7 +70,7 @@ Every plugin that works with Neovim works with LunarVim, here are some examples 
 
 mini.map doesn't automatically open, by design. The follwing makes sure to fix that and excludes buffers/filetypes you don't want it to open:
 
-```
+```lua
 lvim.autocommands = {
   {
     {"BufEnter", "Filetype"},
