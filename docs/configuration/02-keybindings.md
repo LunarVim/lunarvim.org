@@ -16,7 +16,7 @@ lvim.leader = "space"
 
 ## Listing what is mapped
 
-Use `<Leader>Lk` to view the keybindings set by Lunarvim.
+Use `<Leader>sk` to view different keybinding currently set.
 
 To see if a particular key has already been bound:
 
