@@ -629,9 +629,49 @@ lvim.builtin.which_key.mappings["t"] = {
 },
 ```
 
-### [copilot.lua](https://github.com/zbirenbaum/copilot.lua) and [copilot-cmp](https://github.com/zbirenbaum/copilot-cmp)
+### [copilot.lua](https://github.com/zbirenbaum/copilot.lua)
 
 **your AI pair programmer**
+
+```lua
+table.insert(lvim.plugins, {
+  "zbirenbaum/copilot.lua",
+  event = "VimEnter",
+  config = function()
+    -- https://github.com/zbirenbaum/copilot.lua/blob/master/README.md#setup-and-configuration
+    vim.defer_fn(function ()
+      require("copilot").setup({
+        panel = {
+          keymap = {
+            jump_prev = "[[",
+            jump_next = "]]",
+            accept = "<CR>",
+            refresh = "gr",
+            open = "<M-CR>"
+          },
+        },
+        suggestion = {
+          auto_trigger = false,
+          keymap = {
+            accept = "<M-l>",
+            accept_word = false,
+            accept_line = false,
+            next = "<M-]>",
+            prev = "<M-[>",
+            dismiss = "<C-]>",
+          },
+        },
+      }) 
+    end, 100)
+  end,
+})
+```
+
+Make sure to run `:PackerLoad copilot.lua` followed by `:Copilot auth` once the plugin is installed to start the authentication process.
+
+**[copilot-cmp](https://github.com/zbirenbaum/copilot-cmp)**
+
+In case you want to use Copilot with `nvim-cmp`:
 
 ```lua
 table.insert(lvim.plugins, {
@@ -639,15 +679,11 @@ table.insert(lvim.plugins, {
   event = "InsertEnter",
   requires = { "zbirenbaum/copilot.lua" },
   config = function()
-    vim.defer_fn(function()
-      require("copilot").setup() -- https://github.com/zbirenbaum/copilot.lua/blob/master/README.md#setup-and-configuration
-      require("copilot_cmp").setup() -- https://github.com/zbirenbaum/copilot-cmp/blob/master/README.md#configuration
-    end, 100)
+    -- https://github.com/zbirenbaum/copilot-cmp/blob/master/README.md#configuration
+    require("copilot_cmp").setup()
   end,
 })
 ```
-
-Make sure to run `:PackerLoad copilot-cmp` followed by `:Copilot auth` once the plugin is installed to start the authentication process.
 
 ### [dial.nvim](https://github.com/monaqa/dial.nvim)
 
