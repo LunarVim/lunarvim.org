@@ -185,6 +185,8 @@ mkdir
 autopep
 lrwxrwxrwx
 npm
+iwr
+pwsh
 
 # misc
 cssmodules
