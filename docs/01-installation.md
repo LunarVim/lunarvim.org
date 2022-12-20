@@ -27,7 +27,7 @@ LV_BRANCH='release-1.2/neovim-0.8' bash <(curl -s https://raw.githubusercontent.
 <TabItem value="windows" label="Windows">
 
 ```powershell
-pwsh -c "`$LV_BRANCH='release-1.2/neovim-0.8' $((iwr https://raw.githubusercontent.com/LunarVim/LunarVim/master/utils/installer/install.ps1 -UseBasicParsing).Content)"
+pwsh -c "`$LV_BRANCH='release-1.2/neovim-0.8'; iwr https://raw.githubusercontent.com/LunarVim/LunarVim/master/utils/installer/install.ps1 -UseBasicParsing | iex"
 ```
 
 </TabItem>
@@ -50,7 +50,7 @@ bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/
 <TabItem value="windows" label="Windows">
 
 ```powershell
-pwsh -c (iwr https://raw.githubusercontent.com/LunarVim/LunarVim/master/utils/installer/install.ps1 -UseBasicParsing).Content
+pwsh -c "iwr https://raw.githubusercontent.com/LunarVim/LunarVim/master/utils/installer/install.ps1 -UseBasicParsing | iex"
 ```
 
 </TabItem>
