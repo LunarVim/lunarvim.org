@@ -14,15 +14,15 @@ const Santa = () => {
   if (!santa) return null;
 
   return (
-    <div class={styles.container}>
+    <div className={styles.container}>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="350"
         height="400"
-        class="svg"
+        className="svg"
       >
         <path fill="transparent" d="M0 0h350v400H0z" />
-        <g class={styles.plane}>
+        <g className={styles.plane}>
           <rect
             x="215.747"
             y="157.738"
@@ -36,7 +36,7 @@ const Santa = () => {
             fill="#f52a65"
             d="M166.263 185.401h74.995v31.965h-74.995zM166.263 217.366h74.995a31.965 31.965 0 01-31.965 31.965h-43.03v-31.965z"
           />
-          <g class={styles.hand}>
+          <g className={styles.hand}>
             <rect
               x="136.437"
               y="152.836"
@@ -79,7 +79,7 @@ const Santa = () => {
             <circle cx="155.505" cy="226.586" r="2.459" />
           </g>
           <rect
-            class={styles.blade}
+            className={styles.blade}
             x="113.244"
             y="167.266"
             width="6.762"
