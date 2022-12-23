@@ -164,5 +164,5 @@ lvim.builtin.which_key.mappings = {
 To change the terminal mapping:
 
 ```lua
-lvim.builtin.terminal.open_mapping = "<c-t>"
+lvim.builtin.terminal.open_mapping = "<c-/>"
 ```
