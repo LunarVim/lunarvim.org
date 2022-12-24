@@ -77,7 +77,9 @@ You can remove LunarVim (including the configuration files) using the bundled `u
 
 ```bash
 bash ~/.local/share/lunarvim/lvim/utils/installer/uninstall.sh
-# or
+```
+#### **or**
+```
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/uninstall.sh)
 ```
 
