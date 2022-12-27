@@ -1,3 +1,4 @@
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # python
 
 ### Syntax highlighting
@@ -8,12 +9,12 @@
 
 ### Supported language servers
 
-- pylsp
-- anakin_language_server
 - pyre
 - pyright
-- sourcery
 - jedi_language_server
+- pylsp
+- anakin_language_server
+- sourcery
 
 ### Supported formatters
 

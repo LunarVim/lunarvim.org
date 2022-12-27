@@ -1,3 +1,4 @@
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # svelte
 
 ### Syntax highlighting
@@ -8,8 +9,8 @@
 
 ### Supported language servers
 
-- svelte
 - tailwindcss
+- svelte
 - eslint
 
 ### Supported formatters

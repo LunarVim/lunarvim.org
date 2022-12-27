@@ -1,3 +1,4 @@
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # qmljs
 
 ### Syntax highlighting
@@ -8,5 +9,5 @@
 
 ### Supported language servers
 
-- qml_lsp
 - qmlls
+- qml_lsp

@@ -1,3 +1,4 @@
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # rust
 
 ### Syntax highlighting
@@ -8,8 +9,8 @@
 
 ### Supported language servers
 
-- rls
 - rust_analyzer
+- rls
 
 ### Supported formatters
 

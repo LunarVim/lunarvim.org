@@ -1,3 +1,4 @@
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # ruby
 
 ### Syntax highlighting
@@ -8,12 +9,12 @@
 
 ### Supported language servers
 
-- ruby_ls
-- sorbet
 - typeprof
+- sorbet
 - syntax_tree
 - steep
 - solargraph
+- ruby_ls
 
 ### Supported formatters
 

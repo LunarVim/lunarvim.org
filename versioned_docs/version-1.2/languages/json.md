@@ -1,3 +1,4 @@
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # json
 
 ### Syntax highlighting
@@ -8,9 +9,9 @@
 
 ### Supported language servers
 
+- nxls
 - rome
 - spectral
-- nxls
 - jsonls
 
 ### Supported formatters

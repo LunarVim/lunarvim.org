@@ -1,3 +1,4 @@
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # perl
 
 ### Syntax highlighting
@@ -9,8 +10,8 @@
 ### Supported language servers
 
 - perlls
-- perlpls
 - perlnavigator
+- perlpls
 
 ### Supported formatters
 

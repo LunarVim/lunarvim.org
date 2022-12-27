@@ -1,3 +1,4 @@
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # solidity
 
 ### Syntax highlighting
@@ -8,10 +9,10 @@
 
 ### Supported language servers
 
-- solang
+- solidity
 - solc
 - solidity_ls
-- solidity
+- solang
 
 ### Supported linters
 

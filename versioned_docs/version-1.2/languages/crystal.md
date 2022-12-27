@@ -1,9 +1,10 @@
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # crystal
 
 ### Supported language servers
 
-- scry
 - crystalline
+- scry
 
 ### Supported formatters
 

@@ -1,9 +1,10 @@
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # rescript
 
 ### Supported language servers
 
-- tailwindcss
 - rescriptls
+- tailwindcss
 
 ### Supported formatters
 

@@ -1,6 +1,7 @@
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # sugarss
 
 ### Supported language servers
 
-- stylelint_lsp
 - tailwindcss
+- stylelint_lsp

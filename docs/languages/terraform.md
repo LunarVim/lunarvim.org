@@ -1,3 +1,4 @@
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # terraform
 
 ### Syntax highlighting
@@ -9,8 +10,8 @@
 ### Supported language servers
 
 - tflint
-- terraform_lsp
 - terraformls
+- terraform_lsp
 
 ### Supported formatters
 

@@ -1,3 +1,4 @@
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # markdown
 
 ### Syntax highlighting
@@ -8,13 +9,13 @@
 
 ### Supported language servers
 
-- grammarly
 - prosemd_lsp
 - remark_ls
-- tailwindcss
-- marksman
 - zk
 - ltex
+- tailwindcss
+- grammarly
+- marksman
 
 ### Supported formatters
 

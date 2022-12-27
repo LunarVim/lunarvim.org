@@ -1,3 +1,4 @@
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # vue
 
 ### Syntax highlighting
@@ -8,10 +9,10 @@
 
 ### Supported language servers
 
-- stylelint_lsp
-- vuels
 - volar
+- vuels
 - tailwindcss
+- stylelint_lsp
 - eslint
 
 ### Supported formatters

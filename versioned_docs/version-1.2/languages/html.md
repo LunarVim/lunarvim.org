@@ -1,3 +1,4 @@
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # html
 
 ### Syntax highlighting
@@ -10,9 +11,9 @@
 
 - html
 - tailwindcss
-- antlersls
 - angularls
 - emmet_ls
+- antlersls
 
 ### Supported formatters
 

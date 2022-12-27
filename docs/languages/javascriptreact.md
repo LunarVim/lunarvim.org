@@ -1,3 +1,4 @@
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # javascriptreact
 
 ### Syntax highlighting
@@ -8,17 +9,17 @@
 
 ### Supported language servers
 
-- rome
-- stylelint_lsp
-- relay_lsp
-- flow
 - graphql
+- rome
 - tsserver
 - tailwindcss
+- flow
+- stylelint_lsp
 - cssmodules_ls
 - denols
 - emmet_ls
 - eslint
+- relay_lsp
 
 ### Supported formatters
 

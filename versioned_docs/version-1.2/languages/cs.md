@@ -1,3 +1,4 @@
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # cs
 
 ### Syntax highlighting
@@ -8,9 +9,9 @@
 
 ### Supported language servers
 
+- csharp_ls
 - omnisharp
 - omnisharp_mono
-- csharp_ls
 
 ### Supported formatters
 

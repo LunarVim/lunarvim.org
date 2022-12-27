@@ -1,3 +1,4 @@
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # php
 
 ### Syntax highlighting
@@ -11,9 +12,9 @@
 - phpactor
 - psalm
 - phan
+- tailwindcss
 - hhvm
 - intelephense
-- tailwindcss
 
 ### Supported formatters
 
