@@ -1,2 +1,2 @@
 02-extra-plugins.md$
-languages/*.md$
+languages/.*\.md$
