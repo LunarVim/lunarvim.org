@@ -1,5 +1,5 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # rust
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Syntax highlighting
 
@@ -9,8 +9,8 @@
 
 ### Supported language servers
 
-- rust_analyzer
 - rls
+- rust_analyzer
 
 ### Supported formatters
 

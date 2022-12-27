@@ -1,5 +1,5 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # markdown
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Syntax highlighting
 
@@ -9,13 +9,13 @@
 
 ### Supported language servers
 
+- marksman
 - prosemd_lsp
 - remark_ls
-- zk
-- ltex
-- tailwindcss
 - grammarly
-- marksman
+- zk
+- tailwindcss
+- ltex
 
 ### Supported formatters
 

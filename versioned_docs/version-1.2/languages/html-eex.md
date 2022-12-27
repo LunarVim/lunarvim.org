@@ -1,5 +1,5 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # html-eex
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Supported language servers
 

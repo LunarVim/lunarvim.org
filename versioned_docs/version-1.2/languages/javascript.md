@@ -1,5 +1,5 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # javascript
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Syntax highlighting
 
@@ -9,18 +9,18 @@
 
 ### Supported language servers
 
-- rome
-- tsserver
-- tailwindcss
 - flow
-- stylelint_lsp
+- tailwindcss
+- tsserver
 - cssmodules_ls
 - denols
 - ember
 - eslint
-- relay_lsp
-- quick_lint_js
 - glint
+- quick_lint_js
+- rome
+- stylelint_lsp
+- relay_lsp
 
 ### Supported formatters
 
@@ -69,8 +69,8 @@
 
 ### Supported language servers
 
-- tsserver
 - flow
+- tsserver
 - denols
 - eslint
 - relay_lsp

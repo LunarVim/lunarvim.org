@@ -1,5 +1,5 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # ruby
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Syntax highlighting
 
@@ -9,11 +9,11 @@
 
 ### Supported language servers
 
+- steep
 - typeprof
 - sorbet
-- syntax_tree
-- steep
 - solargraph
+- syntax_tree
 - ruby_ls
 
 ### Supported formatters

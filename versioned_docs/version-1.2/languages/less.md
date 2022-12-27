@@ -1,12 +1,12 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # less
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Supported language servers
 
 - cssls
 - tailwindcss
-- stylelint_lsp
 - emmet_ls
+- stylelint_lsp
 
 ### Supported formatters
 

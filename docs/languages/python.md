@@ -1,5 +1,5 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # python
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Syntax highlighting
 
@@ -9,11 +9,11 @@
 
 ### Supported language servers
 
+- anakin_language_server
 - pyre
 - pyright
 - jedi_language_server
 - pylsp
-- anakin_language_server
 - sourcery
 
 ### Supported formatters

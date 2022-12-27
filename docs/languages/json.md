@@ -1,5 +1,5 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # json
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Syntax highlighting
 
@@ -9,10 +9,10 @@
 
 ### Supported language servers
 
-- nxls
 - rome
 - spectral
 - jsonls
+- nxls
 
 ### Supported formatters
 

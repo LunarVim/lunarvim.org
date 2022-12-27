@@ -1,5 +1,5 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # php
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Syntax highlighting
 
@@ -9,12 +9,12 @@
 
 ### Supported language servers
 
-- phpactor
-- psalm
 - phan
-- tailwindcss
 - hhvm
 - intelephense
+- tailwindcss
+- phpactor
+- psalm
 
 ### Supported formatters
 

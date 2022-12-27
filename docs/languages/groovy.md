@@ -1,10 +1,10 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # groovy
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Supported language servers
 
-- gradle_ls
 - groovyls
+- gradle_ls
 
 ### Supported formatters
 

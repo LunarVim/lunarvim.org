@@ -149,7 +149,7 @@ function M.generate_doc_files(filetypes)
 		if require("lvim.utils").is_file(path) then
 			content = { "", "## " .. ft, "" }
 		else
-			content = { "<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->", "# " .. ft, "" }
+			content = { "# " .. ft, "<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->", "" }
 		end
 
 		vim.list_extend(content, M.get_treesitter_info(ft))

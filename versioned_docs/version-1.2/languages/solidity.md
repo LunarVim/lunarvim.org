@@ -1,5 +1,5 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # solidity
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Syntax highlighting
 
@@ -9,10 +9,10 @@
 
 ### Supported language servers
 
-- solidity
+- solang
 - solc
 - solidity_ls
-- solang
+- solidity
 
 ### Supported linters
 

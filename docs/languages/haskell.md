@@ -1,5 +1,5 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # haskell
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Syntax highlighting
 
@@ -9,9 +9,9 @@
 
 ### Supported language servers
 
+- hls
 - ghcide
 - hie
-- hls
 
 ### Supported formatters
 

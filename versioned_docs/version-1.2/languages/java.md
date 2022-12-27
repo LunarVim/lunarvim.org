@@ -1,5 +1,5 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # java
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Syntax highlighting
 
@@ -9,8 +9,8 @@
 
 ### Supported language servers
 
-- java_language_server
 - jdtls
+- java_language_server
 
 ### Supported formatters
 

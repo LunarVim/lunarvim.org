@@ -1,5 +1,5 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # typescriptreact
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Syntax highlighting
 
@@ -9,17 +9,17 @@
 
 ### Supported language servers
 
-- graphql
-- rome
-- tsserver
 - tailwindcss
-- stylelint_lsp
+- tsserver
 - angularls
 - cssmodules_ls
 - denols
 - emmet_ls
 - eslint
+- rome
+- stylelint_lsp
 - relay_lsp
+- graphql
 
 ### Supported formatters
 

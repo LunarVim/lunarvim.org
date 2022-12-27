@@ -1,5 +1,5 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # vue
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Syntax highlighting
 
@@ -9,11 +9,11 @@
 
 ### Supported language servers
 
-- volar
-- vuels
 - tailwindcss
-- stylelint_lsp
+- volar
 - eslint
+- stylelint_lsp
+- vuels
 
 ### Supported formatters
 

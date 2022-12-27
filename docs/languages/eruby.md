@@ -1,5 +1,5 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # eruby
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Syntax highlighting
 
@@ -9,9 +9,9 @@
 
 ### Supported language servers
 
-- typeprof
-- tailwindcss
 - steep
+- tailwindcss
+- typeprof
 - emmet_ls
 
 ### Supported formatters

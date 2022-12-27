@@ -1,5 +1,5 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # svelte
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Syntax highlighting
 
@@ -9,8 +9,8 @@
 
 ### Supported language servers
 
-- tailwindcss
 - svelte
+- tailwindcss
 - eslint
 
 ### Supported formatters

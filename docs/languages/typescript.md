@@ -1,5 +1,5 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # typescript
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Syntax highlighting
 
@@ -9,17 +9,17 @@
 
 ### Supported language servers
 
-- rome
-- tsserver
 - tailwindcss
-- stylelint_lsp
+- tsserver
 - angularls
 - cssmodules_ls
 - denols
 - ember
 - eslint
-- relay_lsp
 - glint
+- rome
+- stylelint_lsp
+- relay_lsp
 
 ### Supported formatters
 
@@ -65,9 +65,9 @@
 
 ### Supported language servers
 
-- rome
 - tsserver
 - angularls
 - denols
 - eslint
+- rome
 - relay_lsp

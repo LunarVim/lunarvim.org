@@ -1,5 +1,5 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # systemverilog
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Syntax highlighting
 
@@ -9,11 +9,11 @@
 
 ### Supported language servers
 
-- svls
-- veridian
-- verible
-- svlangserver
 - hdl_checker
+- veridian
+- svlangserver
+- verible
+- svls
 
 ### Supported formatters
 

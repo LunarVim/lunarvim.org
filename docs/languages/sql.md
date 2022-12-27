@@ -1,5 +1,5 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # sql
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Syntax highlighting
 
@@ -9,8 +9,8 @@
 
 ### Supported language servers
 
-- sqls
 - sqlls
+- sqls
 
 ### Supported formatters
 

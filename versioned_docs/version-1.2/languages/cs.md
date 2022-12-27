@@ -1,5 +1,5 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # cs
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Syntax highlighting
 
@@ -9,9 +9,9 @@
 
 ### Supported language servers
 
-- csharp_ls
-- omnisharp
 - omnisharp_mono
+- omnisharp
+- csharp_ls
 
 ### Supported formatters
 

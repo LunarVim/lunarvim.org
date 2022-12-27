@@ -1,5 +1,5 @@
-<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 # css
+<!--- THIS DOCUMENT IS AUTOMATICALLY GENERATED, DON'T EDIT IT -->
 
 ### Syntax highlighting
 
@@ -11,8 +11,8 @@
 
 - cssls
 - tailwindcss
-- stylelint_lsp
 - emmet_ls
+- stylelint_lsp
 
 ### Supported formatters
 
