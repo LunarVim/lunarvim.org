@@ -1,17 +1,17 @@
-# Go
+# go
 
-## Install Syntax Highlighting
+### Syntax highlighting
 
 ```vim
 :TSInstall go
 ```
 
-## Supported language servers
+### Supported language servers
 
-- golangci_lint_ls
 - gopls
+- golangci_lint_ls
 
-## Supported formatters
+### Supported formatters
 
 - gofmt
 - gofumpt
@@ -19,7 +19,7 @@
 - goimports_reviser
 - golines
 
-## Supported linters
+### Supported linters
 
 - golangci_lint
 - revive

@@ -1,16 +1,15 @@
-# HCL
+# hcl
 
-## Syntax highlighting
+### Syntax highlighting
 
 ```vim
 :TSInstall hcl
 ```
 
-## Supported language servers
+### Supported language servers
 
 - terraform_lsp
-- tflint
 
-## Supported formatters
+### Supported formatters
 
 - packer

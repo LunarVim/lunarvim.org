@@ -1,27 +1,27 @@
-# JavaScript
+# javascript
 
-## Syntax highlighting
+### Syntax highlighting
 
 ```vim
 :TSInstall javascript
 ```
 
-## Supported language servers
+### Supported language servers
 
+- quick_lint_js
+- rome
+- stylelint_lsp
+- relay_lsp
+- flow
+- tsserver
+- tailwindcss
 - cssmodules_ls
 - denols
 - ember
 - eslint
 - glint
-- quick_lint_js
-- rome
-- stylelint_lsp
-- tailwindcss
-- tsserver
 
-Only `tsserver` and `tailwindcss` is enabled by default and the other servers need to be [manually configured](./README.md#manually-configured-servers).
-
-## Supported formatters
+### Supported formatters
 
 - deno_fmt
 - dprint
@@ -29,6 +29,7 @@ Only `tsserver` and `tailwindcss` is enabled by default and the other servers ne
 - eslint_d
 - prettier
 - prettier_d_slim
+- prettier_eslint
 - prettier_standard
 - prettierd
 - rome
@@ -36,9 +37,7 @@ Only `tsserver` and `tailwindcss` is enabled by default and the other servers ne
 - semistandardjs
 - standardjs
 
-The configured formatter(s) must be installed separately.
-
-## Supported linters
+### Supported linters
 
 - eslint
 - eslint_d
@@ -47,4 +46,30 @@ The configured formatter(s) must be installed separately.
 - standardjs
 - xo
 
-The configured linter(s) must be installed separately.
+## javascript.glimmer
+
+### Syntax highlighting
+
+```vim
+:TSInstall javascript
+```
+
+### Supported language servers
+
+- glint
+
+## javascript.jsx
+
+### Syntax highlighting
+
+```vim
+:TSInstall javascript
+```
+
+### Supported language servers
+
+- relay_lsp
+- flow
+- tsserver
+- denols
+- eslint

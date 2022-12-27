@@ -1,34 +1,26 @@
-# TypeScript
+# typescript
 
-## Syntax highlighting
+### Syntax highlighting
 
 ```vim
 :TSInstall typescript
-:TSInstall tsx
 ```
 
-## Supported language servers
+### Supported language servers
 
+- rome
+- stylelint_lsp
+- relay_lsp
+- tsserver
+- tailwindcss
 - angularls
 - cssmodules_ls
 - denols
 - ember
 - eslint
 - glint
-- rome
-- stylelint_lsp
-- tailwindcss
-- tsserver
 
-Only `tsserver` and `tailwindcss` is enabled by default and the other servers need to be [manually configured](./README.md#manually-configured-servers).
-
-### TypeScript standalone server (tsserver)
-
-`tsserver` requires one of the following files/folders : `package.json`, [`tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html), [`jsconfig.json`](https://code.visualstudio.com/docs/languages/jsconfig) or `.git.` in the root directory of the project
-
-See [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver) for more information about the tsserver language server configuration options.
-
-## Supported formatters
+### Supported formatters
 
 - deno_fmt
 - dprint
@@ -36,13 +28,13 @@ See [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/se
 - eslint_d
 - prettier
 - prettier_d_slim
+- prettier_eslint
 - prettierd
 - rome
 - rustywind
+- standardts
 
-The configured formatter(s) must be installed separately.
-
-## Supported linters
+### Supported linters
 
 - eslint
 - eslint_d
@@ -50,4 +42,31 @@ The configured formatter(s) must be installed separately.
 - tsc
 - xo
 
-The configured linter(s) must be installed separately.
+## typescript.glimmer
+
+### Syntax highlighting
+
+```vim
+:TSInstall typescript
+```
+
+### Supported language servers
+
+- glint
+
+## typescript.tsx
+
+### Syntax highlighting
+
+```vim
+:TSInstall tsx
+```
+
+### Supported language servers
+
+- rome
+- relay_lsp
+- tsserver
+- angularls
+- denols
+- eslint

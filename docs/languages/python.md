@@ -1,29 +1,33 @@
-# Python
+# python
 
-## Install Syntax Highlighting
+### Syntax highlighting
 
 ```vim
 :TSInstall python
 ```
 
-## Supported language servers
+### Supported language servers
 
-- jedi_language_server
 - pylsp
+- anakin_language_server
+- pyre
 - pyright
 - sourcery
+- jedi_language_server
 
-## Supported formatters
+### Supported formatters
 
+- autoflake
 - autopep8
 - black
 - blue
 - isort
 - reorder_python_imports
+- ruff
 - usort
 - yapf
 
-## Supported linters
+### Supported linters
 
 - flake8
 - mypy
@@ -32,5 +36,6 @@
 - pylama
 - pylint
 - pyproject_flake8
+- ruff
 - semgrep
 - vulture

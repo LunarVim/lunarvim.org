@@ -9,6 +9,9 @@ export LUNARVIM_CACHE_DIR="$TEST_BASE_DIR"
 
 touch "$LUNARVIM_CONFIG_DIR/config.lua"
 
+shopt -s extglob
+find docs/languages -type f -name '*.md' -and -not -name 'README.md' -delete
+
 lvim --headless \
   +"luafile scripts/autogen_lsp_docs.lua" \
   +"qall"

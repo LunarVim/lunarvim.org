@@ -1,19 +1,17 @@
-# Terraform
+# terraform
 
-## Syntax highlighting
-
-
-First, within LunarVim run the following:
+### Syntax highlighting
 
 ```vim
 :TSInstall hcl
 ```
 
-## Supported language servers
+### Supported language servers
 
-- terraform
+- tflint
+- terraform_lsp
 - terraformls
 
-## Supported formatters
+### Supported formatters
 
-- terraform
+- terraform_fmt

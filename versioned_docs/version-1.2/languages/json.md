@@ -1,17 +1,19 @@
-# JSON
+# json
 
-## Install Syntax Highlighting
+### Syntax highlighting
 
 ```vim
 :TSInstall json
 ```
 
-## Supported language servers
+### Supported language servers
 
-- jsonls
 - rome
+- spectral
+- nxls
+- jsonls
 
-## Supported formatters
+### Supported formatters
 
 - deno_fmt
 - dprint
@@ -20,9 +22,10 @@
 - json_tool
 - prettier
 - prettier_d_slim
+- prettier_eslint
 - prettierd
 
-## Supported linters
+### Supported linters
 
 - cfn_lint
 - jsonlint

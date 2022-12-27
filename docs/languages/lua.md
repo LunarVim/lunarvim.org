@@ -1,21 +1,21 @@
-# Lua
+# lua
 
-## Install Syntax Highlighting
+### Syntax highlighting
 
 ```vim
 :TSInstall lua
 ```
 
-## Supported language servers
+### Supported language servers
 
 - sumneko_lua
 
-## Supported formatters
+### Supported formatters
 
 - lua_format
 - stylua
 
-## Supported linters
+### Supported linters
 
 - luacheck
 - selene

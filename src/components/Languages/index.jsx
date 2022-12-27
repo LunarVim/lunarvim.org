@@ -11,22 +11,22 @@ const LanguagesList = [
   {
     Svg: require("@site/static/img/ansible.svg").default,
     title: "Ansible",
-    docPath: "/docs/languages/ansible",
+    docPath: "/docs/languages/yaml#yaml.ansible",
   },
   {
     Svg: require("@site/static/img/c.svg").default,
     title: "C",
-    docPath: "/docs/languages/c_cpp",
+    docPath: "/docs/languages/c",
   },
   {
     Svg: require("@site/static/img/cpp.svg").default,
     title: "C++",
-    docPath: "/docs/languages/c_cpp",
+    docPath: "/docs/languages/cpp",
   },
   {
     Svg: require("@site/static/img/csharp.svg").default,
     title: "C#",
-    docPath: "/docs/languages/csharp",
+    docPath: "/docs/languages/cs",
   },
   {
     Svg: require("@site/static/img/go.svg").default,
@@ -66,7 +66,7 @@ const LanguagesList = [
   {
     Svg: require("@site/static/img/powershell.svg").default,
     title: "PowerShell",
-    docPath: "/docs/languages/powershell",
+    docPath: "/docs/languages/ps1",
   },
   {
     Svg: require("@site/static/img/python.svg").default,
@@ -76,7 +76,7 @@ const LanguagesList = [
   {
     Svg: require("@site/static/img/qml.svg").default,
     title: "QML",
-    docPath: "/docs/languages/qml",
+    docPath: "/docs/languages/qmljs",
   },
   {
     Svg: require("@site/static/img/ruby.svg").default,
@@ -101,7 +101,7 @@ const LanguagesList = [
   {
     Svg: require("@site/static/img/terraform.svg").default,
     title: "Terraform",
-    docPath: "/docs/languages/Terraform",
+    docPath: "/docs/languages/terraform",
   },
   {
     Svg: require("@site/static/img/typescript.svg").default,

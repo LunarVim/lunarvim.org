@@ -1,30 +1,27 @@
-# Ruby
+# ruby
 
-### Install Syntax Highlighting
+### Syntax highlighting
 
 ```vim
 :TSInstall ruby
 ```
 
-## Supported language servers
+### Supported language servers
 
 - ruby_ls
-- solargraph
 - sorbet
+- typeprof
+- syntax_tree
+- steep
+- solargraph
 
-### Solargraph
-
-Project root is recognized by having one of the following files/folders in the root directory of the project: `Gemfile`, `.git`.
-
-Note: `Solargraph` should automatically detect and use `rubocop` for formatting.
-
-## Supported formatters
+### Supported formatters
 
 - rubocop
 - rufo
 - standardrb
 
-## Supported linters
+### Supported linters
 
 - rubocop
 - semgrep

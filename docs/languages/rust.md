@@ -1,16 +1,17 @@
-# Rust
+# rust
 
-## Install Syntax Highlighting
+### Syntax highlighting
 
 ```vim
 :TSInstall rust
 ```
 
-## Supported language servers
+### Supported language servers
 
+- rls
 - rust_analyzer
 
-## Supported formatters
+### Supported formatters
 
 - dprint
 - rustfmt
