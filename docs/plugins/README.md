@@ -50,12 +50,12 @@ and saving or manually invoking `LvimReload` will trigger lazy to sync all the p
 
 ```lua
 lvim.plugins = {
-	{ "lunarvim/colorschemes" },
-	{
-		"nvim-neorg/neorg",
-		ft = "norg", -- lazy-load on filetype
-		config = true, -- run require("neorg").setup()
-	},
+  { "lunarvim/colorschemes" },
+  {
+    "nvim-neorg/neorg",
+    ft = "norg", -- lazy-load on filetype
+    config = true, -- run require("neorg").setup()
+  },
 }
 ```
 
