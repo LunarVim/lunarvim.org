@@ -649,7 +649,7 @@ table.insert(lvim.plugins, {
 })
 ```
 
-Make sure to run `:PackerLoad copilot-cmp` followed by `:Copilot auth` once the plugin is installed to start the authentication process.
+Make sure to run `:Lazy load copilot-cmp` followed by `:Copilot auth` once the plugin is installed to start the authentication process.
 
 ### [dial.nvim](https://github.com/monaqa/dial.nvim)
 
