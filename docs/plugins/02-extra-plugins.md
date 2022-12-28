@@ -13,7 +13,7 @@ Every plugin that works with Neovim works with LunarVim, here are some examples 
   "phaazon/hop.nvim",
   event = "BufRead",
   config = function()
-    require("hop").init()
+    require("hop").setup()
     vim.api.nvim_set_keymap("n", "s", ":HopChar2<cr>", { silent = true })
     vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
   end,
@@ -57,7 +57,7 @@ Every plugin that works with Neovim works with LunarVim, here are some examples 
   "nacro90/numb.nvim",
   event = "BufRead",
   config = function()
-  require("numb").init {
+  require("numb").setup {
     show_numbers = true, -- Enable 'number' for the window while peeking
     show_cursorline = true, -- Enable 'cursorline' for the window while peeking
   }
@@ -74,7 +74,7 @@ Every plugin that works with Neovim works with LunarVim, here are some examples 
   "kevinhwang91/nvim-bqf",
   event = { "BufRead", "BufNew" },
   config = function()
-  require("bqf").init({
+  require("bqf").setup({
           auto_enable = true,
           preview = {
           win_height = 12,
@@ -107,7 +107,7 @@ Every plugin that works with Neovim works with LunarVim, here are some examples 
   "windwp/nvim-spectre",
   event = "BufRead",
   config = function()
-    require("spectre").init()
+    require("spectre").setup()
   end,
 },
 ```
@@ -175,7 +175,7 @@ lvim.builtin.treesitter.matchup.enable = true
       "s1n7ax/nvim-window-picker",
       version = "1.*",
       config = function()
-        require("window-picker").init({
+        require("window-picker").setup({
           autoselect_one = true,
           include_current = false,
           filter_rules = {
@@ -257,7 +257,7 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
   "ruifm/gitlinker.nvim",
   event = "BufRead",
   config = function()
-  require("gitlinker").init {
+  require("gitlinker").setup {
         opts = {
           -- remote = 'github', -- force the use of a specific remote
             -- adds current line nr in the url for normal mode
@@ -288,7 +288,7 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
     'kyazdani42/nvim-web-devicons',
   },
   config = function()
-    require("octo").init()
+    require("octo").setup()
   end,
 },
 ```
@@ -341,7 +341,7 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
 {
   "windwp/nvim-ts-autotag",
   config = function()
-    require("nvim-ts-autotag").init()
+    require("nvim-ts-autotag").setup()
   end,
 },
 ```
@@ -394,7 +394,7 @@ lvim.builtin.treesitter.rainbow.enable = true
 {
     "romgrk/nvim-treesitter-context",
     config = function()
-      require("treesitter-context").init{
+      require("treesitter-context").setup{
         enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
         throttle = true, -- Throttles plugin updates (may improve performance)
         max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
@@ -451,7 +451,7 @@ end
 {
   "nvim-telescope/telescope-project.nvim",
   event = "BufWinEnter",
-  init = function()
+  setup = function()
     vim.cmd [[packadd telescope.nvim]]
   end,
 },
@@ -488,7 +488,7 @@ end
 {
   "norcalli/nvim-colorizer.lua",
     config = function()
-      require("colorizer").init({ "css", "scss", "html", "javascript" }, {
+      require("colorizer").setup({ "css", "scss", "html", "javascript" }, {
           RGB = true, -- #RGB hex codes
           RRGGBB = true, -- #RRGGBB hex codes
           RRGGBBAA = true, -- #RRGGBBAA hex codes
@@ -524,7 +524,7 @@ end
 {
   "rmagatti/goto-preview",
   config = function()
-  require('goto-preview').init {
+  require('goto-preview').setup {
         width = 120; -- Width of the floating window
         height = 25; -- Height of the floating window
         default_mappings = false; -- Bind default mappings
