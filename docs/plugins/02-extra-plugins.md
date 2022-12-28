@@ -13,7 +13,7 @@ Every plugin that works with Neovim works with LunarVim, here are some examples 
   "phaazon/hop.nvim",
   event = "BufRead",
   config = function()
-    require("hop").setup()
+    require("hop").init()
     vim.api.nvim_set_keymap("n", "s", ":HopChar2<cr>", { silent = true })
     vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
   end,
@@ -38,7 +38,7 @@ Every plugin that works with Neovim works with LunarVim, here are some examples 
 ```lua
 {
   'wfxr/minimap.vim',
-  run = "cargo install --locked code-minimap",
+  build = "cargo install --locked code-minimap",
   -- cmd = {"Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight"},
   config = function ()
     vim.cmd ("let g:minimap_width = 10")
@@ -57,7 +57,7 @@ Every plugin that works with Neovim works with LunarVim, here are some examples 
   "nacro90/numb.nvim",
   event = "BufRead",
   config = function()
-  require("numb").setup {
+  require("numb").init {
     show_numbers = true, -- Enable 'number' for the window while peeking
     show_cursorline = true, -- Enable 'cursorline' for the window while peeking
   }
@@ -74,7 +74,7 @@ Every plugin that works with Neovim works with LunarVim, here are some examples 
   "kevinhwang91/nvim-bqf",
   event = { "BufRead", "BufNew" },
   config = function()
-  require("bqf").setup({
+  require("bqf").init({
           auto_enable = true,
           preview = {
           win_height = 12,
@@ -107,7 +107,7 @@ Every plugin that works with Neovim works with LunarVim, here are some examples 
   "windwp/nvim-spectre",
   event = "BufRead",
   config = function()
-    require("spectre").setup()
+    require("spectre").init()
   end,
 },
 ```
@@ -173,9 +173,9 @@ lvim.builtin.treesitter.matchup.enable = true
 ```lua
 {
       "s1n7ax/nvim-window-picker",
-      tag = "1.*",
+      version = "1.*",
       config = function()
-        require("window-picker").setup({
+        require("window-picker").init({
           autoselect_one = true,
           include_current = false,
           filter_rules = {
@@ -257,7 +257,7 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
   "ruifm/gitlinker.nvim",
   event = "BufRead",
   config = function()
-  require("gitlinker").setup {
+  require("gitlinker").init {
         opts = {
           -- remote = 'github', -- force the use of a specific remote
             -- adds current line nr in the url for normal mode
@@ -271,7 +271,7 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
         },
       }
   end,
-  requires = "nvim-lua/plenary.nvim",
+  dependencies = "nvim-lua/plenary.nvim",
 },
 ```
 
@@ -282,13 +282,13 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
 ```lua
 {
   "pwntester/octo.nvim",
-  requires = {
+  dependencies = {
     'nvim-lua/plenary.nvim',
     'nvim-telescope/telescope.nvim',
     'kyazdani42/nvim-web-devicons',
   },
   config = function()
-    require("octo").setup()
+    require("octo").init()
   end,
 },
 ```
@@ -327,7 +327,7 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
 {
   "mattn/vim-gist",
   event = "BufRead",
-  requires = "mattn/webapi-vim",
+  dependencies = "mattn/webapi-vim",
 },
 ```
 
@@ -341,7 +341,7 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
 {
   "windwp/nvim-ts-autotag",
   config = function()
-    require("nvim-ts-autotag").setup()
+    require("nvim-ts-autotag").init()
   end,
 },
 ```
@@ -366,7 +366,9 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
   "p00f/nvim-ts-rainbow",
 },
 ```
+
 After installing ensure to enable it in your `config.lua` using:
+
 ```
 ...
 lvim.builtin.treesitter.rainbow.enable = true
@@ -392,7 +394,7 @@ lvim.builtin.treesitter.rainbow.enable = true
 {
     "romgrk/nvim-treesitter-context",
     config = function()
-      require("treesitter-context").setup{
+      require("treesitter-context").init{
         enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
         throttle = true, -- Throttles plugin updates (may improve performance)
         max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
@@ -436,7 +438,7 @@ end
 ```lua
 {
   "nvim-telescope/telescope-fzy-native.nvim",
-  run = "make",
+  build = "make",
   event = "BufRead",
 },
 ```
@@ -449,7 +451,7 @@ end
 {
   "nvim-telescope/telescope-project.nvim",
   event = "BufWinEnter",
-  setup = function()
+  init = function()
     vim.cmd [[packadd telescope.nvim]]
   end,
 },
@@ -486,7 +488,7 @@ end
 {
   "norcalli/nvim-colorizer.lua",
     config = function()
-      require("colorizer").setup({ "css", "scss", "html", "javascript" }, {
+      require("colorizer").init({ "css", "scss", "html", "javascript" }, {
           RGB = true, -- #RGB hex codes
           RRGGBB = true, -- #RRGGBB hex codes
           RRGGBBAA = true, -- #RRGGBBAA hex codes
@@ -508,8 +510,8 @@ end
 ```lua
 {
   "tzachar/cmp-tabnine",
-  run = "./install.sh",
-  requires = "hrsh7th/nvim-cmp",
+  build = "./install.sh",
+  dependencies = "hrsh7th/nvim-cmp",
   event = "InsertEnter",
 },
 ```
@@ -522,7 +524,7 @@ end
 {
   "rmagatti/goto-preview",
   config = function()
-  require('goto-preview').setup {
+  require('goto-preview').init {
         width = 120; -- Width of the floating window
         height = 25; -- Height of the floating window
         default_mappings = false; -- Bind default mappings
@@ -637,7 +639,7 @@ lvim.builtin.which_key.mappings["t"] = {
 table.insert(lvim.plugins, {
   "zbirenbaum/copilot-cmp",
   event = "InsertEnter",
-  requires = { "zbirenbaum/copilot.lua" },
+  dependencies = { "zbirenbaum/copilot.lua" },
   config = function()
     vim.defer_fn(function()
       require("copilot").setup() -- https://github.com/zbirenbaum/copilot.lua/blob/master/README.md#setup-and-configuration
@@ -696,7 +698,7 @@ Make sure to run `:PackerLoad copilot-cmp` followed by `:Copilot auth` once the 
 {
   "npxbr/glow.nvim",
   ft = {"markdown"}
-  -- run = "yay -S glow"
+  -- build = "yay -S glow"
 },
 ```
 
@@ -707,7 +709,7 @@ Make sure to run `:PackerLoad copilot-cmp` followed by `:Copilot auth` once the 
 ```lua
 {
   "iamcco/markdown-preview.nvim",
-  run = "cd app && npm install",
+  build = "cd app && npm install",
   ft = "markdown",
   config = function()
     vim.g.mkdp_auto_start = 1
@@ -746,7 +748,7 @@ Make sure to run `:PackerLoad copilot-cmp` followed by `:Copilot auth` once the 
 **next generation note-taking**
 
 ```lua
-	{"oberblastmeister/neuron.nvim"},
+ {"oberblastmeister/neuron.nvim"},
 ```
 
 ### [nvim-lastplace](https://github.com/ethanholz/nvim-lastplace)
@@ -754,19 +756,19 @@ Make sure to run `:PackerLoad copilot-cmp` followed by `:Copilot auth` once the 
 **pick up where you left off**
 
 ```lua
-	{
-		"ethanholz/nvim-lastplace",
-		event = "BufRead",
-		config = function()
-			require("nvim-lastplace").setup({
-				lastplace_ignore_buftype = { "quickfix", "nofile", "help" },
-				lastplace_ignore_filetype = {
-					"gitcommit", "gitrebase", "svn", "hgcommit",
-				},
-				lastplace_open_folds = true,
-			})
-		end,
-	},
+ {
+  "ethanholz/nvim-lastplace",
+  event = "BufRead",
+  config = function()
+   require("nvim-lastplace").setup({
+    lastplace_ignore_buftype = { "quickfix", "nofile", "help" },
+    lastplace_ignore_filetype = {
+     "gitcommit", "gitrebase", "svn", "hgcommit",
+    },
+    lastplace_open_folds = true,
+   })
+  end,
+ },
 ```
 
 ### [persistence](https://github.com/folke/persistence.nvim)
@@ -888,7 +890,7 @@ Once installed and synced, add your WakaTime API Key via `:WakaTimeApiKey` comma
 {
   "turbio/bracey.vim",
   cmd = {"Bracey", "BracyStop", "BraceyReload", "BraceyEval"},
-  run = "npm install --prefix server",
+  build = "npm install --prefix server",
 },
 ```
 
