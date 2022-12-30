@@ -35,12 +35,11 @@ jobs:
     steps:
     - name: check-spelling
       id: spelling
-      uses: check-spelling/check-spelling@v0.0.21-alpha1
+      uses: check-spelling/check-spelling@v0.0.21
       with:
         checkout: true
         suppress_push_for_open_pull_request: 1
         post_comment: 0
-        dictionary_source_prefixes: '{"cspell": "https://raw.githubusercontent.com/streetsidesoftware/cspell-dicts/main/dictionaries/"}'
         extra_dictionaries:
           cspell:filetypes/filetypes.txt
           cspell:lua/lua.txt
@@ -56,7 +55,7 @@ jobs:
     if: (success() || failure()) && needs.spelling.outputs.followup && github.event_name == 'push'
     steps:
     - name: comment
-      uses: check-spelling/check-spelling@v0.0.21-alpha1
+      uses: check-spelling/check-spelling@v0.0.21
       with:
         checkout: true
         task: ${{ needs.spelling.outputs.followup }}
@@ -71,7 +70,7 @@ jobs:
     if: (success() || failure()) && needs.spelling.outputs.followup && contains(github.event_name, 'pull_request')
     steps:
     - name: comment
-      uses: check-spelling/check-spelling@v0.0.21-alpha1
+      uses: check-spelling/check-spelling@v0.0.21
       with:
         checkout: true
         task: ${{ needs.spelling.outputs.followup }}
