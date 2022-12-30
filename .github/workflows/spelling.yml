@@ -40,9 +40,10 @@ jobs:
         checkout: true
         suppress_push_for_open_pull_request: 1
         post_comment: 0
+        dictionary_source_prefixes: '{"cspell": "https://raw.githubusercontent.com/streetsidesoftware/cspell-dicts/cspell-dicts%408.0.0/dictionaries/"}'
         extra_dictionaries:
           cspell:filetypes/filetypes.txt
-          cspell:lua/lua.txt
+          cspell:lua/src/lua.txt
           cspell:markdown/src/markdown.txt
         check_extra_dictionaries: ''
   comment-push:
