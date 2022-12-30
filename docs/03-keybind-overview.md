@@ -14,14 +14,6 @@ Also see:
 **TIP:** Non-leader keybindings (for e.g. `<C-\>`, mentioned below and others) can be viewed
 by pressing `<backspace>` in the which-key main menu (first popup after pressing `<leader>`)
 
-**TIP:** For LazyGit `<leader>gg` to work, you must have it installed first. [Install guide](https://github.com/jesseduffield/lazygit#installation)
-
-and also have the builtin terminal enabled in your `config.lua`
-
-```lua
-lvim.builtin.terminal.active = true
-```
-
 ## Plugins
 
 | key                 | description                                                                              | mode   |
@@ -90,25 +82,6 @@ lvim.builtin.terminal.active = true
 | `<leader>sr` | open recent files         | normal |
 | `<leader>pS` | list of installed plugins | normal |
 
-## File explorer ([nvimtree](https://github.com/nvim-tree/nvim-tree.lua))
+## [nvimtree](https://github.com/nvim-tree/nvim-tree.lua) (side file explorer)
 
 `g?` show keybindings
-
-## Git
-
-| key          | description                    | mode   |
-| ------------ | ------------------------------ | ------ |
-| `<leader>gg` | open lazygit                   | normal |
-| `<leader>gj` | next hunk                      | normal |
-| `<leader>gk` | previous hunk                  | normal |
-| `<leader>gl` | blame line                     | normal |
-| `<leader>gp` | preview hunk                   | normal |
-| `<leader>gr` | reset hunk                     | normal |
-| `<leader>gR` | reset buffer                   | normal |
-| `<leader>gs` | stage hunk                     | normal |
-| `<leader>gu` | undo stage hunk                | normal |
-| `<leader>go` | open changed file              | normal |
-| `<leader>gb` | checkout branch                | normal |
-| `<leader>gc` | checkout commit                | normal |
-| `<leader>gC` | checkout commit (current file) | normal |
-| `<leader>gd` | show diff                      | normal |
