@@ -1,0 +1,37 @@
+.container {
+  padding-block: 2rem;
+}
+
+.members {
+  display: grid;
+  justify-content: space-between;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(500px, 100%), 1fr));
+}
+
+.member {
+  background-color: var(--bright-black);
+  height: 100%;
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.member > h3 {
+  margin: 0.5rem
+}
+
+.member > img {
+  border-radius: 1rem;
+  height: 8em;
+  margin: 0 1em 0.5em 0;
+  float: left;
+}
+
+.member ul {
+  margin: 0
+}
+
+.member summary {
+  font-weight: bold;
+  font-size: 1.4em;
+}
