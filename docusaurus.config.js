@@ -89,7 +89,7 @@ const config = {
       text: "Install",
       to: "/docs/installation",
     },
-    // secondary and tertiary call to action is optional
+    // secondary and tertiary calls to action are optional
     secondaryCTA: {
       text: "Get Help",
       to: "https://discord.gg/Xb9B4Ny",
