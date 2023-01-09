@@ -30,15 +30,22 @@ const TeamMembers = () => {
   const [contributors, setContributors] = useState({});
 
   useEffect(() => {
-    fetch("https://api.github.com/repos/LunarVim/LunarVim/contributors")
+    fetch("https://api.github.com/repos/LunarVim/LunarVim/stats/contributors")
       .then((res) => res.json())
       .then((data) => {
-        const contributors_list = data.map((contributor) => ({
-            [contributor.login]: {
-            img: contributor.avatar_url,
-            username: contributor.login,
-            contributions: contributor.contributions,
-          }}
+        const contributors_list = data.map((stats) => ({
+          [stats.author.login]: {
+            img: stats.author.avatar_url,
+            username: stats.author.login,
+            contributions: stats.total,
+            changes: stats.weeks.reduce((accumulator, week) => {
+              return {
+                a: accumulator.a + week.a,
+                d: accumulator.d + week.d
+              }
+            }, { a: 0, d: 0 }),
+          }
+        }
         ));
         setContributors(Object.assign({}, ...contributors_list));
       }).catch((err) => console.error(err));
@@ -58,7 +65,7 @@ const TeamMembers = () => {
 };
 
 
-const TeamMember = ({ name, username, img, bio, contributions,donate }) => {
+const TeamMember = ({ name, username, img, bio, contributions, changes, donate }) => {
   const nameEl = (name ? <span>{name}</span> : null);
   const usernameEl = (<a href={`https://github.com/${username}`}>@{username}</a>);
   const donationsEl = (donate ? (
@@ -67,7 +74,7 @@ const TeamMember = ({ name, username, img, bio, contributions,donate }) => {
       <summary>donate</summary>
       <ul>
         {donate.map(({ name, link }) => (
-          <li><a href={link}>{name}</a></li>
+          <li key={name}><a href={link}>{name}</a></li>
         ))}
       </ul>
     </details>
@@ -77,7 +84,10 @@ const TeamMember = ({ name, username, img, bio, contributions,donate }) => {
     <div className={styles.member}>
       {img ? <img src={img} alt="profile pic" /> : null}
       <h3>{nameEl} {usernameEl}</h3>
-      <p>{contributions} contributions</p>
+      <p className={styles.details}>{contributions} commits
+        {changes ? <span className={styles.a}>{changes.a}++</span> : null}
+        {changes ? <span className={styles.d}>{changes.d}--</span> : null}
+      </p>
       <p>{bio ? bio : "Write something about yourself."}</p>
       <div style={{ clear: "both" }}> </div>
       {donationsEl}

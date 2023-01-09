@@ -17,7 +17,25 @@
 }
 
 .member > h3 {
-  margin: 0.5rem
+  margin: 0.5rem;
+  margin-bottom: 0;
+}
+
+.member > .details {
+  margin-bottom: 0.5rem;
+  font-size: 90%
+}
+
+.member > .details > span {
+  margin-left: 0.3rem
+}
+
+.member > .details > .a {
+  color: var(--normal-green)
+}
+
+.member > .details > .d {
+  color: var(--normal-red)
 }
 
 .member > img {
