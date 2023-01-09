@@ -17,8 +17,7 @@
 }
 
 .member > h3 {
-  margin: 0.5rem;
-  margin-bottom: 0;
+  margin: 0 0.5rem;
 }
 
 .member > .details {
@@ -40,7 +39,7 @@
 
 .member > img {
   border-radius: 1rem;
-  height: 8em;
+  width: max(20%, 4rem);
   margin: 0 1em 0.5em 0;
   float: left;
 }

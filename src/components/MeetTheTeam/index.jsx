@@ -68,6 +68,8 @@ const TeamMembers = () => {
 const TeamMember = ({ name, username, img, bio, contributions, changes, donate }) => {
   const nameEl = (name ? <span>{name}</span> : null);
   const usernameEl = (<a href={`https://github.com/${username}`}>@{username}</a>);
+  const additionsEl = (changes ? <span className={styles.a}>{changes.a}++</span> : null)
+  const deletionsEl = (changes ? <span className={styles.d}>{changes.d}--</span> : null)
   const donationsEl = (donate ? (
     <details open={donate.length < 5 ? "open" : null}>
 
@@ -84,10 +86,7 @@ const TeamMember = ({ name, username, img, bio, contributions, changes, donate }
     <div className={styles.member}>
       {img ? <img src={img} alt="profile pic" /> : null}
       <h3>{nameEl} {usernameEl}</h3>
-      <p className={styles.details}>{contributions} commits
-        {changes ? <span className={styles.a}>{changes.a}++</span> : null}
-        {changes ? <span className={styles.d}>{changes.d}--</span> : null}
-      </p>
+      <p className={styles.details}>{contributions} commits {additionsEl} {deletionsEl} </p>
       <p>{bio ? bio : "Write something about yourself."}</p>
       <div style={{ clear: "both" }}> </div>
       {donationsEl}
