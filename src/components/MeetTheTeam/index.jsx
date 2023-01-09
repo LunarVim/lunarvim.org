@@ -3,6 +3,7 @@ import styles from "./styles.modules.css";
 
 const TeamMembersList = [
   {
+    name: "Christian Chiarulli",
     username: "ChristianChiarulli",
     donate: [
       { name: "GitHub Sponsors", link: "https://github.com/sponsors/ChristianChiarulli" },
@@ -17,6 +18,7 @@ const TeamMembersList = [
     username: "kylo252",
   },
   {
+    name: "Abouzar Parvan",
     username: "abzcoding",
   },
   {
@@ -33,7 +35,6 @@ const TeamMembers = () => {
       .then((data) => {
         const contributors_list = data.map((contributor) => ({
             [contributor.login]: {
-            name: contributor.login,
             img: contributor.avatar_url,
             username: contributor.login,
             contributions: contributor.contributions,
@@ -48,7 +49,7 @@ const TeamMembers = () => {
       <div id="team-members" className={`container ${styles.container}`}>
         <div className={styles.members}>
           {TeamMembersList.map((member) => (
-            <TeamMember key={member.username} donate={member.donate} {...contributors[member.username]} />
+            <TeamMember key={member.username} {...member} {...contributors[member.username]} />
           ))}
         </div>
       </div>
@@ -58,7 +59,6 @@ const TeamMembers = () => {
 
 
 const TeamMember = ({ name, username, img, bio, contributions,donate }) => {
-  console.log(username)
   const nameEl = (name ? <span>{name}</span> : null);
   const usernameEl = (<a href={`https://github.com/${username}`}>@{username}</a>);
   const donationsEl = (donate ? (
