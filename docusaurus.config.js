@@ -91,8 +91,8 @@ const config = {
     },
     // secondary call to action is optional
     secondaryCTA: {
-      text: "Support",
-      to: "/donate",
+      text: "Get Help",
+      to: "https://discord.gg/Xb9B4Ny",
     },
     heroImage: {
       src: "/img/lunarvim_logo.png",
