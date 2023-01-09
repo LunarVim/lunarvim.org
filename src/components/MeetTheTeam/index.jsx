@@ -33,7 +33,7 @@ const TeamMembers = () => {
     fetch("https://api.github.com/repos/LunarVim/LunarVim/stats/contributors")
       .then((res) => res.json())
       .then((data) => {
-        const contributors_list = data.map((stats) => ({
+        const contributors_list = data.map((stats) => (stats.author ? {
           [stats.author.login]: {
             img: stats.author.avatar_url,
             username: stats.author.login,
@@ -45,7 +45,7 @@ const TeamMembers = () => {
               }
             }, { a: 0, d: 0 }),
           }
-        }
+        } : null
         ));
         setContributors(Object.assign({}, ...contributors_list));
       }).catch((err) => console.error(err));
