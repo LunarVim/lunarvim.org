@@ -58,7 +58,7 @@ const Hero = () => {
               ) : null}
               {tertiaryCTA ? (
                 <Link
-                  className={`button button--outline button--lg ${snowBtn ? styles.snowBtn : ""
+                  className={`button button--link button--lg ${snowBtn ? styles.snowBtn : ""
                     }`}
                   to={tertiaryCTA.to}
                 >
