@@ -68,8 +68,8 @@ const TeamMembers = () => {
 const TeamMember = ({ name, username, img, bio, contributions, changes, donate }) => {
   const nameEl = (name ? <span>{name}</span> : null);
   const usernameEl = (<a href={`https://github.com/${username}`}>@{username}</a>);
-  const additionsEl = (changes ? <span className={styles.a}>{changes.a}++</span> : null)
-  const deletionsEl = (changes ? <span className={styles.d}>{changes.d}--</span> : null)
+  const additionsEl = (changes ? <span className={styles.a}>{changes.a.toLocaleString()}++</span> : null)
+  const deletionsEl = (changes ? <span className={styles.d}>{changes.d.toLocaleString()}--</span> : null)
   const donationsEl = (donate ? (
     <details open={donate.length < 5 ? "open" : null}>
 
