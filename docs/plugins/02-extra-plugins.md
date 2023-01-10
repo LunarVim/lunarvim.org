@@ -457,7 +457,7 @@ end
 
 ## Colorschemes
 
-### [tokyonight]()
+### [tokyonight](https://github.com/folke/tokyonight.nvim)
 
 ```lua
 lvim.plugins = {
