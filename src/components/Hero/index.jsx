@@ -17,6 +17,7 @@ const Hero = () => {
       customFields: {
         primaryCTA,
         secondaryCTA,
+        tertiaryCTA,
         heroImage,
         christmas: { snowBtn },
       },
@@ -53,6 +54,15 @@ const Hero = () => {
                   to={secondaryCTA.to}
                 >
                   <Translate>{secondaryCTA.text}</Translate>
+                </Link>
+              ) : null}
+              {tertiaryCTA ? (
+                <Link
+                  className={`button button--link button--lg ${snowBtn ? styles.snowBtn : ""
+                    }`}
+                  to={tertiaryCTA.to}
+                >
+                  <Translate>{tertiaryCTA.text}</Translate>
                 </Link>
               ) : null}
             </div>

@@ -89,10 +89,14 @@ const config = {
       text: "Install",
       to: "/docs/installation",
     },
-    // secondary call to action is optional
+    // secondary and tertiary calls to action are optional
     secondaryCTA: {
-      text: "Support",
+      text: "Donate",
       to: "/donate",
+    },
+    tertiaryCTA: {
+      text: "Get Help",
+      to: "https://discord.gg/Xb9B4Ny",
     },
     heroImage: {
       src: "/img/lunarvim_logo.png",
