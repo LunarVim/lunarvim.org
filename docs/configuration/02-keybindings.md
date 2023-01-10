@@ -147,12 +147,11 @@ lvim.builtin.which_key.mappings = {
   ["h"] = { '<cmd>let @/=""<CR>', "No Highlight" },
 
   p = {
-    name = "Packer",
-    c = { "<cmd>PackerCompile<cr>", "Compile" },
-    i = { "<cmd>PackerInstall<cr>", "Install" },
-    r = { "<cmd>LvimReload<cr>", "Reload" },
-    s = { "<cmd>PackerSync<cr>", "Sync" },
-    u = { "<cmd>PackerUpdate<cr>", "Update" },
+    name = "Plugins",
+    i = { "<cmd>Lazy install<cr>", "Install" },
+    s = { "<cmd>Lazy sync<cr>", "Sync" },
+    S = { "<cmd>Lazy clear<cr>", "Status" },
+    u = { "<cmd>Lazy update<cr>", "Update" },
   },
 }
 ```
