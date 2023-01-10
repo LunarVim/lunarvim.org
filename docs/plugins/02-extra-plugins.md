@@ -38,7 +38,7 @@ Every plugin that works with Neovim works with LunarVim, here are some examples 
 ```lua
 {
   'wfxr/minimap.vim',
-  run = "cargo install --locked code-minimap",
+  build = "cargo install --locked code-minimap",
   -- cmd = {"Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight"},
   config = function ()
     vim.cmd ("let g:minimap_width = 10")
@@ -173,7 +173,7 @@ lvim.builtin.treesitter.matchup.enable = true
 ```lua
 {
       "s1n7ax/nvim-window-picker",
-      tag = "1.*",
+      version = "1.*",
       config = function()
         require("window-picker").setup({
           autoselect_one = true,
@@ -271,7 +271,7 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
         },
       }
   end,
-  requires = "nvim-lua/plenary.nvim",
+  dependencies = "nvim-lua/plenary.nvim",
 },
 ```
 
@@ -282,7 +282,7 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
 ```lua
 {
   "pwntester/octo.nvim",
-  requires = {
+  dependencies = {
     'nvim-lua/plenary.nvim',
     'nvim-telescope/telescope.nvim',
     'kyazdani42/nvim-web-devicons',
@@ -327,7 +327,7 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
 {
   "mattn/vim-gist",
   event = "BufRead",
-  requires = "mattn/webapi-vim",
+  dependencies = "mattn/webapi-vim",
 },
 ```
 
@@ -366,7 +366,9 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
   "p00f/nvim-ts-rainbow",
 },
 ```
+
 After installing ensure to enable it in your `config.lua` using:
+
 ```
 ...
 lvim.builtin.treesitter.rainbow.enable = true
@@ -436,7 +438,7 @@ end
 ```lua
 {
   "nvim-telescope/telescope-fzy-native.nvim",
-  run = "make",
+  build = "make",
   event = "BufRead",
 },
 ```
@@ -508,8 +510,8 @@ end
 ```lua
 {
   "tzachar/cmp-tabnine",
-  run = "./install.sh",
-  requires = "hrsh7th/nvim-cmp",
+  build = "./install.sh",
+  dependencies = "hrsh7th/nvim-cmp",
   event = "InsertEnter",
 },
 ```
@@ -637,7 +639,7 @@ lvim.builtin.which_key.mappings["t"] = {
 table.insert(lvim.plugins, {
   "zbirenbaum/copilot-cmp",
   event = "InsertEnter",
-  requires = { "zbirenbaum/copilot.lua" },
+  dependencies = { "zbirenbaum/copilot.lua" },
   config = function()
     vim.defer_fn(function()
       require("copilot").setup() -- https://github.com/zbirenbaum/copilot.lua/blob/master/README.md#setup-and-configuration
@@ -647,7 +649,7 @@ table.insert(lvim.plugins, {
 })
 ```
 
-Make sure to run `:PackerLoad copilot-cmp` followed by `:Copilot auth` once the plugin is installed to start the authentication process.
+Make sure to run `:Lazy load copilot-cmp` followed by `:Copilot auth` once the plugin is installed to start the authentication process.
 
 ### [dial.nvim](https://github.com/monaqa/dial.nvim)
 
@@ -696,7 +698,7 @@ Make sure to run `:PackerLoad copilot-cmp` followed by `:Copilot auth` once the 
 {
   "npxbr/glow.nvim",
   ft = {"markdown"}
-  -- run = "yay -S glow"
+  -- build = "yay -S glow"
 },
 ```
 
@@ -707,7 +709,7 @@ Make sure to run `:PackerLoad copilot-cmp` followed by `:Copilot auth` once the 
 ```lua
 {
   "iamcco/markdown-preview.nvim",
-  run = "cd app && npm install",
+  build = "cd app && npm install",
   ft = "markdown",
   config = function()
     vim.g.mkdp_auto_start = 1
@@ -746,7 +748,7 @@ Make sure to run `:PackerLoad copilot-cmp` followed by `:Copilot auth` once the 
 **next generation note-taking**
 
 ```lua
-	{"oberblastmeister/neuron.nvim"},
+ {"oberblastmeister/neuron.nvim"},
 ```
 
 ### [nvim-lastplace](https://github.com/ethanholz/nvim-lastplace)
@@ -754,19 +756,19 @@ Make sure to run `:PackerLoad copilot-cmp` followed by `:Copilot auth` once the 
 **pick up where you left off**
 
 ```lua
-	{
-		"ethanholz/nvim-lastplace",
-		event = "BufRead",
-		config = function()
-			require("nvim-lastplace").setup({
-				lastplace_ignore_buftype = { "quickfix", "nofile", "help" },
-				lastplace_ignore_filetype = {
-					"gitcommit", "gitrebase", "svn", "hgcommit",
-				},
-				lastplace_open_folds = true,
-			})
-		end,
-	},
+ {
+  "ethanholz/nvim-lastplace",
+  event = "BufRead",
+  config = function()
+   require("nvim-lastplace").setup({
+    lastplace_ignore_buftype = { "quickfix", "nofile", "help" },
+    lastplace_ignore_filetype = {
+     "gitcommit", "gitrebase", "svn", "hgcommit",
+    },
+    lastplace_open_folds = true,
+   })
+  end,
+ },
 ```
 
 ### [persistence](https://github.com/folke/persistence.nvim)
@@ -888,7 +890,7 @@ Once installed and synced, add your WakaTime API Key via `:WakaTimeApiKey` comma
 {
   "turbio/bracey.vim",
   cmd = {"Bracey", "BracyStop", "BraceyReload", "BraceyEval"},
-  run = "npm install --prefix server",
+  build = "npm install --prefix server",
 },
 ```
 
