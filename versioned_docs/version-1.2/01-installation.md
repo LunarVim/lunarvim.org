@@ -20,14 +20,14 @@ import TabItem from '@theme/TabItem';
 <TabItem value="linux/macos" label="Linux/MacOs">
 
 ```bash
-LV_BRANCH='release-1.2/neovim-0.8' bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+LV_BRANCH='release-1.2/neovim-0.8' bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/fc6873809934917b470bff1b072171879899a36b/utils/installer/install.sh)
 ```
 
 </TabItem>
 <TabItem value="windows" label="Windows">
 
 ```powershell
-$LV_BRANCH='release-1.2/neovim-0.8'; Invoke-WebRequest https://raw.githubusercontent.com/LunarVim/LunarVim/master/utils/installer/install.ps1 -UseBasicParsing | Invoke-Expression
+$LV_BRANCH='release-1.2/neovim-0.8'; Invoke-WebRequest https://raw.githubusercontent.com/LunarVim/LunarVim/fc6873809934917b470bff1b072171879899a36b/utils/installer/install.ps1 -UseBasicParsing | Invoke-Expression
 ```
 
 </TabItem>
