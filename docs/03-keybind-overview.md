@@ -16,13 +16,13 @@ by pressing `<backspace>` in the which-key main menu (first popup after pressing
 
 ## Plugins
 
-| key                 | description                                                                              | mode   |
-| ------------------- | ---------------------------------------------------------------------------------------- | ------ |
-| `<leader>`          | [whichkey](https://github.com/folke/which-key.nvim) (keybinds popup (shows up after 1s)) | normal |
-| `<leader>e`         | [nvimtree](https://github.com/nvim-tree/nvim-tree.lua) (side file explorer)              | normal |
-| `<leader>f`  `<leader>s`(menu) | [telescope](https://github.com/nvim-telescope/telescope.nvim) (find files, grep text, and more)               | normal |
-| `<leader>;`         | [alpha](https://github.com/goolord/alpha-nvim) (dashboard)                               | normal |
-| `<C-\>` `<M-1/2/3>` | [toggleterm](https://github.com/akinsho/toggleterm.nvim) (terminal)                      | normal |
+| key                           | description                                                                                     | mode   |
+| ----------------------------- | ----------------------------------------------------------------------------------------------- | ------ |
+| `<leader>`                    | [whichkey](https://github.com/folke/which-key.nvim) (keybinds popup (shows up after 1s))        | normal |
+| `<leader>e`                   | [nvimtree](https://github.com/nvim-tree/nvim-tree.lua) (side file explorer)                     | normal |
+| `<leader>f` `<leader>s`(menu) | [telescope](https://github.com/nvim-telescope/telescope.nvim) (find files, grep text, and more) | normal |
+| `<leader>;`                   | [alpha](https://github.com/goolord/alpha-nvim) (dashboard)                                      | normal |
+| `<C-\>` `<M-1/2/3>`           | [toggleterm](https://github.com/akinsho/toggleterm.nvim) (terminal)                             | normal |
 
 ## LSP
 
