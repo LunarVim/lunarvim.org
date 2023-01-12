@@ -25,8 +25,9 @@ const config = {
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
+
     defaultLocale: "en",
-    locales: ["en", "de", "es"],
+    locales: ["en", "de", "es", "it"],
     localeConfigs: {
       en: {
         label: "English",
@@ -34,6 +35,9 @@ const config = {
       de: {
         label: "Deutsch",
       },
+      it: {
+        label: "Italiano",
+      }
       es: {
         label: "Español",
       },
@@ -87,7 +91,7 @@ const config = {
     ],
     primaryCTA: {
       text: "Install",
-      to: "/docs/installation",
+      to: "docs/installation",
     },
     // secondary and tertiary calls to action are optional
     secondaryCTA: {
@@ -190,6 +194,10 @@ const config = {
           {
             type: "localeDropdown",
             position: "right",
+          },
+          {
+            type: 'localeDropdown',
+            position: 'right',
           },
         ],
       },
