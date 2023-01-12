@@ -18,7 +18,7 @@ The first file describes where your snippets are :
 
 ```json
 {
-    "name": "nvim-snippets",
+    "name": "snippets",
     "author": "authorname",
     "engines": {
         "vscode": "^1.11.0"
