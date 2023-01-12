@@ -65,7 +65,7 @@ lvim.builtin.lualine.sections.lualine_y = {
 
 LunarVim detecta automaticamente el esquema de colores que tienes activado y lo establece como el tema de la barra de estado.
 
-Para cambiar el esquema de colores, puedes revisar [Esquemas de Colores](./03-colorschemes.md).
+Para cambiar el esquema de colores, puedes revisar [Esquemas de Colores](./colorschemes.md).
 
 Si no tienes un tema compatible con `lualine`, el sistema te mostrará automaticamente el tema por defecto de `lualine`.
 

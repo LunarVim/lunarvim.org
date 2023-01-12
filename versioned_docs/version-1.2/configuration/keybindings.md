@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Keybindings
 
-See the [keybind overview](../03-keybind-overview.md) for most commonly used keybinds.
+See the [keybind overview](../keybind-overview.md) for most commonly used keybinds.
 
 If you want to (re)map a keybinding that starts with `<leader>`, use [Whichkey Bindings](#whichkey-bindings).
 If the bindings are LSP (intellisense) related, use [LSP Bindings](#lsp-bindings).

@@ -19,4 +19,4 @@ lvim --headless \
 
 # yarn run prettier -w scripts/core_plugins.*
 
-# mv scripts/core_plugins.md docs/plugins/01-core-plugins-list.md
+# mv scripts/core_plugins.md docs/plugins/core-plugins-list.md

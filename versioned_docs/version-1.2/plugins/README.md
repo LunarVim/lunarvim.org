@@ -1,6 +1,6 @@
 # Plugins
 
-Plugins are managed by [Packer](https://github.com/wbthomason/packer.nvim), and are split into [core-plugins](./01-core-plugins-list.md) and user-plugins.
+Plugins are managed by [Packer](https://github.com/wbthomason/packer.nvim), and are split into [core-plugins](./core-plugins-list.md) and user-plugins.
 
 - from [lua/lvim/plugin-loader.lua](https://github.com/lunarvim/lunarvim/blob/10c7753d8e6f572974f9b9e0d0d8631cd13e60ea/lua/lvim/plugin-loader.lua):
 
@@ -87,6 +87,6 @@ lvim.plugins = {
 }
 ```
 
-Check the [extra plugins](./02-extra-plugins.md) for some suggestions.
+Check the [extra plugins](./extra-plugins.md) for some suggestions.
 
 _Note: removing a plugin from the `lvim.plugin` table removes it from your configuration but not your system. Any plugins left in the `start` directory will still autostart. To remove them completely, run `:PackerSync`._

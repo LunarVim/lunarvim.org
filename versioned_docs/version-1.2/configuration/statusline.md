@@ -63,7 +63,7 @@ lvim.builtin.lualine.sections.lualine_y = {
 
 LunarVim automatically detects current colorscheme and set it as theme.
 
-To change your colorscheme, see [Colorscheme](./03-colorschemes.md)
+To change your colorscheme, see [Colorscheme](./colorschemes.md)
 
 If there is no matching theme, it will fallback to `"auto"` theme provided by lualine.
 
