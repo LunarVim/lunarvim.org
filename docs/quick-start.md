@@ -42,11 +42,11 @@ See [languages](./languages/README.md) where each language with its formatting a
 
 ## Nerd Fonts
 
-Installing a [nerd font](https://www.nerdfonts.com/) is recommended. Otherwise some symbols won't be rendered properly. For more information go to the [configuration section ](./configuration/04-nerd-fonts.md).
+Installing a [nerd font](https://www.nerdfonts.com/) is recommended. Otherwise some symbols won't be rendered properly. For more information go to the [configuration section ](./configuration/nerd-fonts.md).
 
 ## Next Steps
 
 - Learn how to [configure LunarVim](./configuration/README.md)
-- See the [keybind overview](./03-keybind-overview.md)
+- See the [keybind overview](./keybind-overview.md)
 - Learn about the [installed plugins](./plugins/README.md)
 - Learn how to set up LunarVim for your [language](./languages/README.md)
