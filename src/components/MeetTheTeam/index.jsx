@@ -57,7 +57,7 @@ export default function TeamMembers() {
         if (data.length) {
           const contributorsList = data.filter(({ author }) =>
             teamMembersList.some(
-              (teamMember) => teamMember.username === author.login,
+              ({ username }) => username === author.login,
             ),
           );
           const newContributors = contributorsList.reduce(
