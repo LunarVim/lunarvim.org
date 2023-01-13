@@ -1,4 +1,4 @@
-name: yarn builld
+name: yarn build
 
 on:
   pull_request:
@@ -7,7 +7,6 @@ on:
 
 jobs:
   yarn-build:
-    name: "yarn build"
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
