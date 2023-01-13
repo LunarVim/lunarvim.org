@@ -1,97 +1,205 @@
-import React, { useEffect, useState } from "react";
-import styles from "./styles.modules.css";
+import React, { useEffect, useState } from 'react';
+import classNames from 'classnames';
+import styles from './styles.modules.css';
 
-const TeamMembersList = [
+const GITHUB_API_URL =
+  'https://api.github.com/repos/LunarVim/LunarVim/stats/contributors';
+const TRANSITION_DELAY_IN_MILLISECONDS = 400;
+
+const teamMembersList = [
   {
-    name: "Christian Chiarulli",
-    username: "ChristianChiarulli",
+    id: 1,
+    name: 'Christian Chiarulli',
+    username: 'ChristianChiarulli',
     donate: [
-      { name: "GitHub Sponsors", link: "https://github.com/sponsors/ChristianChiarulli" },
-      { name: "Patreon", link: "https://www.patreon.com/chrisatmachine" },
-      { name: "Ko-fi", link: "https://ko-fi.com/chrisatmachine" },
-      { name: "BuyMeACoffee", link: "https://www.buymeacoffee.com/chrisatmachine" },
-      { name: "PayPal", link: "https://www.paypal.com/paypalme/chrisatmachine" },
-      { name: "Strike", link: "https://strike.me/chrisatmachine/" },
-    ]
+      {
+        name: 'GitHub Sponsors',
+        link: 'https://github.com/sponsors/ChristianChiarulli',
+      },
+      { name: 'Patreon', link: 'https://www.patreon.com/chrisatmachine' },
+      { name: 'Ko-fi', link: 'https://ko-fi.com/chrisatmachine' },
+      {
+        name: 'BuyMeACoffee',
+        link: 'https://www.buymeacoffee.com/chrisatmachine',
+      },
+      {
+        name: 'PayPal',
+        link: 'https://www.paypal.com/paypalme/chrisatmachine',
+      },
+      { name: 'Strike', link: 'https://strike.me/chrisatmachine/' },
+    ],
   },
   {
-    username: "kylo252",
+    id: 2,
+    username: 'kylo252',
   },
   {
-    name: "Abouzar Parvan",
-    username: "abzcoding",
+    id: 3,
+    name: 'Abouzar Parvan',
+    username: 'abzcoding',
   },
   {
-    username: "rebuilt",
+    id: 4,
+    username: 'rebuilt',
   },
 ];
 
-const TeamMembers = () => {
+export default function TeamMembers() {
+  const [isFetchingContributors, setIsFetchingContributors] = useState(true);
   const [contributors, setContributors] = useState({});
 
   useEffect(() => {
-    fetch("https://api.github.com/repos/LunarVim/LunarVim/stats/contributors")
-      .then((res) => res.json())
-      .then((data) => {
-        const contributors_list = data.map((stats) => (stats.author ? {
-          [stats.author.login]: {
-            img: stats.author.avatar_url,
-            username: stats.author.login,
-            contributions: stats.total,
-            changes: stats.weeks.reduce((accumulator, week) => {
+    async function getContributors() {
+      try {
+        const res = await fetch(GITHUB_API_URL);
+        const data = await res.json();
+
+        if (data.length) {
+          const contributorsList = data.filter(({ author }) =>
+            teamMembersList.some(
+              (teamMember) => teamMember.username === author.login,
+            ),
+          );
+          const newContributors = contributorsList.reduce(
+            (accumulator, { author, total: contributions, weeks }) => {
+              const { login: username, avatar_url: img } = author;
+              const changes = weeks.reduce(
+                (accumulator, week) => ({
+                  a: accumulator.a + week.a,
+                  d: accumulator.d + week.d,
+                }),
+                {
+                  a: 0,
+                  d: 0,
+                },
+              );
+
               return {
-                a: accumulator.a + week.a,
-                d: accumulator.d + week.d
-              }
-            }, { a: 0, d: 0 }),
-          }
-        } : null
-        ));
-        setContributors(Object.assign({}, ...contributors_list));
-      }).catch((err) => console.error(err));
+                ...accumulator,
+                [username]: {
+                  img,
+                  username,
+                  contributions,
+                  changes,
+                },
+              };
+            },
+            {},
+          );
+
+          setContributors(newContributors);
+          setIsFetchingContributors(false);
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    getContributors();
   }, []);
+
+  const { container, members } = styles;
 
   return (
     <section>
-      <div id="team-members" className={`container ${styles.container}`}>
-        <div className={styles.members}>
-          {TeamMembersList.map((member) => (
-            <TeamMember key={member.username} {...member} {...contributors[member.username]} />
-          ))}
+      <div id="team-members" className={classNames('container', container)}>
+        <div className={members}>
+          {teamMembersList.map(({ id, name, username, donate }) => {
+            const contributorData = contributors[username] ?? {};
+
+            return (
+              <TeamMember
+                key={id}
+                id={id}
+                name={name}
+                username={username}
+                donate={donate}
+                contributorData={contributorData}
+                isLoading={isFetchingContributors}
+              />
+            );
+          })}
         </div>
       </div>
     </section>
   );
-};
+}
 
+function TeamMember({
+  id,
+  name,
+  username,
+  donate,
+  contributorData,
+  isLoading,
+}) {
+  const [shouldRender, setShouldRender] = useState(false);
+  const { img, bio, contributions, changes } = contributorData;
+  const commits = shouldRender ? contributions : 0;
+  const additions = shouldRender ? changes.a.toLocaleString() : 0;
+  const deletions = shouldRender ? changes.d.toLocaleString() : 0;
+  const description = bio || 'Write something about yourself.';
 
-const TeamMember = ({ name, username, img, bio, contributions, changes, donate }) => {
-  const nameEl = (name ? <span>{name}</span> : null);
-  const usernameEl = (<a href={`https://github.com/${username}`}>@{username}</a>);
-  const additionsEl = (changes ? <span className={styles.a}>{changes.a.toLocaleString()}++</span> : null)
-  const deletionsEl = (changes ? <span className={styles.d}>{changes.d.toLocaleString()}--</span> : null)
-  const donationsEl = (donate ? (
-    <details open={donate.length < 5 ? "open" : null}>
+  useEffect(() => {
+    if (isLoading) {
+      return;
+    }
 
-      <summary>donate</summary>
-      <ul>
-        {donate.map(({ name, link }) => (
-          <li key={name}><a href={link}>{name}</a></li>
-        ))}
-      </ul>
-    </details>
-  ) : null);
+    const delay = (id - 1) * TRANSITION_DELAY_IN_MILLISECONDS;
+    const timeout = setTimeout(() => setShouldRender(true), delay);
+
+    return () => clearTimeout(timeout);
+  }, [isLoading, id]);
+
+  const {
+    member,
+    'image-container': imageContainer,
+    image,
+    'image--show': imageShow,
+    title,
+    clear,
+    details,
+    detail,
+    a,
+    d,
+    summary,
+    list,
+  } = styles;
 
   return (
-    <div className={styles.member}>
-      {img ? <img src={img} alt="profile pic" /> : null}
-      <h3>{nameEl} {usernameEl}</h3>
-      <p className={styles.details}>{contributions} commits {additionsEl} {deletionsEl} </p>
-      <p>{bio ? bio : "Write something about yourself."}</p>
-      <div style={{ clear: "both" }}> </div>
-      {donationsEl}
-    </div >
+    <div className={member}>
+      <div className={imageContainer}>
+        <img
+          src={img}
+          className={classNames(image, {
+            [imageShow]: shouldRender,
+          })}
+        />
+      </div>
+      <h3 className={title}>
+        <span>{name}</span>
+        &nbsp;
+        <a href={`https://github.com/${username}`}>@{username}</a>
+      </h3>
+      <p className={details}>
+        {commits} commits
+        <span className={classNames(detail, a)}>{additions}++</span>
+        <span className={classNames(detail, d)}>{deletions}--</span>
+      </p>
+      <p>{description}</p>
+      <div className={clear} />
+      {donate && (
+        <details open={donate.length < 5}>
+          <summary className={summary}>donate</summary>
+          <ul className={list}>
+            {donate.map(({ name, link }) => (
+              <li key={name}>
+                <a href={link}>{name}</a>
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
+    </div>
   );
-};
-
-export default TeamMembers;
+}
