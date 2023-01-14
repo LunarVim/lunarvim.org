@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import CountUp from 'react-countup';
 import classNames from 'classnames';
 import styles from './styles.modules.css';
 
@@ -56,9 +57,7 @@ export default function TeamMembers() {
 
         if (data.length) {
           const contributorsList = data.filter(({ author }) =>
-            teamMembersList.some(
-              ({ username }) => username === author.login,
-            ),
+            teamMembersList.some(({ username }) => username === author.login),
           );
           const newContributors = contributorsList.reduce(
             (accumulator, { author, total: contributions, weeks }) => {
@@ -125,6 +124,21 @@ export default function TeamMembers() {
   );
 }
 
+function DetailCountUp({ value, suffix, className }) {
+  const durationInSeconds = TRANSITION_DELAY_IN_MILLISECONDS / 1_000;
+
+  return (
+    <CountUp
+      start={0}
+      end={value}
+      duration={durationInSeconds}
+      suffix={suffix}
+      formattingFn={(value) => `${value.toLocaleString()}${suffix}`}
+      className={className}
+    />
+  );
+}
+
 function TeamMember({
   id,
   name,
@@ -136,8 +150,8 @@ function TeamMember({
   const [shouldRender, setShouldRender] = useState(false);
   const { img, bio, contributions, changes } = contributorData;
   const commits = shouldRender ? contributions : 0;
-  const additions = shouldRender ? changes.a.toLocaleString() : 0;
-  const deletions = shouldRender ? changes.d.toLocaleString() : 0;
+  const additions = shouldRender ? changes.a : 0;
+  const deletions = shouldRender ? changes.d : 0;
   const description = bio || 'Write something about yourself.';
 
   useEffect(() => {
@@ -182,9 +196,17 @@ function TeamMember({
         <a href={`https://github.com/${username}`}>@{username}</a>
       </h3>
       <p className={details}>
-        {commits} commits
-        <span className={classNames(detail, a)}>{additions}++</span>
-        <span className={classNames(detail, d)}>{deletions}--</span>
+        <DetailCountUp value={commits} suffix={' commits'} />
+        <DetailCountUp
+          value={additions}
+          suffix={'++'}
+          className={classNames(detail, a)}
+        />
+        <DetailCountUp
+          value={deletions}
+          suffix={'--'}
+          className={classNames(detail, d)}
+        />
       </p>
       <p>{description}</p>
       <div className={clear} />
