@@ -26,7 +26,7 @@ bash utils/installer/install_bin.sh
 
 ### Cache issues
 
-This might be the result of old cache files that need to be reset. LunarVim makes use of  [impatient's](https://github.com/lewis6991/impatient.nvim) to optimize the startup procedure and deliver a snappy experience.
+This might be the result of old cache files that need to be reset. LunarVim makes use of [impatient's](https://github.com/lewis6991/impatient.nvim) to optimize the startup procedure and deliver a snappy experience.
 
 1. while running LunarVim: `:LvimCacheReset`
 2. from the CLI: `lvim +LvimCacheReset`
@@ -35,10 +35,10 @@ This might be the result of old cache files that need to be reset. LunarVim make
 
 Another common reason for such errors is due to Packer being unable to fully restore a snapshot.
 This could be due to multiple reasons, but most commonly it's a breaking change in some plugin,
-or `git` refusing to pull an update to a plugin because it 
+or `git` refusing to pull an update to a plugin because it
 [can't safely fast-forward the current branch](https://blog.sffc.xyz/post/185195398930/why-you-should-use-git-pull-ff-only-git-is-a).
 
-The easiest way to solve this is to manually update (a rebase is likely required) the offending plugin, which should be located in [Packer's package-root](https://github.com/wbthomason/packer.nvim/blob/4dedd3b08f8c6e3f84afbce0c23b66320cd2a8f2/doc/packer.txt#L199) at `$LUNARVIM_RUNTIME_DIR/site/pack/packer`. 
+The easiest way to solve this is to manually update (a rebase is likely required) the offending plugin, which should be located in [Packer's package-root](https://github.com/wbthomason/packer.nvim/blob/4dedd3b08f8c6e3f84afbce0c23b66320cd2a8f2/doc/packer.txt#L199) at `$LUNARVIM_RUNTIME_DIR/site/pack/packer`.
 
 Let's say it's `nvim-cmp` for example
 
@@ -47,6 +47,7 @@ Let's say it's `nvim-cmp` for example
 ```
 
 now check which commit is currently checked out
+
 ```vim
 :! git -C "$LUNARVIM_RUNTIME_DIR/site/pack/packer/start/nvim-cmp" log -1
 ```
@@ -84,7 +85,7 @@ See [fish-shell/fish-shell#7004](https://github.com/fish-shell/fish-shell/issues
 
 ### Update node
 
-Some language servers depend on newer versions of node.  Update your version of node to the latest.
+Some language servers depend on newer versions of node. Update your version of node to the latest.
 
 ### is it overridden?
 
@@ -133,15 +134,15 @@ vim.list_extend(lvim.lsp.override, { "jsonls" })
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "jsonls" })
 ```
 
-
 ## My LunarVim looks ugly!
 
-- Make sure that you have a terminal that supports 24-bit colors. If not, you might face some issues regarding the default colorscheme, and other colorschemes. 
+- Make sure that you have a terminal that supports 24-bit colors. If not, you might face some issues regarding the default colorscheme, and other colorschemes.
+
   - For a explainer on what 24-bit colors are, and to test if your terminal supports it, we like this useful repository: https://github.com/termstandard/colors
 
 - Another issue might be `termguicolors`. If this is the case, we advice you to look at the official neovim docs:
+
   - What is `termguicolors`? see <https://neovim.io/doc/user/options.html#'termguicolors'>
 
 - Another case might be that your `$TERM` variable changes the colors in your terminal.
   - For this, we advice you to look and see if anyone else has the same `$TERM` variable as you, and what they did https://github.com/neovim/neovim/issues?q=label%3Atui+color
-

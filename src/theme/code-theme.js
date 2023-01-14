@@ -1,59 +1,67 @@
 const theme = {
   plain: {
-    color: "var(--normal-white)",
-    backgroundColor: "var(--normal-black)",
+    color: 'var(--normal-white)',
+    backgroundColor: 'var(--normal-black)',
   },
   styles: [
     {
-      types: ["prolog", "constant", "builtin", "important", "deleted", "type", "attr-name"],
+      types: [
+        'prolog',
+        'constant',
+        'builtin',
+        'important',
+        'deleted',
+        'type',
+        'attr-name',
+      ],
       style: {
-        color: "var(--normal-red)",
-      }
+        color: 'var(--normal-red)',
+      },
     },
     {
-      types: ["inserted", "function"],
+      types: ['inserted', 'function'],
       style: {
-        color: "var(--normal-cyan)",
-      }
+        color: 'var(--normal-cyan)',
+      },
     },
     {
-      types: ["changed"],
+      types: ['changed'],
       style: {
-        color: "var(--normal-yellow)",
-      }
+        color: 'var(--normal-yellow)',
+      },
     },
     {
-      types: ["punctuation", "symbol"],
+      types: ['punctuation', 'symbol'],
       style: {
-        color: "var(--normal-green)",
-      }
+        color: 'var(--normal-green)',
+      },
     },
     {
-      types: ["string", "char", "selector"],
+      types: ['string', 'char', 'selector'],
       style: {
-        color: "var(--normal-green)",
-      }
+        color: 'var(--normal-green)',
+      },
     },
     {
-      types: ["keyword", "variable", "boolean", "number"],
+      types: ['keyword', 'variable', 'boolean', 'number'],
       style: {
-        color: "var(--normal-magenta)",
-        fontStyle: "italic",
-      }
+        color: 'var(--normal-magenta)',
+        fontStyle: 'italic',
+      },
     },
     {
-      types: ["comment"],
+      types: ['comment'],
       style: {
-        color: "var(--normal-white)",
-      }
+        color: 'var(--normal-white)',
+      },
     },
     {
-      types: ["tag"],
+      types: ['tag'],
       style: {
-        color: "var(--normal-blue)",
-      }
-    }
-  ]
+        color: 'var(--normal-blue)',
+      },
+    },
+  ],
 };
 
 module.exports = theme;

@@ -1,6 +1,6 @@
-import styles from "./lightrope.module.css";
-import React from "react";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import styles from './lightrope.module.css';
+import React from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 const Lightrope = () => {
   const lightsCount = 27;

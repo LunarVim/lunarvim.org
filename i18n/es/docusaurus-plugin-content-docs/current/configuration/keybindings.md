@@ -23,6 +23,7 @@ Para eliminar mapeos de teclas establecidas en LunarVim.
 ```
 
 ### Mostrando que está mapeado
+
 Usa `<Leader>Lk` para ver los mapeos de teclas en LunarVim.
 
 Para verificar si una tecla en particular ya ha sido mapeada:
@@ -75,7 +76,7 @@ lvim.builtin.which_key.mappings["tP"] = {
 
 ### Mapeo de submenús
 
-Puedes mapear un grupo de teclas dentro del mapeo de una tecla, esto es util para hacer submenús, por ejemplo; quieres hacer que `Definiciones` sea activado presionando `<Leader>td` y que  `Referencias` sea activado presionando `<Leader>tr`. Entonces debes hacer un submenú que se llame `Problema`de la siguiente forma.
+Puedes mapear un grupo de teclas dentro del mapeo de una tecla, esto es util para hacer submenús, por ejemplo; quieres hacer que `Definiciones` sea activado presionando `<Leader>td` y que `Referencias` sea activado presionando `<Leader>tr`. Entonces debes hacer un submenú que se llame `Problema`de la siguiente forma.
 
 ```lua
 lvim.builtin.which_key.mappings["t"] = {

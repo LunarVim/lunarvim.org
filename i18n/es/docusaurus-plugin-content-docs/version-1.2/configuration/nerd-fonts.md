@@ -40,4 +40,3 @@ OTF es un estándar nuevo, está basado en TTF, cuando exista la opción debes e
 ## Configuraciones de Terminal
 
 Después de instalar la fuente, vas a tener que refrescar el cache de fuentes ejecutando `fc-cache -f -v`. Luego, vas a ir a cambiar la configuración de tu terminal para usar la fuente que acabas de instalar. En este paso debes ir a la documentación de tu terminal para saber como cambiar la fuente.
-

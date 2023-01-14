@@ -3,18 +3,18 @@ name: Spell checking
 on:
   push:
     branches:
-    - "**"
+      - '**'
     tags-ignore:
-    - "**"
+      - '**'
   pull_request_target:
     branches:
-    - "**"
+      - '**'
     tags-ignore:
-    - "**"
+      - '**'
     types:
-    - 'opened'
-    - 'reopened'
-    - 'synchronize'
+      - 'opened'
+      - 'reopened'
+      - 'synchronize'
 
 jobs:
   spelling:
@@ -33,19 +33,18 @@ jobs:
       # note: If you use only_check_changed_files, you do not want cancel-in-progress
       cancel-in-progress: true
     steps:
-    - name: check-spelling
-      id: spelling
-      uses: check-spelling/check-spelling@v0.0.21
-      with:
-        checkout: true
-        suppress_push_for_open_pull_request: 1
-        post_comment: 0
-        dictionary_source_prefixes: '{"cspell": "https://raw.githubusercontent.com/streetsidesoftware/cspell-dicts/cspell-dicts%408.0.0/dictionaries/"}'
-        extra_dictionaries:
-          cspell:filetypes/filetypes.txt
-          cspell:lua/src/lua.txt
-          cspell:markdown/src/markdown.txt
-        check_extra_dictionaries: ''
+      - name: check-spelling
+        id: spelling
+        uses: check-spelling/check-spelling@v0.0.21
+        with:
+          checkout: true
+          suppress_push_for_open_pull_request: 1
+          post_comment: 0
+          dictionary_source_prefixes: '{"cspell": "https://raw.githubusercontent.com/streetsidesoftware/cspell-dicts/cspell-dicts%408.0.0/dictionaries/"}'
+          extra_dictionaries: cspell:filetypes/filetypes.txt
+            cspell:lua/src/lua.txt
+            cspell:markdown/src/markdown.txt
+          check_extra_dictionaries: ''
   comment-push:
     name: Report (Push)
     # If your workflow isn't running on push, you can remove this job
@@ -55,11 +54,11 @@ jobs:
       contents: write
     if: (success() || failure()) && needs.spelling.outputs.followup && github.event_name == 'push'
     steps:
-    - name: comment
-      uses: check-spelling/check-spelling@v0.0.21
-      with:
-        checkout: true
-        task: ${{ needs.spelling.outputs.followup }}
+      - name: comment
+        uses: check-spelling/check-spelling@v0.0.21
+        with:
+          checkout: true
+          task: ${{ needs.spelling.outputs.followup }}
 
   comment-pr:
     name: Report (PR)
@@ -70,8 +69,8 @@ jobs:
       pull-requests: write
     if: (success() || failure()) && needs.spelling.outputs.followup && contains(github.event_name, 'pull_request')
     steps:
-    - name: comment
-      uses: check-spelling/check-spelling@v0.0.21
-      with:
-        checkout: true
-        task: ${{ needs.spelling.outputs.followup }}
+      - name: comment
+        uses: check-spelling/check-spelling@v0.0.21
+        with:
+          checkout: true
+          task: ${{ needs.spelling.outputs.followup }}

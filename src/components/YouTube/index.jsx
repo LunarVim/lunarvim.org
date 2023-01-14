@@ -1,10 +1,14 @@
-import React from "react";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import Clouds from "../Clouds";
-import styles from "./styles.module.css";
+import React from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Clouds from '../Clouds';
+import styles from './styles.module.css';
 
 const YouTube = () => {
-  const { siteConfig: { customFields: { YouTube } } } = useDocusaurusContext();
+  const {
+    siteConfig: {
+      customFields: { YouTube },
+    },
+  } = useDocusaurusContext();
 
   return (
     <Clouds>
@@ -16,7 +20,9 @@ const YouTube = () => {
               loading="lazy"
               width="560"
               height="315"
-              src={`https://www.youtube.com/embed/${yt.type === "playlist" ? `playlist?list=${yt.id}` : yt.id}`}
+              src={`https://www.youtube.com/embed/${
+                yt.type === 'playlist' ? `playlist?list=${yt.id}` : yt.id
+              }`}
               title={yt.title}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

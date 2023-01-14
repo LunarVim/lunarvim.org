@@ -49,7 +49,7 @@
   animation-duration: 1.4s;
 }
 .lightrope li:before {
-  content: "";
+  content: '';
   position: absolute;
   background: #222;
   width: 10px;
@@ -59,7 +59,7 @@
   left: 1px;
 }
 .lightrope li:after {
-  content: "";
+  content: '';
   top: -14px;
   left: 9px;
   position: absolute;

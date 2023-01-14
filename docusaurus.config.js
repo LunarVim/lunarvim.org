@@ -3,54 +3,53 @@
 
 /* const lightCodeTheme = require('prism-react-renderer/themes/github'); */
 /* const darkCodeTheme = require('prism-react-renderer/themes/dracula'); */
-const codeTheme = require("./src/theme/code-theme");
-const socials = require("./socials");
+const codeTheme = require('./src/theme/code-theme');
+const socials = require('./socials');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "LunarVim",
-  url: "https://lunarvim.org",
-  baseUrl: "/",
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
-  favicon: "img/lunarvim_icon.png",
+  title: 'LunarVim',
+  url: 'https://lunarvim.org',
+  baseUrl: '/',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+  favicon: 'img/lunarvim_icon.png',
   trailingSlash: false,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "lunarvim", // Usually your GitHub org/user name.
-  projectName: "lunarvim", // Usually your repo name.
+  organizationName: 'lunarvim', // Usually your GitHub org/user name.
+  projectName: 'lunarvim', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
-    locales: ["en", "de", "es"],
+    defaultLocale: 'en',
+    locales: ['en', 'de', 'es'],
     localeConfigs: {
       en: {
-        label: "English",
+        label: 'English',
       },
       de: {
-        label: "Deutsch",
+        label: 'Deutsch',
       },
       es: {
-        label: "Español",
+        label: 'Español',
       },
     },
   },
 
   presets: [
     [
-      "classic",
+      'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
+          sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/LunarVim/lunarvim.org/tree/master/",
+          editUrl: 'https://github.com/LunarVim/lunarvim.org/tree/master/',
           versions: {
             current: {
               label: 'master',
@@ -62,11 +61,10 @@ const config = {
           showReadingTime: true,
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/LunarVim/lunarvim.org/tree/master/",
+          editUrl: 'https://github.com/LunarVim/lunarvim.org/tree/master/',
         },
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
@@ -74,33 +72,33 @@ const config = {
 
   customFields: {
     taglineList: [
-      "Interstellar Development Experience",
-      "Neovim in <Space>",
-      "Houston, how do I exit?",
-      "A community driven IDE for Neovim",
-      "The Neovim config from another world",
+      'Interstellar Development Experience',
+      'Neovim in <Space>',
+      'Houston, how do I exit?',
+      'A community driven IDE for Neovim',
+      'The Neovim config from another world',
       "The IDE that's too cool for planet Earth",
-      "A stellar Neovim experience",
+      'A stellar Neovim experience',
       "The universe's most lightweight IDE",
-      "No-Configuration-Required Neovim",
-      "Support for +10 Languages"
+      'No-Configuration-Required Neovim',
+      'Support for +10 Languages',
     ],
     primaryCTA: {
-      text: "Install",
-      to: "/docs/installation",
+      text: 'Install',
+      to: '/docs/installation',
     },
     // secondary and tertiary calls to action are optional
     secondaryCTA: {
-      text: "Donate",
-      to: "/donate",
+      text: 'Donate',
+      to: '/donate',
     },
     tertiaryCTA: {
-      text: "Get Help",
-      to: "https://discord.gg/Xb9B4Ny",
+      text: 'Get Help',
+      to: 'https://discord.gg/Xb9B4Ny',
     },
     heroImage: {
-      src: "/img/lunarvim_logo.png",
-      alt: "LunarVim Logo",
+      src: '/img/lunarvim_logo.png',
+      alt: 'LunarVim Logo',
     },
     christmas: {
       lightrope: false,
@@ -109,48 +107,48 @@ const config = {
     },
     previewImgs: [
       {
-        src: "/img/lunarvim_preview5.png",
-        alt: "LunarVim Preview",
+        src: '/img/lunarvim_preview5.png',
+        alt: 'LunarVim Preview',
       },
       {
-        src: "/img/lunarvim_preview.png",
-        alt: "LunarVim Preview",
+        src: '/img/lunarvim_preview.png',
+        alt: 'LunarVim Preview',
       },
       {
-        src: "/img/lunarvim_preview2.png",
-        alt: "LunarVim Preview",
+        src: '/img/lunarvim_preview2.png',
+        alt: 'LunarVim Preview',
       },
       {
-        src: "/img/lunarvim_preview3.png",
-        alt: "LunarVim Preview",
+        src: '/img/lunarvim_preview3.png',
+        alt: 'LunarVim Preview',
       },
       {
-        src: "/img/lunarvim_preview4.png",
-        alt: "LunarVim Preview",
+        src: '/img/lunarvim_preview4.png',
+        alt: 'LunarVim Preview',
       },
     ],
     YouTube: [
       /* NOTE: max 3 preferred */
       /* type: video | playlist */
       {
-        type: "video",
-        id: "NPmKRygD7DU",
-        title: "Neovim v0.8 release",
+        type: 'video',
+        id: 'NPmKRygD7DU',
+        title: 'Neovim v0.8 release',
       },
       {
-        type: "video",
-        id: "sFA9kX-Ud_c",
-        title: "Install LunarVim Stable Release",
+        type: 'video',
+        id: 'sFA9kX-Ud_c',
+        title: 'Install LunarVim Stable Release',
       },
       {
-        type: "playlist",
-        id: "PLhoH5vyxr6QoYP4bKw0krF4aEn_3_pfWA",
-        title: "LunarVim (IDE for Neovim)",
+        type: 'playlist',
+        id: 'PLhoH5vyxr6QoYP4bKw0krF4aEn_3_pfWA',
+        title: 'LunarVim (IDE for Neovim)',
       },
     ],
     Contributors: {
-      owner: "LunarVim",
-      repos: ["LunarVim", "lunarvim.org", "starter.lvim",],
+      owner: 'LunarVim',
+      repos: ['LunarVim', 'lunarvim.org', 'starter.lvim'],
     },
   },
 
@@ -158,28 +156,28 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode: "dark",
+        defaultMode: 'dark',
       },
-      image: "img/lunarvim_preview.png",
+      image: 'img/lunarvim_preview.png',
       navbar: {
-        title: "LunarVim",
+        title: 'LunarVim',
         logo: {
-          alt: "LunarVim Logo",
-          src: "img/lunarvim_icon.png",
+          alt: 'LunarVim Logo',
+          src: 'img/lunarvim_icon.png',
         },
         hideOnScroll: false,
         items: [
           {
-            type: "doc",
-            docId: "installation",
-            position: "left",
-            label: "Docs",
+            type: 'doc',
+            docId: 'installation',
+            position: 'left',
+            label: 'Docs',
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
-            position: "left",
-            to: "/donate",
-            label: "Donate",
+            position: 'left',
+            to: '/donate',
+            label: 'Donate',
           },
           ...socials,
           {
@@ -188,8 +186,8 @@ const config = {
             dropdownActiveClassDisabled: true,
           },
           {
-            type: "localeDropdown",
-            position: "right",
+            type: 'localeDropdown',
+            position: 'right',
           },
         ],
       },
@@ -197,18 +195,19 @@ const config = {
         theme: codeTheme,
         darkTheme: codeTheme,
         additionalLanguages: [
-          "lua",
-          "markup",
-          "javascript",
-          "css",
-          "bash",
-          "powershell",
-          "python",
+          'lua',
+          'markup',
+          'javascript',
+          'css',
+          'bash',
+          'powershell',
+          'python',
         ],
       },
       announcementBar: {
         id: 'new_release_1.2',
-        content: 'New Release! <a target="_blank" rel="noopener noreferrer" href="https://github.com/LunarVim/LunarVim">install</a>',
+        content:
+          'New Release! <a target="_blank" rel="noopener noreferrer" href="https://github.com/LunarVim/LunarVim">install</a>',
         backgroundColor: 'var(--primary-fg)',
         textColor: 'var(--primary-bg)',
         isCloseable: true,
@@ -216,23 +215,23 @@ const config = {
     }),
   plugins: [
     [
-      "./plugins/asciinema",
+      './plugins/asciinema',
       {
-        casts_folder: "static/casts",
-        font_name: "glyphs.ttf",
-        source_font: "src/theme/fura_code_nerd.ttf",
+        casts_folder: 'static/casts',
+        font_name: 'glyphs.ttf',
+        source_font: 'src/theme/fura_code_nerd.ttf',
       },
     ],
     [
-      require.resolve("@easyops-cn/docusaurus-search-local"),
-      ({
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
         hashed: true,
-        language: ["en", "es", "de"],
+        language: ['en', 'es', 'de'],
         indexDocs: true,
         indexBlog: false,
         indexPages: false,
-        explicitSearchResultPath: true
-      }),
+        explicitSearchResultPath: true,
+      },
     ],
   ],
 };

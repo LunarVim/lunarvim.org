@@ -245,7 +245,7 @@ lvim.autocommands = {
         })
       end,
  }
- 
+
 -- example mappings you can place in some other place
 -- An awesome method to jump to windows
 local picker = require('window-picker')
@@ -419,7 +419,9 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
   "p00f/nvim-ts-rainbow",
 },
 ```
+
 After installing ensure to enable it in your `config.lua` using:
+
 ```
 ...
 lvim.builtin.treesitter.rainbow.enable = true
@@ -703,14 +705,14 @@ lvim.plugins = {
 
   { "zbirenbaum/copilot-cmp",
     after = { "copilot.lua", "nvim-cmp" },
-  },  
+  },
   ...
 }
 
 -- Can not be placed into the config method of the plugins.
 lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"
 table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
-``` 
+```
 
 ### [dial.nvim](https://github.com/monaqa/dial.nvim)
 
@@ -921,7 +923,7 @@ Also define keybindings in your `config.lua`
 ```lua
 {
   "tpope/vim-surround",
-  
+
   -- make sure to change the value of `timeoutlen` if it's not triggering correctly, see https://github.com/tpope/vim-surround/issues/117
   -- setup = function()
     --  vim.o.timeoutlen = 500

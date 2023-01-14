@@ -11,7 +11,8 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@docusaurus/core": "2.1.0",
@@ -30,7 +31,8 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.1.0",
-    "asciinema-player": "^3.0.1"
+    "asciinema-player": "^3.0.1",
+    "prettier": "2.8.3"
   },
   "browserslist": {
     "production": [

@@ -5,7 +5,7 @@ authors: [christianchiarulli]
 tags: [lunarvim]
 ---
 
-Welcome to the community blog! To contribute you can add a PR here: [lunarvim.org github](https://github.com/LunarVim/lunarvim.org) 
+Welcome to the community blog! To contribute you can add a PR here: [lunarvim.org github](https://github.com/LunarVim/lunarvim.org)
 
 Simply add Markdown files (or folders) to the `blog` directory.
 

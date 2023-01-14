@@ -1,8 +1,7 @@
 # LunarVim documentation
 
-* [Development](#development)
-* [Contributing](CONTRIBUTING.md)
-
+- [Development](#development)
+- [Contributing](CONTRIBUTING.md)
 
 ## Development
 

@@ -1,12 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const ShootingStar = () => (
-  <svg
-    width="464"
-    height="464"
-    viewBox="0 0 464 464"
-    fill="none"
-  >
+  <svg width="464" height="464" viewBox="0 0 464 464" fill="none">
     <circle cx="231.5" cy="231.5" r="174.5" stroke="black" strokeWidth="10" />
     <path
       fillRule="evenodd"

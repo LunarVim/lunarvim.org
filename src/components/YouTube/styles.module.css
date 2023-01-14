@@ -26,8 +26,8 @@
   padding-block-start: 1rem;
 }
 
-@media screen  and (min-width: 996px ) {
-  .container{
+@media screen and (min-width: 996px) {
+  .container {
     flex-direction: row;
   }
 }

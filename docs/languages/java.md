@@ -44,6 +44,7 @@ Add the following content:
   "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml"
 }
 ```
+
 To reference a local file in the url attribute, simply set its path: `"java.format.settings.url": ".config/lvim/custom-formatter.xml"`
 
 It is also possible to specify project-specific configs. To do so, type `:LspSettings local jdtls` which will create `.nlsp-settings/jdtls.json` in the current working directory, and paste the config that we used for the global settings.
@@ -62,6 +63,7 @@ Prerequisites:
 clang-format should be on the $PATH
 
 Enable formatter in `~/.config/lvim/config.lua`:
+
 ```lua
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
@@ -71,11 +73,13 @@ formatters.setup {
   }
 }
 ```
+
 With the above configuration, the default settings will be used. To see the defaults, type `clang-format --dump-config` in the terminal.
 
 clang-format supports multiple predefined styles. For the list of values see: https://clang.llvm.org/docs/ClangFormatStyleOptions.html#configurable-format-style-options
 
 To specify such style you need to set extra args in `config.lua`:
+
 ```lua
   {
     command = "clang-format",
@@ -87,6 +91,7 @@ To specify such style you need to set extra args in `config.lua`:
 It is also possible to use a format file. For that, you will need a valid clang-format file. You can create one from an existing style that can be used as a base: `clang-format --style=Google --dump-config > .clang-format`
 
 `config.lua`:
+
 ```lua
   {
     command = "clang-format",
@@ -103,6 +108,7 @@ Prerequisites:
 google-java-format should be on the $PATH
 
 Enable formatter in `~/.config/lvim/config.lua`:
+
 ```lua
 formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
@@ -118,6 +124,7 @@ formatters.setup {
 uncrustify works similarly to clang-format.
 
 Enable formatter in `~/.config/lvim/config.lua`:
+
 ```lua
 formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
@@ -138,4 +145,3 @@ formatters.setup {
 ## Advanced configuration
 
 It is also possible to fully customize the language server. See https://github.com/LunarVim/starter.lvim to get ideas on how to proceed with that.
-

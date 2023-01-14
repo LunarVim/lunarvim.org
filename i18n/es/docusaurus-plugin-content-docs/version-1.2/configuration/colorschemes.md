@@ -12,7 +12,7 @@ Para cambiar el esquema de colores rapidamente, escribe el siguiente comando:
 :Telescope colorscheme
 ```
 
-También puedes presionar  `Espacio` `s` `p` para tener una vista previa de los esquemas de colores.
+También puedes presionar `Espacio` `s` `p` para tener una vista previa de los esquemas de colores.
 
 Para cambiar el esquema de colores de manera permanente, tienes que modificar el archivo `config.lua`.
 
@@ -45,4 +45,5 @@ cmd "au ColorScheme * hi TelescopeBorder ctermbg=none guibg=none"
 cmd "au ColorScheme * hi NvimTreeNormal ctermbg=none guibg=none"
 cmd "let &fcs='eob: '"
 ```
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/OOr1qM17Lds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>

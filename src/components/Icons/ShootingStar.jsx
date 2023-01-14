@@ -1,12 +1,7 @@
-import React from "react";
+import React from 'react';
 
 const ShootingStar = () => (
-  <svg
-    width="464"
-    height="464"
-    viewBox="0 0 464 464"
-    fill="none"
-  >
+  <svg width="464" height="464" viewBox="0 0 464 464" fill="none">
     <path
       d="M268.787 162.593L175.65 172.821L114.428 101.897L95.3724 193.633L9 229.944L90.3594 276.414L98.2023 369.78L167.538 306.764L258.759 328.156L220.254 242.739L268.787 162.593Z"
       fill="black"

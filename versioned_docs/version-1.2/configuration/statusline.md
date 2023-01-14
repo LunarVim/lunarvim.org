@@ -74,6 +74,7 @@ lvim.builtin.lualine.options.theme = "gruvbox"
 ```
 
 To customize existing theme,
+
 ```lua
 local custom_gruvbox = require "lualine.themes.gruvbox_dark"
 custom_gruvbox.insert.b = { fg = custom_gruvbox.insert.a.bg, gui = "bold" }

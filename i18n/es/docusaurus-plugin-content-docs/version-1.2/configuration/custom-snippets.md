@@ -22,19 +22,19 @@ El primer archivo, es el que describe la ruta para tus snippets:
 
 ```json
 {
-    "name": "nvim-snippets",
-    "author": "authorname",
-    "engines": {
-        "vscode": "^1.11.0"
-    },
-    "contributes": {
-        "snippets": [
-            {
-                "language": "python",
-                "path": "./python.json"
-            }
-        ]
-    }
+  "name": "nvim-snippets",
+  "author": "authorname",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "python",
+        "path": "./python.json"
+      }
+    ]
+  }
 }
 ```
 
@@ -46,9 +46,7 @@ Para cada lenguaje en el que quieras un snippet, debes crear un archivo de esta 
 {
   "hola": {
     "prefix": "hola",
-    "body": [
-      "print('Hola, Mundo!')"
-    ],
+    "body": ["print('Hola, Mundo!')"],
     "description": "Imprimir Hola, Mundo!"
   }
 }

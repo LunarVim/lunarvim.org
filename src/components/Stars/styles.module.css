@@ -49,10 +49,10 @@
 
   30% {
     width: 150px;
-    opacity: .75;
+    opacity: 0.75;
   }
   70% {
-    opacity: .75;
+    opacity: 0.75;
   }
   100% {
     width: 0;

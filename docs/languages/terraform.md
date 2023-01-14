@@ -2,7 +2,6 @@
 
 ## Syntax highlighting
 
-
 First, within LunarVim run the following:
 
 ```vim

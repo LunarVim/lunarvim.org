@@ -1,11 +1,15 @@
-import React, { useState } from "react";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import React, { useState } from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-import styles from "./styles.module.css";
-import Clouds from "../Clouds/";
+import styles from './styles.module.css';
+import Clouds from '../Clouds/';
 
 const Preview = () => {
-  const { siteConfig: { customFields: { previewImgs } } } = useDocusaurusContext();
+  const {
+    siteConfig: {
+      customFields: { previewImgs },
+    },
+  } = useDocusaurusContext();
 
   const [previewIdx, setPreviewIdx] = useState(1);
   const imgsCount = previewImgs.length;
@@ -41,13 +45,20 @@ const Preview = () => {
             <button
               key={idx}
               onClick={() => setPreviewIdx(idx)}
-              className={`${styles.dot} ${idx === previewIdx ? styles.active : null
-                }`}
+              className={`${styles.dot} ${
+                idx === previewIdx ? styles.active : null
+              }`}
             />
           ))}
         </div>
-        <button className={`${styles.btn} ${styles.prev}`} onClick={prevImg}> <Arrow /> </button>
-        <button className={`${styles.btn} ${styles.next}`} onClick={nextImg}> <Arrow /> </button>
+        <button className={`${styles.btn} ${styles.prev}`} onClick={prevImg}>
+          {' '}
+          <Arrow />{' '}
+        </button>
+        <button className={`${styles.btn} ${styles.next}`} onClick={nextImg}>
+          {' '}
+          <Arrow />{' '}
+        </button>
       </div>
     </Clouds>
   );

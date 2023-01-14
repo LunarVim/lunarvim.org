@@ -71,6 +71,7 @@ Invoke-WebRequest https://raw.githubusercontent.com/LunarVim/LunarVim/master/uti
 </Tabs>
 
 Make sure to check the [troubleshooting](./troubleshooting/README.md) section if you encounter any problem.
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sFA9kX-Ud_c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>
 
 ## Updating LunarVim
@@ -92,7 +93,9 @@ You can remove LunarVim (including the configuration files) using the bundled `u
 ```bash
 bash ~/.local/share/lunarvim/lvim/utils/installer/uninstall.sh
 ```
+
 #### **or**
+
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/uninstall.sh)
 ```

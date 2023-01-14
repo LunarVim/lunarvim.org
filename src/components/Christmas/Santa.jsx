@@ -1,6 +1,6 @@
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import React from "react";
-import styles from "./santa.module.css";
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import React from 'react';
+import styles from './santa.module.css';
 
 const Santa = () => {
   const {

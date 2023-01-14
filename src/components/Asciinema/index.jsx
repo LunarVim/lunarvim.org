@@ -16,11 +16,10 @@ const AsciinemaPlayer = ({ src, ...asciinemaOptions }) => {
   useEffect(async () => {
     const loadLib = async () => {
       return await import('asciinema-player');
-    }
+    };
 
     setLib(await loadLib());
   }, [lib]);
-
 
   // create player instance
   useEffect(() => {
@@ -35,21 +34,16 @@ const AsciinemaPlayer = ({ src, ...asciinemaOptions }) => {
   const Loading = () => {
     return (
       <div>
-        <Translate description="AsciinemaPlayer loading text">Loading a terminal...</Translate>
+        <Translate description="AsciinemaPlayer loading text">
+          Loading a terminal...
+        </Translate>
       </div>
     );
-  }
+  };
 
   return (
     <>
-      {lib ?
-        <BrowserOnly>{
-          () => (<div ref={ref} />)
-        }
-        </BrowserOnly>
-        :
-        <Loading />
-      }
+      {lib ? <BrowserOnly>{() => <div ref={ref} />}</BrowserOnly> : <Loading />}
     </>
   );
 };

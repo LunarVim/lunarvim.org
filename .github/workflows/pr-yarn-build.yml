@@ -3,7 +3,7 @@ name: yarn build
 on:
   pull_request:
     branches:
-      - "master"
+      - 'master'
 
 jobs:
   yarn-build:

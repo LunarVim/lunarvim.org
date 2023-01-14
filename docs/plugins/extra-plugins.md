@@ -196,7 +196,7 @@ lvim.builtin.treesitter.matchup.enable = true
         })
       end,
  }
- 
+
 -- example mappings you can place in some other place
 -- An awesome method to jump to windows
 local picker = require('window-picker')
@@ -864,7 +864,7 @@ Also define keybindings in your `config.lua`
 ```lua
 {
   "tpope/vim-surround",
-  
+
   -- make sure to change the value of `timeoutlen` if it's not triggering correctly, see https://github.com/tpope/vim-surround/issues/117
   -- setup = function()
     --  vim.o.timeoutlen = 500

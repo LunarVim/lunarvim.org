@@ -6,7 +6,7 @@ sidebar_position: 2
 
 # Logic from start to window load
 
-![LunarVim initialization flowchart](./lunarvim_initialization.png "LunarVim initialization flowchart")
+![LunarVim initialization flowchart](./lunarvim_initialization.png 'LunarVim initialization flowchart')
 
 The above chart was made with the following markdown using mermaid markdown
 Last updated Wed Aug 4 10:04:27 PM CEST 2021

@@ -16,7 +16,7 @@
   --ifm-color-emphasis-500: var(--bright-white);
 }
 
-html[data-theme="light"] {
+html[data-theme='light'] {
   /* tokyonight day */
   --primary-bg: #e1e2e7;
   --primary-fg: #414868;
@@ -53,7 +53,7 @@ html[data-theme="light"] {
   --ifm-navbar-search-input-icon: url('data:image/svg+xml;utf8,<svg fill="%23414868" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" height="16px" width="16px"><path d="M6.02945,10.20327a4.17382,4.17382,0,1,1,4.17382-4.17382A4.15609,4.15609,0,0,1,6.02945,10.20327Zm9.69195,4.2199L10.8989,9.59979A5.88021,5.88021,0,0,0,12.058,6.02856,6.00467,6.00467,0,1,0,9.59979,10.8989l4.82338,4.82338a.89729.89729,0,0,0,1.29912,0,.89749.89749,0,0,0-.00087-1.29909Z" /></svg>');
 }
 
-html[data-theme="dark"] {
+html[data-theme='dark'] {
   /* tokyonight night */
   --primary-bg: #1a1b26;
   --primary-fg: #c1caf4;
@@ -122,22 +122,22 @@ body {
 }
 
 /* Asciinema css */
-@import url("asciinema-player/dist/bundle/asciinema-player.css");
+@import url('asciinema-player/dist/bundle/asciinema-player.css');
 
 @font-face {
-  font-family: "Terminal Glyphs";
-  src: url("../../static/fonts/glyphs.ttf") format("truetype");
+  font-family: 'Terminal Glyphs';
+  src: url('../../static/fonts/glyphs.ttf') format('truetype');
 }
 
 .asciinema-terminal {
-  font-family: "Terminal Glyphs", Consolas, Menlo, "Bitstream Vera Sans Mono",
-    monospace, "Powerline Symbols";
+  font-family: 'Terminal Glyphs', Consolas, Menlo, 'Bitstream Vera Sans Mono',
+    monospace, 'Powerline Symbols';
 }
 
 /* youtube embedded videos */
-iframe[src*="youtube.com"] {
+iframe[src*='youtube.com'] {
   border: 2px solid var(--ifm-color-primary);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   width: 100%;
   max-width: 560px;
   aspect-ratio: 16/9;

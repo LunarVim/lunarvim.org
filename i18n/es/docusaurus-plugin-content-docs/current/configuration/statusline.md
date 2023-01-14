@@ -21,7 +21,7 @@ Hay tres opciones de diseño que puedes establecer en tu LunarVim.
 - none
   > Es un diseño vacio.
 
-Para cambiar el diseño, basta con agregar la siguiente linea a la configuración. 
+Para cambiar el diseño, basta con agregar la siguiente linea a la configuración.
 
 ```lua
 lvim.builtin.lualine.style = "default" -- o "none"
@@ -76,6 +76,7 @@ lvim.builtin.lualine.options.theme = "gruvbox"
 ```
 
 También puedes personalizar un tema ya existente.
+
 ```lua
 local custom_gruvbox = require "lualine.themes.gruvbox_dark"
 custom_gruvbox.insert.b = { fg = custom_gruvbox.insert.a.bg, gui = "bold" }
@@ -145,4 +146,5 @@ lvim.builtin.lualine.on_config_done = function(lualine)
   lualine.setup(config)
 end
 ```
+
 Si quieres profundizar más en esta configuración, puedes tomar la [configuración de jimcornmell](https://github.com/jimcornmell/lvim/blob/main/lua/user/lualine.lua) como referencia.

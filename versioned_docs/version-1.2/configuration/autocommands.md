@@ -5,6 +5,7 @@ sidebar_position: 5
 # Autocommands
 
 To set up autocommands use the native nvim api `vim.api.nvim_create_autocmd`, or use the helper Lunarvim table `lvim.autocommands` which will be passed to [define_autocmds()](https://github.com/LunarVim/lunarvim/blob/3475f7675d8928b49c85878dfc2912407de57342/lua/lvim/core/autocmds.lua#L177) automatically.
+
 ```lua
 lvim.autocommands = {
     {
@@ -16,9 +17,11 @@ lvim.autocommands = {
     },
 }
 ```
+
 This will run a command at a given event for the given filetype.
 
 An example using the nvim api could look like this:
+
 ```lua
 vim.api.nvim_create_autocmd("BufEnter", {
 	  pattern = { "*.json", "*.jsonc" },
@@ -26,6 +29,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
 	  command = "setlocal wrap",
 })
 ```
+
 You can also add lua callbacks
 
 ```lua
@@ -43,4 +47,3 @@ lvim.autocommands = {
   }
 }
 ```
-

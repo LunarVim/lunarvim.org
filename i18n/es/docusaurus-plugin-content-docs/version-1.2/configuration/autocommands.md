@@ -11,13 +11,15 @@ lvim.autocommands = {
     "BufEnter", -- ver `:h autocmd-events`
       { -- esta tabla es enviada como `opts` a `nvim_create_autocmd`
           pattern = { "*.json", "*.jsonc" }, -- ver `:h autocmd-events`
-          command = "setlocal wrap", 
+          command = "setlocal wrap",
       }
     },
 ```
+
 Esto va a ejecutar un comando cuando se registre el evento que coincida con el tipo de archivo proporcionado.
 
 Un ejemplo usando la api de nvim se veria de la siguiente forma:
+
 ```lua
 vim.api.nvim_create_autocmd("BufEnter", {
 	  pattern = { "*.json", "*.jsonc" },
@@ -25,7 +27,8 @@ vim.api.nvim_create_autocmd("BufEnter", {
 	  command = "setlocal wrap",
 })
 ```
-Tambíén puedes añadir callbacks con lua. 
+
+Tambíén puedes añadir callbacks con lua.
 
 ```lua
 lvim.autocommands = {
