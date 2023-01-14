@@ -1,5 +1,6 @@
 ---
 sidebar: auto
+sidebar_position: 2
 ---
 
 # FAQ

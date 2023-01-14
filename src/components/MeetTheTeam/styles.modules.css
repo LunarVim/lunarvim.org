@@ -65,7 +65,7 @@
   opacity: 0;
 }
 
-.image--show {
+.image-container .image--show {
   opacity: 1;
 }
 

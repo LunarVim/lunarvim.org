@@ -1,6 +1,6 @@
 # Plugins
 
-Plugins are managed by [folke/lazy.nvim](https://github.com/folke/lazy.nvim), and are split into [core-plugins](./01-core-plugins-list.md) and [user-plugins](#user-plugins).
+Plugins are managed by [folke/lazy.nvim](https://github.com/folke/lazy.nvim), and are split into [core-plugins](./core-plugins-list.md) and [user-plugins](#user-plugins).
 
 :::tip
 
@@ -66,6 +66,6 @@ You can find more examples [here](https://github.com/folke/lazy.nvim#examples)
 
 :::
 
-Check the [extra plugins](./02-extra-plugins.md) for some suggestions.
+Check the [extra plugins](./extra-plugins.md) for some suggestions.
 
 _Note: removing a plugin from the `lvim.plugin` table removes it from your configuration but not your system. To remove them completely, run `:Lazy clean`._
