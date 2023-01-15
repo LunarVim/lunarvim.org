@@ -6,10 +6,6 @@ sidebar_position: 2
 
 After installing you should be able to start LunarVim with the `lvim` command.
 
-## Add `lvim` to `$PATH`
-
-If your terminal can't find the `lvim` command, [add the installation folder to your path](https://gist.github.com/nex3/c395b2f8fd4b02068be37c961301caa7) or move the lvim command to somewhere in your path. The default install folder is `~/.local/bin`.
-
 ## Tree-sitter
 
 To install syntax highlighting and treesitter support for your language:
@@ -40,10 +36,6 @@ Formatting and Linting is not supported by some LSPs by default.
 This needs to be installed / configured separately.
 
 See [languages](./languages/README.md) where each language with its formatting and linting can be addressed.
-
-## Nerd Fonts
-
-Installing a [nerd font](https://www.nerdfonts.com/) is recommended. Otherwise some symbols won't be rendered properly. For more information go to the [configuration section ](./configuration/nerd-fonts.md).
 
 ## Next Steps
 
