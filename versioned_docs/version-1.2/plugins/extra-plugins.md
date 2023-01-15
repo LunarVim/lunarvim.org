@@ -338,7 +338,7 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
   requires = {
     'nvim-lua/plenary.nvim',
     'nvim-telescope/telescope.nvim',
-    'nvim-tree/nvim-web-devicons',
+    'kyazdani42/nvim-web-devicons',
   },
   config = function()
     require("octo").setup()
