@@ -43,7 +43,7 @@ Ver [lenguajes](./languages/) donde se puede abordar cada idioma con su formateo
 
 ## Fuentes Nerd
 
-Se recomienda instalar una [nerd font](https://www.nerdfonts.com/). De lo contrario, algunos símbolos no se representarán correctamente. Para obtener más información, vaya a la [sección de configuración](./configuration/nerd-fonts).
+Se recomienda instalar una [nerd font](https://www.nerdfonts.com/). De lo contrario, algunos símbolos no se representarán correctamente.
 
 ## Siguientes Pasos
 
