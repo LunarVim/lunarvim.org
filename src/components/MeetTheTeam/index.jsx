@@ -44,6 +44,7 @@ const teamMembersList = [
     username: 'rebuilt',
   },
 ];
+const { container, members } = styles;
 
 export default function TeamMembers() {
   const [isFetchingContributors, setIsFetchingContributors] = useState(true);
@@ -57,15 +58,15 @@ export default function TeamMembers() {
 
         if (data.length) {
           const contributorsList = data.filter(({ author }) =>
-            teamMembersList.some(({ username }) => username === author.login),
+            teamMembersList.some(({ username }) => username === author?.login),
           );
           const newContributors = contributorsList.reduce(
-            (accumulator, { author, total: contributions, weeks }) => {
+            (result, { author, total: contributions, weeks }) => {
               const { login: username, avatar_url: img } = author;
               const changes = weeks.reduce(
-                (accumulator, week) => ({
-                  a: accumulator.a + week.a,
-                  d: accumulator.d + week.d,
+                (prev, { a, d }) => ({
+                  a: prev.a + a,
+                  d: prev.d + d,
                 }),
                 {
                   a: 0,
@@ -74,7 +75,7 @@ export default function TeamMembers() {
               );
 
               return {
-                ...accumulator,
+                ...result,
                 [username]: {
                   img,
                   username,
@@ -96,8 +97,6 @@ export default function TeamMembers() {
 
     getContributors();
   }, []);
-
-  const { container, members } = styles;
 
   return (
     <section>
@@ -124,20 +123,33 @@ export default function TeamMembers() {
   );
 }
 
-function DetailCountUp({ value, suffix, className }) {
-  const durationInSeconds = TRANSITION_DELAY_IN_MILLISECONDS / 1_000;
+const durationInSeconds = TRANSITION_DELAY_IN_MILLISECONDS / 1_000;
 
-  return (
-    <CountUp
-      start={0}
-      end={value}
-      duration={durationInSeconds}
-      suffix={suffix}
-      formattingFn={(value) => `${value.toLocaleString()}${suffix}`}
-      className={className}
-    />
-  );
-}
+const DetailCountUp = ({ value, suffix, className }) => (
+  <CountUp
+    start={0}
+    end={value}
+    duration={durationInSeconds}
+    suffix={suffix}
+    formattingFn={(value) => `${value.toLocaleString()}${suffix}`}
+    className={className}
+  />
+);
+
+const {
+  member,
+  'image-container': imageContainer,
+  image,
+  'image--show': imageShow,
+  title,
+  clear,
+  details,
+  detail,
+  a,
+  d,
+  summary,
+  list,
+} = styles;
 
 function TeamMember({
   id,
@@ -147,11 +159,11 @@ function TeamMember({
   contributorData,
   isLoading,
 }) {
-  const [shouldRender, setShouldRender] = useState(false);
+  const [shouldRenderImage, setShouldRenderImage] = useState(false);
   const { img, bio, contributions, changes } = contributorData;
-  const commits = shouldRender ? contributions : 0;
-  const additions = shouldRender ? changes.a : 0;
-  const deletions = shouldRender ? changes.d : 0;
+  const commits = shouldRenderImage ? contributions : 0;
+  const additions = shouldRenderImage ? changes.a : 0;
+  const deletions = shouldRenderImage ? changes.d : 0;
   const description = bio || 'Write something about yourself.';
 
   useEffect(() => {
@@ -160,25 +172,10 @@ function TeamMember({
     }
 
     const delay = (id - 1) * TRANSITION_DELAY_IN_MILLISECONDS;
-    const timeout = setTimeout(() => setShouldRender(true), delay);
+    const timeout = setTimeout(() => setShouldRenderImage(true), delay);
 
     return () => clearTimeout(timeout);
   }, [isLoading, id]);
-
-  const {
-    member,
-    'image-container': imageContainer,
-    image,
-    'image--show': imageShow,
-    title,
-    clear,
-    details,
-    detail,
-    a,
-    d,
-    summary,
-    list,
-  } = styles;
 
   return (
     <div className={member}>
@@ -186,13 +183,16 @@ function TeamMember({
         <img
           src={img}
           className={classNames(image, {
-            [imageShow]: shouldRender,
+            [imageShow]: shouldRenderImage,
           })}
         />
       </div>
       <h3 className={title}>
-        <span>{name}</span>
-        &nbsp;
+        {name && (
+          <>
+            <span>{name}</span>&nbsp;{' '}
+          </>
+        )}
         <a href={`https://github.com/${username}`}>@{username}</a>
       </h3>
       <p className={details}>
@@ -215,7 +215,7 @@ function TeamMember({
           <summary className={summary}>donate</summary>
           <ul className={list}>
             {donate.map(({ name, link }) => (
-              <li key={name}>
+              <li key={link}>
                 <a href={link}>{name}</a>
               </li>
             ))}
