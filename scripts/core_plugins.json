@@ -200,7 +200,7 @@
     "description": "A file explorer tree for neovim written in lua"
   },
   {
-    "name": "<a href='https://github.com/kyazdani42/nvim-web-devicons'>kyazdani42/nvim-web-devicons</a>",
+    "name": "<a href='https://github.com/nvim-tree/nvim-web-devicons'>nvim-tree/nvim-web-devicons</a>",
     "enabled": true,
     "description": "lua `fork` of vim-web-devicons for neovim"
   }
