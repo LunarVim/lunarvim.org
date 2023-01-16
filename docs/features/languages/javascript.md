@@ -19,7 +19,7 @@
 - tailwindcss
 - tsserver
 
-Only `tsserver` and `tailwindcss` is enabled by default and the other servers need to be [manually configured](../configuration/language-features/language-servers.md#manually-configured-servers).
+Only `tsserver` and `tailwindcss` is enabled by default and the other servers need to be [manually configured](../../configuration/language-features/language-servers.md#manually-configured-servers).
 
 ## Supported formatters
 
