@@ -36,6 +36,7 @@ statusline
 swapfile
 titlestring
 vmap
+vimscript
 filetype
 filetypes
 winbar
