@@ -22,7 +22,7 @@ lvim.colorscheme = 'desert'
 
 ## Instalar Esquema de Colores
 
-Puedes añadir el esquema de colores que quieras. Solo debes añadir el plugin con el esquema de colores de tu preferencia. Para más información sobre como instalar plugins [revisa aqui. ](../plugins/)
+Puedes añadir el esquema de colores que quieras. Solo debes añadir el plugin con el esquema de colores de tu preferencia. Para más información sobre como instalar plugins [revisa aqui. ](./plugins/)
 
 [Aqui tienes una lista](https://github.com/rockerBOO/awesome-neovim#colorscheme) de esquemas de colores con soporte para coloreado de sintaxis.
 

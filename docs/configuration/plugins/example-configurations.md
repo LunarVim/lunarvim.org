@@ -1,8 +1,8 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 ---
 
-# Extra Plugins
+# Example configurations
 
 Every plugin that works with Neovim works with LunarVim, here are some examples to get you started.
 

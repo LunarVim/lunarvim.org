@@ -60,7 +60,7 @@ pwsh -c "iwr https://raw.githubusercontent.com/LunarVim/LunarVim/master/utils/in
 </TabItem>
 </Tabs>
 
-Make sure to check the [troubleshooting](./troubleshooting/README.md) section if you encounter any problem.
+Make sure to check the [troubleshooting](../troubleshooting/README.md) section if you encounter any problem.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sFA9kX-Ud_c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>
 

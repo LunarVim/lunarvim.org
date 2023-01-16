@@ -1,5 +1,5 @@
 ---
-sidebar_position: 8
+sidebar_position: 3
 ---
 
 # Custom snippets
@@ -62,7 +62,7 @@ Then, inside that folder, create a lua file named with the filetype you want to 
 
 ```lua
 return {
-  s("foo", { t "Expands to bar" }),
+	s("foo", { t("Expands to bar") }),
 }
 ```
 
