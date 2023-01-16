@@ -89,7 +89,7 @@ Some language servers depend on newer versions of node. Update your version of n
 
 ### is it overridden?
 
-This could be due to the fact that the server is [overridden](../languages/README.md#server-override)
+This could be due to the fact that the server is [overridden](../configuration/language-features/language-servers.md#server-override)
 
 ```lua
 --- is it in this list?
@@ -104,7 +104,7 @@ vim.tbl_map(function(server)
 end, lvim.lsp.automatic_configuration.skipped_servers)
 ```
 
-or set it up [manually](../languages/README.md#server-setup).
+or set it up [manually](../configuration/language-features/language-servers.md#server-setup).
 
 ### is it supported by [nvim-lsp-installer](https://github.com/williamboman/nvim-lsp-installer)?
 
@@ -116,7 +116,7 @@ Check out the tips for [debugging nvim-lspconfig](https://github.com/neovim/nvim
 
 ## Too many language servers are starting at once!
 
-Are any of these servers [overridden](../languages/README.md#server-override) by default?
+Are any of these servers [overridden](../configuration/language-features/language-servers.md#server-override) by default?
 
 ```lua
 :lua print(vim.inspect(require("lvim.lsp.config").override))
