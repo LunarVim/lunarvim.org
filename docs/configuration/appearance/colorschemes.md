@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 1
 ---
 
 # Colorscheme
@@ -22,7 +22,7 @@ lvim.colorscheme = 'desert'
 
 ## Installing colorschemes
 
-You can add any colorscheme you like. Just add a plugin with the colorscheme of your choice. For more information on installing plugins [look here. ](./plugins/plugins.md)
+You can add any colorscheme you like. Just add a plugin with the colorscheme of your choice. For more information on installing plugins [look here. ](../plugins/plugins.md)
 
 [This is a list](https://github.com/rockerBOO/awesome-neovim#colorscheme) of colorschemes with tree-sitter support
 
