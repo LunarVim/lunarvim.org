@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-## Core plugins
+# Core plugins
 
 _This page is not complete, [you can help us write it](https://github.com/LunarVim/lunarvim.org/issues/352)_
 
@@ -34,7 +34,7 @@ A plugin's README (and `docs/` folder if it exists) typically contain excellent 
 
 :::
 
-### Pinning
+## Pinning
 
 Versions of core plugins are pinned for better stability,
 you can disable pinning by setting an environment variable `$LVIM_DEV_MODE`, e.g. can be defined in `~/.local/bin/lvim`

@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-## User plugins
+# User plugins
 
 _This page is not complete, [you can help us write it](https://github.com/LunarVim/lunarvim.org/issues/352)_
 
