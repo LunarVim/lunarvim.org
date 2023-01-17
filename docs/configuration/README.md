@@ -9,7 +9,7 @@ cp ~/.local/share/lunarvim/lvim/utils/installer/config.example.lua ~/.config/lvi
 ```
 
 Many LunarVim internal settings are exposed through the `lvim` global object.
-To see a list of all available settings, run this command from either `~/.config/lvim/` or `~/.local/share/lunarvim/lvim` to generate an lv-settings.lua file.
+To see a list of all available settings, run this command from either `~/.config/lvim/` or `~/.local/share/lunarvim/lvim` to generate an `lv-settings.lua` file.
 
 ```bash
 lvim --headless +'lua require("lvim.utils").generate_settings()' +qa && sort -o lv-settings.lua{,}
@@ -27,4 +27,4 @@ lvim.builtin.telescope.defaults.layout_config.width = 0.75
 lvim.builtin.telescope.defaults.layout_strategy = "horizontal"
 ```
 
-If you want to keep launching LunarVim with the nvim command, add an alias entry to your shell's config file: `alias nvim=lvim`. To temporarily revert to the default nvim prefix it with a backslash `\nvim`. If you create this alias, you may also want to explicitly set your editor as well `export EDITOR='lvim'`. This will tell command line tools like git to use LunarVim as your editor.
+If you want to keep launching LunarVim with the `nvim` command, add an alias entry to your shell's config file: `alias nvim=lvim`. To temporarily revert to the default nvim prefix it with a backslash `\nvim`. If you create this alias, you may also want to explicitly set your editor as well `export EDITOR='lvim'`. This will tell command line tools like git to use LunarVim as your editor.

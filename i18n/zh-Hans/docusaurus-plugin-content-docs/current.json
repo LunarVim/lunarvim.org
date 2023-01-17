@@ -1,0 +1,50 @@
+{
+  "version.label": {
+    "message": "master",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Installation": {
+    "message": "安装",
+    "description": "The label for category Installation in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Beginner's guide": {
+    "message": "入门指南",
+    "description": "The label for category Beginner's guide in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Configuration": {
+    "message": "配置",
+    "description": "The label for category Configuration in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Plugins": {
+    "message": "插件",
+    "description": "The label for category Plugins in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Appearance": {
+    "message": "外观",
+    "description": "The label for category Appearance in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Language features": {
+    "message": "语言特性",
+    "description": "The label for category Language features in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Features": {
+    "message": "特性",
+    "description": "The label for category Features in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Supported frameworks": {
+    "message": "支持的框架",
+    "description": "The label for category Supported frameworks in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Supported languages": {
+    "message": "支持的编程语言",
+    "description": "The label for category Supported languages in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Community": {
+    "message": "社区",
+    "description": "The label for category Community in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.For Developers": {
+    "message": "开发",
+    "description": "The label for category For Developers in sidebar tutorialSidebar"
+  }
+}

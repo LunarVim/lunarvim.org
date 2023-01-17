@@ -2,39 +2,40 @@
 sidebar_position: 1
 ---
 
-# Colorscheme
+# 配色方案
 
-## Switching colors
+## 更换配色
 
-To switch color schemes on the fly, type the following command:
+
+如需实时更换配色，输入以下命令：
 
 ```vim
 :Telescope colorscheme
 ```
 
-You can also press `<leader>sp` to cycle through colorschemes with a preview.
+您也可以使用`<leader>sp` 来预览所有的配色方案。
 
-To change the color scheme permanently, modify `config.lua`
+如需永久改变配色方案，则修改`config.lua`
 
 ```lua
 lvim.colorscheme = 'desert'
 ```
 
-## Installing colorschemes
+## 安装配色方案
 
-You can add any colorscheme you like. Just add a plugin with the colorscheme of your choice. For more information on installing plugins [look here. ](../plugins/plugins.md)
+您可以按照自己的喜好添加任意配色方案，只需添加配色方案的插件即可。关于安装插件的更多信息请参考[此处](../plugins/plugins.md)。
 
-[This is a list](https://github.com/rockerBOO/awesome-neovim#colorscheme) of colorschemes with tree-sitter support
+[此列表](https://github.com/rockerBOO/awesome-neovim#colorscheme) 有带tree-sitter支持的配色方案。
 
-## Transparent Windows
+## 透明窗口
 
-If you're using transparent windows enable this setting
+如果您在使用透明的窗口，需要打开这个设置：
 
 ```lua
 lvim.transparent_window = true
 ```
 
-That enables the following settings
+这会允许以下设置：
 
 ```lua
 cmd "au ColorScheme * hi Normal ctermbg=none guibg=none"

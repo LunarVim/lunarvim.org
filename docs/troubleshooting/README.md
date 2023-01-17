@@ -73,7 +73,7 @@ now open `lvim`, the plugins should start installing, otherwise run `:Lazy sync`
 
 ### are you using `fish`?
 
-> First of all, it is not recommended to set shell to fish in vim. Plenty of vim addons execute fish-incompatible shellscript, so setting it to /bin/sh is typically better, especially if you have no good reason to set it to fish.
+> First of all, it is not recommended to set shell to fish in vim. Plenty of vim addons execute fish-incompatible shellscript, so setting it to `/bin/sh` is typically better, especially if you have no good reason to set it to fish.
 
 ```lua
 vim.opt.shell = "/bin/sh"
@@ -110,7 +110,7 @@ or set it up [manually](../configuration/language-features/language-servers.md#s
 
 Any server that does not show up in `LspInstallInfo` needs to be installed manually.
 
-### is it at least showing up in `:LspInfo`?
+### is it at list showing up in `:LspInfo`?
 
 Check out the tips for [debugging nvim-lspconfig](https://github.com/neovim/nvim-lspconfig#debugging).
 

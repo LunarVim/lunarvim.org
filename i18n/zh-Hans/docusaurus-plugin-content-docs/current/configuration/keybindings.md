@@ -2,47 +2,47 @@
 sidebar_position: 2
 ---
 
-# Keybindings
+# 键位
 
-See the [keybinds overview](../beginners-guide/keybinds-overview.md) for most commonly used keybinds.
+最常使用的键位请参考 [键位总览](../beginners-guide/keybinds-overview.md) 。
 
-If you want to (re)map a keybinding that starts with `<leader>`, use [Whichkey Bindings](#whichkey-bindings).
-If the bindings are LSP (intellisense) related, use [LSP Bindings](#lsp-bindings).
-In all other cases, use [NeoVim mappings](#neovim-mappings)
+如需（重）映射以`<leader>`开头的键位，请使用 [Whichkey映射](#whichkey-bindings).
+如果键位映射是LSP（智能）相关的，请使用 [LSP映射](#lsp-bindings).
+其他所有情况，请使用 [NeoVim映射](#neovim-mappings)
 
-## Leader Key
+## Leader 键
 
-The default leader key is `Space`. This can be changed with the following
+默认的Leader键是 `Space`。 可以通过如下配置更改：
 
 ```lua
 lvim.leader = "space"
 ```
 
-## Listing what is mapped
+## 查看键位映射
 
-Use `<Leader>sk` to view different keybinding currently set.
+使用 `<Leader>sk` 来查看当前设置的键位映射。
 
-To see if a particular key has already been bound:
+如需了解某键位是否已经被使用了：
 
 ```lua
 :verbose map <TAB>
 ```
 
-- :nmap for normal mode mappings
-- :vmap for visual mode mappings
-- :imap for insert mode mappings
+- :nmap 普通模式
+- :vmap 可视模式
+- :imap 输入模式
 
-Or just list every mapping
+或是列出所有映射：
 
 ```lua
 :map
 ```
 
-## NeoVim mappings
+## NeoVim 映射
 
-### (Re)mapping keys
+### 键位（重）映射
 
-To modify or add a keymapping:
+修改或添加键位映射：
 
 ```lua
   -- X closes a buffer
@@ -52,9 +52,9 @@ To modify or add a keymapping:
   lvim.keys.normal_mode["<C-d>"] = "<C-d>zz"
 ```
 
-### Removing default mappings
+### 删除默认键位映射
 
-To remove keymappings set by LunarVim:
+删除LunarVim默认的键位映射：
 
 ```lua
   lvim.keys.normal_mode["<C-h>"] = false
@@ -63,42 +63,42 @@ To remove keymappings set by LunarVim:
   lvim.keys.normal_mode["<C-l>"] = false
 ```
 
-## LSP Bindings
+## LSP映射
 
-To modify your LSP keybindings use `lvim.lsp.buffer_mappings.[normal|visual|insert]_mode`.
+如需修改LSP映射请使用 `lvim.lsp.buffer_mappings.[normal|visual|insert]_mode`。
 
-### (Re)map a key
+### （重）映射
 
-Map your own functionality
+映射你自己的功能：
 
 ```lua
 lvim.lsp.buffer_mappings.normal_mode['H'] = { vim.lsp.buf.hover, "Show documentation" }
 ```
 
-Or map default functionality to a different key
+或将默认的功能映射到不同的键位：
 
 ```lua
 lvim.lsp.buffer_mappings.normal_mode['gk'] = lvim.lsp.buffer_mappings.normal_mode['K']
 ```
 
-### Remove a binding
+### 删除映射
 
-LSP bindings take precedence over regular keybindings.
-So in order to use a key for a regular binding, we have to remove it first
+LSP映射相比于常规映射有更高的优先级。
+因此为了将某个键位用于常规映射，必须首先删除它
 
 ```lua
 lvim.lsp.buffer_mappings.normal_mode['K'] = nil
 lvim.keys.normal_mode['K'] = "<Cmd>echo Okay!<CR>"
 ```
 
-## Whichkey Bindings
+## Whichkey映射
 
-To add or remap keybindings for whichkey use `lvim.builtin.which_key.mappings`.
-The leader key is already included.
+如需修改whichkey映射请使用 `lvim.builtin.which_key.mappings`。
+leader键已经被包含了。
 
-### Single mapping
+### 单一映射
 
-Map a single key.
+映射一个单一键位：
 
 ```lua
 lvim.builtin.which_key.mappings["P"] = {
@@ -106,17 +106,17 @@ lvim.builtin.which_key.mappings["P"] = {
 }
 ```
 
-As stated above, the leader key is included. So for the above example, the keybinding becomes `<leader>P`
+上面的配置包括了leader键。因此，对于上面的示例，键位映射变为`<leader>P`
 
-### Removing a single mapping
+### 删除单一键位映射
 
-Remove a single Whichkey keybind
+删除一个Whichkey映射：
 
 ```lua
 lvim.builtin.which_key.mappings['w'] = {}
 ```
 
-Adding a key to an existing menu/submenu.
+添加一个键到已经已存在的目录/子目录：
 
 ```lua
 lvim.builtin.which_key.mappings["tP"] = {
@@ -124,9 +124,9 @@ lvim.builtin.which_key.mappings["tP"] = {
 }
 ```
 
-### Submenu mapping
+### 字目录映射
 
-Map a group of keys. `Definitions` would be triggered by pressing `<Leader>td`. The name for this menu would appear as `Trouble`.
+映射一组键位。按`<Leader>td`会触发`Definitions`。该目录的目录名会显示为`Trouble`：
 
 ```lua
 lvim.builtin.which_key.mappings["t"] = {
@@ -140,9 +140,9 @@ lvim.builtin.which_key.mappings["t"] = {
 }
 ```
 
-### Replace all whichkey mappings
+### 替换所有的whichkey映射
 
-To clear all whichkey bindings and replace all mappings with your own, use this form.
+清除所有的whichkey映射并替换为自己的，使用如下形式：
 
 ```lua
 lvim.builtin.which_key.mappings = {
@@ -162,9 +162,9 @@ lvim.builtin.which_key.mappings = {
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/BdoizYjJHis" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>
 
-## [toggleterm](https://github.com/akinsho/toggleterm.nvim) (terminal) mappings
+## [toggleterm](https://github.com/akinsho/toggleterm.nvim) (终端) 映射
 
-To change the terminal mapping:
+更改终端映射：
 
 ```lua
 lvim.builtin.terminal.open_mapping = "<c-t>"
