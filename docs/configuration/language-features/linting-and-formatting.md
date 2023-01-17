@@ -57,11 +57,10 @@ Let's take `python` as an example:
 1. create a file called `python.lua` in the `$LUNARVIM_CONFIG_DIR/after/ftplugin` folder
 
 2. add the following snippet
-
-```lua
-local linters = require "lvim.lsp.null-ls.linters"
-linters.setup { { command = "flake8", filetypes = { "python" } } }
-```
+   ```lua
+   local linters = require "lvim.lsp.null-ls.linters"
+   linters.setup { { command = "flake8", filetypes = { "python" } } }
+   ```
 
 ## Formatting on save
 

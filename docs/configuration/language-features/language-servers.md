@@ -116,7 +116,7 @@ in `$LUNARVIM_CONFIG_DIR/ftplugin/<filetype>.lua`
 -- $LUNARVIM_CONFIG_DIR/ftplugin/lua.lua
 local opts = {
   settings = {
-    Lua = { hint = { enabe = false } },
+    Lua = { hint = { enable = false } },
   },
 }
 require("lvim.lsp.manager").setup("sumneko_lua", opts)
