@@ -37,7 +37,7 @@ const config = {
       es: {
         label: 'Español',
       },
-      zh-Hans: {
+      'zh-Hans': {
         label: '简体中文',
       }
     },
