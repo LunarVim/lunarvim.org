@@ -110,7 +110,7 @@ or set it up [manually](../configuration/language-features/language-servers.md#s
 
 Any server that does not show up in `LspInstallInfo` needs to be installed manually.
 
-### is it at list showing up in `:LspInfo`?
+### is it at least showing up in `:LspInfo`?
 
 Check out the tips for [debugging nvim-lspconfig](https://github.com/neovim/nvim-lspconfig#debugging).
 
