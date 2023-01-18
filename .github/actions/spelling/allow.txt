@@ -50,6 +50,7 @@ authorname
 addons
 api
 args
+builtins
 colorscheme
 colorschemes
 configs
