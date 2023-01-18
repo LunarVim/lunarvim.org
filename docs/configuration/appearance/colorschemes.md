@@ -6,25 +6,44 @@ sidebar_position: 1
 
 ## Switching colors
 
-To switch color schemes on the fly, type the following command:
+To switch color schemes on the fly, use `leader s c` (`:Telescope colorscheme`)
 
-```vim
-:Telescope colorscheme
-```
-
-You can also press `Space` `s` `p` to cycle through colorschemes with a preview.
+You can also press `leader s p` to cycle through colorschemes with a preview.
 
 To change the color scheme permanently, modify `config.lua`
 
 ```lua
-lvim.colorscheme = 'desert'
+lvim.colorscheme = "desert"
 ```
 
 ## Installing colorschemes
 
-You can add any colorscheme you like. Just add a plugin with the colorscheme of your choice. For more information on installing plugins [look here. ](../plugins/plugins.md)
+You can add any colorscheme you like. Just add a plugin with the colorscheme of your choice. For more information on installing plugins [look here.](../plugins/plugins.md)
 
 [This is a list](https://github.com/rockerBOO/awesome-neovim#colorscheme) of colorschemes with tree-sitter support
+
+## Customizing some colors
+
+You can customize the highlight groups by overriding them in an autocommand.
+To find the group you want to change use `leader s H` (`:Telescope highlights`),
+`:TSHighlightCapturesUnderCursor` or `:Inspect`
+
+```lua
+lvim.autocommands = {
+  {
+    { "ColorScheme" },
+    {
+      pattern = "*",
+      callback = function()
+        -- change `Normal` to the group you want to change
+        -- and `#ffffff` to the color you want
+        -- see `:h nvim_set_hl` for more options
+        vim.api.nvim_set_hl(0, "Normal", { bg = "#ffffff", underline = false, bold = true })
+      end,
+    },
+  },
+}
+```
 
 ## Transparent Windows
 
