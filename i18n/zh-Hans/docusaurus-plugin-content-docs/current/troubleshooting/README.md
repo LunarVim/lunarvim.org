@@ -88,7 +88,7 @@ vim.opt.shell = "/bin/sh"
 
 ### 它被覆盖了?
 
-这可能是由于语言服务器被[覆盖](.../configuration/language-features/language-servers.md#server-override)了
+这可能是由于语言服务器被[覆盖](../configuration/language-features/language-servers.md#server-override)了
 
 ```lua
 --- is it in this list?
