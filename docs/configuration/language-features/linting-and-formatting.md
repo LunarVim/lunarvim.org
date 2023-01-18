@@ -64,8 +64,15 @@ Let's take `python` as an example:
 
 ## Formatting on save
 
-To enable formatting on save:
+- To enable formatting on save:
 
-```lua
-lvim.format_on_save = true
-```
+  ```lua
+  lvim.format_on_save.enabled = true
+  ```
+
+- Only enable it for certain filetypes
+
+  ```lua
+  lvim.format_on_save.enabled = true
+  lvim.format_on_save.pattern = { "*.lua", "*.py" }
+  ```
