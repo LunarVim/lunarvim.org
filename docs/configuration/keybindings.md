@@ -161,7 +161,7 @@ lvim.builtin.which_key.mappings = {
 ```
 ### Enable whichkey presets
 
-Whichkey containts default presets that are **disabled** by default in LunarVim.
+Whichkey contains default presets that are **disabled** by default in LunarVim.
 
 ```
 presets = {
