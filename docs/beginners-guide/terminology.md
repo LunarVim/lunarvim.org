@@ -8,13 +8,11 @@ sidebar_position: 1
 
 ### [LSP (Language Server Protocol)](https://microsoft.github.io/language-server-protocol/)
 
-- LSP
-  Protocol for use between source code editors and LSP servers. The goal of the protocol is to allow
+- **LSP** - protocol for use between source code editors and LSP servers. The goal of the protocol is to allow
   programming language support to be implemented and distributed independently of any given editor
   or IDE.
 
-- LSP server
-  LSP servers that provide programming language-specific features like code completion, syntax
+- **LSP server** - provides programming language-specific features like code completion, syntax
   highlighting and marking of warnings and errors, as well as refactoring routines.
 
 ### [DAP (Debug Adapter Protocol)](https://microsoft.github.io/debug-adapter-protocol/)
