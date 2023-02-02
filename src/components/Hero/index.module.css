@@ -15,6 +15,10 @@
   display: none;
 }
 
+.heroDescription {
+  text-align: center;
+}
+
 .heroBanner > .container {
   display: flex;
   align-items: center;
@@ -136,5 +140,8 @@
   }
   .heroContent {
     max-width: unset;
+  }
+  .heroDescription {
+    text-align: left;
   }
 }
