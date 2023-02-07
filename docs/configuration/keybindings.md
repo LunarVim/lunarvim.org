@@ -169,3 +169,47 @@ To change the terminal mapping:
 ```lua
 lvim.builtin.terminal.open_mapping = "<c-t>"
 ```
+
+Create custom terminal commands by extending the `lvim.builtin.terminal.keybinds` table.
+`size` is specified as a percentage of the buffer size, with `size = 1` equivalent to fullscreen.
+The `desc` parameter will display in Whichkey for mappings starting with `<leader>`. Other values are passed to `toggleterm:new`
+
+The built-in keybinds can be overridden or modified with the following code:
+
+```lua
+lvim.builtin.terminal.keybinds = {
+  { keymap = "<M-1>", direction = "horizontal" },
+  { keymap = "<M-2>", direction = "vertical" },
+  { keymap = "<M-3>", direction = "float" },
+  { keymap = "<leader>gg", cmd = "lazygit", size= 1 },
+}
+```
+To create user-defined keybinds, simply extend the `lvim.builtin.terminal.keybinds` table, as shown in this example:
+
+```lua
+local keybinds = {
+  { keymap = "<leader>u", cmd = "sudo dmesg | less", desc = "Show Kernel Logs", size = 1 },
+  { keymap = "<leader>h", cmd = "htop", desc = "Interactive System Monitor", size = 0.8 },
+  { keymap = "<M-4>", cmd = "neofetch", close_on_exit = false, direction = "horizontal", size = 0.6 },
+  {
+    keymap = "<leader>os",
+    direction = "vertical",
+    cmd = "docker ps",
+    desc = "List Docker Containers",
+    close_on_exit = false,
+    persist_mode = false,
+    size = 0.3,
+  },
+}
+vim.list_extend(lvim.builtin.terminal.keybinds, keybinds)
+```
+
+Default values for the keybinds can be found in `lvim.builtin.terminal.keybinds_defaults`:
+```lua
+lvim.builtin.terminal.keybinds_defaults = {
+  -- `cmd` defaults to `lvim.builtin.terminal.shell`
+  direction = "horizontal",
+  horizontal_size = 0.3,
+  vertical_size = 0.4,
+}
+```
