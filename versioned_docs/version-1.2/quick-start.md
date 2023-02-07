@@ -43,7 +43,7 @@ See [languages](./languages/README.md) where each language with its formatting a
 
 ## Nerd Fonts
 
-Installing a [nerd font](https://www.nerdfonts.com/) is recommended. Otherwise some symbols won't be rendered properly. For more information go to the [configuration section ](./configuration/nerd-fonts.md).
+Installing a [nerd font](https://www.nerdfonts.com/) is recommended. Otherwise some symbols won't be rendered properly. For more information go to the [configuration section](./configuration/nerd-fonts.md).
 
 ## Next Steps
 
