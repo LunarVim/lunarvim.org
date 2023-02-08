@@ -17,7 +17,7 @@ sidebar_position: 1
 
 ### [DAP (Debug Adapter Protocol)](https://microsoft.github.io/debug-adapter-protocol/)
 
-Protocol user for debugging support
+Protocol used for debugging support
 
 ### [Treesitter](https://tree-sitter.github.io/tree-sitter/)
 
