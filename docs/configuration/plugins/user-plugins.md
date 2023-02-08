@@ -4,25 +4,33 @@ sidebar_position: 2
 
 # User plugins
 
-_This page is not complete, [you can help us write it](https://github.com/LunarVim/lunarvim.org/issues/352)_
-
-User plugins can be installed by adding entries to the `lvim.plugins` table in your `config.lua` file,
-and saving or manually invoking `LvimReload` will trigger lazy to sync all the plugins in that table.
+User plugins can be installed by adding entries to the `lvim.plugins` table in
+your `config.lua` file, saving or manually invoking `LvimReload` will trigger
+lazy to sync all the plugins in that table.
 
 ```lua
 lvim.plugins = {
-	{ "lunarvim/colorschemes" },
-	{
-		"nvim-neorg/neorg",
-		ft = "norg", -- lazy-load on filetype
-		config = true, -- run require("neorg").setup()
-	},
+  { "lunarvim/colorschemes" },
+  {
+    "stevearc/dressing.nvim",
+    config = function()
+      require("dressing").setup({
+        input = { enabled = false },
+      })
+    end,
+  },
+  {
+    "nvim-neorg/neorg",
+    ft = "norg", -- lazy-load on filetype
+    config = true, -- run require("neorg").setup()
+  },
 }
 ```
 
 :::tip
 
-You can find all available options [here](https://github.com/folke/lazy.nvim#-plugin-spec) or in lunarvim: `:help lazy.nvim-plugin-spec`
+You can find all available options [here](https://github.com/folke/lazy.nvim#-plugin-spec)
+or in lunarvim: `:help lazy.nvim-plugin-spec`
 You can find more examples [here](https://github.com/folke/lazy.nvim#examples)
 
 :::
