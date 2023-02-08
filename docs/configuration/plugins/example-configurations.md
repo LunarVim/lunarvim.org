@@ -28,10 +28,26 @@ Every plugin that works with Neovim works with LunarVim, here are some examples 
 
 **jetpack codebase navigation**
 
+For a more lightweight, easier-to-use alternative, check out the author's new, work-in-progress plugin, leap.nvim. Example config below. 
+
 ```lua
 {
   "ggandor/lightspeed.nvim",
   event = "BufRead",
+},
+```
+
+### [leap](https://github.com/ggandor/leap.nvim)
+
+**Neovim's answer to the mouse**
+
+```lua
+{
+  "ggandor/leap.nvim",
+  as = "leap",
+  config = function()
+    require("leap").add_default_mappings()
+  end,
 },
 ```
 
