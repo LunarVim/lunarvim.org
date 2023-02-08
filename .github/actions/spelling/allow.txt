@@ -86,6 +86,7 @@ fav
 pls
 rtp
 regex
+refactoring
 intellisense
 
 # LSP
