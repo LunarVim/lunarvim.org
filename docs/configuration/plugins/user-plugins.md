@@ -36,3 +36,5 @@ You can find more examples [here](https://github.com/folke/lazy.nvim#examples)
 :::
 
 Check the [extra plugins](./example-configurations.md) for some suggestions.
+
+_Note: removing a plugin from the `lvim.plugins` table removes it from your configuration but not your system. To remove them completely, run `:Lazy clean`._
