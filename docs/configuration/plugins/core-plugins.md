@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Core plugins
 
-The configurations for core plugins are accessible through a `lvim.builtin` table.
+The configurations for core plugins are accessible through the `lvim.builtin` table.
 
 ## Disabling core plugins
 
