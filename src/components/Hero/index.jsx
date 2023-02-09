@@ -38,6 +38,7 @@ const Hero = () => {
         <div className={`container ${styles.container}`}>
           <div className={styles.heroContent}>
             <h1 className={`hero__title ${styles.heroTitle}`}>LunarVim</h1>
+            <Slogan />
             <p className={`hero__description ${styles.heroDescription} `}>
               An IDE layer for{' '}
               <a href='https://neovim.io' target={'_blank'}>
@@ -45,7 +46,6 @@ const Hero = () => {
               </a>{' '}
               with sane defaults. Completely free and community driven.
             </p>
-            <Slogan />
             <div className={styles.buttons}>
               <Link
                 className={`button button--primary button--lg ${
