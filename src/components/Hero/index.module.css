@@ -16,7 +16,7 @@
 }
 
 .heroDescription {
-  text-align: center;
+  text-align: left;
 }
 
 .heroBanner > .container {
@@ -140,8 +140,5 @@
   }
   .heroContent {
     max-width: unset;
-  }
-  .heroDescription {
-    text-align: left;
   }
 }
