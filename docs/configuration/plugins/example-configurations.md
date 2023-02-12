@@ -377,13 +377,13 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
 },
 ```
 
-### [nvim-ts-rainbow](https://github.com/p00f/nvim-ts-rainbow)
+### [nvim-ts-rainbow](https://github.com/mrjones2014/nvim-ts-rainbow)
 
 **rainbow parentheses**
 
 ```lua
 {
-  "p00f/nvim-ts-rainbow",
+  "mrjones2014/nvim-ts-rainbow",
 },
 ```
 
