@@ -8,6 +8,8 @@ User plugins can be installed by adding entries to the `lvim.plugins` table in
 your `config.lua` file, saving or manually invoking `LvimReload` will trigger
 lazy to sync all the plugins in that table.
 
+Example:
+
 ```lua
 lvim.plugins = {
   { "lunarvim/colorschemes" },
@@ -27,6 +29,8 @@ lvim.plugins = {
 }
 ```
 
+Check the [example configurations](./example-configurations.md) for some suggestions.
+
 :::tip
 
 You can find all available options [here](https://github.com/folke/lazy.nvim#-plugin-spec)
@@ -35,6 +39,8 @@ You can find more examples [here](https://github.com/folke/lazy.nvim#examples)
 
 :::
 
-Check the [extra plugins](./example-configurations.md) for some suggestions.
+:::info
 
-_Note: removing a plugin from the `lvim.plugins` table removes it from your configuration but not your system. To remove them completely, run `:Lazy clean`._
+Removing a plugin from the `lvim.plugins` table removes it from your configuration but not your system. To remove them completely, run `:Lazy clean`
+
+:::

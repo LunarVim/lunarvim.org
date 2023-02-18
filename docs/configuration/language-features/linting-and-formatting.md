@@ -10,6 +10,8 @@ The easiest way is to reference the linter/formatter/code_actions by their names
 docs](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md) for a full list
 of builtins with their names.
 
+Example:
+
 ```lua
 local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {

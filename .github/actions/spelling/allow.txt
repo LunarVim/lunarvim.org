@@ -7,6 +7,7 @@ lvim
 lunarvim
 nvim
 neovim
+neovide
 lsp
 LSPs
 treesitter
@@ -196,3 +197,4 @@ cssmodules
 startify
 google
 vscode
+usr

@@ -53,9 +53,16 @@ You can update all mason packages with `<S-u>`.
 To use a different server than the default one add the default server to the `skipped_servers` list
 and remove the one you want to use.
 
+:::info
+
+Any changes to `lvim.lsp.automatic_configuration.skipped_servers` **must** be followed by `:LvimCacheReset` to take effect.
+
+:::
+
 Example:
 
 - Use `jedi_language_server` instead of `pyright`
+
   ```lua
   -- add `pyright` to `skipped_servers` list
   vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
@@ -64,12 +71,6 @@ Example:
     return server ~= "jedi_language_server"
   end, lvim.lsp.automatic_configuration.skipped_servers)
   ```
-
-:::info
-
-Any changes to `lvim.lsp.automatic_configuration.skipped_servers` **must** be followed by `:LvimCacheReset` to take effect.
-
-:::
 
 ## Overriding settings
 
@@ -109,8 +110,16 @@ Add the server you wish to configure manually to `lvim.lsp.automatic_configurati
 vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "sumneko_lua" })
 ```
 
+:::info
+
+Any changes to `lvim.lsp.automatic_configuration.skipped_servers` **must** be followed by `:LvimCacheReset` to take effect.
+
+:::
+
 Now you can set it up manually using the builtin [lsp manager](https://github.com/LunarVim/LunarVim/blob/master/lua/lvim/lsp/manager.lua)
 in `$LUNARVIM_CONFIG_DIR/ftplugin/<filetype>.lua`
+
+Example:
 
 ```lua
 -- $LUNARVIM_CONFIG_DIR/ftplugin/lua.lua
