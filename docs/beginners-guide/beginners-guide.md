@@ -18,5 +18,5 @@ You'll need some basic lua knowledge to configure LunarVim.
 
 - [learn about the default keybinds](./keybinds-overview.md)
 - Learn about the [most important default plugins](./plugins-overview.md)
-- Learn how to [configure LunarVim](../configuration/README.md)
+- Learn how to [configure LunarVim](/configuration/README.md)
 - Check out [starter.lvim](https://github.com/LunarVim/starter.lvim) (a collection of language specific lunarvim configurations)
