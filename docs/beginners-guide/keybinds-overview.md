@@ -11,7 +11,7 @@ or `<leader>` to show whichkey (keybinds popup)
 Also see:
 [vim mappings](https://devhints.io/vim)
 
-**TIP:** `<leader>` is space by default, read `:help keycodes` for more key names
+**TIP:** `<leader>` is space by default, read [`:help keycodes`](https://neovim.io/doc/user/intro.html#keycodes) for more key names
 
 **TIP:** `<M>` is `alt` on Windows/Linux and `option` on MacOS
 
@@ -30,15 +30,17 @@ by pressing `<backspace>` in the which-key main menu (first popup after pressing
 
 ## LSP
 
-| key  | description           | mode   |
-| ---- | --------------------- | ------ |
-| `K`  | hover information     | normal |
-| `gd` | go to definition      | normal |
-| `gD` | go to declaration     | normal |
-| `gr` | go to references      | normal |
-| `gI` | go to implementation  | normal |
-| `gs` | show signature help   | normal |
-| `gl` | show line diagnostics | normal |
+| key    | description                                  | mode   |
+| ------ | -------------------------------------------- | ------ |
+| `K`    | hover information (double tap to get inside) | normal |
+| `KK`   | move cursor inside `K` window                | normal |
+| `gd`   | go to definition                             | normal |
+| `gD`   | go to declaration                            | normal |
+| `gr`   | go to references                             | normal |
+| `gI`   | go to implementation                         | normal |
+| `gs`   | show signature help                          | normal |
+| `gl`   | show line diagnostics                        | normal |
+| `glgl` | move cursor inside `gl` diagnostics window   | normal |
 
 ## Editing
 
