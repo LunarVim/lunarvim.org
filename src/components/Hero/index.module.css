@@ -15,6 +15,10 @@
   display: none;
 }
 
+.heroDescription {
+  text-align: left;
+}
+
 .heroBanner > .container {
   display: flex;
   align-items: center;
