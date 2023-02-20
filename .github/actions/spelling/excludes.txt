@@ -1,1 +1,2 @@
 02-extra-plugins.md$
+plugins/extra-plugins.md$
