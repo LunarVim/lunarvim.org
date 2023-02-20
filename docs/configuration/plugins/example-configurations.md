@@ -175,7 +175,7 @@ For a more lightweight, easier-to-use alternative, check out the author's new, w
 
 After installing ensure to disable `nvim-tree` it in your `config.lua` using:
 
-```
+```lua
 ...
 lvim.builtin.nvimtree.active = false -- NOTE: using neo-tree
 ...

@@ -211,7 +211,7 @@ lvim.autocommands = {
 
 After installing ensure to disable `nvim-tree` it in your `config.lua` using:
 
-```
+```lua
 ...
 lvim.builtin.nvimtree.active = false -- NOTE: using neo-tree
 ...
