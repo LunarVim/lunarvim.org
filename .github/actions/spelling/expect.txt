@@ -4,11 +4,14 @@ autoselect
 buftype
 codebase
 cursorline
+dotfiles
+filesystem
 frontend
 func
 fzf
 fzy
 Github
+gitignored
 highlighter
 hrsh
 hsl
@@ -34,4 +37,3 @@ uelic
 vheight
 vimgrep
 vsplit
-winblend
