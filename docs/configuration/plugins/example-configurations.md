@@ -132,6 +132,55 @@ For a more lightweight, easier-to-use alternative, check out the author's new, w
 },
 ```
 
+### [neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+
+**neo-tree is a plugin to manage the file system and other tree like structures**
+
+```lua
+{
+  "nvim-neo-tree/neo-tree.nvim",
+  branch = "v2.x",
+  requires = {
+    "nvim-lua/plenary.nvim",
+    "nvim-tree/nvim-web-devicons",
+    "MunifTanjim/nui.nvim",
+  },
+  config = function()
+    require("neo-tree").setup({
+      close_if_last_window = true,
+      window = {
+        width = 30,
+      },
+      buffers = {
+        follow_current_file = true,
+      },
+      filesystem = {
+        follow_current_file = true,
+        filtered_items = {
+          hide_dotfiles = false,
+          hide_gitignored = false,
+          hide_by_name = {
+            "node_modules"
+          },
+          never_show = {
+            ".DS_Store",
+            "thumbs.db"
+          },
+        },
+      },
+    })
+  end
+},
+```
+
+After installing ensure to disable `nvim-tree` it in your `config.lua` using:
+
+```
+...
+lvim.builtin.nvimtree.active = false -- NOTE: using neo-tree
+...
+```
+
 ### [rnvimr](https://github.com/kevinhwang91/rnvimr)
 
 **ranger file explorer window**
