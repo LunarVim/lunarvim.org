@@ -122,7 +122,7 @@ const config = {
       {
         type: 'video',
         id: 'NPmKRygD7DU',
-        title: 'Neovim v0.8 release',
+        title: 'Regular Neovim v0.8 release',
       },
       {
         type: 'video',
