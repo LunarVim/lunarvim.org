@@ -40,7 +40,7 @@ pwsh -c "`$LV_BRANCH='release-1.2/neovim-0.8'; iwr https://raw.githubusercontent
 _This is intended just to take a look at the base functionalities, so some interactions may be blocked by the environment._
 
 ```bash
-docker run -w /root -it --rm alpine:edge sh -uelic 'apk add git neovim ripgrep alpine-sdk bash --update && LV_BRANCH='release-1.2/neovim-0.8' bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/fc6873809934917b470bff1b072171879899a36b/utils/installer/install.sh) && /root/.local/bin/lvim'
+docker run -w /tmp -it --rm alpine:edge sh -uelic 'addgroup -S lunaruser && adduser -S lunaruser -G lunaruser --shell /bin/sh && apk add yarn git python3 cargo neovim ripgrep alpine-sdk bash --update && LV_BRANCH='release-1.2/neovim-0.8' su -c "bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/fc6873809934917b470bff1b072171879899a36b/utils/installer/install.sh)" lunaruser && su -c /home/lunaruser/.local/bin/lvim lunaruser'
 ```
 
 </TabItem>
