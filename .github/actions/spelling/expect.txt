@@ -32,6 +32,7 @@ scrolloff
 stoggleup
 strlist
 tabpage
+tmux
 todo
 uelic
 vheight
