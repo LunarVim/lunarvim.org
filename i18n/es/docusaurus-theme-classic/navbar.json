@@ -16,7 +16,7 @@
     "description": "Navbar item with label GitHub"
   },
   "item.label.Donate": {
-    "message": "Dona",
+    "message": "Donar",
     "description": "Navbar item with label Donate"
   }
 }
