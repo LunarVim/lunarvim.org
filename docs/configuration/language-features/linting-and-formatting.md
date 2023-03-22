@@ -106,7 +106,7 @@ require("null-ls").register({
     filetypes = { "eruby" },
     generator_opts = {
       command = "htmlbeautifier",
-      args = {} -- put any required arguments in this table
+      args = {}, -- put any required arguments in this table
       to_stdin = true, -- instructs the command to ingest the file from STDIN (i.e. run the currently open buffer through the linter/formatter)
     },
     factory = helpers.formatter_factory,
