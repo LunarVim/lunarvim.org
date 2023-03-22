@@ -11,6 +11,9 @@ sidebar_position: 1
 - [Resolve `EACCES` permissions when installing packages globally](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) to avoid error when installing packages with npm.
 - [`PowerShell 7+`](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.2) (for Windows)
 
+## Optional Feature Prerequisites
+- Install [`lazygit`](https://github.com/jesseduffield/lazygit#installation). This enables `<leader>gg` to launch `lazygit` for intergrated and enhanced Git experience while in `lvim`.
+
 ## Release
 
 (Neovim 0.8.0)
