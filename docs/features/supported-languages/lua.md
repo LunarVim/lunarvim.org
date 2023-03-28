@@ -8,7 +8,7 @@
 
 ## Supported language servers
 
-- sumneko_lua
+- lua_ls
 
 ## Supported formatters
 
