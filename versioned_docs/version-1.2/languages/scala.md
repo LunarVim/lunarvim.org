@@ -66,7 +66,7 @@ lvim.plugins = {
       end,
     },
 }
-
+local dap = require('dap')
 dap.configurations.scala = {
   {
     type = "scala",
