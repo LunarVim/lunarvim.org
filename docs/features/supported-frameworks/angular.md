@@ -1,13 +1,5 @@
 # Angular
 
-## Better syntax highlighting
-
-You may want to add this plugin to your config. It provides treesitter integration with the Angular framework.
-
-```lua
-{ "nvim-treesitter/nvim-treesitter-angular" }
-```
-
 ## Install Language Server
 
 ```vim
