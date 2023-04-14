@@ -17,7 +17,7 @@ const Home = () => {
     <AnimationsContextProvider>
       <Layout
         title={siteConfig.title}
-        description={siteConfig.description}
+        description={siteConfig.tagline}
       >
         <main>
           <Lightrope />

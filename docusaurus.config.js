@@ -9,7 +9,7 @@ const socials = require('./socials');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'LunarVim',
-  description: 'An IDE layer for Neovim with sane defaults. Completely free and community driven.',
+  tagline: 'An IDE layer for Neovim with sane defaults. Completely free and community driven.',
   url: 'https://lunarvim.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
