@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## Prerequisites
 
-- Make sure you have installed the latest version of [`Neovim v0.8.0+`](https://github.com/neovim/neovim/releases/latest).
+- Make sure you have installed the latest version of [`Neovim v0.9.0+`](https://github.com/neovim/neovim/releases/latest).
 - Have [`git`](https://cli.github.com/), [`make`](https://www.gnu.org/software/make/), [`pip`](https://pypi.org/project/pip/), [`python`](https://www.python.org/) [`npm`](https://npmjs.com/), [`node`](https://nodejs.org/) and [`cargo`](https://www.rust-lang.org/tools/install) installed on your system.
 - [Resolve `EACCES` permissions when installing packages globally](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) to avoid error when installing packages with npm.
 - [`PowerShell 7+`](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.2) (for Windows)
@@ -16,7 +16,7 @@ sidebar_position: 1
 
 ## Release
 
-(Neovim 0.8.0)
+(Neovim 0.9.0)
 
 No alarms and No surprises:
 
@@ -27,14 +27,14 @@ import TabItem from '@theme/TabItem';
 <TabItem value="linux/macos" label="Linux/MacOs">
 
 ```bash
-LV_BRANCH='release-1.2/neovim-0.8' bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/fc6873809934917b470bff1b072171879899a36b/utils/installer/install.sh)
+LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
 ```
 
 </TabItem>
 <TabItem value="windows" label="Windows">
 
 ```powershell
-pwsh -c "`$LV_BRANCH='release-1.2/neovim-0.8'; iwr https://raw.githubusercontent.com/LunarVim/LunarVim/fc6873809934917b470bff1b072171879899a36b/utils/installer/install.ps1 -UseBasicParsing | iex"
+pwsh -c "`$LV_BRANCH='release-1.3/neovim-0.9'; iwr https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.ps1 -UseBasicParsing | iex"
 ```
 
 </TabItem>
@@ -43,7 +43,7 @@ pwsh -c "`$LV_BRANCH='release-1.2/neovim-0.8'; iwr https://raw.githubusercontent
 _This is intended just to take a look at the base functionalities, so some interactions may be blocked by the environment._
 
 ```bash
-docker run -w /tmp -it --rm alpine:edge sh -uelic 'addgroup -S lunaruser && adduser -S lunaruser -G lunaruser --shell /bin/sh && apk add yarn git python3 cargo neovim ripgrep alpine-sdk bash --update && LV_BRANCH='release-1.2/neovim-0.8' su -c "bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/fc6873809934917b470bff1b072171879899a36b/utils/installer/install.sh)" lunaruser && su -c /home/lunaruser/.local/bin/lvim lunaruser'
+docker run -w /tmp -it --rm alpine:edge sh -uelic 'addgroup -S lunaruser && adduser -S lunaruser -G lunaruser --shell /bin/sh && apk add yarn git python3 cargo neovim ripgrep alpine-sdk bash --update && LV_BRANCH='release-1.3/neovim-0.9' su -c "bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/release-1.3/neovim-0.9/utils/installer/install.sh)" lunaruser && su -c /home/lunaruser/.local/bin/lvim lunaruser'
 ```
 
 </TabItem>
@@ -51,7 +51,7 @@ docker run -w /tmp -it --rm alpine:edge sh -uelic 'addgroup -S lunaruser && addu
 
 ## Nightly
 
-(Neovim 0.9.0)
+(Neovim 0.10.0)
 
 All the new features with all the new bugs:
 
