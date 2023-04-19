@@ -79,7 +79,7 @@ Let's take `python` as an example:
   lvim.format_on_save.pattern = { "*.lua", "*.py" }
   ```
   
-### Registering custom linters/formatters
+## Registering custom linters/formatters
 
 LunarVim supports all linters and formatters defined as builtins to null-ls, however there may be occasions where you want to run a linter/formatter that null-ls does not support.
 
