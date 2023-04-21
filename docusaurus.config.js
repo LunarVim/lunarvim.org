@@ -9,7 +9,8 @@ const socials = require('./socials');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'LunarVim',
-  tagline: 'An IDE layer for Neovim with sane defaults. Completely free and community driven.',
+  tagline:
+    'An IDE layer for Neovim with sane defaults. Completely free and community driven.',
   url: 'https://lunarvim.org',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -194,14 +195,14 @@ const config = {
           'python',
         ],
       },
-      // announcementBar: {
-      //   id: 'new_release_1.2',
-      //   content:
-      //     'New Release! <a target="_blank" rel="noopener noreferrer" href="https://github.com/LunarVim/LunarVim">install</a>',
-      //   backgroundColor: 'var(--primary-fg)',
-      //   textColor: 'var(--primary-bg)',
-      //   isCloseable: true,
-      // },
+      announcementBar: {
+        id: 'star_us',
+        content:
+          '🌟 If you like LunarVim, don\'t forget to give us a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/LunarVim/LunarVim">Github</a> 🌟',
+        backgroundColor: 'var(--primary-fg)',
+        textColor: 'var(--primary-bg)',
+        isCloseable: true,
+      },
     }),
   plugins: [
     [
