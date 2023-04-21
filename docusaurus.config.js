@@ -160,7 +160,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'installation',
+            docId: 'installation/installation',
             position: 'left',
             label: 'Docs',
           },
