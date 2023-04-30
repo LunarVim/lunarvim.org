@@ -1002,6 +1002,7 @@ Once installed and synced, add your WakaTime API Key via `:WakaTimeApiKey` comma
 },
 
 ```
+
 ### [flutter-tools](https://github.com/tpope/vim-rails)
 
 **Build flutter and dart applications in LunarVim using the native LSP. This
