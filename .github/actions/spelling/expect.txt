@@ -4,6 +4,7 @@ autoselect
 buftype
 codebase
 cursorline
+dartls
 dotfiles
 filesystem
 frontend
