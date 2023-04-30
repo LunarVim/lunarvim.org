@@ -45,6 +45,19 @@ lvim.autocommands = {
 }
 ```
 
+You can also override parameters in builtin colorscheme; e.g., to have winseparator colored in orange in tokyonight scheme:
+
+```lua
+lvim.colorscheme = "tokyonight"
+lvim.builtin.theme.name = "tokyonight"
+lvim.builtin.theme.tokyonight.options.on_highlights = function(hl, c)
+	hl.WinSeparator = {
+		fg = c.orange,
+		bold = true,
+	}
+end
+```
+
 ## Transparent Windows
 
 If you're using transparent windows enable this setting

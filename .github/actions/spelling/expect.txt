@@ -34,7 +34,9 @@ strlist
 tabpage
 tmux
 todo
+tokyonight
 uelic
 vheight
 vimgrep
 vsplit
+winseparator
