@@ -1002,3 +1002,40 @@ Once installed and synced, add your WakaTime API Key via `:WakaTimeApiKey` comma
 },
 
 ```
+### [flutter-tools](https://github.com/tpope/vim-rails)
+
+**Build flutter and dart applications in LunarVim using the native LSP. This
+plugin provides easy launching and debugging of flutter applications, as well
+as extending LSP functionality like widget guides, widget outline view, and hot
+reloading.**
+
+```lua
+{
+  "akinsho/flutter-tools.nvim",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "stevearc/dressing.nvim", -- this is optional, but improves the appearance
+  },
+  config = function()
+    require("flutter-tools").setup {
+      settings = {
+        -- If you want flutter-specific snippets, enable them here
+        enableSnippets = true,
+      },
+      lsp = {
+        on_attach = require("lvim.lsp").common_on_attach,
+      }
+    }
+  end,
+  ft = "dart",
+},
+```
+
+You also need to prevent LunarVim from automatically configuring the `dartls`
+language server so `flutter-tools` can do it. Insert this code outside of
+`lvim.plugins`:
+
+```lua
+-- Prevent LunarVim from configuring dartls so flutter-tools can do it
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "dartls" })
+```
