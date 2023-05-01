@@ -87,7 +87,9 @@ Make sure to check the [troubleshooting](../troubleshooting/README.md) section i
 
 ## Updating LunarVim
 
-- Inside LunarVim `:LvimUpdate`
+- LunarVim updates to the current LunarVim branch's latest commit.  
+- `:LvimUpdate` command in command-line mode.
+- `<leader>Lu` using WhichKey.  
 - From the command-line `lvim +LvimUpdate +q`
 
 ### Update the plugins
