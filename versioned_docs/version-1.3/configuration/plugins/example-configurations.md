@@ -44,7 +44,7 @@ For a more lightweight, easier-to-use alternative, check out the author's new, w
 ```lua
 {
   "ggandor/leap.nvim",
-  as = "leap",
+  name = "leap",
   config = function()
     require("leap").add_default_mappings()
   end,
