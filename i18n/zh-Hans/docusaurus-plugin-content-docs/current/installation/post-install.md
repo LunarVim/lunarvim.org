@@ -34,4 +34,4 @@ cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Co
 
 ### 终端设置
 
-安装字体后，必须执行`fc-cache -f -v`以刷新字体缓存。然后需要改终端设置以使用刚刚安装的字体。有关更改终端字体的信息，请参阅终端文档。
+安装字体后，必须执行`fc-cache -f -v`以刷新字体缓存。然后需要改终端设置以使用刚刚安装的字体。有关更改终端字体的信息，请参阅您终端的文档。
