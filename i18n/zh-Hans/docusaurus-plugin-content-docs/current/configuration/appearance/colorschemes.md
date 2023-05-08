@@ -23,7 +23,7 @@ lvim.colorscheme = 'desert'
 
 ## 安装配色方案
 
-您可以按照自己的喜好添加任意配色方案，只需添加配色方案的插件即可。关于安装插件的更多信息请参考[此处](../plugins/plugins.md)。
+您可以按照自己的喜好添加任意配色方案，只需添加配色方案的插件即可。关于安装插件的更多信息请参考[此处](/configuration/plugins/plugins.md)。
 
 [此列表](https://github.com/rockerBOO/awesome-neovim#colorscheme) 有带tree-sitter支持的配色方案。
 
