@@ -6,11 +6,17 @@ sidebar_position: 3
 
 每个与Neovim兼容的插件都与LunarVim兼容，这里有一些示例可以帮助您入门。
 
-## Navigation plugins
+:::tip
+
+因为翻译可能不及时，以及准确度问题，完整示例配置请查看英文版
+
+:::
+
+## 导航插件
 
 ### [hop](https://github.com/phaazon/hop.nvim)
 
-**neovim motions on speed!**
+**快速移动neovim!**
 
 ```lua
 {
@@ -26,7 +32,10 @@ sidebar_position: 3
 
 ### [lightspeed](https://github.com/ggandor/lightspeed.nvim)
 
-**jetpack codebase navigation**
+**jetpack 代码库导航**
+
+对于更轻量级，更容易使用的替代品，可以查看作者新开发的插件`leap.nvim`。
+下面是配置示例。
 
 ```lua
 {
@@ -35,9 +44,23 @@ sidebar_position: 3
 },
 ```
 
+### [leap](https://github.com/ggandor/leap.nvim)
+
+**Neovim对鼠标的回答**
+
+```lua
+{
+  "ggandor/leap.nvim",
+  as = "leap",
+  config = function()
+    require("leap").add_default_mappings()
+  end,
+},
+```
+
 ### [minimap](https://github.com/wfxr/minimap.vim)
 
-**blazing fast minimap/scrollbar written in Rust**
+**用Rust开发的 快速的 迷你地图/滚动条**
 
 ```lua
 {
@@ -54,7 +77,7 @@ sidebar_position: 3
 
 ### [numb](https://github.com/nacro90/numb.nvim)
 
-**jump to the line**
+**行间跳跃**
 
 ```lua
 {
@@ -71,7 +94,7 @@ sidebar_position: 3
 
 ### [nvim-bqf](https://github.com/kevinhwang91/nvim-bqf)
 
-**better quickfix window**
+**更好的快速修复窗口**
 
 ```lua
 {
@@ -104,7 +127,7 @@ sidebar_position: 3
 
 ### [nvim-spectre](https://github.com/windwp/nvim-spectre)
 
-**search and replace**
+**搜索和替换**
 
 ```lua
 {
@@ -116,9 +139,58 @@ sidebar_position: 3
 },
 ```
 
+### [neo-tree](https://github.com/nvim-neo-tree/neo-tree.nvim)
+
+**neo-tree是一个用来管理文件系统和其他树状结构的插件**
+
+```lua
+{
+  "nvim-neo-tree/neo-tree.nvim",
+  branch = "v2.x",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-tree/nvim-web-devicons",
+    "MunifTanjim/nui.nvim",
+  },
+  config = function()
+    require("neo-tree").setup({
+      close_if_last_window = true,
+      window = {
+        width = 30,
+      },
+      buffers = {
+        follow_current_file = true,
+      },
+      filesystem = {
+        follow_current_file = true,
+        filtered_items = {
+          hide_dotfiles = false,
+          hide_gitignored = false,
+          hide_by_name = {
+            "node_modules"
+          },
+          never_show = {
+            ".DS_Store",
+            "thumbs.db"
+          },
+        },
+      },
+    })
+  end
+},
+```
+
+安装后确保在您的 `config.lua` 中禁用 `nvim-tree` ：
+
+```lua
+...
+lvim.builtin.nvimtree.active = false -- NOTE: using neo-tree
+...
+```
+
 ### [rnvimr](https://github.com/kevinhwang91/rnvimr)
 
-**ranger file explorer window**
+**Ranger文件资源管理器窗口**
 
 ```lua
 {
@@ -134,7 +206,7 @@ sidebar_position: 3
 
 ### [snap](https://github.com/camspiers/snap)
 
-**fast finder system**
+**快速查找系统**
 
 ```lua
 {
@@ -155,7 +227,7 @@ sidebar_position: 3
 
 ### [vim-matchup](https://github.com/andymass/vim-matchup)
 
-**navigate and highlight matching words**
+**导航和高亮匹配的词**
 
 ```lua
 {
@@ -172,7 +244,7 @@ lvim.builtin.treesitter.matchup.enable = true
 
 ### [nvim-window-picker](https://github.com/s1n7ax/nvim-window-picker)
 
-**jump to any window using a selector like the one nvim-tree uses**
+**像nvim-tree一样使用选择器跳到任何窗口**
 
 ```lua
 {
@@ -228,7 +300,7 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
 
 ### [diffview](https://github.com/sindrets/diffview.nvim)
 
-**git diff in a single tabpage**
+**单个标签页中的 git diff**
 
 ```lua
 {
@@ -239,7 +311,7 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
 
 ### [git-blame](https://github.com/f-person/git-blame.nvim)
 
-**show git blame**
+**展示 git blame**
 
 ```lua
 {
@@ -254,7 +326,7 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
 
 ### [gitlinker](https://github.com/ruifm/gitlinker.nvim)
 
-**generate shareable file permalinks for several git web frontend hosts**
+**生成可分享的文件永久链接给若干个git前端主机**
 
 ```lua
 {
@@ -281,7 +353,7 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
 
 ### [octo](https://github.com/pwntester/octo.nvim)
 
-**edit and review GitHub issues and pull requests**
+**编辑和审查GitHub issues和pull requests**
 
 ```lua
 {
@@ -325,7 +397,7 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
 
 ### [vim-gist](https://github.com/mattn/vim-gist)
 
-**create/edit Github gists**
+**创建/编辑 Github gists**
 
 ```lua
 {
@@ -339,7 +411,7 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
 
 ### [nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag)
 
-**autoclose and autorename html tag**
+**autoclose 和 autorename html 标签**
 
 ```lua
 {
@@ -352,7 +424,7 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
 
 ### [nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring)
 
-**commentstring option based on the cursor location**
+**基于光标位置的注释字符串选项**
 
 ```lua
 {
@@ -361,17 +433,17 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
 },
 ```
 
-### [nvim-ts-rainbow](https://github.com/p00f/nvim-ts-rainbow)
+### [nvim-ts-rainbow](https://github.com/mrjones2014/nvim-ts-rainbow)
 
-**rainbow parentheses**
+**彩虹括号**
 
 ```lua
 {
-  "p00f/nvim-ts-rainbow",
+  "mrjones2014/nvim-ts-rainbow",
 },
 ```
 
-After installing ensure to enable it in your `config.lua` using:
+在安装后请确保在`config.lua`中启用它：
 
 ```
 ...
@@ -381,7 +453,7 @@ lvim.builtin.treesitter.rainbow.enable = true
 
 ### [playground](https://github.com/nvim-treesitter/playground)
 
-**view treesitter information**
+**查看 treesitter 信息**
 
 ```lua
 {
@@ -392,7 +464,7 @@ lvim.builtin.treesitter.rainbow.enable = true
 
 ### [nvim-treesitter-context](https://github.com/romgrk/nvim-treesitter-context)
 
-**Show current function at the top of the screen when function does not fit in screen**
+**当function不在屏幕内时，在屏幕顶部显示当前function**
 
 ```lua
 {
@@ -418,14 +490,15 @@ lvim.builtin.treesitter.rainbow.enable = true
   },
 ```
 
-## Telescope Extensions
+## Telescope 扩展
 
-### How to install telescope extensions
+### 如何安装 telescope 扩展
 
-First **add your telescope extension to the list of plugins** as usual (`lvim.plugins = { ... }`) following the extension instructions.
-There are several ways to register extensions within telescope, but the safer is using the `on_config_done` callback for telescope.
-Create the callback function anywhere in your `config.lua`. This function will be called when telescope has finished loading and will get telescope as its only parameter.
-Finally, within the `on_config_done` callback register your extension :
+首先像往常一样按照扩展的说明**把你的telescope扩展添加到插件列表中**(`lvim.plugins = { ... }`)。
+有几种方法可以在telescope中注册扩展，但比较安全的是使用telescope的`on_config_done`回调。
+在你的`config.lua`中的任何地方创建回调函数。
+这个函数将在telescope完成加载后被调用，并将得到telescope作为其唯一的参数。
+最后，在`on_config_done`回调中注册你的扩展：
 
 ```lua
 lvim.builtin.telescope.on_config_done = function(telescope)
@@ -437,7 +510,7 @@ end
 
 ### [telescope-fzy-native.nvim](https://github.com/nvim-telescope/telescope-fzy-native.nvim)
 
-**fzy style sorter that is compiled**
+**编译的fzy风格分类器**
 
 ```lua
 {
@@ -449,7 +522,7 @@ end
 
 ### [telescope-project](https://github.com/nvim-telescope/telescope-project.nvim)
 
-**switch between projects**
+**项目间切换**
 
 ```lua
 {
@@ -461,11 +534,11 @@ end
 },
 ```
 
-## Colorschemes
+## 颜色主题
 
 ### [lsp-colors](https://github.com/folke/lsp-colors.nvim)
 
-**lsp diagnostics highlight groups for non lsp colorschemes**
+**lsp诊断高亮组合，并非lsp颜色主题**
 
 ```lua
 {
@@ -476,7 +549,7 @@ end
 
 ### [lush.nvim](https://github.com/rktjmp/lush.nvim)
 
-**colorscheme creation aid**
+**色调创作辅助工具**
 
 ```lua
 {
@@ -505,7 +578,7 @@ end
 },
 ```
 
-## LSP Enhancement
+## LSP 增强功能
 
 ### [cmp-tabnine](https://github.com/tzachar/cmp-tabnine)
 
@@ -547,7 +620,7 @@ end
 
 ### [lsp-rooter](https://github.com/ahmedkhalf/lsp-rooter.nvim)
 
-**cwd to the project's root directory**
+**cwd到项目的根目录**
 
 ```lua
 {
@@ -561,7 +634,7 @@ end
 
 ### [lsp_signature.nvim](https://github.com/ray-x/lsp_signature.nvim)
 
-**hint when you type**
+**当你输入时提示**
 
 ```lua
 {
@@ -586,7 +659,7 @@ end
 
 ### [trouble.nvim](https://github.com/folke/trouble.nvim)
 
-**diagnostics, references, telescope results, quickfix and location lists**
+**诊断、参考、telescope结果、快速修复和位置列表**
 
 ```lua
 {
@@ -595,7 +668,7 @@ end
 },
 ```
 
-Also define keybindings in `config.lua`
+同时在 `config.lua` 中定义键盘绑定
 
 ```lua
 lvim.builtin.which_key.mappings["t"] = {
@@ -609,11 +682,11 @@ lvim.builtin.which_key.mappings["t"] = {
 },
 ```
 
-## General
+## 一般
 
 ### [auto-save](https://github.com/Pocco81/auto-save.nvim)
 
-**automatically saving your work whenever you make changes to it**
+**每当你对你的工作进行修改时，自动保存你的工作**
 
 ```lua
 {
@@ -637,7 +710,7 @@ lvim.builtin.which_key.mappings["t"] = {
 
 ### [copilot.lua](https://github.com/zbirenbaum/copilot.lua) and [copilot-cmp](https://github.com/zbirenbaum/copilot-cmp)
 
-**your AI pair programmer**
+**你的人工智能配对程序员**
 
 ```lua
 table.insert(lvim.plugins, {
@@ -693,7 +766,7 @@ Make sure to run `:Lazy load copilot-cmp` followed by `:Copilot auth` once the p
 
 ### [glow.nvim](https://github.com/npxbr/glow.nvim)
 
-**preview markdown in neovim**
+**在neovim中预览markdown**
 
 ```lua
 -- You must install glow globally
@@ -708,7 +781,7 @@ Make sure to run `:Lazy load copilot-cmp` followed by `:Copilot auth` once the p
 
 ### [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim)
 
-**preview markdown in the browser**
+**在浏览器中预览markdown**
 
 ```lua
 {
@@ -723,7 +796,7 @@ Make sure to run `:Lazy load copilot-cmp` followed by `:Copilot auth` once the p
 
 ### [neoscroll](https://github.com/karb94/neoscroll.nvim)
 
-**smooth scrolling**
+**平滑滚动**
 
 ```lua
 {
@@ -777,7 +850,7 @@ Make sure to run `:Lazy load copilot-cmp` followed by `:Copilot auth` once the p
 
 ### [persistence](https://github.com/folke/persistence.nvim)
 
-**simple session management**
+**简单的会话管理**
 
 ```lua
 {
@@ -793,7 +866,7 @@ Make sure to run `:Lazy load copilot-cmp` followed by `:Copilot auth` once the p
 },
 ```
 
-Also define keybindings in your `config.lua`
+同时在您的 `config.lua` 中定义按键绑定
 
 ```lua
   lvim.builtin.which_key.mappings["S"]= {
@@ -806,7 +879,7 @@ Also define keybindings in your `config.lua`
 
 ### [todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
 
-**highlight and search for todo comments**
+**搜索并高亮todo注释**
 
 ```lua
 {
@@ -874,7 +947,7 @@ Also define keybindings in your `config.lua`
 
 ### [vim-wakatime](https://github.com/wakatime/vim-wakatime)
 
-**metrics, insights, and time tracking automatically generated from your programming activity**
+**从你的编程活动中自动生成指标、洞察力和时间跟踪**
 
 ```lua
 {
@@ -882,13 +955,13 @@ Also define keybindings in your `config.lua`
 }
 ```
 
-Once installed and synced, add your WakaTime API Key via `:WakaTimeApiKey` command
+安装并同步后，通过 `:WakaTimeApiKey` 命令添加你的WakaTime API密钥
 
-## Language specific
+## 特定语言
 
 ### [bracey](https://github.com/turbio/bracey.vim)
 
-**live edit html, css, and javascript**
+**实时编辑html、css和javascript**
 
 ```lua
 {
