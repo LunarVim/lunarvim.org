@@ -2,31 +2,44 @@
 sidebar_position: 2
 ---
 
-# 用户插件
+# 用户插件 
 
-_This page is not complete, [you can help us write it](https://github.com/LunarVim/lunarvim.org/issues/352)_
+用户插件可以通过你的 `config.lua` 文件，在 `lvim.plugins` 表中添加项目来进行安装。
+保存或手动调用 `LvimReload` 将触发 lazy.nvim 来同步该表中的所有插件。
 
-User plugins can be installed by adding entries to the `lvim.plugins` table in your `config.lua` file,
-and saving or manually invoking `LvimReload` will trigger lazy to sync all the plugins in that table.
+例子:
 
 ```lua
 lvim.plugins = {
-	{ "lunarvim/colorschemes" },
-	{
-		"nvim-neorg/neorg",
-		ft = "norg", -- lazy-load on filetype
-		config = true, -- run require("neorg").setup()
-	},
+  { "lunarvim/colorschemes" },
+  {
+    "stevearc/dressing.nvim",
+    config = function()
+      require("dressing").setup({
+        input = { enabled = false },
+      })
+    end,
+  },
+  {
+    "nvim-neorg/neorg",
+    ft = "norg", -- lazy-load on filetype
+    config = true, -- run require("neorg").setup()
+  },
 }
 ```
 
+检查[示例配置](./example-configurations.md)以获取一些建议。
+
 :::tip
 
-You can find all available options [here](https://github.com/folke/lazy.nvim#-plugin-spec) or in lunarvim: `:help lazy.nvim-plugin-spec`
-You can find more examples [here](https://github.com/folke/lazy.nvim#examples)
+您可以在[此处](https://github.com/folke/lazy.nvim#-plugin-spec)或 lunarvim：`:help lazy.nvim-plugin-spec `中找到所有可用选项。
+您可以在[此处](https://github.com/folke/lazy.nvim#examples)找到更多示例。
 
 :::
 
-Check the [extra plugins](./example-configurations.md) for some suggestions.
+:::info
 
-_Note: removing a plugin from the `lvim.plugins` table removes it from your configuration but not your system. To remove them completely, run `:Lazy clean`._
+在 `lvim.plugins` 表中移除插件会将其从您的配置中删除，并不会在系统中移除。
+想要完全的删除，请运行 `:Lazy clean`。
+
+:::

@@ -4,23 +4,27 @@ sidebar_position: 1
 
 # 核心插件
 
-_This page is not complete, [you can help us write it](https://github.com/LunarVim/lunarvim.org/issues/352)_
+核心插件的配置可通过该`lvim.builtin`表访问。
 
-The configurations for core plugins are accessible through `lvim.builtin`. Most should contain an `active` attribute that can be set to `false` to disable the plugin
+## 禁用核心插件
 
-```lua
-lvim.builtin.alpha.active = true
-lvim.builtin.dap.active = true -- (default: false)
-lvim.builtin.terminal.active = true
+大多数插件应该包含一个可以被设置为`false`禁用插件的属性`active`
+
+```
+lvim.builtin.alpha.active = false
+lvim.builtin.dap.active = false
 ```
 
 :::caution
 
-Disabling a plugin will not take effect until you restart lvim.
+直到您重启lvim，否则禁用插件不会生效。
 
 :::
 
-You can press `<TAB>` to get autocomplete suggestions to explore these settings.
+## 配置核心
+
+要配置内置插件，请编辑`lvim.builtin.<builtin>`。
+您可以按`<TAB>`获取自动完成建议以浏览这些设置。
 
 ```lua
 lvim.builtin.cmp.completion.keyword_length = 2
@@ -30,11 +34,11 @@ lvim.builtin.telescope.defaults.layout_config.preview_cutoff = 75
 
 :::tip
 
-A plugin's README (and `docs/` folder if it exists) typically contain excellent documentation, so it may be worthwhile to create an alias for if you use them often.
+插件的README（和可能存在的`docs/`文件夹 ）通常包括优秀的文档，所以如果您经常使用它们，创建一个别名可能是值得的
 
 :::
 
-## Pinning
+## 版本固定
 
-Versions of core plugins are pinned for better stability,
-you can disable pinning by setting an environment variable `$LVIM_DEV_MODE`, e.g. can be defined in `~/.local/bin/lvim`
+核心插件的版本通常被固定，以获得更好的稳定性，
+你可以通过设置环境变量 `$LVIM_DEV_MODE` 来解除版本固定。
