@@ -4,115 +4,119 @@ sidebar_position: 1
 
 # 语言服务器
 
-_This page needs improvement_
+LunarVim使用[文件类型插件](/configuration/ftplugin.md)来实现语言服务器的懒加载设置。一个模板生成器被用来创建 `ftplugin` 文件，并将设置调用填充到这些文件中。
 
-## Installing and updating a server
+`lvim.lsp.automatic_configuration.skipped_servers` 包含一个默认不会被自动配置的服务器列表，例如，只允许JS-family语言使用 `tsserver`，当一种语言有多个可用的服务器时，那么通常会选择最受欢迎的那个。
 
-### Automatic server installation
+:::info
 
-By default, most supported language servers will get automatically installed once you open the supported file-type, e.g, opening a Python file for the first time will install `Pyright` and configure it automatically for you.
+如果要更改 `lvim.lsp.automatic_configuration.skipped_servers` 的值，**必须**在之后执行 `:LvimCacheReset` 命令才能生效。
 
-- configuration option
+:::
+
+## 安装和更新服务
+
+### 自动安装
+
+默认情况下，一旦你打开支持的文件类型，大多数支持的语言服务器将被自动安装，例如，第一次打开一个Python文件将安装 `pyright` 并自动为你配置。
+
+### 手动安装
 
 ```lua
-lvim.lsp.automatic_servers_installation = true
+lvim.lsp.automatic_servers_installation = false
 ```
 
-Please refer to [mason](https://github.com/williamboman/mason.nvim) to see the updated full list of currently available servers.
+请参考[mason](https://github.com/williamboman/mason.nvim)，查看当前可用服务器的最新完整列表。
 
-To install a supported language server:
+要安装一个支持的语言服务器：
 
-```md
+```vim
 :LspInstall `<your_language_server>`
 ```
 
-You can also toggle `<:Mason>` and interactively choose which servers to install.
+你也可以打开 `:Mason` ，交互式地选择要安装的服务器（按`g?`键绑定）。
 
-## Server override
+### 更新服务器
 
-`lvim.lsp.automatic_configuration.skipped_servers` contains a list of servers that will **not** be automatically configured by default, for example only `tsserver` is allowed for JS-family languages, and when a language has more than one server available, then the most popular one is usually chosen.
+打开 `:Mason`，选择一个服务器，用 `u` 来更新它。你可以用 `<S-u>` 来更新所有Mason软件包。
 
-:::tip
+## 改变默认服务器
 
-Overriding a server will completely bypass the lsp-installer, so you would have to manage the installation for any of those servers manually.
+要使用与默认服务器不同的服务器，请将默认服务器添加到 `skipped_servers` 列表中，并删除你想使用的那个服务器。
 
-:::
+:::info
 
-See the current list
-
-```lua
-:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))
-```
-
-See the default list in [`lua/lvim/lsp/config.lua`](https://github.com/LunarVim/LunarVim/blob/master/lua/lvim/lsp/config.lua#L1-L40)
-
-:::tip
-
-Any changes to `lvim.lsp.automatic_configuration.skipped_servers` **must** be followed by `:LvimCacheReset` to take effect.
+对 `lvim.lsp.automatic_configuration.skipped_servers` 的任何修改都**必须**在按下 `:LvimCacheReset` 之后才会生效。
 
 :::
 
-## Server setup
+例子:
 
-LunarVim uses [filetype plugins](/configuration/ftplugin.md) to enable lazy-loading the setup of a language server. A template generator is used to create `ftplugin` files and populate them with the setup call.
+- 使用j `jedi_language_server` 而不是 `pyright`
 
-- configuration option
+  ```lua
+  -- add `pyright` to `skipped_servers` list
+  vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
+  -- remove `jedi_language_server` from `skipped_servers` list
+  lvim.lsp.automatic_configuration.skipped_servers = vim.tbl_filter(function(server)
+    return server ~= "jedi_language_server"
+  end, lvim.lsp.automatic_configuration.skipped_servers)
+  ```
 
-```lua
-lvim.lsp.templates_dir = join_paths(get_runtime_dir(), "after", "ftplugin")
-```
+## 覆盖设置
 
-A typical setup call with default arguments
+### 使用 :LspSettings
 
-```lua
--- edit this file by running `:lua vim.cmd("edit " .. lvim.lsp.templates_dir .. "/lua.lua")`
-require("lvim.lsp.manager").setup("sumneko_lua")
-```
-
-:::tip
-
-You can quickly find these files by running `<leader>Lf` -> "Find LunarVim Files"
-
-:::
-
-### Overriding the default setup options
-
-Add the server you wish to configure manually to `lvim.lsp.automatic_configuration.skipped_servers`.
-
-```lua
-vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
-```
-
-Now you can set it up manually using the builtin [lsp-manager](https://github.com/LunarVim/LunarVim/blob/rolling/lua/lvim/lsp/manager.lua)
-
-```lua
---- list of options that should take precedence over any of LunarVim's defaults
---- check the lspconfig documentation for a list of all possible options
-local opts = {}
-require("lvim.lsp.manager").setup("pyright", opts)
-```
-
-Alternatively, set it up using the `lspconfig` API directly
-
-```lua
---- check the lspconfig documentation for a list of all possible options
-local opts = {}
-require("lspconfig")["pyright"].setup(opts)
-```
-
-## Server settings
-
-To set a setting for your language server:
+为你的语言服务器进行设置:
 
 ```vim
 :LspSettings <TAB>
-:LspSettings <NAME_OF_LANGUAGE_SERVER>
 ```
 
-This will create a file in `$LUNARVIM_CONFIG_DIR/lsp-settings`, to enable persistent changes. Refer to the documentation of [nlsp-settings](https://github.com/tamago324/nlsp-settings.nvim/blob/main/schemas/README.md) for a full updated list of supported language servers.
+例子:
+
+1. `:LspSettings sumneko_lua`
+
+2. ```json
+   {
+     "Lua.hint.enable": false
+   }
+   ```
+
+这将在 `/lsp-settings` 中创建一个文件，以实现持久的更改。
+请参考 [nlsp-settings](https://github.com/tamago324/nlsp-settings.nvim/blob/main/schemas/README.md) 的文档，
+了解支持的语言服务器的完整更新列表。
 
 :::tip
 
-Make sure to install `jsonls` for autocompletion.
+安装 `jsonls` LSP服务器用于自动完成。
 
 :::
+
+### 通过覆盖进行设置
+
+将你想手动配置的服务器添加到 `lvim.lsp.automatic_configuration.skipped_servers`。
+
+```lua
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "sumneko_lua" })
+```
+
+:::info
+
+对 `lvim.lsp.automatic_configuration.skipped_servers` 的任何修改都**必须**在按下 `:LvimCacheReset` 之后才会生效。
+
+:::
+
+现在你可以使用 `$LUNARVIM_CONFIG_DIR/ftplugin/<filetype>.lua` 中的内置的[lsp管理器](https://github.com/LunarVim/LunarVim/blob/master/lua/lvim/lsp/manager.lua)手动设置它。
+
+例子:
+
+```lua
+-- $LUNARVIM_CONFIG_DIR/ftplugin/lua.lua
+local opts = {
+  settings = {
+    Lua = { hint = { enable = false } },
+  },
+}
+require("lvim.lsp.manager").setup("sumneko_lua", opts)
+```

@@ -29,9 +29,9 @@ LunarVim 使用 Nerd Fonts 字体中的图标。如果你不想使用它们，�
 
 ```bash
 mkdir -p ~/.local/share/fonts
-cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/DroidSansMNerdFont-Regular.otf
 ```
 
 ### 终端设置
 
-安装字体后，必须执行`fc-cache -f -v`以刷新字体缓存。然后需要改终端设置以使用刚刚安装的字体。有关更改终端字体的信息，请参阅终端文档。
+安装字体后，必须执行`fc-cache -f -v`以刷新字体缓存。然后需要改终端设置以使用刚刚安装的字体。有关更改终端字体的信息，请参阅您终端的文档。

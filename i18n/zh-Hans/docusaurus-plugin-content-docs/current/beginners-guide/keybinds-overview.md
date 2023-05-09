@@ -22,7 +22,7 @@ sidebar_position: 3
 | `<leader>`                    | [whichkey](https://github.com/folke/which-key.nvim) (键位提示弹窗 (1秒后弹出))        | normal |
 | `<leader>e`                   | [nvimtree](https://github.com/nvim-tree/nvim-tree.lua) (文件浏览边栏)                     | normal |
 | `<leader>f` `<leader>s`(menu) | [telescope](https://github.com/nvim-telescope/telescope.nvim) (查找文件，搜索文本等) | normal |
-| `<leader>;`                   | [alpha](https://github.com/goolord/alpha-nvim) (主页)                                      | normal |
+| `<leader>;`                   | [alpha](https://github.com/goolord/alpha-nvim) (仪表盘)                                      | normal |
 | `<C-\>` `<M-1/2/3>`           | [toggleterm](https://github.com/akinsho/toggleterm.nvim) (终端)                             | normal |
 
 ## LSP
@@ -36,6 +36,7 @@ sidebar_position: 3
 | `gI` | 跳转到实现   | normal |
 | `gs` | 显示签名帮助   | normal |
 | `gl` | 显示当前行诊断信息 | normal |
+| `glgl` | 将光标移至`gl`诊断窗口内 | normal |
 
 ## 编辑
 
