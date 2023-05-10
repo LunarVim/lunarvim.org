@@ -22,7 +22,7 @@ Visit [ronniedroid/getnf](https://github.com/ronniedroid/getnf) for an easy way 
 
 ### Manual Install
 
-1. Go to the [pached fonts directory](https://www.nerdfonts.com/font-downloads)
+1. Go to the [patched fonts directory](https://www.nerdfonts.com/font-downloads)
 1. Copy the downloaded files to `~/.local/share/fonts`
 
 ### Curl Download
