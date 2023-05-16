@@ -1,3 +1,4 @@
+Alacritty
 autoclose
 autorename
 autoselect
@@ -32,7 +33,6 @@ scrolloff
 stoggleup
 strlist
 tabpage
-tmux
 todo
 tokyonight
 uelic

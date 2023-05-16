@@ -13,9 +13,11 @@ Also see:
 
 **TIP:** `<leader>` is space by default, read [`:help keycodes`](https://neovim.io/doc/user/intro.html#keycodes) for more key names
 
-**TIP:** `<M>` is `alt` on Windows/Linux and `option` on MacOS
+**TIP:** `<M>` is `alt` on Windows/Linux and `option` on macOS
 
-**TIP:** If you happen to be using iTerm2, take note that `<M>` requires the `option` key to be mapped to `Esc+` in [ Preferences - Profiles - Keys ](https://github.com/LunarVim/lunarvim.org/pull/377#discussion_r1140747022) for proper functioning in both the terminal and tmux
+**TIP:** For macOS users: For the `option` key (`⌥`) to work as `<M>` you may need to adjust some settings:
+- For iTerm2: Select `Esc+` as the Option key setting in [ Preferences - Profiles - Keys ](https://github.com/LunarVim/lunarvim.org/pull/377#discussion_r1140747022)
+- For Alacritty: Make sure you're on Alacritty version >= 0.12.0. In your `alacritty.yml` config file, set `window.option_as_alt` to `Both` or `OnlyLeft` \ `OnlyRight` per your preference (https://github.com/alacritty/alacritty/issues/62).
 
 **TIP:** Non-leader keybindings (for e.g. `<C-\>`, mentioned below and others) can be viewed
 by pressing `<backspace>` in the which-key main menu (first popup after pressing `<leader>`)
