@@ -61,7 +61,7 @@ code_actions.setup {
    linters.setup { { command = "flake8", filetypes = { "python" } } }
    ```
 
-## 报错时格式化
+## 保存时格式化
 
 - 要在保存时启用格式化：
 
