@@ -3,9 +3,11 @@ autoclose
 autorename
 autoselect
 buftype
+cmdline
 codebase
 cursorline
 dotfiles
+emacs
 filesystem
 frontend
 func
