@@ -9,9 +9,10 @@ sidebar_position: 1
 - Make sure you have installed the latest version of [`Neovim v0.9.0+`](https://github.com/neovim/neovim/releases/latest).
 - Have [`git`](https://cli.github.com/), [`make`](https://www.gnu.org/software/make/), [`pip`](https://pypi.org/project/pip/), [`python`](https://www.python.org/) [`npm`](https://npmjs.com/), [`node`](https://nodejs.org/) and [`cargo`](https://www.rust-lang.org/tools/install) installed on your system.
 - [Resolve `EACCES` permissions when installing packages globally](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) to avoid error when installing packages with npm.
-- [`PowerShell 7+`](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.2) (for Windows)
+- [`PowerShell 7+`](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.2) (for Windows).
 
 ## Optional Feature Prerequisites
+
 - Install [`lazygit`](https://github.com/jesseduffield/lazygit#installation). This enables `<leader>gg` to launch `lazygit` for intergrated and enhanced Git experience while in `lvim`.
 
 ## Release
@@ -24,7 +25,7 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 <Tabs>
-<TabItem value="linux/macos" label="Linux/MacOs">
+<TabItem value="linux/macos" label="Linux/MacOS">
 
 ```bash
 LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
@@ -56,7 +57,7 @@ docker run -w /tmp -it --rm alpine:edge sh -uelic 'addgroup -S lunaruser && addu
 All the new features with all the new bugs:
 
 <Tabs>
-<TabItem value="linux/macos" label="Linux/MacOs">
+<TabItem value="linux/macos" label="Linux/MacOS">
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
@@ -101,13 +102,13 @@ Make sure to check the [troubleshooting](../troubleshooting/README.md) section i
 You can remove LunarVim (including the configuration files) using the bundled `uninstall` script
 
 <Tabs>
-<TabItem value="linux/macos" label="Linux/MacOs">
+<TabItem value="linux/macos" label="Linux/MacOS">
 
 ```bash
 bash ~/.local/share/lunarvim/lvim/utils/installer/uninstall.sh
 ```
 
-#### **or**
+**or**
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/uninstall.sh)
