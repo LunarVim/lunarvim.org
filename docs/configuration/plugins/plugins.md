@@ -89,4 +89,10 @@ A plugin's README (and `docs/` folder if it exists) typically contain excellent 
 ### Pinning
 
 Versions of core plugins are pinned for better stability,
-you can disable pinning by setting an environment variable `$LVIM_DEV_MODE`, e.g. can be defined in `~/.local/bin/lvim`
+you can disable pinning by setting an environment variable `$LVIM_DEV_MODE`, e.g. can be defined in `~/.local/bin/lvim` or in your shell's rc file:
+
+```bash
+export LVIM_DEV_MODE=1
+# or 
+alias lvim="LVIM_DEV_MODE=1 lvim"
+```
