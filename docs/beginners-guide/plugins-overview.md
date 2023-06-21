@@ -10,21 +10,9 @@ LunarVim supports a wide range of plugins to enhance the functionality of the Ne
 
 LunarVim also includes a set of [core plugins](../../features/core-plugins-list) that are pre-configured and provided out of the box. These plugins offer essential features and functionality.
 
-| Plugin                                                      | Description                                                                                                                    |
-| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| [Neovim LSP Configuration](https://github.com/neovim/nvim-lspconfig) | Provides easy configuration for the built-in Language Server Protocol (LSP) client in Neovim.                                 |
-| [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) | Brings advanced syntax highlighting and parsing capabilities to Neovim.                                                         |
-| [Telescope](https://github.com/nvim-telescope/telescope.nvim) | A highly extensible fuzzy finder plugin that simplifies the process of finding and opening files in Neovim.                    |
-| [NERDTree](https://github.com/preservim/nerdtree)           | A popular plugin that provides a sidebar for navigating and managing files in a visual manner.                                   |
-| [Auto Pairs](https://github.com/windwp/nvim-autopairs)      | Automatically inserts matching pairs of brackets, quotes, and other characters as you type.                                    |
-| [Comment.nvim](https://github.com/numToStr/Comment.nvim)    | Simplifies the process of commenting and uncommenting code blocks, supporting various programming languages.                   |
-| [Gitsigns](https://github.com/lewis6991/gitsigns.nvim)       | Displays Git diff markers and signs within the gutter, aiding in visualizing changes and tracking file status in Neovim.       |
-| [Lualine](https://github.com/nvim-lualine/lualine.nvim)      | A customizable statusline plugin that allows displaying various information in the statusline of Neovim.                        |
-| [Which-key](https://github.com/folke/which-key.nvim)         | Provides a popup that shows keybindings and associated commands, helping users explore and learn Neovim functionalities.        |
-
 These plugins are just a starting point, and there are many more available to explore. Remember to read the documentation and experiment with different plugins to find the ones that suit your workflow and preferences.
 
-## Plugin Details
+## Core plugin details
 
 ### Neovim LSP Configuration
 
@@ -64,4 +52,4 @@ If you're using Git for version control, `Gitsigns` is a valuable plugin. It dis
 
 ## Installing and configuring plugins
 
-Plugins in LunarVim are managed using [folke/lazy.nvim](https://github.com/folke/lazy.nvim), a plugin manager designed specifically for LunarVim. To install plugins, you need to add entries to the `lvim.plugins` table in your `config.lua`. About configuring your plugins you can read a lot more at [this page](../../configuration/plugins).
+Plugins in LunarVim are managed using [folke/lazy.nvim](https://github.com/folke/lazy.nvim). To install plugins, you need to add entries to the `lvim.plugins` table in your `config.lua`. About configuring your plugins you can read a lot more at [this page](../../configuration/plugins).
