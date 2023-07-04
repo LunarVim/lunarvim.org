@@ -13,7 +13,7 @@ sidebar_position: 1
 
 ## Optional Feature Prerequisites
 
-- Install [`lazygit`](https://github.com/jesseduffield/lazygit#installation). This enables `<leader>gg` to launch `lazygit` for intergrated and enhanced Git experience while in `lvim`.
+- Install [`lazygit`](https://github.com/jesseduffield/lazygit#installation). This enables `<leader>gg` to launch `lazygit` for integrated and enhanced Git experience while in `lvim`.
 
 ## Release
 
