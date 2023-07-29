@@ -36,7 +36,7 @@ lvim.builtin.lualine.style = "default" -- or "none"
 **LunarVim的组件**
 
 `mode`, `branch`, `filename`, `diff`, `python_env`, `diagnostics`, `treesitter`, `lsp`, `location`, `progress`, `spaces`, `encoding`, `filetype`, `scrollbar`
-`
+
 设置 `lualine` 的 `"diff"` 组件到 `"default"` 风格的c部分：
 
 ```lua

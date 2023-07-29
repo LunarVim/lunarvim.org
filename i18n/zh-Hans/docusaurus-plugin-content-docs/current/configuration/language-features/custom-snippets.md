@@ -52,11 +52,11 @@ sidebar_position: 3
 }
 ```
 
-以上配置将`hellp`展开为`print("Hello, World!")`。
+以上配置将`hello`展开为`print("Hello, World!")`。
 
 ### lua版本
 
-首先在`config.lua`目录创建一个名为`luasnippets`的文件夹：`~/.config/lvim/snippets/`
+首先在`config.lua`目录创建一个名为`luasnippets`的文件夹：`~/.config/lvim/luasnippets/`
 
 然后在该文件夹中，创建一个lua文件，以你想创建代码模版的语言命名。例如，为了创建lua的代码模版，创建一个名为`lua.lua`的（多余但正确的）文件。然后把你的文件放进去，例如：
 

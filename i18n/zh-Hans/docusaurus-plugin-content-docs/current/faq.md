@@ -7,6 +7,20 @@ sidebar_position: 4
 
 ## 该如何 [..] ?
 
+### 如何在 Neovide 中使用 LunarVim？
+
+使用此 bash 脚本启动 neovide
+```shell
+#!/usr/bin/env bash
+
+export LUNARVIM_RUNTIME_DIR="${LUNARVIM_RUNTIME_DIR:-"$HOME/.local/share/lunarvim"}"
+export LUNARVIM_CONFIG_DIR="${LUNARVIM_CONFIG_DIR:-"$HOME/.config/lvim"}"
+export LUNARVIM_CACHE_DIR="${LUNARVIM_CACHE_DIR:-"$HOME/.cache/lvim"}"
+export LUNARVIM_BASE_DIR="${LUNARVIM_BASE_DIR:-"$HOME/.local/share/lunarvim/lvim"}"
+
+exec neovide -- -u "$LUNARVIM_BASE_DIR/init.lua" "$@"
+```
+
 ### 该如何添加自己的键位映射?
 
 - 使用`<leader>Lk`查看所有默认的键位映射
@@ -58,6 +72,7 @@ C/C++语言有`llvm`项目的`clangd`，它可以使用其附加的`clang-tidy`�
 
 如果你想有配置LunarVim的灵感，可以参考这些仓库：
 
+- starter.lvim [https://github.com/LunarVim/starter.lvim](https://github.com/LunarVim/starter.lvim)（特定于语言的lunarvim配置的集合）
 - Chris - [https://github.com/ChristianChiarulli/lvim](https://github.com/ChristianChiarulli/lvim)
 - Abouzar -[ https://github.com/abzcoding/lvim ](https://github.com/abzcoding/lvim)
 - Nelson -[ https://github.com/rebuilt/lvim ](https://github.com/rebuilt/lvim)
