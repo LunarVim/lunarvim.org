@@ -17,7 +17,7 @@ lvim.plugins = {
 	},
 }
 ```
-检查[示例配置](../example-configurations.md)以获取一些建议。
+检查[示例配置](/configuration/plugins/example-configurations.md)以获取一些建议。
 
 :::tip
 
