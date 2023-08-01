@@ -124,7 +124,7 @@ lvim.builtin.which_key.mappings["tP"] = {
 }
 ```
 
-### 字目录映射
+### 子目录映射
 
 映射一组键位。按`<Leader>td`会触发`Definitions`。该目录的目录名会显示为`Trouble`：
 

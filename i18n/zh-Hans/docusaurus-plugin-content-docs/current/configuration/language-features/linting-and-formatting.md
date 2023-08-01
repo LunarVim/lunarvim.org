@@ -6,8 +6,7 @@ sidebar_position: 2
 
 如果设置一个格式化器，将覆盖语言服务器本身的格式化能力。
 
-最简单的方法是通过名字来引用 linter/formatter/code_actions。请参阅[null-ls
-文档](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md)，了解带有名称的完整内置程序列表。
+最简单的方法是通过名字来引用 linter/formatter/code_actions。请参阅[null-ls 文档](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md)，了解带有名称的完整内置程序列表。
 
 例子:
 
@@ -88,7 +87,7 @@ LunarVim支持所有定义为null-ls的内建程序的linters和formatters，然
 
 :::
 
-面是一个注册[htmlbeautifier](https://github.com/threedaymonk/htmlbeautifier)formatter的例子
+下面是一个注册[htmlbeautifier](https://github.com/threedaymonk/htmlbeautifier)formatter的例子
 
 ```lua
 local helpers = require("null-ls.helpers")

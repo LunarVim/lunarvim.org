@@ -52,7 +52,7 @@ lvim.lsp.automatic_servers_installation = false
 
 例子:
 
-- 使用j `jedi_language_server` 而不是 `pyright`
+- 使用 `jedi_language_server` 而不是 `pyright`
 
   ```lua
   -- add `pyright` to `skipped_servers` list

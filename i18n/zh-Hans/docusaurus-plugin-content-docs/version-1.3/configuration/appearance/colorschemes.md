@@ -27,6 +27,27 @@ lvim.colorscheme = 'desert'
 
 [此列表](https://github.com/rockerBOO/awesome-neovim#colorscheme) 有带tree-sitter支持的配色方案。
 
+## 定制一些颜色
+
+您可以通过在自动命令中覆盖它们来自定义突出显示组。要查找要更改的组，请使用 `leader s H` (`:Telescope highlights`)、 `:TSHighlightCapturesUnderCursor` 或 `:Inspect`
+```lua
+lvim.autocommands = {
+  {
+    { "ColorScheme" },
+    {
+      pattern = "*",
+      callback = function()
+        -- change `Normal` to the group you want to change
+        -- and `#ffffff` to the color you want
+        -- see `:h nvim_set_hl` for more options
+        vim.api.nvim_set_hl(0, "Normal", { bg = "#ffffff", underline = false, bold = true })
+      end,
+    },
+  },
+}
+
+```
+
 ## 透明窗口
 
 如果您在使用透明的窗口，需要打开这个设置：

@@ -4,11 +4,9 @@ sidebar_position: 2
 
 # 用户插件
 
-_This page is not complete, [you can help us write it](https://github.com/LunarVim/lunarvim.org/issues/352)_
+可以通过将条目添加到 `config.lua` 文件中的 `lvim.plugins` 表来安装用户插件，保存或手动调用 `LvimReload` 将触发延迟同步该文件中的所有插件。
 
-User plugins can be installed by adding entries to the `lvim.plugins` table in your `config.lua` file,
-and saving or manually invoking `LvimReload` will trigger lazy to sync all the plugins in that table.
-
+例子：
 ```lua
 lvim.plugins = {
 	{ "lunarvim/colorschemes" },
@@ -19,14 +17,11 @@ lvim.plugins = {
 	},
 }
 ```
+检查[示例配置](/configuration/plugins/example-configurations.md)以获取一些建议。
 
 :::tip
 
-You can find all available options [here](https://github.com/folke/lazy.nvim#-plugin-spec) or in lunarvim: `:help lazy.nvim-plugin-spec`
-You can find more examples [here](https://github.com/folke/lazy.nvim#examples)
+从 `lvim.plugins` 表中删除插件会将其从您的配置中删除，但不会从您的系统中删除。要完全删除它们，请运行 `:Lazy clean`
 
 :::
 
-Check the [extra plugins](./example-configurations.md) for some suggestions.
-
-_Note: removing a plugin from the `lvim.plugins` table removes it from your configuration but not your system. To remove them completely, run `:Lazy clean`._
