@@ -27,6 +27,7 @@
     "react-contributors": "^1.1.2",
     "react-countup": "^6.4.0",
     "react-dom": "^17.0.2",
+    "react-lite-youtube-embed": "^2.3.52",
     "subset-font": "^1.6.1"
   },
   "devDependencies": {

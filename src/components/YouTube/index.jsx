@@ -2,6 +2,9 @@ import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Clouds from '../Clouds';
 import styles from './styles.module.css';
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css';
+import './yt-lite.css'
 
 const YouTube = () => {
   const {
@@ -16,18 +19,15 @@ const YouTube = () => {
         {YouTube.map((yt) => (
           <div key={yt.id} className={styles.yt}>
             <h2>{yt.title}</h2>
-            <iframe
-              loading="lazy"
+            <LiteYouTubeEmbed
               width="560"
               height="315"
-              src={`https://www.youtube.com/embed/${
-                yt.type === 'playlist' ? `playlist?list=${yt.id}` : yt.id
-              }`}
+              id={yt.id}
               title={yt.title}
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+              playlistCoverId={yt.playlistCoverId}
+              playlist={yt.playlistCoverId}
+              playerClass="lty-playbtn"
+            />
           </div>
         ))}
       </section>
