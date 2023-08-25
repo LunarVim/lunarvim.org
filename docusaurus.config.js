@@ -118,23 +118,23 @@ const config = {
         alt: 'LunarVim Preview',
       },
     ],
+    /**  NOTE: max 3 preferred
+    * for playlists you need to pass playlistCoverId
+    * playlistCoverId = youtube video id
+    */
     YouTube: [
-      /* NOTE: max 3 preferred */
-      /* type: video | playlist */
       {
-        type: 'video',
         id: 'NPmKRygD7DU',
         title: 'Neovim v0.8 release',
       },
       {
-        type: 'video',
         id: 'sFA9kX-Ud_c',
         title: 'Install LunarVim Stable Release',
       },
       {
-        type: 'playlist',
         id: 'PLhoH5vyxr6QoYP4bKw0krF4aEn_3_pfWA',
         title: 'LunarVim (IDE for Neovim)',
+        playlistCoverId: 'NlRxRtGpHHk',
       },
     ],
     Contributors: {

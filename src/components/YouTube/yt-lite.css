@@ -1,0 +1,20 @@
+.yt-lite {
+  border: 2px solid var(--primary-bg);
+  border-radius: 1rem;
+  aspect-ratio: 16/9;
+  height: auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.yt-lite > .lty-playbtn {
+  border-color: transparent;
+}
+
+.yt-lite > .lty-playbtn::before {
+  border-color: transparent transparent transparent #cdd6f4;
+}
+
+.yt-lite:hover > .lty-playbtn {
+  border-color: transparent;
+}

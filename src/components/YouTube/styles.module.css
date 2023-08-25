@@ -5,15 +5,6 @@
   flex: 1;
 }
 
-.yt > iframe {
-  border: 2px solid var(--primary-bg);
-  border-radius: 1rem;
-  aspect-ratio: 16/9;
-  height: auto;
-  width: 100%;
-  max-width: 100%;
-}
-
 .yt > h2 {
   text-align: center;
 }
