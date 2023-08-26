@@ -26,9 +26,9 @@ The `nvim-lspconfig` plugin provides easy configuration for the built-in Languag
 
 `Telescope` is a highly extensible fuzzy finder plugin. It provides a powerful interface for searching files, buffers, and other resources within your Neovim environment. With its intuitive navigation and customizable options, it simplifies the process of finding and opening files.
 
-### NERDTree
+### NvimTree
 
-For a more traditional file explorer experience, `NERDTree` is a popular plugin. It provides a sidebar that displays the directory structure, allowing you to navigate and manage files easily. This plugin is especially useful if you prefer a visual representation of your project's files.
+`NvimTree`, a widely embraced Neovim plugin, enriches the coding experience by seamlessly integrating a file explorer sidebar within the interface. This feature optimizes workflow efficiency and seamless file management. NvimTree offers an array of customization options, ensuring alignment with users' preferences. Employing common shortcuts like `o` to open files and `d` to toggle folders, NvimTree significantly streamlines the programming journey.
 
 ### Auto Pairs
 
