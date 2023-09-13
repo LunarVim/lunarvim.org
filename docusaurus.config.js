@@ -124,8 +124,8 @@ const config = {
     */
     YouTube: [
       {
-        id: 'NPmKRygD7DU',
-        title: 'Neovim v0.8 release',
+        id: 'BHlR_GJaNbI',
+        title: 'You can keep your Neovim Config!',
       },
       {
         id: 'sFA9kX-Ud_c',
