@@ -62,8 +62,8 @@ by pressing `<backspace>` in the which-key main menu (first popup after pressing
 | `<C-space>`                | show completion menu                   | insert |
 | `<CR>` `<C-y>`             | confirm                                | insert |
 | `<C-e>`                    | abort                                  | insert |
-| `<C-k>` `<Up>` `<Tab>`     | select previous item                   | insert |
-| `<C-j>` `<Down>` `<S-Tab>` | select next item                       | insert |
+| `<C-k>` `<Up>` `<S-Tab>`   | select previous item                   | insert |
+| `<C-j>` `<Down>` `<Tab>`   | select next item                       | insert |
 | `<C-d>`                    | scroll docs up                         | insert |
 | `<C-f>`                    | scroll docs down                       | insert |
 | `<CR>` `<Tab>`             | jump to next jumpable in a snippet     | insert |
