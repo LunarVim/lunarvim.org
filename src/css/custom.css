@@ -146,4 +146,6 @@ iframe[src*='youtube.com'] {
 
 .navbar--fixed-top {
   z-index: calc(var(--ifm-z-index-fixed) + 2);
+  top: -1px;
 }
+
