@@ -1,0 +1,46 @@
+{
+  "version.label": {
+    "message": "master",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Installation": {
+    "message": "Installation",
+    "description": "The label for category Installation in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Beginner's guide": {
+    "message": "Beginner's guide",
+    "description": "The label for category Beginner's guide in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Configuration": {
+    "message": "Configuration",
+    "description": "The label for category Configuration in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Appearance": {
+    "message": "Appearance",
+    "description": "The label for category Appearance in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Language features": {
+    "message": "Language features",
+    "description": "The label for category Language features in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Features": {
+    "message": "Features",
+    "description": "The label for category Features in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Supported frameworks": {
+    "message": "Supported frameworks",
+    "description": "The label for category Supported frameworks in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Supported languages": {
+    "message": "Supported languages",
+    "description": "The label for category Supported languages in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Community": {
+    "message": "Community",
+    "description": "The label for category Community in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.For Developers": {
+    "message": "For Developers",
+    "description": "The label for category For Developers in sidebar tutorialSidebar"
+  }
+}
