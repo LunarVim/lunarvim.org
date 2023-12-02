@@ -842,7 +842,7 @@ Make sure to run `:Lazy load copilot-cmp` followed by `:Copilot auth` once the p
 
 ### [persistence](https://github.com/folke/persistence.nvim)
 
-**simple session management**
+**simple IDE-like session management**
 
 ```lua
 {
@@ -867,6 +867,20 @@ Also define keybindings in your `config.lua`
     l = { "<cmd>lua require('persistence').load({ last = true })<cr>", "Restore last session" },
     Q = { "<cmd>lua require('persistence').stop()<cr>", "Quit without saving session" },
   }
+```
+
+### [auto-session](https://github.com/rmagatti/auto-session)
+
+**vim-style session management (works great with [tmux-continuum](https://github.com/tmux-plugins/tmux-continuum))**
+
+
+```lua
+{
+  'rmagatti/auto-session',
+  config = function()
+    require("auto-session").setup {}
+  end,
+},
 ```
 
 ### [todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
