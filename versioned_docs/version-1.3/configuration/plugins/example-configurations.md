@@ -682,9 +682,15 @@ lvim.builtin.which_key.mappings["t"] = {
 
 ```lua
 {
-  "Pocco81/auto-save.nvim",
+  "okuuva/auto-save.nvim",
   config = function()
-    require("auto-save").setup()
+    require("auto-save").setup({
+      -- Optionally add the following trigger_events to prevent auto save on InsertLeave
+      trigger_events = {
+        immediate_save = { "BufLeave", "FocusLost" },
+        defer_save = {},
+      },
+    })
   end,
 },
 ```
