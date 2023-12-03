@@ -2,36 +2,36 @@
 sidebar_position: 2
 ---
 
-# Post install
+# Після встановлення 
 
-## Add `lvim` to `$PATH`
+## Додайте `lvim` до `$PATH`
 
-If your terminal can't find the `lvim` command, [add the installation folder to your path](https://gist.github.com/nex3/c395b2f8fd4b02068be37c961301caa7) or move the lvim command to somewhere in your path. The default install folder is `~/.local/bin`.
+Якщо ваш термінал не може знайти команду `lvim`, [додайте папку встановлення до вашого шляху](https://gist.github.com/nex3/c395b2f8fd4b02068be37c961301caa7) або перемістіть команду lvim кудись в наявних шлях з PATH. Типова папка для встановлення: `~/.local/bin`.
 
-## Install a [Nerd Font](https://www.nerdfonts.com/)
+## Установіть [Nerd Font](https://www.nerdfonts.com/)
 
-LunarVim uses icons from Nerd Fonts. If you don't want to use them set `lvim.use_icons` to false.
+LunarVim використовує іконки з Nerd Fonts. Якщо ви не хочете їх використовувати, тоді встановіть параметр `lvim.use_icons` на false.
 
-### Easy Installer
+### Простий встановлювач
 
-Visit [ronniedroid/getnf](https://github.com/ronniedroid/getnf) for an easy way to install nerd fonts.
+Відвідайтe [ronniedroid/getnf](https://github.com/ronniedroid/getnf) для легшого шляху встановлення Nerd Fonts.
 
-### Video Explanation
+### Відео-пояснення
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fR4ThXzhQYI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fR4ThXzhQYI" title="Програвач відео YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>
 
-### Manual Install
+### Ручне встановлення 
 
-1. Go to the [patched fonts directory](https://www.nerdfonts.com/font-downloads)
-1. Copy the downloaded files to `~/.local/share/fonts`
+1. Перейдіть до [каталогу оновлених шрифтів](https://www.nerdfonts.com/font-downloads)
+2. Скопіююйте завантажені файли до `~/.local/share/fonts`
 
-### Curl Download
+### Завантаження через curl
 
 ```bash
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/DroidSansMNerdFont-Regular.otf
 ```
 
-### Terminal settings
+### Налаштування в терміналі
 
-After installing your font, you will have to refresh your font cache by doing `fc-cache -f -v`. Then you will have to change your terminal settings to use the font you just installed. Please refer to your terminal's documentation for changing the terminal font.
+Після встановлення шрифту вам потрібно буде оновити кеш шрифтів командою `fc-cache -f -v`. Після цього вам потрібно буде змінити налаштування вашого терміналу для використання шрифту, який ви щойно встановили. Будь ласка, зверніться до документації вашого терміналу для зміни шрифту терміналу.

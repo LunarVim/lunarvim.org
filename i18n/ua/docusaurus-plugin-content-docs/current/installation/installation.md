@@ -2,24 +2,24 @@
 sidebar_position: 1
 ---
 
-# Installation
+# Установлення
 
-## Prerequisites
+## Передумови 
 
-- Make sure you have installed the latest version of [`Neovim v0.9.0+`](https://github.com/neovim/neovim/releases/latest).
-- Have [`git`](https://cli.github.com/), [`make`](https://www.gnu.org/software/make/), [`pip`](https://pypi.org/project/pip/), [`python`](https://www.python.org/), [`npm`](https://npmjs.com/), [`node`](https://nodejs.org/) and [`cargo`](https://www.rust-lang.org/tools/install) installed on your system.
-- [Resolve `EACCES` permissions when installing packages globally](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) to avoid error when installing packages with npm.
-- [`PowerShell 7+`](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.2) (for Windows).
+- Упевніться, що ви встановили останюю версію [`Neovim v0.9.0+`](https://github.com/neovim/neovim/releases/latest).
+- [`git`](https://cli.github.com/), [`make`](https://www.gnu.org/software/make/), [`pip`](https://pypi.org/project/pip/), [`python`](https://www.python.org/), [`npm`](https://npmjs.com/), [`node`](https://nodejs.org/) та [`cargo`](https://www.rust-lang.org/tools/install) мають бути встановлені на вашій системі.
+- [Вирішення проблеми з дозволами `EACCES` під час глобального встановлення пакунків](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) щоб уникнути помилок під час встановлення пакетів за допомогою npm.
+- [`PowerShell 7+`](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.2) (для Windows).
 
-## Optional Feature Prerequisites
+## Передумови для додаткових функцій 
+- Установіть [`lazygit`](https://github.com/jesseduffield/lazygit#installation). Це дозволяє `<leader>gg` запускати `lazygit` для інтегрованого та розширеного використання Git'а, перебуваючи у `lvim`.
 
-- Install [`lazygit`](https://github.com/jesseduffield/lazygit#installation). This enables `<leader>gg` to launch `lazygit` for integrated and enhanced Git experience while in `lvim`.
 
-## Release
+## Release (стабільна збірка)
 
 (Neovim 0.9.0)
 
-No alarms and No surprises:
+Без тривог і сюрпризів:
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -39,9 +39,9 @@ pwsh -c "`$LV_BRANCH='release-1.3/neovim-0.9'; iwr https://raw.githubusercontent
 ```
 
 </TabItem>
-<TabItem value="docker" label="Try it first in Docker!">
+<TabItem value="docker" label="Спробуйте спочатку в Docker!">
 
-_This is intended just to take a look at the base functionalities, so some interactions may be blocked by the environment._
+_Це призначено лише для ознайомлення з базовим функціоналом, тому деякі операції можуть бути заблоковані середовищем._
 
 ```bash
 docker run -w /tmp -it --rm alpine:edge sh -uelic 'addgroup -S lunaruser && adduser -S lunaruser -G lunaruser --shell /bin/sh && apk add yarn git python3 cargo neovim ripgrep alpine-sdk bash --update && LV_BRANCH='release-1.3/neovim-0.9' su -c "bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/release-1.3/neovim-0.9/utils/installer/install.sh) --no-install-dependencies" lunaruser && su -c /home/lunaruser/.local/bin/lvim lunaruser'
@@ -50,11 +50,11 @@ docker run -w /tmp -it --rm alpine:edge sh -uelic 'addgroup -S lunaruser && addu
 </TabItem>
 </Tabs>
 
-## Nightly
+## Nightly (нічна збірка)
 
 (Neovim 0.10.0)
 
-All the new features with all the new bugs:
+Усі нові можливості зі всіма новими помилками:
 
 <Tabs>
 <TabItem value="linux/macos" label="Linux/MacOS">
@@ -71,9 +71,9 @@ pwsh -c "iwr https://raw.githubusercontent.com/LunarVim/LunarVim/master/utils/in
 ```
 
 </TabItem>
-<TabItem value="docker" label="Try it first in Docker!">
+<TabItem value="docker" label="Спробуйте спочатку в Docker!">
 
-_This is intended just to take a look at the base functionalities, so some interactions may be blocked by the environment._
+_Це призначено лише для ознайомлення з базовим функціоналом, тому деякі операції можуть бути заблоковані середовищем._
 
 ```bash
 docker run -w /root -it --rm alpine:edge sh -uelic 'apk add git neovim ripgrep alpine-sdk bash --update && bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) --no-install-dependencies && /root/.local/bin/lvim'
@@ -82,24 +82,24 @@ docker run -w /root -it --rm alpine:edge sh -uelic 'apk add git neovim ripgrep a
 </TabItem>
 </Tabs>
 
-Make sure to check the [troubleshooting](../troubleshooting/README.md) section if you encounter any problem.
+Не забудьте перевірити секцію з [вирішення проблем](../troubleshooting/README.md), якщо ви зішхтовнетеся з проблемою.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/sFA9kX-Ud_c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sFA9kX-Ud_c" title="Програвач відео YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>
 
-## Updating LunarVim
+## Оновлення LunarVim
 
-- LunarVim updates to the current LunarVim branch's latest commit.  
-- `:LvimUpdate` command in command-line mode.
-- `<leader>Lu` using WhichKey.  
-- From the command-line `lvim +LvimUpdate +q`
+- LunarVim оновлюється до поточного останнього коміта гілки LunarVim.  
+- `:LvimUpdate` команда в режимі командного рядка.
+- `<leader>Lu` використовуючи WhichKey.  
+- З командного рядка `lvim +LvimUpdate +q`
 
-### Update the plugins
+### Оновлення плагінів
 
-- Inside LunarVim `:LvimSyncCorePlugins`
+- Усередині LunarVim `:LvimSyncCorePlugins`
 
-## Uninstall
+## Видалення 
 
-You can remove LunarVim (including the configuration files) using the bundled `uninstall` script
+Ви можете видалити LunarVim (включаючи файли налаштувань) використовуючи вбудований `uninstall` скрипт
 
 <Tabs>
 <TabItem value="linux/macos" label="Linux/MacOS">
@@ -108,7 +108,7 @@ You can remove LunarVim (including the configuration files) using the bundled `u
 bash ~/.local/share/lunarvim/lvim/utils/installer/uninstall.sh
 ```
 
-**or**
+**або**
 
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/uninstall.sh)
