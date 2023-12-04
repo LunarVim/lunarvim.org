@@ -1,6 +1,6 @@
 # QML
 
-## Install Syntax Highlighting
+## Установлення підсвічування синтаксису
 
 There is no official Treesitter support for QML, so instead you could use [the
 plugin](https://github.com/peterhoeg/vim-qml):
@@ -13,16 +13,16 @@ plugin](https://github.com/peterhoeg/vim-qml):
 },
 ```
 
-## Supported language servers
+## Підтримувані мовні сервери
 
 Currently QML does not have an official LSP, but its development is currently
 [in progress](https://bugreports.qt.io/browse/QTBUG-68406).
 
-## Supported formatters
+## Підтримувані форматувальники коду
 
 - qmlformat
 
-## Supported linters
+## Підтримувані лінтери
 
 - qmllint
 

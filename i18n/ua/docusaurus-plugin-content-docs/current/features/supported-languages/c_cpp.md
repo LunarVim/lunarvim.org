@@ -1,6 +1,6 @@
 # C/C++
 
-## Install Syntax Highlighting
+## Установлення підсвічування синтаксису
 
 ```vim
 :TSInstall c
@@ -10,18 +10,18 @@
 :TSInstall cpp
 ```
 
-## Supported language servers
+## Підтримувані мовні сервери
 
 - clangd
 - ccls
 
-## Supported formatters
+## Підтримувані форматувальники коду
 
 - astyle
 - clang_format
 - uncrustify
 
-## Supported linters
+## Підтримувані лінтери
 
 - clang_format
 - cppcheck

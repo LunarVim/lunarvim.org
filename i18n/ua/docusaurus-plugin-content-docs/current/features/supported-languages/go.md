@@ -1,17 +1,17 @@
 # Go
 
-## Install Syntax Highlighting
+## Установлення підсвічування синтаксису
 
 ```vim
 :TSInstall go
 ```
 
-## Supported language servers
+## Підтримувані мовні сервери
 
 - golangci_lint_ls
 - gopls
 
-## Supported formatters
+## Підтримувані форматувальники коду
 
 - gofmt
 - gofumpt
@@ -19,7 +19,7 @@
 - goimports_reviser
 - golines
 
-## Supported linters
+## Підтримувані лінтери
 
 - golangci_lint
 - revive

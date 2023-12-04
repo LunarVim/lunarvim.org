@@ -1,13 +1,13 @@
 # TypeScript
 
-## Syntax highlighting
+## Установлення підсвічування синтаксису
 
 ```vim
 :TSInstall typescript
 :TSInstall tsx
 ```
 
-## Supported language servers
+## Підтримувані мовні сервери
 
 - angularls
 - cssmodules_ls
@@ -28,7 +28,7 @@ Only `tsserver` and `tailwindcss` is enabled by default and the other servers ne
 
 See [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#tsserver) for more information about the tsserver language server configuration options.
 
-## Supported formatters
+## Підтримувані форматувальники коду
 
 - deno_fmt
 - dprint
@@ -42,7 +42,7 @@ See [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig/blob/master/doc/se
 
 The configured formatter(s) must be installed separately.
 
-## Supported linters
+## Підтримувані лінтери
 
 - eslint
 - eslint_d

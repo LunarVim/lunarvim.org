@@ -1,16 +1,16 @@
 # Java
 
-## Install Syntax Highlighting
+## Установлення підсвічування синтаксису
 
 ```vim
 :TSInstall java
 ```
 
-## Supported language servers
+## Підтримувані мовні сервери
 
 - jdtls
 
-## Supported formatters
+## Підтримувані форматувальники коду
 
 - astyle
 - clang_format
@@ -18,25 +18,27 @@
 - npm_groovy_lint
 - uncrustify
 
-The Java language server (jdtls) also supports formatting, and it is enabled by default. It is possible to fine-tune its formatting rules, but it is also possible to use a different formatter from the above list. When such a formatter is used, jdtls formatting will be disabled to avoid conflict.
+Сервер мови Java (jdtls) також підтримує форматування, і за замовчуванням він увімкнений. Ви можете налаштувати його правила форматування, але також можна використовувати інший форматувальник з наведеного вище списку. Коли використовується такий форматувальник, форматування jdtls буде вимкнено, щоб уникнути конфлікту.
+
 
 ### jdtls
 
-jdtls is installed automatically once you open a `.java` file.
+jdtls встановлюється автоматично, коли ви вперше відкриєте `.java` файл.
 
 :::note
 
-jdtls requires **jdk-17 or newer** to run.
+jdtls повинно бути **jdk-17 або новіше** для запуску.
 
 :::
 
-Neovim (by default) passes basic options (such as `vim.opt.shiftwidth` and `vim.opt.tabstop`) to the language server when formatting.
+Neovim ( типово) передає основні параметри (такі як `vim.opt.shiftwidth` та `vim.opt.tabstop`) мовному серверу під час форматування.
 
-It is possible to further customize jdtls formatting by supplying an Eclipse formatter file.
+Можна додатково налаштувати форматування jdtls, надавши файл форматування Eclipse.
 
-To do so, type `:LspSettings jdtls`. It will create a JSON file at `.config/lvim/lsp-settings/jdtls.json` and can be treated as global settings.
+Для цього введіть `:LspSettings jdtls`. Буде створено JSON-файл за адресою `.config/lvim/lsp-settings/jdtls.json`, який можна розглядати як глобальні налаштування.
 
-Add the following content:
+Додайте наступний вміст:
+
 
 ```json
 {
@@ -45,24 +47,24 @@ Add the following content:
 }
 ```
 
-To reference a local file in the url attribute, simply set its path: `"java.format.settings.url": ".config/lvim/custom-formatter.xml"`
+Щоб посилатися на локальний файл в атрибуті url, просто задайте його шлях:: `"java.format.settings.url": ".config/lvim/custom-formatter.xml"`
 
-It is also possible to specify project-specific configs. To do so, type `:LspSettings local jdtls` which will create `.nlsp-settings/jdtls.json` in the current working directory, and paste the config that we used for the global settings.
+Також можна вказати специфічні для проєкту конфіги. Для цього введіть `:LspSettings local jdtls`, який створить `.nlsp-settings/jdtls.json` у поточній робочій папці, і вставте конфіг, який ви використовували для глобальних налаштувань.
+Більше інформації про команди LSP ви можете знайти тут: https://github.com/tamago324/nlsp-settings.nvim
 
-More information about Lsp commands can be found at https://github.com/tamago324/nlsp-settings.nvim
+### Користувацькі форматувальники 
 
-### Custom formatters
+Користувацькі форматувальники - це інструменти інтерфейсу командного рядка, які обгорнуті плагіном null-ls, який за замовчуванням доступний у LunarVim. Їх слід встановлювати окремо від LunarVim, і вони мають бути доступні у $PATH.
 
-Custom formatters are CLI tools that are wrapped with null-ls plugin, which is available by default in LunarVim. They should be installed separately from LunarVim and be available on $PATH.
 
 #### clang-format
 
-clang-format is traditionally used for formatting C/C++ code but can also be used for Java code formatting.
+clang-формат традиційно використовується для форматування C/C++ коду, але також може бути використаний для форматування Java коду.
 
-Prerequisites:
-clang-format should be on the $PATH
+Необхідні умови:
+clang-format має бути у $PATH
 
-Enable formatter in `~/.config/lvim/config.lua`:
+Увімкніть форматувальник файлі `~/.config/lvim/config.lua`:
 
 ```lua
 local formatters = require "lvim.lsp.null-ls.formatters"
@@ -74,11 +76,11 @@ formatters.setup {
 }
 ```
 
-With the above configuration, the default settings will be used. To see the defaults, type `clang-format --dump-config` in the terminal.
+У наведеній вище конфігурації буде використано налаштування за замовчуванням. Щоб переглянути налаштування за замовчуванням, введіть у терміналі `clang-format --dump-config`.
 
-clang-format supports multiple predefined styles. For the list of values see: https://clang.llvm.org/docs/ClangFormatStyleOptions.html#configurable-format-style-options
+clang-format підтримує декілька попередньо визначених стилів. Список значень можна знайти за посиланням: https://clang.llvm.org/docs/ClangFormatStyleOptions.html#configurable-format-style-options.
 
-To specify such style you need to set extra args in `config.lua`:
+Щоб вказати такий стиль, потрібно задати додаткові аргументи у файлі `config.lua`:
 
 ```lua
   {
@@ -88,7 +90,7 @@ To specify such style you need to set extra args in `config.lua`:
   }
 ```
 
-It is also possible to use a format file. For that, you will need a valid clang-format file. You can create one from an existing style that can be used as a base: `clang-format --style=Google --dump-config > .clang-format`
+Також можна використовувати файл формату. Для цього вам знадобиться дійсний файл формату clang. Ви можете створити його на основі наявного стилю, який можна використати як базовий: `clang-format --style=Google --dump-config > .clang-format`
 
 `config.lua`:
 
@@ -102,12 +104,12 @@ It is also possible to use a format file. For that, you will need a valid clang-
 
 #### google-java-format
 
-google-java-format is a program that reformats Java source code to comply with Google Java Style.
+google-java-format - програма, яка переформатовує вихідний код Java відповідно до Google Java Style.
 
-Prerequisites:
-google-java-format should be on the $PATH
+Передумови:
+google-java-format має бути на $PATH
 
-Enable formatter in `~/.config/lvim/config.lua`:
+Увімкніть формальник у `~/.config/lvim/config.lua`:
 
 ```lua
 formatters = require "lvim.lsp.null-ls.formatters"
@@ -121,9 +123,9 @@ formatters.setup {
 
 #### uncrustify
 
-uncrustify works similarly to clang-format.
+unrustify працює аналогічно до clang-форматувальника.
 
-Enable formatter in `~/.config/lvim/config.lua`:
+Увімкніть формальтувальник у `~/.config/lvim/config.lua`:
 
 ```lua
 formatters = require "lvim.lsp.null-ls.formatters"
@@ -136,7 +138,7 @@ formatters.setup {
 }
 ```
 
-## Supported linters
+## Підтримувані лінтери
 
 ```lua
 { "checkstyle", "pmd", "semgrep" }
@@ -144,4 +146,4 @@ formatters.setup {
 
 ## Advanced configuration
 
-It is also possible to fully customize the language server. See https://github.com/LunarVim/starter.lvim to get ideas on how to proceed with that.
+Також можна повністю налаштувати мовний сервер. Дивіться https://github.com/LunarVim/starter.lvim, щоб дізнатися, як це зробити.

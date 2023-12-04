@@ -1,12 +1,12 @@
 # Ruby
 
-### Install Syntax Highlighting
+### Установлення підсвічування синтаксису
 
 ```vim
 :TSInstall ruby
 ```
 
-## Supported language servers
+## Підтримувані мовні сервери
 
 - ruby_ls
 - solargraph
@@ -18,13 +18,13 @@ Project root is recognized by having one of the following files/folders in the r
 
 Note: `Solargraph` should automatically detect and use `rubocop` for formatting.
 
-## Supported formatters
+## Підтримувані форматувальники коду
 
 - rubocop
 - rufo
 - standardrb
 
-## Supported linters
+## Підтримувані лінтери
 
 - rubocop
 - semgrep

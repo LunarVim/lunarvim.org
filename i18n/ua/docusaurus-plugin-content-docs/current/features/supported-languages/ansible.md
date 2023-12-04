@@ -1,16 +1,16 @@
 # Ansible
 
-## Install Syntax Highlighting
+## Установлення підсвічування синтаксису
 
 ```vim
 :TSInstall yaml
 ```
 
-## Supported language servers
+## Підтримувані мовні сервери
 
 - ansiblels
 
-## Supported linters
+## Підтримувані лінтери
 
 - ansible-lint
 - yamllint

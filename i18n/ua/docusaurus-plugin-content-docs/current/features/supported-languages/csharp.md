@@ -1,23 +1,23 @@
 # C# (csharp)
 
-## Install Syntax Highlighting
+## Установлення підсвічування синтаксису
 
 ```vim
 :TSInstall c_sharp
 ```
 
-## Supported language servers
+## Підтримувані мовні сервери
 
 - charp_ls
 - omnisharp
 - omnisharp_mono
 
-### What is OmniSharp?
+### Що таке OmniSharp?
 
-Formatting is automatically enabled. The formatting options can be changed by with the [OmniSharp
+Форматування автоматично увімкнено. Налаштувати форматування можна з [OmniSharp
 configuration options](https://github.com/OmniSharp/omnisharp-roslyn/wiki/Configuration-Options).
 
-## Supported formatters
+## Підтримувані форматувальники коду
 
 - astyle
 - clang_format

@@ -1,16 +1,16 @@
 # Rust
 
-## Install Syntax Highlighting
+## Установлення підсвічування синтаксису
 
 ```vim
 :TSInstall rust
 ```
 
-## Supported language servers
+## Підтримувані мовні сервери
 
 - rust_analyzer
 
-## Supported formatters
+## Підтримувані форматувальники коду
 
 - dprint
 - rustfmt

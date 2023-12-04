@@ -1,6 +1,6 @@
 # Julia
 
-## Install Syntax Highlighting
+## Установлення підсвічування синтаксису
 
 ```vim
 :TSInstall julia

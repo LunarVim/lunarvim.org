@@ -1,6 +1,6 @@
 # Scala
 
-## Install Syntax Highlighting
+## Установлення підсвічування синтаксису
 
 ```vim
 :TSInstall scala
@@ -97,7 +97,7 @@ lvim.builtin.dap.active = true
 
 Any Lunarvim builtin debug commands, which could be displayed by pressing `<leader> d`, is supported.
 
-## Supported formatters
+## Підтримувані форматувальники коду
 
 In most cases, isn't necessary enable the [scalafmt](https://scalameta.org/scalafmt/) formatter, this is already integrated with metals to format on save creating a `.scalafmt.conf` file in your project root, see more [here](https://scalameta.org/scalafmt/docs/configuration.html)
 

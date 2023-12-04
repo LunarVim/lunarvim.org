@@ -1,6 +1,6 @@
 # PowerShell
 
-## Install Syntax Highlighting
+## Установлення підсвічування синтаксису
 
 Currently there is no maintained PowerShell parser available. If needed, configure a unmaintained parser by adding the following code to e.g. `config.lua`
 
@@ -22,7 +22,7 @@ Install the configured parser.
 :TSInstall powershell
 ```
 
-## Supported language servers
+## Підтримувані мовні сервери
 
 - powershell_es
 

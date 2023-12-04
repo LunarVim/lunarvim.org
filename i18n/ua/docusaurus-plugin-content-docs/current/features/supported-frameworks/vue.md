@@ -1,32 +1,31 @@
 # Vue
 
-## Syntax highlighting
+## Підсвітка синтаксису
 
 ```vim
 :TSInstall vue
 ```
 
-## Supported language servers
+## Підтримувані мовні сервери 
 
 ```lua
 { "eslint", "stylelint_lsp", "tailwindcss", "volar", "vuels" }
 ```
 
-Only `vuels` is enabled by default and the other servers need to be [manually configured](/configuration/language-features/language-servers.md#manually-configured-servers).
+Типово тільки `vuels` увімкнений, а інші сервери потрібно буде [вручну налаштувати](/configuration/language-features/language-servers.md#manually-configured-servers).
 
-## Supported formatters
+## Підтримувані форматувальники 
 
 ```lua
 { "eslint", "eslint_d", "prettier", "prettier_d_slim", "prettierd", "rustywind" }
 ```
 
-## Supported linters
-
+## Підтримувані лінтери 
 ```lua
 { "eslint", "eslint_d" }
 ```
 
-## LSP Settings
+## Налаштування LSP
 
 ```lua
 :LspSettings vuels

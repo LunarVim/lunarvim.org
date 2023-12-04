@@ -1,6 +1,6 @@
 # Swift
 
-## Install Syntax Highlighting
+## Установлення підсвічування синтаксису
 
 ```vim
 :TSInstall swift
@@ -35,6 +35,6 @@ default_config = {
 }
 ```
 
-## Supported formatters
+## Підтримувані форматувальники коду
 
 - swiftformat

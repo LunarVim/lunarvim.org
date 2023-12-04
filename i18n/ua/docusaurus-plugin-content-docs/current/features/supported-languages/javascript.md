@@ -1,12 +1,12 @@
 # JavaScript
 
-## Syntax highlighting
+## Установлення підсвічування синтаксису
 
 ```vim
 :TSInstall javascript
 ```
 
-## Supported language servers
+## Підтримувані мовні сервери
 
 - cssmodules_ls
 - denols
@@ -21,7 +21,7 @@
 
 Only `tsserver` and `tailwindcss` is enabled by default and the other servers need to be [manually configured](/configuration/language-features/language-servers.md#manually-configured-servers).
 
-## Supported formatters
+## Підтримувані форматувальники коду
 
 - deno_fmt
 - dprint
@@ -38,7 +38,7 @@ Only `tsserver` and `tailwindcss` is enabled by default and the other servers ne
 
 The configured formatter(s) must be installed separately.
 
-## Supported linters
+## Підтримувані лінтери
 
 - eslint
 - eslint_d

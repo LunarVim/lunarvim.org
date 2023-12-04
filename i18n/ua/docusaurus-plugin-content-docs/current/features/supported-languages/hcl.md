@@ -1,16 +1,16 @@
 # HCL
 
-## Syntax highlighting
+## Установлення підсвічування синтаксису
 
 ```vim
 :TSInstall hcl
 ```
 
-## Supported language servers
+## Підтримувані мовні сервери
 
 - terraform_lsp
 - tflint
 
-## Supported formatters
+## Підтримувані форматувальники коду
 
 - packer

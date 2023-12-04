@@ -1,19 +1,19 @@
 # Python
 
-## Install Syntax Highlighting
+## Установлення підсвічування синтаксису
 
 ```vim
 :TSInstall python
 ```
 
-## Supported language servers
+## Підтримувані мовні сервери
 
 - jedi_language_server
 - pylsp
 - pyright
 - sourcery
 
-## Supported formatters
+## Підтримувані форматувальники коду
 
 - autopep8
 - black
@@ -23,7 +23,7 @@
 - usort
 - yapf
 
-## Supported linters
+## Підтримувані лінтери
 
 - flake8
 - mypy

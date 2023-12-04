@@ -1,36 +1,35 @@
 # Angular
 
-## Better syntax highlighting
+## Ліпша підсвітка синтаксису
 
-You may want to add this plugin to your config. It provides treesitter integration with the Angular framework.
+Можливо ви хочете додати цей плагін до вашої конфігурації. Він надає інтеграцію фреймворка Angular з treesitter.
 
 ```lua
 { "nvim-treesitter/nvim-treesitter-angular" }
 ```
 
-## Install Language Server
-
+## Установіть мовний сервер 
 ```vim
 :LspInstall angularls
 ```
 
-## Configure LunarVim
+## Налаштуйте LunarVim
 
-The `angularls` server is overridden by default. So it needs to be
-[manually configured](/configuration/language-features/language-servers.md#server-override).
+Сервер `angularls` перезаписаний за замовчуванням. Тому вам потрібно його 
+[вручну налаштувати](/configuration/language-features/language-servers.md#server-override).
 
-### Setup
+### Установлення
 
-Add this to your `config.lua` file:
+Додайте це до вашого файлу `config.lua`:
 
 ```lua
 require("lvim.lsp.manager").setup("angularls")
 ```
 
-For more info about the LSP such as default values [checkout this](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#angularls).
+Детальніше про LSP, як-от типові значенні, [можете дізнатися тут](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#angularls).
 
 :::note
 
-For Angular projects with version lesser than 9 (pre Ivy) you should provide the LSP with the `--viewEngine` flag.
+Для проєктів Angular з версією менше ніж 9 (до Ivy) ви повинні надати LSP прапор `--viewEngine`.
 
 :::

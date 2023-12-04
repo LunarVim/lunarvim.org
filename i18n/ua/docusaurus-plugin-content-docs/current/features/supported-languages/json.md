@@ -1,17 +1,17 @@
 # JSON
 
-## Install Syntax Highlighting
+## Установлення підсвічування синтаксису
 
 ```vim
 :TSInstall json
 ```
 
-## Supported language servers
+## Підтримувані мовні сервери
 
 - jsonls
 - rome
 
-## Supported formatters
+## Підтримувані форматувальники коду
 
 - deno_fmt
 - dprint
@@ -22,7 +22,7 @@
 - prettier_d_slim
 - prettierd
 
-## Supported linters
+## Підтримувані лінтери
 
 - cfn_lint
 - jsonlint

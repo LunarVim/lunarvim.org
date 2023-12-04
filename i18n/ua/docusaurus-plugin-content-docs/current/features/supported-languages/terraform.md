@@ -1,6 +1,6 @@
 # Terraform
 
-## Syntax highlighting
+## Установлення підсвічування синтаксису
 
 First, within LunarVim run the following:
 
@@ -8,11 +8,11 @@ First, within LunarVim run the following:
 :TSInstall hcl
 ```
 
-## Supported language servers
+## Підтримувані мовні сервери
 
 - terraform
 - terraformls
 
-## Supported formatters
+## Підтримувані форматувальники коду
 
 - terraform

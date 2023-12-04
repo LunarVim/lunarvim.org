@@ -1,21 +1,21 @@
 # Lua
 
-## Install Syntax Highlighting
+## Установлення підсвічування синтаксису
 
 ```vim
 :TSInstall lua
 ```
 
-## Supported language servers
+## Підтримувані мовні сервери
 
 - lua_ls
 
-## Supported formatters
+## Підтримувані форматувальники коду
 
 - lua_format
 - stylua
 
-## Supported linters
+## Підтримувані лінтери
 
 - luacheck
 - selene
