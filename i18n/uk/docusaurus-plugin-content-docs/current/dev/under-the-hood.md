@@ -2,13 +2,13 @@
 sidebar_position: 2
 ---
 
-# Under the Hood
+# Під капотом 
 
-# Logic from start to window load
+# Логіка з початку до завантаження вікна
 
-![LunarVim initialization flowchart](./lunarvim_initialization.png 'LunarVim initialization flowchart')
+![Блок-схема ініціалізації LunarVim](./lunarvim_initialization.png 'LunarVim initialization flowchart')
 
-The above chart was made with the following markdown using mermaid markdown
+Наведений вище графік був зроблений з наступною націнкою з використанням mermaid markdown
 Last updated Wed Aug 4 10:04:27 PM CEST 2021
 
 ```mermaid
