@@ -2,55 +2,55 @@
 sidebar_position: 1
 ---
 
-# Options
+# Параметри
 
-[Options](#neovim-options) are used to configure the editor,
-[variables](#neovim-variables) to configure vimscript plugins.
+[Параметри](#neovim-options) використовуються для налаштування редактора,
+[змінні](#neovim-variables) для налаштуванняплагінів vimscript.
 
-## Neovim options
+## Параметри Neovim
 
-See [`:help lua-guide-options`](https://neovim.io/doc/user/lua-guide.html#lua-guide-options) to learn more.
+Дивіться [`:help lua-guide-options`](https://neovim.io/doc/user/lua-guide.html#lua-guide-options) для подробиць.
 
-- To set options:
+- Для встановлення параметрів:
 
   ```lua
   vim.opt.{option} = {value}
   ```
 
-- To get options:
+- Для отримання параметрів:
 
   ```lua
   vim.opt.{option}:get()
   ```
 
-### Example options
+### Приклади параметрів
 
 ```lua
-vim.opt.cmdheight = 2 -- more space in the neovim command line for displaying messages
-vim.opt.guifont = "monospace:h17" -- the font used in graphical neovim applications
-vim.opt.shiftwidth = 2 -- the number of spaces inserted for each indentation
-vim.opt.tabstop = 2 -- insert 2 spaces for a tab
-vim.opt.relativenumber = true -- relative line numbers
-vim.opt.wrap = true -- wrap lines
+vim.opt.cmdheight = 2 -- більше місця в командному рядку neovim для відображення повідомлень
+vim.opt.guifont = "monospace:h17" -- шрифт, який використовується в графічних застосунках neovim
+vim.opt.shiftwidth = 2 -- кількість пробілів, вставлених для кожного відступу
+vim.opt.tabstop = 2 -- вставляти 2 пробіли для tab
+vim.opt.relativenumber = true -- відносні номери рядків
+vim.opt.wrap = true -- переніс рядків
 
 -- use treesitter folding
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 ```
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/8O6o3p7CN7Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8O6o3p7CN7Q" title="Відео-програвач YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>
 
-## Neovim variables
+## Змінні Neovim
 
-See [`:help lua-guide-variables`](https://neovim.io/doc/user/lua-guide.html#lua-guide-variables) to learn more.
+Дивіться [`:help lua-guide-variables`](https://neovim.io/doc/user/lua-guide.html#lua-guide-variables) для подробиц.
 
-- To get and set variables use:
+- Для отримання та встановлення змінних використовуйте:
 
   ```lua
-  vim.g.{name} -- global variables (g:)
-  vim.b.{name} -- variables for the current buffer (b:)
-  vim.w.{name} -- variables for the current window (w:)
-  vim.t.{name} -- variables for the current tabpage (t:)
-  vim.v.{name} -- predefined Vim variables (v:)
-  vim.env.{name} -- environment variables defined in the editor session
+  vim.g.{name} -- глобальні змінні (g:)
+  vim.b.{name} -- змінні для поточного буферу (b:)
+  vim.w.{name} -- змінні для поточного вікна (w:)
+  vim.t.{name} -- змінні для поточної вкладки (t:)
+  vim.v.{name} -- передвстановлені Vim змінні (v:)
+  vim.env.{name} -- змінні оточення, що визначені в сесії редактора
   ```

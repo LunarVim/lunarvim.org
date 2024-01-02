@@ -2,9 +2,9 @@
 sidebar_position: 6
 ---
 
-# Autocommands
+# Автокоманди
 
-To set up autocommands use the native nvim api `vim.api.nvim_create_autocmd`, or use the helper Lunarvim table `lvim.autocommands` which will be passed to [define_autocmds()](https://github.com/LunarVim/lunarvim/blob/3475f7675d8928b49c85878dfc2912407de57342/lua/lvim/core/autocmds.lua#L177) automatically.
+Щоб налаштувати автокоманди, використовуйте власний API nvim `vim.api.nvim_create_autocmd` або скористайтеся допоміжною таблицею Lunarvim `lvim.autocommands`, яка буде передана в [define_autocmds()](https://github.com/LunarVim/lunarvim/blob/3475f7675d8928b49c85878dfc2912407de57342/lua/lvim/core/autocmds.lua#L177) автоматично.
 
 ```lua
 lvim.autocommands = {
@@ -18,9 +18,9 @@ lvim.autocommands = {
 }
 ```
 
-This will run a command at a given event for the given filetype.
+Це запустить команду під час певної події для заданого типу файлу.
 
-An example using the nvim api could look like this:
+Приклад використання nvim API може виглядати так:
 
 ```lua
 vim.api.nvim_create_autocmd("BufEnter", {
@@ -30,7 +30,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 ```
 
-You can also add lua callbacks
+Ви також можете додати зворотні виклики(колбеки) lua
 
 ```lua
 lvim.autocommands = {

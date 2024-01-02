@@ -2,21 +2,21 @@
 sidebar_position: 3
 ---
 
-# Custom snippets
+# Користувацькі фрагменти
 
-## Description
+## Опис
 
-You can add your own snippets to LunarVim.
+Ви можете додавати власні фрагменти до LunarVim.
 
-Custom snippets can be defined as json or lua.
+Спеціальні фрагменти можна визначити як json або lua.
 
-### json version
+### JSON-версія
 
-First create a folder : `~/.config/lvim/snippets/` next to your `config.lua`
+Спочатку створіть папку: `~/.config/lvim/snippets/` поруч із вашим `config.lua`
 
-Then in there you need at least 2 files.
+Тоді вам потрібно принаймні 2 файли.
 
-The first file describes where your snippets are :
+Перший файл описує, де знаходяться ваші фрагменти:
 
 `package.json` :
 
@@ -38,7 +38,7 @@ The first file describes where your snippets are :
 }
 ```
 
-For each language, create a file like this :
+Для кожної мови створіть такий файл:
 
 `python.json` :
 
@@ -52,13 +52,13 @@ For each language, create a file like this :
 }
 ```
 
-You should be able to expand `hello` into `print("Hello, World!")`
+ви повинні мати можливість розгорнути `hello` на `print("hello, world!")`
 
-### lua version
+### Lua-версія
 
-First create a folder named `luasnippets` next to your `config.lua`. For example `~/.config/lvim/luasnippets/`
+Спочатку створіть папку з назвою `luasnippets` поруч із вашим `config.lua`. Наприклад `~/.config/lvim/luasnippets/`
 
-Then, inside that folder, create a lua file named with the filetype you want to create snippets for. For example, for creating snippets for lua, create a (redundant, but correct) file named `lua.lua`. Then you put your files there like this:
+Потім у цій папці створіть файл lua з назвою типу файлу, для якого ви хочете створити фрагменти. Наприклад, щоб створити фрагменти для lua, створіть (зайвий, але правильний) файл під назвою `lua.lua`. Потім ви розмістите туди свої файли так:
 
 ```lua
 return {
@@ -66,7 +66,7 @@ return {
 }
 ```
 
-LuaSnip is able to hot-reload snippets defined in lua when you save them, but you may need to restart LunarVim the first time you create the snippet files.
-Please note that LuaSnip injects a bunch of utility globals when it loads your snippets (in this example the `s` and `t` functions), so you don't need to care about requiring or defining them. To get more detailed information and examples please read the [LuaSnip docs about this topic](https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md#lua)
+LuaSnip може зробити гаряче перезавантажування фрагментів, визначених в lua, коли ви їх зберігаєте, але вам може знадобитися перезапустити LunarVim під час першого створення файлів фрагментів.
+Будь ласка, зверніть увагу, що LuaSnip додає купу службових глобальних даних, коли він завантажує ваші фрагменти (у цьому прикладі функції `s` і `t`), тому вам не потрібно піклуватися про їхні огошення або визначення. Для отримання детальнішої інформації та прикладів, прочитайте [документацію LuaSnip на цю тему](https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md#lua)
 
-### TODO: snipmate version
+### TODO: snipmate-версія

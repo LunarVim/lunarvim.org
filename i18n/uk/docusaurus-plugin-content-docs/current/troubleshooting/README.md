@@ -5,9 +5,10 @@
 1. Make sure to check that you have a recent Neovim version with `luajit` support. The output of version information `nvim -v` should include a line for: `LuaJIT`.
 2. Make sure all the dependencies listed in [Manual Install](#manual-install) are actually installed on your system.
 
-## Unable to run `lvim`
+## Невдається запустити `lvim`
 
-Make sure that `lvim` is available and executable on your path. You can check the results of these commands to verify that
+Переконайтеся, що `lvim` є доступною і виконуваною командою на вашому шляху. Ви можете перевірити результати виконання цих команд, щоб переконатися, що
+
 
 ```shell
 which lvim
@@ -15,44 +16,45 @@ stat "$(which lvim)"
 cat "$(which lvim)"
 ```
 
-If you get errors with any of the above commands, then you need to either fix that manually or reinstall the binary again.
+Якщо ви отримуєте помилки при виконанні будь-якої з наведених вище команд, вам потрібно або виправити її вручну, або перевстановити бінарник заново.
 
 ```shell
 cd <lunarvim-repo> # this will be in `~/.local/share/lunarvim/lvim` by default
 bash utils/installer/install_bin.sh
 ```
 
-## Getting errors after an update
+## Помилки виникли після оноввлення
 
-### Cache issues
+### Проблеми з кешем
 
-This might be the result of old cache files that need to be reset. LunarVim makes use of [impatient's](https://github.com/lewis6991/impatient.nvim) to optimize the startup procedure and deliver a snappy experience.
+Це може бути наслідком старих файлів кешу, які потрібно скинути. lunarvim використовує [impatient](https://github.com/lewis6991/impatient.nvim) для оптимізації процедури запуску та швидкої роботи.
 
-1. while running LunarVim: `:LvimCacheReset`
-2. from the CLI: `lvim +LvimCacheReset`
+1. під час запуску lunarvim: `:lvimcachereset`.
+2. за допомогою команди в терміналі: `lvim +lvimcachereset`.
 
-### Plugin issue
+### Проблема з плагіном
 
-This could be due to multiple reasons, but most commonly it's a breaking change in some plugin,
-or `git` refusing to pull an update to a plugin because it
-[can't safely fast-forward the current branch](https://blog.sffc.xyz/post/185195398930/why-you-should-use-git-pull-ff-only-git-is-a).
+Це може бути пов'язано з багатьма причинами, але найчастіше це збої в роботі якогось плагіна,
+або `git` відмовляється витягувати оновлення до плагіна, оскільки він
+[не може безпечно перейти на поточну гілку за допомогою fast-forward](https://blog.sffc.xyz/post/185195398930/why-you-should-use-git-pull-ff-only-git-is-a).
 
-The easiest way to solve this is to manually update (a rebase is likely required) the offending plugin,
-which should be located in Lazy's package-root at `$LUNARVIM_RUNTIME_DIR/site/pack/lazy`.
 
-Let's say it's `nvim-cmp` for example
+Найпростіший спосіб вирішити цю проблему - вручну оновити (ймовірно, знадобиться rebase) зламаний плагін,
+який має бути розташований у корені пакунка Lazy за адресою `$LUNARVIM_RUNTIME_DIR/site/pack/lazy`.
+
+Скажімо, це може бути, наприклад, `nvim-cmp`.
 
 ```vim
 :! git -C "$LUNARVIM_RUNTIME_DIR/site/pack/lazy/opt/nvim-cmp" status
 ```
 
-now check which commit is currently checked out
+тепер перевірте поточний комміт
 
 ```vim
 :! git -C "$LUNARVIM_RUNTIME_DIR/site/pack/lazy/opt/nvim-cmp" log -1
 ```
 
-it should match the one in `$LUNARVIM_RUNTIME_DIR/lvim/snapshots/default.json`, but you can always restore the snapshot with `:LvimSyncCorePlugins`
+він має збігатися з тим, що знаходиться в `$lunarvim_runtime_dir/lvim/snapshots/default.json`, але ви завжди можете відновити знімок(snapshot) за допомогою `:lvimsynccoreplugins`.
 
 ```vim
 :! git -C "$LUNARVIM_RUNTIME_DIR/site/pack/lazy/opt/nvim-cmp" pull --rebase

@@ -2,16 +2,16 @@
 sidebar_position: 7
 ---
 
-# FTPlugin (filetype plugin)
+# FTP-плагін (плагін типу файлу)
 
-## Description
+## Опис
 
-From `:h ftplugin`
+З `:h ftplugin`
 
-> A filetype plugin is like a global plugin, except that it sets options and
-> defines mappings for the current buffer only.
+> Плагін типу файлу схожий на глобальний плагін, за винятком того, що він встановлює параметри та
+> визначає відображення лише для поточного буфера.
 
-Example for setting specific `shiftwidth` and `tabstop` that only apply for `C` file-types.
+Приклад встановлення певних `shiftwidth` і `tabstop`, які застосовуються лише для типів файлів `C`.
 
 ```lua
 -- create a file at $LUNARVIM_CONFIG_DIR/after/ftplugin/c.lua

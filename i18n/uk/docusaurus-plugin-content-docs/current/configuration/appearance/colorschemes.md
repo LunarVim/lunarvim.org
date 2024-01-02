@@ -2,31 +2,31 @@
 sidebar_position: 1
 ---
 
-# Colorscheme
+# Кольорова схема
 
-## Switching colors
+## Перемикання кольорів
 
-To switch color schemes on the fly, use `<leader>sc` (`:Telescope colorscheme`)
+Щоб перемикати колірні схеми на льоту, використовуйте `<leader>sc` (`:Telescope colorscheme`)
 
-You can also press `<leader>sp` to cycle through colorschemes with a preview.
+Ви також можете натиснути `<leader>sp`, щоб циклічно переходити між кольоровими схемами з попереднім переглядом.
 
-To change the color scheme permanently, modify `config.lua`
+Щоб остаточно змінити схему кольорів, змініть `config.lua`
 
-```lua
-lvim.colorscheme = "desert"
+``` lua
+lvim.colorscheme = "пустеля"
 ```
 
-## Installing colorschemes
+## Встановлення схем кольорів
 
-You can add any colorscheme you like. Just add a plugin with the colorscheme of your choice. For more information on installing plugins [look here.](../plugins/plugins.md)
+Ви можете додати будь-яку кольорову схему, яка вам подобається. Просто додайте плагін із схемою кольорів на ваш вибір. Для отримання додаткової інформації про встановлення плагінів [перегляньте тут.](../plugins/plugins.md)
 
-[This is a list](https://github.com/rockerBOO/awesome-neovim#colorscheme) of colorschemes with tree-sitter support
+[Це список](https://github.com/rockerBOO/awesome-neovim#colorscheme)схем кольорів із підтримкою tree-sitter
 
-## Customizing some colors
+## Налаштування деяких кольорів
 
-You can customize the highlight groups by overriding them in an autocommand.
-To find the group you want to change use `leader s H` (`:Telescope highlights`),
-`:TSHighlightCapturesUnderCursor` or `:Inspect`
+Ви можете налаштувати групи виділення, замінивши їх у автокоманді.
+Щоб знайти групу, яку ви хочете змінити, скористайтеся `leader s H` (`:Telescope highlights`),,
+`:TSHighlightCapturesUnderCursor` бо `:Inspect`
 
 ```lua
 lvim.autocommands = {
@@ -35,9 +35,9 @@ lvim.autocommands = {
     {
       pattern = "*",
       callback = function()
-        -- change `Normal` to the group you want to change
-        -- and `#ffffff` to the color you want
-        -- see `:h nvim_set_hl` for more options
+        -- змініть `Normal` на групу, яку ви хочете змінити
+        -- та `#ffffff` на бажаний колір
+        -- дивіться `:h nvim_set_hl` для більшої кількості налаштувань
         vim.api.nvim_set_hl(0, "Normal", { bg = "#ffffff", underline = false, bold = true })
       end,
     },
@@ -45,7 +45,7 @@ lvim.autocommands = {
 }
 ```
 
-You can also override parameters in builtin colorscheme; e.g., to have winseparator colored in orange in tokyonight scheme:
+Ви також можете змінити параметри у вбудованій схемі кольорів; наприклад, мати winseparator помаранчевого кольору в схемі tokyonight:
 
 ```lua
 lvim.colorscheme = "tokyonight"
@@ -58,15 +58,15 @@ lvim.builtin.theme.tokyonight.options.on_highlights = function(hl, c)
 end
 ```
 
-## Transparent Windows
+## Прозорі вікна
 
-If you're using transparent windows enable this setting
+Якщо ви використовуєте прозорі вікна, увімкніть це налаштування:
 
 ```lua
 lvim.transparent_window = true
 ```
 
-That enables the following settings
+Це вмикає наступні налаштування:
 
 ```lua
 cmd "au ColorScheme * hi Normal ctermbg=none guibg=none"
@@ -78,4 +78,4 @@ cmd "au ColorScheme * hi NvimTreeNormal ctermbg=none guibg=none"
 cmd "let &fcs='eob: '"
 ```
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OOr1qM17Lds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OOr1qM17Lds" title="Відео-програвавч YouTube" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="1"></iframe>

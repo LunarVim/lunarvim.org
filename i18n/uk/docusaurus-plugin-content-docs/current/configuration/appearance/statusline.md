@@ -2,52 +2,52 @@
 sidebar_position: 2
 ---
 
-# Statusline
+# Рядок стану
 
-LunarVim uses `lualine` as a default statusline.
+LunarVim використовує `lualine` як рядок стану за умовчанням.
 
-Configuration is same as that of lualine with full support. See [Lualine README.md](https://github.com/nvim-lualine/lualine.nvim/blob/master/README.md)
+Конфігурація така ж, як у lualine з повною підтримкою. Перегляньте [Lualine README.md](https://github.com/nvim-lualine/lualine.nvim/blob/master/README.md)
 
-In addition, LunarVim provides predefined styles(layout) and components.
+Крім того, LunarVim надає попередньо визначені стилі (макет) і компоненти.
 
-## Style
+## Стиль
 
-There are three style options LunarVim accepts,
+LunarVim приймає три варіанти стилю,
 
 - lvim
-  > LunarVim's default layout
+  > Типовий макет LunarVim
 - default
-  > Lualine's default layout
+  > Типовий макет Lualine
 - none
-  > Empty layout
+  > Порожній макет
 
-To set style other than `"lvim" style`,
+Для встановлення іншого стилю ніж `"lvim" style`,
 
 ```lua
-lvim.builtin.lualine.style = "default" -- or "none"
+lvim.builtin.lualine.style = "default" -- або "none"
 ```
 
 <br />
 
-## Component
+## Компонент
 
-You can use any component that `lualine` provides and `LunarVim` provides.
+Ви можете використовувати будь-який компонент, який надає `lualine` і `LunarVim`.
 
-**LunarVim's components**
+**Компоненти LunarVim**
 
 `mode`, `branch`, `filename`, `diff`, `python_env`, `diagnostics`, `treesitter`, `lsp`, `location`, `progress`, `spaces`, `encoding`, `filetype`, `scrollbar`
 
-To set `lualine's "diff"` component to section c of `"default" style`,
+Для встановлення компоненту `lualine's "diff"` до секції c `"default" style`,
 
 ```lua
 lvim.builtin.lualine.style = "default"
 lvim.builtin.lualine.sections.lualine_c = { "diff" }
 ```
 
-To set `LunarVim's "spaces" and "location"` components to section y and `lualine's "mode"` component to section a of `"lvim" style`,
+Для встановлення компонентів "spaces" і "location" `LunarVim` до секції y, а компонент "mode" `lualine` до секції a стилю `"lvim",
 
 ```lua
--- no need to set style = "lvim"
+-- не треба встановлювати style = "lvim"
 local components = require("lvim.core.lualine.components")
 
 lvim.builtin.lualine.sections.lualine_a = { "mode" }
@@ -59,21 +59,21 @@ lvim.builtin.lualine.sections.lualine_y = {
 
 <br />
 
-## Theme
+## Тема
 
-LunarVim automatically detects current colorscheme and set it as theme.
+LunarVim автоматично визначає поточну колірну схему та встановлює її як тему.
 
-To change your colorscheme, see [Colorscheme](./colorschemes.md)
+Щоб змінити схему кольорів, перегляньте [Кольорова схема](./colorschemes.md)
 
-If there is no matching theme, it will fallback to `"auto"` theme provided by lualine.
+Якщо відповідної теми немає, буде використано тему `"auto", надану lualine.
 
-In case you want to use different theme, set it manually,
+Якщо ви хочете використовувати іншу тему, встановіть її вручну,
 
 ```lua
 lvim.builtin.lualine.options.theme = "gruvbox"
 ```
 
-To customize existing theme,
+Для редагування наявної теми:
 
 ```lua
 local custom_gruvbox = require "lualine.themes.gruvbox_dark"
@@ -85,7 +85,7 @@ custom_gruvbox.command.b = { fg = custom_gruvbox.command.a.bg, gui = "bold" }
 lvim.builtin.lualine.options.theme = custom_gruvbox
 ```
 
-To create your own theme,
+Для створення власної теми:
 
 ```lua
 local colors = {
@@ -127,11 +127,11 @@ lvim.builtin.lualine.options.theme = {
 
 <br />
 
-## Callback
+## Зворотний вилкик (колбек)
 
-Callback function is available for more flexibility.
+Функція зворотного виклику доступна для більшої гнучкості.
 
-It will run when configuration is done,
+Вона запуститься після завершення налаштування,
 
 ```lua
 lvim.builtin.lualine.on_config_done = function(lualine)
@@ -139,10 +139,10 @@ lvim.builtin.lualine.on_config_done = function(lualine)
   local components = require "core.lualine.components"
 
   config.sections.lualine_x[3].color.bg = "#2c2c2c"
-  table.remove(config.sections.lualine_x, 2) -- remove treesitter icon
+  table.remove(config.sections.lualine_x, 2) -- видалення іконки treesitter
   table.insert(config.sections.lualine_x, components.location)
   lualine.setup(config)
 end
 ```
 
-If you want to go way beyond with configuration, check [jimcornmell's setup](https://github.com/jimcornmell/lvim/blob/main/lua/user/lualine.lua) as a reference.
+Якщо ви хочете вийти за межі конфігурації, перевірте [налаштування jimcornmell](https://github.com/jimcornmell/lvim/blob/main/lua/user/lualine.lua) як довідник.

@@ -2,95 +2,100 @@
 sidebar_position: 3
 ---
 
-# Keybinds overview
+# Огляд прив'язок клавіш
 
-Here's an overview of the most commonly used mappings.
-It is not a complete list, you can find more by pressing `<leader>sk` to search through them,
-or `<leader>` to show whichkey (keybinds popup)
+Тут наведено огляд найпоширеніших прив'язок клавіш.
+Це не повний список, ви можете знайти більше, натиснувши `<leader>sk` для пошуку,
+або `<leader>`, щоб показати, з якою клавішею (спливаюче вікно зв'язок клавіш)
 
-Also see:
+Також перегляньте:
 [vim mappings](https://devhints.io/vim)
 
-**Підказка:** `<leader>` is space by default, read [`:help keycodes`](https://neovim.io/doc/user/intro.html#keycodes) for more key names
+**Підказка:** `<leader>` це типово пробіл, прочитайте [`:help keycodes`](https://neovim.io/doc/user/intro.html#keycodes)
+для отримання додаткових імен клавіш
+**Підказка:** `<M>` це `alt` на Windows/Linux та `option` на macOS
 
-**Підказка:** `<M>` is `alt` on Windows/Linux and `option` on macOS
+**Підказка:** Для користувачів macOS: щоб клавіша `option` (`⌥`) працювала як `<M>`, вам може знадобитися змінити деякі
+налаштування:
 
-**Підказка:** For macOS users: For the `option` key (`⌥`) to work as `<M>` you may need to adjust some settings:
-- For iTerm2: Select `Esc+` as the Option key setting in [ Preferences - Profiles - Keys ](https://github.com/LunarVim/lunarvim.org/pull/377#discussion_r1140747022)
-- For Alacritty: Make sure you're on Alacritty version >= 0.12.0. In your `alacritty.yml` config file, set `window.option_as_alt` to `Both` or `OnlyLeft` \ `OnlyRight` per your preference (https://github.com/alacritty/alacritty/issues/62).
+- Для iTerm2: Виберіть `Esc+` як параметр клавіші Option
+  у [ Параметри - Профілі - Клавіші ](https://github.com/LunarVim/lunarvim.org/pull/377#discussion_r1140747022)
+- Для Alacritty: Переконайтеся, що у вас версія Alacritty >= 0.12.0. У файлі конфігурації `alacritty.yml` встановіть для
+  параметра `window.option_as_alt` значення `Both` або `OnlyLeft` \ `OnlyRight` відповідно до ваших
+  уподобань (https://github.com/alacritty/alacritty/issues/62).
 
-**Підказка:** Non-leader keybindings (for e.g. `<C-\>`, mentioned below and others) can be viewed
-by pressing `<backspace>` in the which-key main menu (first popup after pressing `<leader>`)
+**Підказка:** Нелідерні сполучення клавіш (наприклад, `<C-\>`, згадані нижче та інші) можна переглянути
+натиснувши `<backspace>` у головному меню which-key (перше спливне вікно після натискання `<leader>`)
 
 ## Плагіни
 
-| клавіші                       | опис                                                                                            | режим  |
-| ----------------------------- | ----------------------------------------------------------------------------------------------- | ------ |
-| `<leader>`                    | [whichkey](https://github.com/folke/which-key.nvim) (спливаюче вікно з прив'язками клавіш (з'являється через 1 секунду))        | normal |
-| `<leader>e`                   | [nvimtree](https://github.com/nvim-tree/nvim-tree.lua) (бічний файловий провідник)                     | normal |
-| `<leader>f` `<leader>s`(menu) | [telescope](https://github.com/nvim-telescope/telescope.nvim) (знайти файли, текст та більше) | normal |
-| `<leader>;`                   | [alpha](https://github.com/goolord/alpha-nvim) (інформаційна панель)                                      | normal |
-| `<C-\>` `<M-1/2/3>`           | [toggleterm](https://github.com/akinsho/toggleterm.nvim) (термінал)                             | normal |
+| клавіші                       | опис                                                                                                                     | режим      |
+|-------------------------------|--------------------------------------------------------------------------------------------------------------------------|------------|
+| `<leader>`                    | [whichkey](https://github.com/folke/which-key.nvim) (спливаюче вікно з прив'язками клавіш (з'являється через 1 секунду)) | нормальний |
+| `<leader>e`                   | [nvimtree](https://github.com/nvim-tree/nvim-tree.lua) (бічний файловий провідник)                                       | нормальний |
+| `<leader>f` `<leader>s`(menu) | [telescope](https://github.com/nvim-telescope/telescope.nvim) (знайти файли, текст та більше)                            | нормальний |
+| `<leader>;`                   | [alpha](https://github.com/goolord/alpha-nvim) (інформаційна панель)                                                     | нормальний |
+| `<C-\>` `<M-1/2/3>`           | [toggleterm](https://github.com/akinsho/toggleterm.nvim) (термінал)                                                      | нормальний |
 
 ## LSP
 
-| клавіші| опис                                         | режим  |
-| ------ | -------------------------------------------- | ------ |
-| `K`    | hover information (double tap to get inside) | normal |
-| `KK`   | move cursor inside `K` window                | normal |
-| `gd`   | go to definition                             | normal |
-| `gD`   | go to declaration                            | normal |
-| `gr`   | go to references                             | normal |
-| `gI`   | go to implementation                         | normal |
-| `gs`   | show signature help                          | normal |
-| `gl`   | show line diagnostics                        | normal |
-| `glgl` | move cursor inside `gl` diagnostics window   | normal |
+| клавіші | опис                                                                | режим      |
+|---------|---------------------------------------------------------------------|------------|
+| `K`     | інформація при наведення (двічі натисніть, щоб потрапити всередину) | нормальний |
+| `KK`    | перемістит курсор всередину вікна `K`                               | нормальний |
+| `gd`    | перейти до визначення                                               | нормальний |
+| `gD`    | перейти до оголошення                                               | нормальний |
+| `gr`    | go to references                                                    | нормальний |
+| `gI`    | перейти до імплементації                                            | нормальний |
+| `gs`    | show signature help                                                 | нормальний |
+| `gl`    | показати лінію діагностики                                          | нормальний |
+| `glgl`  | перемістити курсор всередину `gl` діагностичного вікна              | нормальний |
 
 ## Редагування
 
-| клавіші     | опис              | режим          |
-| ----------- | ----------------- | -------------- |
-| `<leader>/` | закоментувати           | normal, visual |
-| `gb`        | block comment     | visual         |
-| `<M-k>`     | перемістити лінію або лінії вгору   | normal, visual |
-| `<M-j>`     | перемістити лінію або лінії вниз | normal, visual |
+| клавіші     | опис                              | режим                  |
+|-------------|-----------------------------------|------------------------|
+| `<leader>/` | закоментувати                     | нормальний, візуальний |
+| `gb`        | закоментувати блок                | візуальний             |
+| `<M-k>`     | перемістити лінію або лінії вгору | нормальний, візуальний |
+| `<M-j>`     | перемістити лінію або лінії вниз  | нормальний, візуальний |
 
 ## Completion
 
-| клавіші                    | опис                                   | режим  |
-| -------------------------- | -------------------------------------- | ------ |
-| `<C-space>`                | show completion menu                   | insert |
-| `<CR>` `<C-y>`             | підтвердити                               | insert |
-| `<C-e>`                    | скасувати                                 | insert |
-| `<C-k>` `<Up>` `<Tab>`     | вибрати попередній предмет                 | insert |
-| `<C-j>` `<Down>` `<S-Tab>` | вибрати наступний предмет                       | insert |
-| `<C-d>`                    | scroll docs up                         | insert |
-| `<C-f>`                    | scroll docs down                       | insert |
-| `<CR>` `<Tab>`             | jump to next jumpable in a snippet     | insert |
-| `<S-Tab>`                  | jump to previous jumpable in a snippet | insert |
+| клавіші                    | опис                                         | режим      |
+|----------------------------|----------------------------------------------|------------|
+| `<C-space>`                | показати меню автозавершення                 | вставлення |
+| `<CR>` `<C-y>`             | підтвердити                                  | вставлення |
+| `<C-e>`                    | скасувати                                    | вставлення |
+| `<C-k>` `<Up>` `<Tab>`     | вибрати попередній предмет                   | вставлення |
+| `<C-j>` `<Down>` `<S-Tab>` | вибрати наступний предмет                    | вставлення |
+| `<C-d>`                    | прокрутити докуменацію вгору                 | вставлення |
+| `<C-f>`                    | прокрутити документацію вниз                 | вставлення |
+| `<CR>` `<Tab>`             | перейти до наступного переходу у фрагменті   | вставлення |
+| `<S-Tab>`                  | перейти до попереднього переходу у фрагменті | вставлення |
 
 ## Вікна
 
-| клавіші     | опис                   | режим  |
-| ----------- | ---------------------- | ------ |
-| `<C-h>`     | перейти в ліве вікно      | normal |
-| `<C-j>`     | перейти в нижнє вікно     | normal |
-| `<C-k>`     | перейти в верхнє вікно     | normal |
-| `<C-l>`     | перейти в праве вікно     | normal |
-| `<C-Up>`    | зменшити висоту вікна | normal |
-| `<C-Down>`  | збільшити висоту вікна | normal |
-| `<C-Left>`  | зменшити ширину вікна | normal |
-| `<C-Right>` | збільшити ширину вікна  | normal |
+| клавіші     | опис                   | режим      |
+|-------------|------------------------|------------|
+| `<C-h>`     | перейти в ліве вікно   | нормальний |
+| `<C-j>`     | перейти в нижнє вікно  | нормальний |
+| `<C-k>`     | перейти в верхнє вікно | нормальний |
+| `<C-l>`     | перейти в праве вікно  | нормальний |
+| `<C-Up>`    | зменшити висоту вікна  | нормальний |
+| `<C-Down>`  | збільшити висоту вікна | нормальний |
+| `<C-Left>`  | зменшити ширину вікна  | нормальний |
+| `<C-Right>` | збільшити ширину вікна | нормальний |
 
 ## Різне
 
-| клавіші      | опис                      | режим  |
-| ------------ | ------------------------- | ------ |
-| `<leader>Lc` | редагувати config.lua           | normal |
-| `<leader>h`  | очистити підсвітку пошуку | normal |
-| `<leader>sh` | шукати в `:help`    | normal |
-| `<leader>sr` | відкрити нещодавні файли         | normal |
-| `<leader>pS` | список встановлених плагінів | normal |
+| клавіші      | опис                         | режим      |
+|--------------|------------------------------|------------|
+| `<leader>Lc` | редагувати config.lua        | нормальний |
+| `<leader>h`  | очистити підсвітку пошуку    | нормальний |
+| `<leader>sh` | шукати в `:help`             | нормальний |
+| `<leader>sr` | відкрити нещодавні файли     | нормальний |
+| `<leader>pS` | список встановлених плагінів | нормальний |
 
 ## [nvimtree](https://github.com/nvim-tree/nvim-tree.lua) (бічний файловий провідник)
 

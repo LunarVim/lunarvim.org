@@ -36,7 +36,7 @@
     "description": "The label for category Supported frameworks in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Supported languages": {
-    "message": "Підтримувані МП",
+    "message": "Підтримувані мови",
     "description": "The label for category Supported languages in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Community": {

@@ -1,20 +1,20 @@
-# Plugins
+# Плагіни
 
-Plugins are managed by [folke/lazy.nvim](https://github.com/folke/lazy.nvim).
+Плагінами керує [folke/lazy.nvim](https://github.com/folke/lazy.nvim).
 
 :::tip
 
-use `:Lazy` to see a list of all installed plugins!
+використовуйте `:Lazy`, щоби побачити список усіх встановлених плагінів!
 
 :::
 
-# Installing plugins
+# Встановлення плагінів
 
-User plugins can be installed by adding entries to the `lvim.plugins` table in
-your `config.lua` file, saving or manually invoking `LvimReload` will trigger
-lazy to sync all the plugins in that table.
+Користувацькі плагіни можна встановити, додавши записи до таблиці lvim.plugins у
+ваш файл `config.lua`, зберігши або вручну викликавши `LvimReload` запустить
+плагін lazy для синхронізації всіх плагінів в цій таблиці.
 
-Example:
+приклад:
 
 ```lua
 lvim.plugins = {
@@ -30,33 +30,33 @@ lvim.plugins = {
   {
     "nvim-neorg/neorg",
     ft = "norg", -- lazy-load on filetype
-    config = true, -- run require("neorg").setup()
+    config = true, -- запускає require("neorg").setup()
   },
 }
 ```
 
 :::tip
 
-You can find all available options [here](https://github.com/folke/lazy.nvim#-plugin-spec)
-or in lunarvim: `:help lazy.nvim-plugin-spec`
-You can find more examples [here](https://github.com/folke/lazy.nvim#examples)
+Ви можете знайти всі доступні налаштування [тут](https://github.com/folke/lazy.nvim#-plugin-spec)
+або в lunarvim: `:help lazy.nvim-plugin-spec`
+Ви можете знайти [тут](https://github.com/folke/lazy.nvim#examples) більше прикладів
 
 :::
 
 :::info
 
-Removing a plugin from the `lvim.plugins` table removes it from your configuration but not your system. To remove them completely, run `:Lazy clean`
+Видалення плагіна з таблиці `lvim.plugins` видаляє його з вашої конфігурації, але не з вашої системи. Щоб видалити їх повністю, запустіть `:Lazy clean`
 
 :::
 
-## Core plugins
+## Основні плагіни
 
-The configurations for core plugins are accessible through the `lvim.builtin` table.
+Конфігурації для основних плагінів доступні через таблицю `lvim.builtin`.
 
-### Disabling core plugins
+### Вимкнення основних плагінів
 
-Most should contain an `active` attribute that can be set to `false` to disable
-the plugin
+Більшість має містити атрибут `active`, який можна встановити на `false`, щоби вимкнути
+плагін
 
 ```lua
 lvim.builtin.alpha.active = false
@@ -65,14 +65,14 @@ lvim.builtin.dap.active = false
 
 :::caution
 
-Disabling a plugin will not take effect until you restart lvim.
+Вимкнення плагіна не почне діяти, доки ви не перезапустите lvim.
 
 :::
 
-### Configuring core plugins
+### Налаштування основних плагінів
 
-To configure a builtin plugin, edit options in `lvim.builtin.<builtin>`.
-You can press `<TAB>` to get autocomplete suggestions to explore these settings.
+Щоби налаштувати вбудований плагін, відредагуйте параметри в `lvim.builtin.<builtin>`.
+Ви можете натиснути `<TAB>`, щоб отримати пропозиції автозавершення для вивчення цих налаштувань.
 
 ```lua
 lvim.builtin.cmp.completion.keyword_length = 2
@@ -82,14 +82,14 @@ lvim.builtin.telescope.defaults.layout_config.preview_cutoff = 75
 
 :::tip
 
-A plugin's README (and `docs/` folder if it exists) typically contain excellent documentation, so it may be worthwhile to create an alias if you use them often.
+README плагіна (та папка `docs/`, якщо вона існує) зазвичай містить чудову документацію, тому, можливо, варто створити скоровчення, якщо ви часто використовуєте його.
 
 :::
 
-### Pinning
+### Закріплення
 
-Versions of core plugins are pinned for better stability,
-you can disable pinning by setting an environment variable `$LVIM_DEV_MODE`, e.g. can be defined in `~/.local/bin/lvim` or in your shell's rc file:
+Версії основних плагінів закріплені для кращої стабільності,
+Ви можете вимкнути закріплення, встановивши змінну середовища `$LVIM_DEV_MODE`, наприклад, можна визначити в `~/.local/bin/lvim` або у файлі rc вашої оболонки:
 
 ```bash
 export LVIM_DEV_MODE=1

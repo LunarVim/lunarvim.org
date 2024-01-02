@@ -3,13 +3,13 @@ sidebar: auto
 sidebar_position: 4
 ---
 
-# FAQ
+# ЧаПИ
 
-## How do I [..] ?
+## Як зробити [..] ?
 
-### How do I use LunarVim in Neovide?
+### Як використовувати LunarVim у Neovide?
 
-Use this bash script to start neovide
+Використовуйте цей bash-скрипт для запуску neovide
 
 ```bash
 #!/usr/bin/env bash
@@ -22,17 +22,18 @@ export LUNARVIM_BASE_DIR="${LUNARVIM_BASE_DIR:-"$HOME/.local/share/lunarvim/lvim
 exec neovide -- -u "$LUNARVIM_BASE_DIR/init.lua" "$@"
 ```
 
-## What is `null-ls` and why do you use it?
+## Що таке `null-ls` та чому ви його використовуєте?
 
-For C/C++ we have the `clangd` by `llvm` which can also use its siblings' abilities `clang-tidy` and `clang-format` to support additional linting and formatting. But something like `pyright` doesn't support formatting, so we use `null-ls` to register `black` and `flake8` for example, as a "fake" language server.
+Для C/C++ ми маємо `clangd` з `llvm`, який також може використовувати можливості своїх братів `clang-tidy` і `clang-format` для підтримки додаткового лінтування і форматування. Але щось на кшталт `pyright` не підтримує форматування, тому ми використовуємо `null-ls` для реєстрації `black` і `flake8`, наприклад, як "фальшивого" мовного сервера.
 
-Since it's not using a separate binary it's called `null-ls` or _null language server_.
+оскільки він не використовує окремий бінарний файл, він називається `null-ls` або _нульовий мовний сервер_.
 
-## Where can I find some example configs?
 
-If you want ideas for configuring LunarVim you can look at these repositories.
+## Де я можу знайти приклади конфігурацій?
 
-- starter.lvim [https://github.com/LunarVim/starter.lvim](https://github.com/LunarVim/starter.lvim) (a collection of language specific lunarvim configurations)
+Якщо маєте ідеї для налаштування LunarVim, то перегляньте ці репозиторії.
+
+- starter.lvim [https://github.com/LunarVim/starter.lvim](https://github.com/LunarVim/starter.lvim) (збірка мовних конфігурацій lunarvim)
 - Chris - [https://github.com/ChristianChiarulli/lvim](https://github.com/ChristianChiarulli/lvim)
 - Abouzar - [https://github.com/abzcoding/lvim](https://github.com/abzcoding/lvim)
 - Nelson - [https://github.com/rebuilt/lvim](https://github.com/rebuilt/lvim)

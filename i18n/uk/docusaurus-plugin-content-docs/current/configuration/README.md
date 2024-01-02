@@ -1,21 +1,21 @@
-# Configuration
+# Конфігурація
 
-You can configure LunarVim by using the configuration file located in `~/.config/lvim/config.lua`.
+Ви можете налаштувати LunarVim за допомогою конфігураційного файлу, розташованого у `~/.config/lvim/config.lua`.
 
-To get started quickly, copy the sample configuration file
+Для швидкого початку роботи, скопіюйте приклад конфігураційного файлу
 
 ```bash
 cp ~/.local/share/lunarvim/lvim/utils/installer/config.example.lua ~/.config/lvim/config.lua
 ```
 
-Many LunarVim internal settings are exposed through the `lvim` global object.
-To see a list of all available settings, run this command from either `~/.config/lvim/` or `~/.local/share/lunarvim/lvim` to generate an `lv-settings.lua` file.
+Багато внутрішніх налаштувань LunarVim доступні за допомогою глобального об'єкта `lvim`.
+Щоби переглянути список усіх доступних налаштувань, виконайте цю команду з `~/.config/lvim/` або `~/.local/share/lunarvim/lvim`, щоб згенерувати файл `lv-settings.lua`.
 
 ```bash
 lvim --headless +'lua require("lvim.utils").generate_settings()' +qa && sort -o lv-settings.lua{,}
 ```
 
-Here is a sample of the output.
+Ось приклад вихідних даних.
 
 ```lua
 lvim.builtin.telescope.defaults.initial_mode = "insert"
@@ -27,4 +27,4 @@ lvim.builtin.telescope.defaults.layout_config.width = 0.75
 lvim.builtin.telescope.defaults.layout_strategy = "horizontal"
 ```
 
-If you want to keep launching LunarVim with the `nvim` command, add an alias entry to your shell's config file: `alias nvim=lvim`. To temporarily revert to the default nvim prefix it with a backslash `\nvim`. If you create this alias, you may also want to explicitly set your editor as well `export EDITOR='lvim'`. This will tell command line tools like git to use LunarVim as your editor.
+Якщо ви хочете продовжувати запускати LunarVim командою `nvim`, додайте запис про псевдонім до конфігураційного файлу вашої оболонки: `alias nvim=lvim`. Щоб тимчасово повернутися до стандартного nvim, додайте до нього зворотний слеш `\nvim`. Якщо ви створюєте цей псевдонім, ви також можете явно вказати ваш редактор `export EDITOR='lvim'`. Це вкаже інструментам командного рядка, таким як git, використовувати LunarVim як ваш редактор.

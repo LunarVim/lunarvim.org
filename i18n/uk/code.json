@@ -60,7 +60,7 @@
     "description": "The ARIA label for the blog pagination"
   },
   "theme.blog.paginator.newerEntries": {
-    "message": "До новіших записи",
+    "message": "До новіших записів",
     "description": "The label used to navigate to the newer blog posts page (previous page)"
   },
   "theme.blog.paginator.olderEntries": {
@@ -84,11 +84,11 @@
     "description": "Pluralized label for \"{count} posts\". Use as much plural forms (separated by \"|\") as your language support (see https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)"
   },
   "theme.blog.tagTitle": {
-    "message": "{nPosts} tagged with \"{tagName}\"",
+    "message": "{nPosts} помічено з \"{tagName}\"",
     "description": "The title of the page for a blog tag"
   },
   "theme.tags.tagsPageLink": {
-    "message": "Переглянути всі Tags",
+    "message": "Переглянути всі мітки",
     "description": "The label of the link targeting the tag list page"
   },
   "theme.colorToggle.ariaLabel": {
@@ -104,7 +104,7 @@
     "description": "The name for the light color mode"
   },
   "theme.docs.breadcrumbs.home": {
-    "message": "Головна стоінка",
+    "message": "Головна сторінка",
     "description": "The ARIA label for the home page in the breadcrumbs"
   },
   "theme.docs.breadcrumbs.navAriaLabel": {
@@ -183,7 +183,7 @@
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
   "theme.tags.tagsListLabel": {
-    "message": "Tags:",
+    "message": "Мітки:",
     "description": "The label alongside a tag list"
   },
   "theme.AnnouncementBar.closeButtonAriaLabel": {
@@ -211,7 +211,7 @@
     "description": "The title attribute for toggle word wrapping button of code block lines"
   },
   "theme.DocSidebarItem.toggleCollapsedCategoryAriaLabel": {
-    "message": "Toggle the collapsible sidebar category '{label}'",
+    "message": "Перемкнути категорії бічної панелі, що згортається: '{label}'",
     "description": "The ARIA label to toggle the collapsible sidebar category"
   },
   "theme.navbar.mobileLanguageDropdown.label": {
@@ -281,7 +281,7 @@
     "description": "The paragraph for empty search result"
   },
   "theme.tags.tagsPageTitle": {
-    "message": "Tags",
+    "message": "Мітки",
     "description": "The title of the tag list page"
   }
 }
