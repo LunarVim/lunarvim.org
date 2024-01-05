@@ -92,9 +92,9 @@ const config = {
       alt: 'LunarVim Logo',
     },
     christmas: {
-      lightrope: true,
-      snowBtn: true,
-      santa: true,
+      lightrope: false,
+      snowBtn: false,
+      santa: false,
     },
     previewImgs: [
       {
