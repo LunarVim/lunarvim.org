@@ -1,0 +1,50 @@
+{
+  "version.label": {
+    "message": "1.3",
+    "description": "The label for version 1.3"
+  },
+  "sidebar.tutorialSidebar.category.Installation": {
+    "message": "Установлення",
+    "description": "The label for category Installation in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Beginner's guide": {
+    "message": "Посібник для новачків",
+    "description": "The label for category Beginner's guide in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Configuration": {
+    "message": "Налаштування",
+    "description": "The label for category Configuration in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Plugins": {
+    "message": "Плагіни",
+    "description": "The label for category Plugins in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Appearance": {
+    "message": "Зовнішній вигляд",
+    "description": "The label for category Appearance in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Language features": {
+    "message": "Можливості МП",
+    "description": "The label for category Language features in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Features": {
+    "message": "Можливості",
+    "description": "The label for category Features in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Supported frameworks": {
+    "message": "Підтримувані фреймворки",
+    "description": "The label for category Supported frameworks in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Supported languages": {
+    "message": "Підтримувані мови",
+    "description": "The label for category Supported languages in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Community": {
+    "message": "Спільнота",
+    "description": "The label for category Community in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.For Developers": {
+    "message": "Для розробників",
+    "description": "The label for category For Developers in sidebar tutorialSidebar"
+  }
+}

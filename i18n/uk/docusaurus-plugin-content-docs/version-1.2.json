@@ -1,0 +1,30 @@
+{
+  "version.label": {
+    "message": "1.2",
+    "description": "The label for version 1.2"
+  },
+  "sidebar.tutorialSidebar.category.Configuration": {
+    "message": "Налаштування",
+    "description": "The label for category Configuration in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Languages": {
+    "message": "Мови",
+    "description": "The label for category Languages in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Frameworks": {
+    "message": "Фреймворки",
+    "description": "The label for category Frameworks in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Plugins": {
+    "message": "Плагіни",
+    "description": "The label for category Plugins in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.For Developers": {
+    "message": "Для розробників",
+    "description": "The label for category For Developers in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Community": {
+    "message": "Спільнота",
+    "description": "The label for category Community in sidebar tutorialSidebar"
+  }
+}
