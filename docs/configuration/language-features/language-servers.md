@@ -29,7 +29,7 @@ configure it automatically for you.
 ### Manual installation
 
 ```lua
-lvim.lsp.automatic_servers_installation = false
+lvim.lsp.installer.setup.automatic_installation = false
 ```
 
 Please refer to [mason](https://github.com/williamboman/mason.nvim) to see the updated full list of
