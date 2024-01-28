@@ -34,6 +34,8 @@ LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.
 </TabItem>
 <TabItem value="windows" label="Windows">
 
+_Requires [Powershell 7](https://learn.microsoft.com/en-us/shows/it-ops-talk/how-to-install-powershell-7)._
+
 ```powershell
 pwsh -c "`$LV_BRANCH='release-1.3/neovim-0.9'; iwr https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.ps1 -UseBasicParsing | iex"
 ```
