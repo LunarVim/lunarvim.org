@@ -47,3 +47,18 @@ lvim.autocommands = {
   }
 }
 ```
+
+A popular feature of Vim is to remember the cursor position. You can achieve similar functionality with the following:
+
+```lua
+lvim.autocommands = {
+    {
+        "BufWinEnter",
+        {
+            -- Remember cursor position
+            pattern = "*",
+            command = 'silent! normal! g`"zv',
+        },
+    }
+}
+```
