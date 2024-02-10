@@ -821,7 +821,7 @@ table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
 ```lua
 {
   "iamcco/markdown-preview.nvim",
-  run = "cd app && npm install",
+  build = "cd app && npm install",
   ft = "markdown",
   config = function()
     vim.g.mkdp_auto_start = 1
