@@ -22,6 +22,17 @@ export LUNARVIM_BASE_DIR="${LUNARVIM_BASE_DIR:-"$HOME/.local/share/lunarvim/lvim
 exec neovide -- -u "$LUNARVIM_BASE_DIR/init.lua" "$@"
 ```
 
+Or you can set `$NEOVIM_BIN` env variable to let neovide start with lvim by default
+```sh
+export NEOVIM_BIN=$(which lvim)
+```
+
+```
+$ neovide --help 
+      --neovim-bin <NEOVIM_BIN>
+          Which NeoVim binary to invoke headlessly instead of `nvim` found on $PATH
+```
+
 ## What is `null-ls` and why do you use it?
 
 For C/C++ we have the `clangd` by `llvm` which can also use its siblings' abilities `clang-tidy` and `clang-format` to support additional linting and formatting. But something like `pyright` doesn't support formatting, so we use `null-ls` to register `black` and `flake8` for example, as a "fake" language server.
