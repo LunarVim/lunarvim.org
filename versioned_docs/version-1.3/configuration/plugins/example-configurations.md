@@ -124,7 +124,7 @@ For a more lightweight, easier-to-use alternative, check out the author's new, w
 
 ```lua
 {
-  "windwp/nvim-spectre",
+  "nvim-pack/nvim-spectre",
   event = "BufRead",
   config = function()
     require("spectre").setup()
