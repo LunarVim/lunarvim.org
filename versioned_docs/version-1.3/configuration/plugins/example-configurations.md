@@ -68,6 +68,33 @@ For a more lightweight, easier-to-use alternative, check out the author's new, w
 },
 ```
 
+### [neovim-project](https://github.com/coffebar/neovim-project)
+
+**autosaves your sessions per project and provides quick access to projects via Telescope extension**
+
+```lua
+{
+  "coffebar/neovim-project",
+  opts = {
+    projects = { -- define project roots
+      "~/projects/*",
+      "~/.config/*",
+    },
+  },
+  init = function()
+    -- enable saving the state of plugins in the session
+    vim.opt.sessionoptions:append("globals") -- save global variables that start with an uppercase letter and contain at least one lowercase letter.
+  end,
+  dependencies = {
+    { "nvim-lua/plenary.nvim" },
+    { "nvim-telescope/telescope.nvim", tag = "0.1.0" },
+    { "Shatur/neovim-session-manager" },
+  },
+  lazy = false,
+  priority = 100,
+},
+```
+
 ### [numb](https://github.com/nacro90/numb.nvim)
 
 **jump to the line**
