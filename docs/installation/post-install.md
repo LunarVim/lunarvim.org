@@ -14,7 +14,7 @@ LunarVim uses icons from Nerd Fonts. If you don't want to use them set `lvim.use
 
 ### Easy Installer
 
-Visit [ronniedroid/getnf](https://github.com/ronniedroid/getnf) for an easy way to install nerd fonts.
+Visit [getnf/getnf](https://github.com/getnf/getnf) for an easy way to install nerd fonts.
 
 ### Video Explanation
 
