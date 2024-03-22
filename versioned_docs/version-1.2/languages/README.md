@@ -174,6 +174,13 @@ code_actions.setup {
     command = "proselint"
   },
 }
+
+local hovers = require "lvim.lsp.null-ls.hovers"
+hovers.setup {
+  {
+    command = "dictionary"
+  }
+}
 ```
 
 Another method is to reference the linter/formatter/code_actions by their names, as referenced in [null-ls docs](https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md), if you do not want to customize the command
@@ -200,11 +207,18 @@ code_actions.setup {
     name = "proselint"
   },
 }
+
+local hovers = require "lvim.lsp.null-ls.hovers"
+hovers.setup {
+  {
+    name = "dictionary"
+  }
+}
 ```
 
 This will lookup the provided name in the builtin configurations of `null_ls` and apply them. It can be considered equivalent to `null_ls.builtins.diagnostics.{name}`/`null_ls.builtins.formatting.{name}`/`null_ls.builtins.code_actions.{name}`
 
-_Note: Formatters' or Linters' or Code Actions installation is not managed by LunarVim. Refer to the each tool's respective manual for installation steps._
+_Note: Formatters', Linters', Code Actions' or Hovers' installation is not managed by LunarVim. Refer to the each tool's respective manual for installation steps._
 
 ### Custom arguments
 
