@@ -22,6 +22,8 @@ cd <lunarvim-repo> # this will be in `~/.local/share/lunarvim/lvim` by default
 bash utils/installer/install_bin.sh
 ```
 
+If you installed Neovim using [bob](https://github.com/MordechaiHadad/bob) and get `error: unexpected argument '-u' found`, when running `lvim`, see in this [issue](https://github.com/LunarVim/LunarVim/issues/3612#issuecomment-1379895972) how it can be solved.
+
 ## Getting errors after an update
 
 ### Cache issues
