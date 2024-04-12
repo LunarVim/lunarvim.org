@@ -30,7 +30,7 @@
     "description": "A plugin for setting Neovim LSP with JSON or YAML files"
   },
   {
-    "name": "<a href='https://github.com/jose-elias-alvarez/null-ls.nvim'>jose-elias-alvarez/null-ls.nvim</a>",
+    "name": "<a href='https://github.com/nvimtools/none-ls.nvim/'>nvimtools/none-ls.nvim</a>",
     "enabled": true,
     "description": "Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua."
   },
