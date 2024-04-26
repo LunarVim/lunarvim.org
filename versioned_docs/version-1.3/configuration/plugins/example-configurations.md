@@ -628,12 +628,25 @@ end
 
 **hint when you type**
 
+Add to plugins section:
 ```lua
-{
-  "ray-x/lsp_signature.nvim",
-  event = "BufRead",
-  config = function() require"lsp_signature".on_attach() end,
-},
+{ 
+    "ray-x/lsp_signature.nvim",
+    config = function()
+      require"lsp_signature".setup({
+        -- …
+      })
+    end,
+}, 
+```
+
+And after activate plugin anywhere in config.lua:
+```lua
+lvim.lsp.on_attach_callback = function(client, bufnr)
+  -- …
+  require"lsp_signature".on_attach()
+  -- …
+end
 ```
 
 ### [symbols-outline.nvim](https://github.com/simrat39/symbols-outline.nvim)
