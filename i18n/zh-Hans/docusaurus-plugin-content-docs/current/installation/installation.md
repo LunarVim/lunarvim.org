@@ -6,7 +6,7 @@ sidebar_position: 1
 
 ## 前置条件
 
-- 请确保拥有最新版本的 [`Neovim v0.9.0+`](https://github.com/neovim/neovim/releases/latest)。
+- 请确保拥有最新版本的 [`Neovim v0.9.5+`](https://github.com/neovim/neovim/releases/latest)。
 - 在您的系统上安装 [`git`](https://cli.github.com/)、[`make`](https://www.gnu.org/software/make/)、[`pip`](https://pypi.org/project/pip/)、[`python`](https://www.python.org/)、[`npm`](https://npmjs.com/)、[`node`](https://nodejs.org/) 和 [`cargo`](https://www.rust-lang.org/tools/install)。
 - [解决全局安装程序包时的 `EACCES` 权限错误](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally)，以避免使用 npm 安装程序包时出错。
 - [`PowerShell 7+`](https://learn.microsoft.com/en-us/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.2)（Windows系统所需）。
@@ -17,7 +17,7 @@ sidebar_position: 1
 
 ## 稳定版
 
-(Neovim 0.9.0)
+(Neovim 0.9.5)
 
 没有警报和意外：
 
@@ -28,14 +28,14 @@ import TabItem from '@theme/TabItem';
 <TabItem value="linux/macos" label="Linux/MacOS">
 
 ```bash
-LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
+LV_BRANCH='master' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/master/utils/installer/install.sh)
 ```
 
 </TabItem>
 <TabItem value="windows" label="Windows">
 
 ```powershell
-pwsh -c "`$LV_BRANCH='release-1.3/neovim-0.9'; iwr https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.ps1 -UseBasicParsing | iex"
+pwsh -c "`$LV_BRANCH='master'; iwr https://raw.githubusercontent.com/LunarVim/LunarVim/master/utils/installer/install.ps1 -UseBasicParsing | iex"
 ```
 
 </TabItem>
@@ -44,7 +44,7 @@ pwsh -c "`$LV_BRANCH='release-1.3/neovim-0.9'; iwr https://raw.githubusercontent
 _这只是为了查看基本的功能，因此某些交互可能会被环境拦截。_
 
 ```bash
-docker run -w /tmp -it --rm alpine:edge sh -uelic 'addgroup -S lunaruser && adduser -S lunaruser -G lunaruser --shell /bin/sh && apk add yarn git python3 cargo neovim ripgrep alpine-sdk bash curl --update && LV_BRANCH='release-1.3/neovim-0.9' su -c "bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/release-1.3/neovim-0.9/utils/installer/install.sh) --no-install-dependencies" lunaruser && su -c /home/lunaruser/.local/bin/lvim lunaruser'
+docker run -w /tmp -it --rm alpine:edge sh -uelic 'addgroup -S lunaruser && adduser -S lunaruser -G lunaruser --shell /bin/sh && apk add yarn git python3 cargo neovim ripgrep alpine-sdk bash curl --update && LV_BRANCH='master' su -c "bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) --no-install-dependencies" lunaruser && su -c /home/lunaruser/.local/bin/lvim lunaruser'
 ```
 
 </TabItem>

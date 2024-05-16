@@ -23,14 +23,14 @@ import TabItem from '@theme/TabItem';
 <TabItem value="linux/macos" label="Linux/MacOs">
 
 ```bash
-LV_BRANCH='release-1.2/neovim-0.8' bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+LV_BRANCH='master' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/master/utils/installer/install.sh)
 ```
 
 </TabItem>
 <TabItem value="windows" label="Windows">
 
 ```powershell
-Invoke-WebRequest https://raw.githubusercontent.com/LunarVim/LunarVim/master/utils/installer/install.ps1 -UseBasicParsing | Invoke-Expression
+pwsh -c "`$LV_BRANCH='master'; iwr https://raw.githubusercontent.com/LunarVim/LunarVim/master/utils/installer/install.ps1 -UseBasicParsing | iex"
 ```
 
 </TabItem>
@@ -38,7 +38,7 @@ Invoke-WebRequest https://raw.githubusercontent.com/LunarVim/LunarVim/master/uti
 
 ## Nightly
 
-(Neovim 0.9.0)
+(Neovim 0.10.0)
 
 Todas las nuevas características con todos los nuevos errores:
 
