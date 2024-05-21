@@ -14,6 +14,8 @@ Use this bash script to start neovide
 ```bash
 #!/usr/bin/env bash
 
+export NVIM_APPNAME="${NVIM_APPNAME:-"lvim"}"
+
 export LUNARVIM_RUNTIME_DIR="${LUNARVIM_RUNTIME_DIR:-"$HOME/.local/share/lunarvim"}"
 export LUNARVIM_CONFIG_DIR="${LUNARVIM_CONFIG_DIR:-"$HOME/.config/lvim"}"
 export LUNARVIM_CACHE_DIR="${LUNARVIM_CACHE_DIR:-"$HOME/.cache/lvim"}"
