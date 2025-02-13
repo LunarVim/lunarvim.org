@@ -22,7 +22,7 @@ LunarVim 使用 Nerd Fonts 字体中的图标。如果你不想使用它们，�
 
 ### 手动安装
 
-1. 访问 [pached fonts directory](https://www.nerdfonts.com/font-downloads)
+1. 访问 [patched fonts directory](https://www.nerdfonts.com/font-downloads)
 1. 下载字体文件到 `~/.local/share/fonts`
 
 ### 使用 Curl 下载
