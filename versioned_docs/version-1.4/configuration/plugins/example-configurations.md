@@ -430,18 +430,12 @@ vim.keymap.set('n', ',W', swap_windows, { desc = 'Swap windows' })
 
 **rainbow parentheses**
 
+Note: This is no longer maintained. Please use `hiphish/rainbow-delimiters.nvim`
+
 ```lua
 {
-  "mrjones2014/nvim-ts-rainbow",
+  "hiphish/rainbow-delimiters.nvim",
 },
-```
-
-After installing ensure to enable it in your `config.lua` using:
-
-```
-...
-lvim.builtin.treesitter.rainbow.enable = true
-...
 ```
 
 ### [playground](https://github.com/nvim-treesitter/playground)
